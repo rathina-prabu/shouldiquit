@@ -30,9 +30,11 @@ Full quiz works end-to-end. 18 questions → salary → verdict → diagnosis (t
 | Result page `/r/[id]` (taker + visitor views) | ✅ done | UUID-match gates the taker view |
 | Persona validation | ✅ done | All 3 personas in expected bands |
 | Vercel deploy | ❌ not done | Per RESUME instructions — your call when awake |
-| E2E (Playwright) | ❌ skipped | API-level smoke test done instead; time tradeoff |
+| E2E (Playwright) | ✅ done | 51 tests across 7 files — full UI + API surface |
 
-39 vitest unit tests passing. 1 production build passes. Dev server is up and running in the background.
+**Test totals: 39 vitest unit tests + 51 Playwright E2E tests = 90 passing.** Production build passes. Dev server is up and running in the background.
+
+**E2E coverage:** every screen, every API route, every verdict tier, all 3 calibration personas, visitor vs taker view, navigation guards, mid-quiz refresh persistence, clipboard, OG card rendering for all 5 tiers, salary-offset asymmetry, cross-module scoring, extreme answer patterns (all-A/B/C/D), every YoE band. Run with `npx playwright test`.
 
 ## 3 things to do when you wake up
 
