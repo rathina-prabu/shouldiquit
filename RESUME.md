@@ -88,12 +88,22 @@ Also write `.gitignore` (if not present) with `.env*.local`.
 
 ## Where you LEFT OFF
 
-The previous session was in the middle of these tasks:
+**Overnight build COMPLETE (2026-05-17 ~02:00 onwards).** See `WAKE_UP.md` for the morning briefing.
+
 1. ✓ Supabase project created (`yojxqkwqlnodtllkmauq`)
 2. ✓ Publishable key obtained
-3. ✗ Schema migration NOT YET applied (do this next via MCP)
-4. ✗ Next.js NOT scaffolded — first attempt blocked because `data/`, `mockups/`, `.claude/` exist. **Workaround: manual scaffold.** Write all the Next.js config + entry files by hand. Do not use `create-next-app`.
-5. ✗ Everything in the plan from Task 0.2 onwards
+3. ✓ Schema migration applied via MCP (sessions + answers tables, permissive RLS)
+4. ✓ Next.js scaffolded manually (no `create-next-app`)
+5. ✓ All Phase 0–6 tasks from the plan complete:
+   - 18 questions + scoring engine (39 unit tests passing)
+   - All 7 screens (landing, intake, quiz runner, salary, taker result, visitor result)
+   - `POST /api/sessions` persists session + 18 answers
+   - `POST /api/diagnose` with Claude SDK + templated fallback (30 hand-written templates)
+   - `GET /api/og/[id]` 1080×1080 share card via @vercel/og
+   - Dev server running on `http://localhost:3000` and `http://192.168.1.6:3000`
+6. ✓ Persona validation: 3 personas (HAPPY/MEDIOCRE/FRUSTRATED) all landed in their expected verdict bands. See `validation-results.md`.
+
+**What's still on the user:** restore Anthropic org, paste API key into `.env.local`, deploy to Vercel.
 
 ---
 
