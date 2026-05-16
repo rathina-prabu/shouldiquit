@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Boardroom Briefing</title>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Public Sans',sans-serif;background:#fefcf7;color:#1a1a1a;min-height:100vh;display:flex;justify-content:center}
+  .briefing{width:100%;max-width:460px;padding:26px 24px;display:flex;flex-direction:column;min-height:100vh}
+  .masthead{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px double #1a1a1a;padding-bottom:8px;margin-bottom:6px}
+  .masthead .brand{font-family:'Domine',serif;font-weight:700;font-size:24px;letter-spacing:-0.5px;line-height:1}
+  .masthead .meta{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;text-align:right;font-weight:600;line-height:1.5}
+  .subline{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#666;font-weight:600;margin-bottom:28px}
+  .briefing-label{display:inline-block;background:#1a1a1a;color:#fefcf7;padding:4px 11px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+  .question{font-family:'Domine',serif;font-weight:700;font-size:32px;line-height:1.08;margin:0 0 8px;letter-spacing:-0.8px}
+  .deck{font-family:'Domine',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a3a3a;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid #1a1a1a}
+  .why-it-matters{background:#f4eddc;padding:12px 14px;font-size:13px;line-height:1.5;margin-bottom:24px;border-left:3px solid #b54324}
+  .why-it-matters strong{font-family:'Domine',serif;font-weight:700;color:#b54324;display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+  .response-header{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#1a1a1a;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #1a1a1a}
+  .options{display:flex;flex-direction:column}
+  .option{background:transparent;border:0;border-bottom:1px solid #c8c1ab;padding:13px 0;font:inherit;font-size:15px;font-weight:500;text-align:left;display:flex;align-items:center;gap:14px;cursor:pointer;color:#1a1a1a;transition:all .15s}
+  .option:hover{padding-left:8px;color:#b54324}
+  .option:hover .ltr{color:#1a1a1a;background:#b54324}
+  .ltr{font-family:'Domine',serif;font-weight:700;font-size:12px;width:22px;height:22px;background:#1a1a1a;color:#fefcf7;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .emoji{font-size:18px}
+  .opt-text{flex:1}
+  .footer{margin-top:auto;padding-top:20px;border-top:3px double #1a1a1a;display:flex;justify-content:space-between;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#666;font-weight:600}
+</style>
+</head>
+<body>
+  <div class="briefing">
+    <div class="masthead">
+      <div class="brand">Dr. K & Co.</div>
+      <div class="meta">Career Briefing<br>16 May 2026</div>
+    </div>
+    <div class="subline">Independent · Confidential · Pro Bono</div>
+    <span class="briefing-label">Module 5 · Item 15</span>
+    <h1 class="question">On the matter of Sundays.</h1>
+    <p class="deck">How does your body feel when you remember it's Monday tomorrow?</p>
+    <div class="why-it-matters">
+      <strong>Why this matters</strong>
+      Sunday-evening dread is the single most reliable burnout indicator we measure. Your answer here is weighted above many others.
+    </div>
+    <div class="response-header">Select your response</div>
+    <div class="options">
+      <button class="option"><span class="ltr">A</span><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+      <button class="option"><span class="ltr">B</span><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+      <button class="option"><span class="ltr">C</span><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+      <button class="option"><span class="ltr">D</span><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+    </div>
+    <div class="footer">
+      <span>Page 15 of 20</span>
+      <span>— Dr. K & Co.</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+[
+  {
+    "city": "Bangalore",
+    "gig_cab_hourly_inr": 150,
+    "gig_auto_hourly_inr": 110,
+    "gig_delivery_hourly_inr": 85,
+    "cost_of_living_index": 100,
+    "top_hiring_sectors": ["SaaS / Product Tech", "GCC (Global Capability Centres)", "IT Services"],
+    "layoff_trend_2025_2026": "Mixed: TCS cut 12,000+ in 2025 and startup layoffs ~20-25k nationally, but Bengaluru hiring activity still +23% YoY in early 2026 driven by GCC and AI demand",
+    "hiring_season_peak_months": ["Jan", "Feb", "Mar", "Sep", "Oct"],
+    "confidence": "medium",
+    "sources": [
+      "Fairwork India Report 2024 (Ola/Uber scored 0/10; Swiggy/Zomato 6/10)",
+      "Zomato CEO Deepinder Goyal disclosure: avg EPH ₹102 in 2025 (gross), ~₹81 net after 20% fuel/maintenance",
+      "Inc42 Indian Startup Layoff Tracker 2025",
+      "Numbeo Cost of Living Index May 2026 (Bangalore baseline 20.3)",
+      "Taggd / foundit Insights Tracker 2026 (Bengaluru +23% YoY hiring)",
+      "Naukri JobSpeak hiring calendar (Jan-Mar peak post-appraisal, Sep-Oct secondary)"
+    ]
+  },
+  {
+    "city": "Chennai",
+    "gig_cab_hourly_inr": 130,
+    "gig_auto_hourly_inr": 95,
+    "gig_delivery_hourly_inr": 75,
+    "cost_of_living_index": 92,
+    "top_hiring_sectors": ["IT Services / SaaS", "Manufacturing & Automotive (EV)", "GCC / BFSI Back-office"],
+    "layoff_trend_2025_2026": "Lower exposure than Bengaluru; IT services layoffs (TCS, Infosys) hit Chennai workforce but manufacturing/EV expansion offsetting. Net direction: roughly flat to slightly positive",
+    "hiring_season_peak_months": ["Jan", "Feb", "Mar", "Aug", "Sep"],
+    "confidence": "low",
+    "sources": [
+      "Fairwork India Report 2024",
+      "Zomato 2025 EPH disclosure (used as national anchor; Chennai discounted ~10% vs Bengaluru per fare structure)",
+      "Numbeo Cost of Living Chennai May 2026 (18.7)",
+      "foundit Insights Tracker 2026 (Chennai +18% YoY hiring)",
+      "Taggd Jobs in Chennai 2026 report"
+    ]
+  },
+  {
+    "city": "Hyderabad",
+    "gig_cab_hourly_inr": 135,
+    "gig_auto_hourly_inr": 95,
+    "gig_delivery_hourly_inr": 78,
+    "cost_of_living_index": 100,
+    "top_hiring_sectors": ["Pharma & Life Sciences (Genome Valley)", "GCC (SaaS, BFSI, Aerospace)", "IT Services / Cloud"],
+    "layoff_trend_2025_2026": "Positive: fastest-growing Tier-1 GCC city YoY. Eli Lilly +1,500 jobs, Sanofi scaling to 2,600, BMS & Amgen expansion. Hiring activity +21% YoY",
+    "hiring_season_peak_months": ["Jan", "Feb", "Mar", "Sep", "Oct"],
+    "confidence": "medium",
+    "sources": [
+      "Fairwork India Report 2024",
+      "Zomato 2025 EPH ₹102 gross disclosure",
+      "Numbeo Hyderabad May 2026 (20.2)",
+      "foundit Insights Tracker 2026 (Hyderabad +21% YoY)",
+      "Flexiple GCC list Hyderabad 2026, Taggd pharma hiring trends 2026"
+    ]
+  },
+  {
+    "city": "Gurgaon",
+    "gig_cab_hourly_inr": 160,
+    "gig_auto_hourly_inr": 105,
+    "gig_delivery_hourly_inr": 88,
+    "cost_of_living_index": 114,
+    "top_hiring_sectors": ["Fintech & BFSI back-office", "Consulting (Big 4, MBB)", "GCC (Banking, Analytics, Cybersecurity)"],
+    "layoff_trend_2025_2026": "Mixed: Edtech (Byju's, Unacademy) and consumer-services layoffs hit NCR hardest in 2025; offset by GCC and consulting expansion. Net: slight negative to flat",
+    "hiring_season_peak_months": ["Jan", "Feb", "Mar", "Sep", "Oct"],
+    "confidence": "low",
+    "sources": [
+      "Fairwork India Report 2024",
+      "Zomato 2025 EPH disclosure (NCR fares ~5-8% above national avg)",
+      "Inc42 Layoff Tracker 2025 (edtech most-affected sector, NCR-heavy)",
+      "Numbeo Gurgaon May 2026 (23.2)",
+      "Flexiple GCC NCR list 2026, Taggd India job hotspots 2026"
+    ]
+  },
+  {
+    "city": "Mumbai",
+    "gig_cab_hourly_inr": 175,
+    "gig_auto_hourly_inr": 130,
+    "gig_delivery_hourly_inr": 95,
+    "cost_of_living_index": 120,
+    "top_hiring_sectors": ["BFSI & Fintech", "Media & Entertainment", "Pharma / Healthcare"],
+    "layoff_trend_2025_2026": "Relatively resilient: BFSI hiring strong, fintech mixed. Hiring activity +22% YoY in early 2026. Media/advertising recovery offsetting startup cuts",
+    "hiring_season_peak_months": ["Jan", "Feb", "Mar", "Sep", "Oct"],
+    "confidence": "medium",
+    "sources": [
+      "Fairwork India Report 2024",
+      "Business Standard 2025 (Mumbai auto driver case studies: ₹500-600/day net after CNG + ₹150 permit at 10 hrs)",
+      "Zomato 2025 EPH ₹102 gross (Mumbai surge ~10-15% above avg per metro fare structure)",
+      "Numbeo Mumbai May 2026 (24.4, highest in India)",
+      "foundit Insights Tracker 2026 (Mumbai +22% YoY)",
+      "Pace Recruit / Taggd Mumbai hiring 2026"
+    ]
+  }
+]

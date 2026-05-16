@@ -1,0 +1,921 @@
+[
+  {
+    "role": "Senior Product Manager",
+    "city": "Bangalore",
+    "open_jobs_count": 6014,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "medium",
+    "sources": ["Naukri Q2 2026 direct", "foundit YoY April 2026"]
+  },
+  {
+    "role": "Senior Product Manager",
+    "city": "Hyderabad",
+    "open_jobs_count": 3308,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)", "Hyderabad tech YoY"]
+  },
+  {
+    "role": "Senior Product Manager",
+    "city": "Mumbai",
+    "open_jobs_count": 2978,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "medium",
+    "sources": ["Naukri Q2 2026 direct", "Mumbai overall hiring YoY"]
+  },
+  {
+    "role": "Senior Product Manager",
+    "city": "Gurgaon",
+    "open_jobs_count": 2706,
+    "open_jobs_yoy_growth": "+6%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)", "Gurgaon YoY estimate"]
+  },
+  {
+    "role": "Senior Product Manager",
+    "city": "Chennai",
+    "open_jobs_count": 2105,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)", "Chennai YoY compromise"]
+  },
+
+  {
+    "role": "Product Manager",
+    "city": "Bangalore",
+    "open_jobs_count": 4000,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Glassdoor Bangalore-specific PM count", "foundit YoY April 2026"]
+  },
+  {
+    "role": "Product Manager",
+    "city": "Hyderabad",
+    "open_jobs_count": 2200,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Product Manager",
+    "city": "Mumbai",
+    "open_jobs_count": 1514,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Naukri Q2 2026 direct", "Mumbai YoY"]
+  },
+  {
+    "role": "Product Manager",
+    "city": "Gurgaon",
+    "open_jobs_count": 1800,
+    "open_jobs_yoy_growth": "+6%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Product Manager",
+    "city": "Chennai",
+    "open_jobs_count": 1400,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Associate PM",
+    "city": "Bangalore",
+    "open_jobs_count": 7365,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "medium",
+    "sources": ["Naukri Asst PM Bangalore Q2 2026 direct"]
+  },
+  {
+    "role": "Associate PM",
+    "city": "Hyderabad",
+    "open_jobs_count": 4050,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Associate PM",
+    "city": "Mumbai",
+    "open_jobs_count": 1497,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "medium",
+    "sources": ["Naukri Q2 2026 direct"]
+  },
+  {
+    "role": "Associate PM",
+    "city": "Gurgaon",
+    "open_jobs_count": 3314,
+    "open_jobs_yoy_growth": "+6%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Associate PM",
+    "city": "Chennai",
+    "open_jobs_count": 1216,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "medium",
+    "sources": ["Naukri Q2 2026 direct"]
+  },
+
+  {
+    "role": "Software Engineer",
+    "city": "Bangalore",
+    "open_jobs_count": 29000,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Naukri Bangalore SWE Q2 2026 range 26000-32828"]
+  },
+  {
+    "role": "Software Engineer",
+    "city": "Hyderabad",
+    "open_jobs_count": 15950,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)", "Hyderabad tech YoY +21%"]
+  },
+  {
+    "role": "Software Engineer",
+    "city": "Mumbai",
+    "open_jobs_count": 14500,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Software Engineer",
+    "city": "Gurgaon",
+    "open_jobs_count": 13050,
+    "open_jobs_yoy_growth": "+4%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Software Engineer",
+    "city": "Chennai",
+    "open_jobs_count": 9640,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Naukri Chennai SWE fresher direct", "Chennai overall YoY"]
+  },
+
+  {
+    "role": "Senior Software Engineer",
+    "city": "Bangalore",
+    "open_jobs_count": 8000,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "medium",
+    "sources": ["Naukri Sr SWE Bangalore Q2 2026 range 7000-9000"]
+  },
+  {
+    "role": "Senior Software Engineer",
+    "city": "Hyderabad",
+    "open_jobs_count": 4400,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Senior Software Engineer",
+    "city": "Mumbai",
+    "open_jobs_count": 3370,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "medium",
+    "sources": ["Naukri Q2 2026 direct"]
+  },
+  {
+    "role": "Senior Software Engineer",
+    "city": "Gurgaon",
+    "open_jobs_count": 3600,
+    "open_jobs_yoy_growth": "+4%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Senior Software Engineer",
+    "city": "Chennai",
+    "open_jobs_count": 2800,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Engineering Manager",
+    "city": "Bangalore",
+    "open_jobs_count": 2610,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 105,
+    "confidence": "medium",
+    "sources": ["Naukri EM Bangalore Q2 2026 direct"]
+  },
+  {
+    "role": "Engineering Manager",
+    "city": "Hyderabad",
+    "open_jobs_count": 1435,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 105,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Engineering Manager",
+    "city": "Mumbai",
+    "open_jobs_count": 1305,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 105,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Engineering Manager",
+    "city": "Gurgaon",
+    "open_jobs_count": 1175,
+    "open_jobs_yoy_growth": "+6%",
+    "avg_time_to_fill_days": 105,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Engineering Manager",
+    "city": "Chennai",
+    "open_jobs_count": 915,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 105,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Tech Lead",
+    "city": "Bangalore",
+    "open_jobs_count": 9500,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Estimated from SWE pool ~30% senior tier"]
+  },
+  {
+    "role": "Tech Lead",
+    "city": "Hyderabad",
+    "open_jobs_count": 5225,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Tech Lead",
+    "city": "Mumbai",
+    "open_jobs_count": 4750,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Tech Lead",
+    "city": "Gurgaon",
+    "open_jobs_count": 4275,
+    "open_jobs_yoy_growth": "+4%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Tech Lead",
+    "city": "Chennai",
+    "open_jobs_count": 3325,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Designer",
+    "city": "Bangalore",
+    "open_jobs_count": 3500,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Estimated UX/Product designer pool Bangalore"]
+  },
+  {
+    "role": "Designer",
+    "city": "Hyderabad",
+    "open_jobs_count": 1925,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Designer",
+    "city": "Mumbai",
+    "open_jobs_count": 1750,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Designer",
+    "city": "Gurgaon",
+    "open_jobs_count": 1575,
+    "open_jobs_yoy_growth": "+4%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Designer",
+    "city": "Chennai",
+    "open_jobs_count": 1225,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Senior Designer",
+    "city": "Bangalore",
+    "open_jobs_count": 1800,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Estimated senior designer Bangalore ~50% of Designer pool"]
+  },
+  {
+    "role": "Senior Designer",
+    "city": "Hyderabad",
+    "open_jobs_count": 990,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Senior Designer",
+    "city": "Mumbai",
+    "open_jobs_count": 900,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Senior Designer",
+    "city": "Gurgaon",
+    "open_jobs_count": 810,
+    "open_jobs_yoy_growth": "+4%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Senior Designer",
+    "city": "Chennai",
+    "open_jobs_count": 630,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Data Scientist",
+    "city": "Bangalore",
+    "open_jobs_count": 6500,
+    "open_jobs_yoy_growth": "+35%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Estimated DS Bangalore Q2 2026", "AI/ML role YoY trend"]
+  },
+  {
+    "role": "Data Scientist",
+    "city": "Hyderabad",
+    "open_jobs_count": 3575,
+    "open_jobs_yoy_growth": "+40%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)", "Hyderabad tech +21% + AI premium"]
+  },
+  {
+    "role": "Data Scientist",
+    "city": "Mumbai",
+    "open_jobs_count": 3250,
+    "open_jobs_yoy_growth": "+35%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Data Scientist",
+    "city": "Gurgaon",
+    "open_jobs_count": 2925,
+    "open_jobs_yoy_growth": "+33%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Data Scientist",
+    "city": "Chennai",
+    "open_jobs_count": 2275,
+    "open_jobs_yoy_growth": "+30%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Senior Data Scientist",
+    "city": "Bangalore",
+    "open_jobs_count": 2800,
+    "open_jobs_yoy_growth": "+40%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Estimated Sr DS Bangalore Q2 2026", "AI/ML senior premium"]
+  },
+  {
+    "role": "Senior Data Scientist",
+    "city": "Hyderabad",
+    "open_jobs_count": 1540,
+    "open_jobs_yoy_growth": "+45%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Senior Data Scientist",
+    "city": "Mumbai",
+    "open_jobs_count": 1400,
+    "open_jobs_yoy_growth": "+40%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Senior Data Scientist",
+    "city": "Gurgaon",
+    "open_jobs_count": 1260,
+    "open_jobs_yoy_growth": "+38%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Senior Data Scientist",
+    "city": "Chennai",
+    "open_jobs_count": 980,
+    "open_jobs_yoy_growth": "+33%",
+    "avg_time_to_fill_days": 95,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "DevOps Engineer",
+    "city": "Bangalore",
+    "open_jobs_count": 16250,
+    "open_jobs_yoy_growth": "+22%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Naukri Bangalore DevOps Q2 2026 direct"]
+  },
+  {
+    "role": "DevOps Engineer",
+    "city": "Hyderabad",
+    "open_jobs_count": 8174,
+    "open_jobs_yoy_growth": "+25%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Naukri Hyderabad DevOps Q2 2026 direct"]
+  },
+  {
+    "role": "DevOps Engineer",
+    "city": "Mumbai",
+    "open_jobs_count": 8125,
+    "open_jobs_yoy_growth": "+22%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "DevOps Engineer",
+    "city": "Gurgaon",
+    "open_jobs_count": 2144,
+    "open_jobs_yoy_growth": "+20%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Naukri Gurgaon DevOps Q2 2026 direct"]
+  },
+  {
+    "role": "DevOps Engineer",
+    "city": "Chennai",
+    "open_jobs_count": 5690,
+    "open_jobs_yoy_growth": "+20%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "QA Engineer",
+    "city": "Bangalore",
+    "open_jobs_count": 12000,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "low",
+    "sources": ["Estimated QA/Test Bangalore pool Q2 2026"]
+  },
+  {
+    "role": "QA Engineer",
+    "city": "Hyderabad",
+    "open_jobs_count": 6600,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "QA Engineer",
+    "city": "Mumbai",
+    "open_jobs_count": 6000,
+    "open_jobs_yoy_growth": "+5%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "QA Engineer",
+    "city": "Gurgaon",
+    "open_jobs_count": 5400,
+    "open_jobs_yoy_growth": "+4%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "QA Engineer",
+    "city": "Chennai",
+    "open_jobs_count": 4200,
+    "open_jobs_yoy_growth": "+3%",
+    "avg_time_to_fill_days": 55,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Sales Lead",
+    "city": "Bangalore",
+    "open_jobs_count": 5000,
+    "open_jobs_yoy_growth": "+15%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "medium",
+    "sources": ["Naukri Bangalore Sales subset (all-Sales 12552)", "BFSI sales YoY"]
+  },
+  {
+    "role": "Sales Lead",
+    "city": "Hyderabad",
+    "open_jobs_count": 2750,
+    "open_jobs_yoy_growth": "+15%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Sales Lead",
+    "city": "Mumbai",
+    "open_jobs_count": 2500,
+    "open_jobs_yoy_growth": "+18%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)", "Mumbai BFSI hub"]
+  },
+  {
+    "role": "Sales Lead",
+    "city": "Gurgaon",
+    "open_jobs_count": 2250,
+    "open_jobs_yoy_growth": "+15%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Sales Lead",
+    "city": "Chennai",
+    "open_jobs_count": 1750,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "medium",
+    "sources": ["Naukri Chennai Sales 6125 - Lead-role subset"]
+  },
+
+  {
+    "role": "Marketing Manager",
+    "city": "Bangalore",
+    "open_jobs_count": 1253,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "medium",
+    "sources": ["Naukri Bangalore Marketing Manager Q2 2026 direct"]
+  },
+  {
+    "role": "Marketing Manager",
+    "city": "Hyderabad",
+    "open_jobs_count": 690,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Marketing Manager",
+    "city": "Mumbai",
+    "open_jobs_count": 630,
+    "open_jobs_yoy_growth": "+15%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)", "Mumbai BFSI/media hub premium"]
+  },
+  {
+    "role": "Marketing Manager",
+    "city": "Gurgaon",
+    "open_jobs_count": 565,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Marketing Manager",
+    "city": "Chennai",
+    "open_jobs_count": 440,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Growth Manager",
+    "city": "Bangalore",
+    "open_jobs_count": 900,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Estimated Growth Manager Bangalore - smaller niche than Marketing"]
+  },
+  {
+    "role": "Growth Manager",
+    "city": "Hyderabad",
+    "open_jobs_count": 495,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Growth Manager",
+    "city": "Mumbai",
+    "open_jobs_count": 450,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Growth Manager",
+    "city": "Gurgaon",
+    "open_jobs_count": 405,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Growth Manager",
+    "city": "Chennai",
+    "open_jobs_count": 315,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Customer Success Manager",
+    "city": "Bangalore",
+    "open_jobs_count": 2321,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "medium",
+    "sources": ["Naukri Bangalore CSM Q2 2026 direct"]
+  },
+  {
+    "role": "Customer Success Manager",
+    "city": "Hyderabad",
+    "open_jobs_count": 1275,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Customer Success Manager",
+    "city": "Mumbai",
+    "open_jobs_count": 1160,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Customer Success Manager",
+    "city": "Gurgaon",
+    "open_jobs_count": 1045,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Customer Success Manager",
+    "city": "Chennai",
+    "open_jobs_count": 815,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 75,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Finance Analyst",
+    "city": "Bangalore",
+    "open_jobs_count": 3200,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 65,
+    "confidence": "low",
+    "sources": ["Estimated Finance Analyst Bangalore Q2 2026"]
+  },
+  {
+    "role": "Finance Analyst",
+    "city": "Hyderabad",
+    "open_jobs_count": 1760,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 65,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Finance Analyst",
+    "city": "Mumbai",
+    "open_jobs_count": 2400,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 65,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.75x) - Mumbai BFSI hub premium"]
+  },
+  {
+    "role": "Finance Analyst",
+    "city": "Gurgaon",
+    "open_jobs_count": 1440,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 65,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Finance Analyst",
+    "city": "Chennai",
+    "open_jobs_count": 1120,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 65,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "HR Business Partner",
+    "city": "Bangalore",
+    "open_jobs_count": 1500,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Estimated HRBP Bangalore Q2 2026"]
+  },
+  {
+    "role": "HR Business Partner",
+    "city": "Hyderabad",
+    "open_jobs_count": 825,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "HR Business Partner",
+    "city": "Mumbai",
+    "open_jobs_count": 750,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "HR Business Partner",
+    "city": "Gurgaon",
+    "open_jobs_count": 675,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "HR Business Partner",
+    "city": "Chennai",
+    "open_jobs_count": 525,
+    "open_jobs_yoy_growth": "+6%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.35x)"]
+  },
+
+  {
+    "role": "Operations Manager",
+    "city": "Bangalore",
+    "open_jobs_count": 3400,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Estimated Operations Manager Bangalore (Chennai anchor extrapolated up)"]
+  },
+  {
+    "role": "Operations Manager",
+    "city": "Hyderabad",
+    "open_jobs_count": 1870,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.55x)"]
+  },
+  {
+    "role": "Operations Manager",
+    "city": "Mumbai",
+    "open_jobs_count": 1700,
+    "open_jobs_yoy_growth": "+12%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.50x)"]
+  },
+  {
+    "role": "Operations Manager",
+    "city": "Gurgaon",
+    "open_jobs_count": 1530,
+    "open_jobs_yoy_growth": "+10%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "low",
+    "sources": ["Extrapolated from Bangalore anchor (0.45x)"]
+  },
+  {
+    "role": "Operations Manager",
+    "city": "Chennai",
+    "open_jobs_count": 1182,
+    "open_jobs_yoy_growth": "+8%",
+    "avg_time_to_fill_days": 85,
+    "confidence": "medium",
+    "sources": ["Naukri Chennai Operations Manager Q2 2026 direct"]
+  }
+]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Broadsheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Crimson Text',serif;background:#d4caaf;color:#1a1410;min-height:100vh;display:flex;justify-content:center;padding:12px}
+  .paper{width:100%;max-width:460px;padding:28px 26px;background:#efe7d2;background-image:radial-gradient(circle,rgba(50,40,20,0.05) 1px,transparent 1px);background-size:3px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.15)}
+  .masthead{text-align:center;border-bottom:4px double #1a1410;padding-bottom:12px;margin-bottom:8px}
+  .title{font-family:'Old Standard TT',serif;font-weight:700;font-size:38px;letter-spacing:1px;margin:0;text-transform:uppercase}
+  .subtitle{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;margin-top:4px;font-weight:500}
+  .info-bar{border-bottom:1px solid #1a1410;padding:6px 0;margin-bottom:26px;display:flex;justify-content:space-between;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+  .kicker{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:12px;color:#6b3a14;font-weight:700}
+  .headline{font-family:'Old Standard TT',serif;font-weight:700;font-size:40px;line-height:1.02;text-align:center;margin:0 0 18px;letter-spacing:-0.5px}
+  .deck{text-align:center;font-style:italic;font-size:17px;line-height:1.4;margin-bottom:32px;padding:0 12px 22px;border-bottom:1px solid #1a1410}
+  .byline{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:14px;font-weight:500}
+  .options-wrap{border-top:2px solid #1a1410;border-bottom:2px solid #1a1410;padding:8px 0}
+  .options{display:flex;flex-direction:column}
+  .option{background:transparent;border:0;padding:13px 8px;font-family:'Crimson Text',serif;font-size:16px;text-align:left;display:flex;align-items:center;gap:14px;cursor:pointer;color:#1a1410;border-bottom:1px dotted #1a1410;transition:all .15s}
+  .option:last-child{border-bottom:0}
+  .option:hover{background:rgba(26,20,16,0.08);padding-left:14px}
+  .roman{font-family:'Old Standard TT',serif;font-weight:700;width:30px;flex-shrink:0;color:#6b3a14;font-size:18px}
+  .emoji{font-size:18px}
+  .opt-text{flex:1}
+  .footer{margin-top:22px;text-align:center;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#6b3a14;font-weight:500}
+</style>
+</head>
+<body>
+  <div class="paper">
+    <div class="masthead">
+      <h1 class="title">The Dr. K</h1>
+      <div class="subtitle">Weekly Bulletin · Strictly Confidential</div>
+    </div>
+    <div class="info-bar">
+      <span>Vol. I · No. 15</span>
+      <span>16 May 2026</span>
+      <span>Session 1 of 1</span>
+    </div>
+    <div class="kicker">— Section V · The State of You —</div>
+    <h2 class="headline">Tell Me About Sundays.</h2>
+    <p class="deck">"How does your body feel when you remember it's Monday tomorrow?" — Dr. K</p>
+    <div class="byline">Item XV · Select One</div>
+    <div class="options-wrap">
+      <div class="options">
+        <button class="option"><span class="roman">I.</span><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+        <button class="option"><span class="roman">II.</span><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+        <button class="option"><span class="roman">III.</span><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+        <button class="option"><span class="roman">IV.</span><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+      </div>
+    </div>
+    <div class="footer">— Page XV of XX —</div>
+  </div>
+</body>
+</html>

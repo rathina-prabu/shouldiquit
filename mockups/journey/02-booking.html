@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Start</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Rubik',sans-serif;background:#f4ecd6;color:#0e3870;min-height:100vh;display:flex;justify-content:center;background-image:radial-gradient(circle,rgba(14,56,112,0.04) 1px,transparent 1px);background-size:3px 3px}
+  .screen{width:100%;max-width:440px;display:flex;flex-direction:column;min-height:100vh;padding:24px 26px 60px}
+  .top-bar{display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(14,56,112,0.6);padding-bottom:12px;border-bottom:1px solid rgba(14,56,112,0.2);margin-bottom:30px}
+  .step{color:#e8576b;font-weight:500}
+  .kicker{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#e8576b;margin-bottom:8px;font-weight:500}
+  .title{font-family:'Rubik Mono One',sans-serif;font-size:30px;line-height:1;letter-spacing:-1px;margin:0 0 12px;color:#0e3870}
+  .intro{font-size:15px;line-height:1.55;color:#0e3870;margin:0 0 28px;font-weight:400}
+  .intro strong{font-weight:500}
+  .field{margin-bottom:18px}
+  .label{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(14,56,112,0.7);margin-bottom:5px;display:block;font-weight:500}
+  .input{width:100%;background:transparent;border:0;border-bottom:1.5px solid #0e3870;padding:8px 0 8px 2px;font:inherit;font-size:16px;color:#0e3870;font-weight:500;-webkit-appearance:none;border-radius:0}
+  .input:focus{outline:none;border-bottom-color:#e8576b}
+  select.input{padding-right:20px;background-image:linear-gradient(45deg,transparent 50%,#0e3870 50%),linear-gradient(135deg,#0e3870 50%,transparent 50%);background-position:calc(100% - 10px) calc(50% - 2px),calc(100% - 5px) calc(50% - 2px);background-size:5px 5px;background-repeat:no-repeat}
+  .id-block{margin-top:32px;padding:14px 16px;background:rgba(232,87,107,0.08);border-left:3px solid #e8576b;display:flex;justify-content:space-between;align-items:center}
+  .id-label{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#e8576b;font-weight:500;margin-bottom:3px}
+  .id-value{font-family:'Rubik Mono One',sans-serif;font-size:16px;color:#0e3870;letter-spacing:0.05em}
+  .id-side{font-size:11px;color:rgba(14,56,112,0.6);text-align:right;line-height:1.4}
+  .cta{margin-top:32px;background:#0e3870;color:#f4ecd6;border:0;padding:16px 24px;font-family:'Rubik',sans-serif;font-weight:500;font-size:15px;letter-spacing:0.05em;cursor:pointer;box-shadow:3px 3px 0 #e8576b;text-decoration:none;text-align:center;display:block}
+  .cta:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 #e8576b}
+  .footer-note{font-size:11px;text-align:center;margin-top:14px;color:rgba(14,56,112,0.55);font-style:italic}
+  .next-link{position:fixed;bottom:14px;right:14px;background:#0e3870;color:#f4ecd6;padding:6px 12px;font-size:11px;letter-spacing:0.1em;text-decoration:none;text-transform:uppercase}
+  .prev-link{position:fixed;bottom:14px;left:14px;background:transparent;color:#0e3870;border:1px solid #0e3870;padding:5px 12px;font-size:11px;letter-spacing:0.1em;text-decoration:none;text-transform:uppercase}
+</style>
+</head>
+<body>
+  <div class="screen">
+    <div class="top-bar">
+      <span>shouldiquit.app</span>
+      <span class="step">Step 1 of 3</span>
+    </div>
+    <div class="kicker">— First, the basics —</div>
+    <h1 class="title">Tell us about you.</h1>
+    <p class="intro">Three things to compare your situation. <strong>We never ask your name, email, or where you work.</strong></p>
+    <div class="field">
+      <label class="label">Your city</label>
+      <select class="input">
+        <option>Bangalore</option><option>Mumbai</option><option>Delhi NCR / Gurgaon</option><option>Hyderabad</option><option>Chennai</option><option>Pune</option><option>Kolkata</option><option>Other</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="label">Your role</label>
+      <select class="input">
+        <option>Senior Product Manager</option><option>Product Manager</option><option>Software Engineer</option><option>Senior Software Engineer</option><option>Engineering Manager</option><option>Designer</option><option>Data Scientist</option><option>Other</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="label">Total years of experience</label>
+      <input type="number" class="input" value="8">
+    </div>
+    <div class="id-block">
+      <div>
+        <div class="id-label">Your anonymous ID</div>
+        <div class="id-value">usr_xk29q</div>
+      </div>
+      <div class="id-side">Generated.<br>No name attached.</div>
+    </div>
+    <a href="04-question.html" class="cta">Start the questions →</a>
+    <div class="footer-note">20 questions · ~5 minutes</div>
+  </div>
+  <a href="01-landing.html" class="prev-link">← back</a>
+  <a href="04-question.html" class="next-link">next →</a>
+</body>
+</html>

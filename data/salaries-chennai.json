@@ -1,0 +1,101 @@
+[
+  {"role":"Senior Product Manager","city":"Chennai","yoe_band":"0-3","p25":16,"p50":20,"p75":27,"p90":34,"confidence":"low","sources":["Glassdoor Chennai PM pages","estimate"]},
+  {"role":"Senior Product Manager","city":"Chennai","yoe_band":"4-7","p25":22,"p50":28,"p75":38,"p90":48,"confidence":"medium","sources":["Glassdoor Chennai","productleadership.com 2026"]},
+  {"role":"Senior Product Manager","city":"Chennai","yoe_band":"8-12","p25":32,"p50":42,"p75":56,"p90":72,"confidence":"medium","sources":["Glassdoor Chennai PM","productleadership.com 2026"]},
+  {"role":"Senior Product Manager","city":"Chennai","yoe_band":"13+","p25":45,"p50":58,"p75":78,"p90":100,"confidence":"medium","sources":["Glassdoor Chennai","productleadership.com 2026"]},
+
+  {"role":"Product Manager","city":"Chennai","yoe_band":"0-3","p25":10,"p50":13,"p75":18,"p90":23,"confidence":"medium","sources":["Glassdoor Chennai PM","skilletal.com"]},
+  {"role":"Product Manager","city":"Chennai","yoe_band":"4-7","p25":16,"p50":21,"p75":28,"p90":36,"confidence":"medium","sources":["Glassdoor Chennai PM","skilletal.com"]},
+  {"role":"Product Manager","city":"Chennai","yoe_band":"8-12","p25":24,"p50":30,"p75":40,"p90":52,"confidence":"medium","sources":["Glassdoor Chennai","productleadership.com"]},
+  {"role":"Product Manager","city":"Chennai","yoe_band":"13+","p25":32,"p50":40,"p75":54,"p90":68,"confidence":"low","sources":["estimate","productleadership.com"]},
+
+  {"role":"Associate PM","city":"Chennai","yoe_band":"0-3","p25":7,"p50":9,"p75":12,"p90":15,"confidence":"low","sources":["estimate","Glassdoor India APM"]},
+  {"role":"Associate PM","city":"Chennai","yoe_band":"4-7","p25":11,"p50":14,"p75":19,"p90":24,"confidence":"low","sources":["estimate"]},
+  {"role":"Associate PM","city":"Chennai","yoe_band":"8-12","p25":14,"p50":18,"p75":24,"p90":31,"confidence":"low","sources":["estimate"]},
+  {"role":"Associate PM","city":"Chennai","yoe_band":"13+","p25":18,"p50":23,"p75":31,"p90":39,"confidence":"low","sources":["estimate"]},
+
+  {"role":"Software Engineer","city":"Chennai","yoe_band":"0-3","p25":4,"p50":5.5,"p75":8,"p90":11,"confidence":"high","sources":["Glassdoor Chennai SWE (avg 5.5L, p25 4L, p75 10L)","Indeed Chennai"]},
+  {"role":"Software Engineer","city":"Chennai","yoe_band":"4-7","p25":9,"p50":13,"p75":19,"p90":25,"confidence":"high","sources":["Glassdoor Chennai SWE","salaryinhand.in (5y product 18-35, service 12-20)"]},
+  {"role":"Software Engineer","city":"Chennai","yoe_band":"8-12","p25":15,"p50":20,"p75":28,"p90":36,"confidence":"medium","sources":["Glassdoor Chennai SSE inferred","salaryinhand.in"]},
+  {"role":"Software Engineer","city":"Chennai","yoe_band":"13+","p25":20,"p50":26,"p75":36,"p90":48,"confidence":"medium","sources":["Glassdoor Chennai SSE","6figr.com (15y avg ~58L premium tier)"]},
+
+  {"role":"Senior Software Engineer","city":"Chennai","yoe_band":"0-3","p25":7,"p50":10,"p75":14,"p90":18,"confidence":"medium","sources":["Glassdoor Chennai SSE avg 10.45L (p25 6.2L, p75 17.4L)"]},
+  {"role":"Senior Software Engineer","city":"Chennai","yoe_band":"4-7","p25":12,"p50":17,"p75":24,"p90":32,"confidence":"high","sources":["Glassdoor Chennai SSE (avg 10.45L, p75 17.4L)","salaryinhand.in"]},
+  {"role":"Senior Software Engineer","city":"Chennai","yoe_band":"8-12","p25":20,"p50":28,"p75":40,"p90":52,"confidence":"high","sources":["Glassdoor Chennai SSE","6figr.com"]},
+  {"role":"Senior Software Engineer","city":"Chennai","yoe_band":"13+","p25":28,"p50":38,"p75":52,"p90":68,"confidence":"medium","sources":["Glassdoor Chennai SSE","6figr.com (15y ~58L)"]},
+
+  {"role":"Engineering Manager","city":"Chennai","yoe_band":"0-3","p25":18,"p50":23,"p75":31,"p90":40,"confidence":"low","sources":["Glassdoor Chennai EM band","estimate (rare at low YoE)"]},
+  {"role":"Engineering Manager","city":"Chennai","yoe_band":"4-7","p25":22,"p50":30,"p75":40,"p90":52,"confidence":"high","sources":["Glassdoor Chennai EM (p25 22L, p75 45L, 339 samples Dec 2025)"]},
+  {"role":"Engineering Manager","city":"Chennai","yoe_band":"8-12","p25":28,"p50":38,"p75":50,"p90":65,"confidence":"high","sources":["Glassdoor Chennai EM (p25 22L p75 45L)","Senior EM Chennai p25 28L p75 60L"]},
+  {"role":"Engineering Manager","city":"Chennai","yoe_band":"13+","p25":40,"p50":55,"p75":75,"p90":100,"confidence":"high","sources":["Glassdoor Chennai Senior EM (p25 28L, p75 59.6L)"]},
+
+  {"role":"Tech Lead","city":"Chennai","yoe_band":"0-3","p25":9,"p50":12,"p75":16,"p90":20,"confidence":"low","sources":["Glassdoor Chennai Tech Lead lower band","estimate"]},
+  {"role":"Tech Lead","city":"Chennai","yoe_band":"4-7","p25":11,"p50":15,"p75":21,"p90":27,"confidence":"high","sources":["Glassdoor Chennai Technical Lead (avg 14.65L, p25 10.5L, p75 22.9L)"]},
+  {"role":"Tech Lead","city":"Chennai","yoe_band":"8-12","p25":16,"p50":22,"p75":30,"p90":40,"confidence":"high","sources":["Glassdoor Chennai Technical Lead","Quora context 8-18L tier-2"]},
+  {"role":"Tech Lead","city":"Chennai","yoe_band":"13+","p25":24,"p50":32,"p75":44,"p90":58,"confidence":"medium","sources":["Glassdoor Chennai Tech Lead extrapolated","PayScale India Sr Tech Lead"]},
+
+  {"role":"Designer","city":"Chennai","yoe_band":"0-3","p25":4,"p50":6,"p75":9,"p90":12,"confidence":"medium","sources":["Glassdoor Chennai UX","Cutshort Chennai UI/UX"]},
+  {"role":"Designer","city":"Chennai","yoe_band":"4-7","p25":7,"p50":10,"p75":15,"p90":20,"confidence":"high","sources":["Cutshort Chennai (2y avg 10.6L, 6.8-16.7L)","Glassdoor Chennai UI/UX"]},
+  {"role":"Designer","city":"Chennai","yoe_band":"8-12","p25":12,"p50":16,"p75":22,"p90":28,"confidence":"medium","sources":["simplilearn 2026","internshala blog"]},
+  {"role":"Designer","city":"Chennai","yoe_band":"13+","p25":17,"p50":22,"p75":30,"p90":38,"confidence":"low","sources":["estimate","internshala (senior 15-35L India)"]},
+
+  {"role":"Senior Designer","city":"Chennai","yoe_band":"0-3","p25":7,"p50":10,"p75":14,"p90":18,"confidence":"low","sources":["estimate"]},
+  {"role":"Senior Designer","city":"Chennai","yoe_band":"4-7","p25":12,"p50":16,"p75":22,"p90":29,"confidence":"medium","sources":["Cutshort Chennai","Glassdoor Chennai UX"]},
+  {"role":"Senior Designer","city":"Chennai","yoe_band":"8-12","p25":18,"p50":24,"p75":33,"p90":42,"confidence":"medium","sources":["simplilearn 2026","internshala"]},
+  {"role":"Senior Designer","city":"Chennai","yoe_band":"13+","p25":24,"p50":32,"p75":44,"p90":56,"confidence":"low","sources":["estimate","internshala (lead 15-35L)"]},
+
+  {"role":"Data Scientist","city":"Chennai","yoe_band":"0-3","p25":6,"p50":9,"p75":13,"p90":17,"confidence":"high","sources":["Glassdoor Chennai DS (p25 6.5L, p75 19L, 1283 samples Apr 2026)","futurense.com"]},
+  {"role":"Data Scientist","city":"Chennai","yoe_band":"4-7","p25":11,"p50":16,"p75":22,"p90":28,"confidence":"high","sources":["Glassdoor Chennai DS","upgrad.com (4-6y 10-22L)"]},
+  {"role":"Data Scientist","city":"Chennai","yoe_band":"8-12","p25":19,"p50":25,"p75":34,"p90":44,"confidence":"medium","sources":["Glassdoor Chennai DS","upgrad.com (senior 30-40L+)"]},
+  {"role":"Data Scientist","city":"Chennai","yoe_band":"13+","p25":26,"p50":34,"p75":46,"p90":60,"confidence":"medium","sources":["Glassdoor Chennai Lead DS (p25 21.5L, p75 36L)"]},
+
+  {"role":"Senior Data Scientist","city":"Chennai","yoe_band":"0-3","p25":10,"p50":14,"p75":19,"p90":24,"confidence":"low","sources":["estimate (rare at low YoE)"]},
+  {"role":"Senior Data Scientist","city":"Chennai","yoe_band":"4-7","p25":17,"p50":23,"p75":31,"p90":40,"confidence":"medium","sources":["Glassdoor Chennai DS upper bands","futurense.com"]},
+  {"role":"Senior Data Scientist","city":"Chennai","yoe_band":"8-12","p25":25,"p50":33,"p75":45,"p90":58,"confidence":"high","sources":["Glassdoor Chennai Lead DS (p25 21.5L, p75 36L)","upgrad.com"]},
+  {"role":"Senior Data Scientist","city":"Chennai","yoe_band":"13+","p25":34,"p50":45,"p75":60,"p90":78,"confidence":"medium","sources":["Glassdoor Chennai Lead DS","upgrad.com"]},
+
+  {"role":"DevOps Engineer","city":"Chennai","yoe_band":"0-3","p25":4,"p50":5,"p75":7,"p90":9,"confidence":"high","sources":["Glassdoor Chennai DevOps (avg 7.6L, p25 5.3L)","slajobs.com (entry 4.4L)"]},
+  {"role":"DevOps Engineer","city":"Chennai","yoe_band":"4-7","p25":7,"p50":10,"p75":14,"p90":18,"confidence":"high","sources":["Glassdoor Chennai DevOps","slajobs.com (4-9y avg 7.7L)"]},
+  {"role":"DevOps Engineer","city":"Chennai","yoe_band":"8-12","p25":12,"p50":16,"p75":22,"p90":28,"confidence":"high","sources":["Glassdoor Chennai DevOps (p90 15.5L)","slajobs.com (10-20y avg 13.2L)","igmguru"]},
+  {"role":"DevOps Engineer","city":"Chennai","yoe_band":"13+","p25":18,"p50":24,"p75":32,"p90":42,"confidence":"medium","sources":["slajobs.com","igmguru DevOps 2026"]},
+
+  {"role":"QA Engineer","city":"Chennai","yoe_band":"0-3","p25":3,"p50":4.5,"p75":6.5,"p90":8.5,"confidence":"high","sources":["Glassdoor Chennai QA (avg 6.2L, p25 4.2L, p75 10L)"]},
+  {"role":"QA Engineer","city":"Chennai","yoe_band":"4-7","p25":6,"p50":9,"p75":13,"p90":17,"confidence":"high","sources":["Glassdoor Chennai QA","Quora (7y senior QA Chennai ~17L)"]},
+  {"role":"QA Engineer","city":"Chennai","yoe_band":"8-12","p25":10,"p50":14,"p75":20,"p90":26,"confidence":"medium","sources":["Glassdoor Chennai QA upper","product co 12-22L senior QA"]},
+  {"role":"QA Engineer","city":"Chennai","yoe_band":"13+","p25":14,"p50":19,"p75":26,"p90":34,"confidence":"low","sources":["estimate","product co automation 12-22L+"]},
+
+  {"role":"Sales Lead","city":"Chennai","yoe_band":"0-3","p25":5,"p50":7,"p75":10,"p90":13,"confidence":"low","sources":["estimate","Glassdoor India sales"]},
+  {"role":"Sales Lead","city":"Chennai","yoe_band":"4-7","p25":10,"p50":13,"p75":18,"p90":23,"confidence":"low","sources":["estimate"]},
+  {"role":"Sales Lead","city":"Chennai","yoe_band":"8-12","p25":16,"p50":22,"p75":30,"p90":38,"confidence":"low","sources":["estimate"]},
+  {"role":"Sales Lead","city":"Chennai","yoe_band":"13+","p25":25,"p50":33,"p75":45,"p90":58,"confidence":"low","sources":["estimate"]},
+
+  {"role":"Marketing Manager","city":"Chennai","yoe_band":"0-3","p25":6,"p50":8,"p75":11,"p90":14,"confidence":"medium","sources":["Glassdoor Chennai Marketing Manager (avg 12L, p25 9L, p75 17.5L)"]},
+  {"role":"Marketing Manager","city":"Chennai","yoe_band":"4-7","p25":9,"p50":12,"p75":17,"p90":22,"confidence":"high","sources":["Glassdoor Chennai Marketing Manager (avg 12L, p25 9L, p75 17.5L)"]},
+  {"role":"Marketing Manager","city":"Chennai","yoe_band":"8-12","p25":14,"p50":19,"p75":26,"p90":34,"confidence":"medium","sources":["Glassdoor Chennai Marketing Manager upper bands"]},
+  {"role":"Marketing Manager","city":"Chennai","yoe_band":"13+","p25":22,"p50":29,"p75":40,"p90":52,"confidence":"low","sources":["estimate","Glassdoor Chennai Marketing extrapolated"]},
+
+  {"role":"Growth Manager","city":"Chennai","yoe_band":"0-3","p25":7,"p50":10,"p75":13,"p90":17,"confidence":"medium","sources":["skilletal.com (Chennai growth 20-25L mid)"]},
+  {"role":"Growth Manager","city":"Chennai","yoe_band":"4-7","p25":12,"p50":17,"p75":23,"p90":30,"confidence":"medium","sources":["skilletal.com Chennai 20-25L"]},
+  {"role":"Growth Manager","city":"Chennai","yoe_band":"8-12","p25":19,"p50":26,"p75":35,"p90":45,"confidence":"low","sources":["skilletal.com extrapolated","estimate"]},
+  {"role":"Growth Manager","city":"Chennai","yoe_band":"13+","p25":28,"p50":37,"p75":50,"p90":64,"confidence":"low","sources":["estimate"]},
+
+  {"role":"Customer Success Manager","city":"Chennai","yoe_band":"0-3","p25":5,"p50":7,"p75":10,"p90":14,"confidence":"medium","sources":["Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L; 208 samples Feb 2026)"]},
+  {"role":"Customer Success Manager","city":"Chennai","yoe_band":"4-7","p25":7,"p50":12,"p75":17,"p90":24,"confidence":"high","sources":["Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L)"]},
+  {"role":"Customer Success Manager","city":"Chennai","yoe_band":"8-12","p25":13,"p50":18,"p75":25,"p90":32,"confidence":"medium","sources":["Glassdoor Chennai CSM upper bands"]},
+  {"role":"Customer Success Manager","city":"Chennai","yoe_band":"13+","p25":18,"p50":25,"p75":34,"p90":44,"confidence":"low","sources":["estimate","Glassdoor Chennai CSM p90 27L"]},
+
+  {"role":"Finance Analyst","city":"Chennai","yoe_band":"0-3","p25":4,"p50":5.5,"p75":7.5,"p90":10,"confidence":"low","sources":["Glassdoor Chennai Sr BA (low 6.2L)","estimate"]},
+  {"role":"Finance Analyst","city":"Chennai","yoe_band":"4-7","p25":7,"p50":9,"p75":12,"p90":16,"confidence":"low","sources":["estimate","Glassdoor India Finance Analyst"]},
+  {"role":"Finance Analyst","city":"Chennai","yoe_band":"8-12","p25":11,"p50":14,"p75":19,"p90":24,"confidence":"low","sources":["estimate"]},
+  {"role":"Finance Analyst","city":"Chennai","yoe_band":"13+","p25":15,"p50":20,"p75":27,"p90":35,"confidence":"low","sources":["estimate"]},
+
+  {"role":"HR Business Partner","city":"Chennai","yoe_band":"0-3","p25":5,"p50":6.5,"p75":9,"p90":12,"confidence":"low","sources":["Glassdoor Chennai HR Manager (avg 10L, p25 6.3L)","keka.com"]},
+  {"role":"HR Business Partner","city":"Chennai","yoe_band":"4-7","p25":8,"p50":11,"p75":15,"p90":20,"confidence":"medium","sources":["Glassdoor Chennai HR Manager (avg 10L, p25 6.3L, p75 14.5L)"]},
+  {"role":"HR Business Partner","city":"Chennai","yoe_band":"8-12","p25":13,"p50":18,"p75":24,"p90":31,"confidence":"medium","sources":["Glassdoor Chennai HR upper bands","keka.com HRBP"]},
+  {"role":"HR Business Partner","city":"Chennai","yoe_band":"13+","p25":20,"p50":27,"p75":36,"p90":46,"confidence":"low","sources":["estimate","keka.com HRBP India"]},
+
+  {"role":"Operations Manager","city":"Chennai","yoe_band":"0-3","p25":5,"p50":7,"p75":9,"p90":12,"confidence":"low","sources":["estimate","Glassdoor India Ops Mgr"]},
+  {"role":"Operations Manager","city":"Chennai","yoe_band":"4-7","p25":8,"p50":11,"p75":15,"p90":20,"confidence":"low","sources":["estimate","Glassdoor India"]},
+  {"role":"Operations Manager","city":"Chennai","yoe_band":"8-12","p25":13,"p50":17,"p75":23,"p90":30,"confidence":"low","sources":["estimate"]},
+  {"role":"Operations Manager","city":"Chennai","yoe_band":"13+","p25":19,"p50":25,"p75":34,"p90":44,"confidence":"low","sources":["estimate"]}
+]

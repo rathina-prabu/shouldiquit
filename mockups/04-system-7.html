@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · System 7</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#7a7a7a;background-image:repeating-conic-gradient(rgba(0,0,0,0.06) 0% 25%,transparent 0% 50%);background-size:4px 4px;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:16px;font-family:'Pixelify Sans',sans-serif}
+  .window{width:100%;max-width:420px;background:#dcdcdc;border:1px solid #000;box-shadow:5px 5px 0 #000}
+  .titlebar{background:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 3px);padding:4px 8px;border-bottom:1px solid #000;display:flex;align-items:center;gap:6px}
+  .title-text{background:#dcdcdc;padding:1px 10px;font-family:'Pixelify Sans',sans-serif;font-size:14px;font-weight:700;flex:1;text-align:center}
+  .close-box{width:13px;height:13px;border:1px solid #000;background:#dcdcdc;box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 0 #888}
+  .content{padding:18px 16px}
+  .icon-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+  .icon{width:48px;height:48px;border:2px solid #000;background:white;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+  .question-text{font-family:'Pixelify Sans',sans-serif;font-size:14px;font-weight:700;line-height:1.35;padding-top:4px}
+  .question-text .normal{font-weight:500;display:block;margin-top:4px}
+  .meta-info{font-family:'VT323',monospace;font-size:18px;border-top:1px dashed #000;border-bottom:1px dashed #000;padding:6px 0;margin:14px 0;display:flex;justify-content:space-between}
+  .options{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+  .option{background:#dcdcdc;border:1px solid #000;box-shadow:2px 2px 0 #000;padding:9px 12px;font-family:'Pixelify Sans',sans-serif;font-size:13px;font-weight:500;text-align:left;cursor:pointer;display:flex;align-items:center;gap:10px;color:#000}
+  .option:hover{background:#000;color:#fff}
+  .option:active{box-shadow:1px 1px 0 #000;transform:translate(1px,1px)}
+  .radio{width:13px;height:13px;border-radius:50%;border:1.5px solid currentColor;flex-shrink:0}
+  .progress-row{display:flex;align-items:center;gap:8px;font-family:'VT323',monospace;font-size:18px;border-top:1px solid #000;padding-top:10px}
+  .progress-bar{flex:1;height:14px;border:1.5px solid #000;background:white;position:relative;box-shadow:inset 1px 1px 0 #888}
+  .progress-fill{height:100%;width:75%;background:repeating-linear-gradient(135deg,#000 0 3px,transparent 3px 6px)}
+</style>
+</head>
+<body>
+  <div class="window">
+    <div class="titlebar">
+      <span class="close-box"></span>
+      <span class="title-text">Dr. K — Session 1.app</span>
+    </div>
+    <div class="content">
+      <div class="icon-row">
+        <div class="icon">👨‍⚕️</div>
+        <div class="question-text">Let's talk about Sundays.<span class="normal">How does your body feel when you remember it's Monday tomorrow?</span></div>
+      </div>
+      <div class="meta-info"><span>SEC.5: STATE OF YOU</span><span>ITEM 15/20</span></div>
+      <div class="options">
+        <button class="option"><div class="radio"></div><span>🌞 Excited about something on the calendar</span></button>
+        <button class="option"><div class="radio"></div><span>😐 Neutral, it's just Monday</span></button>
+        <button class="option"><div class="radio"></div><span>😔 Heavy chest, dread</span></button>
+        <button class="option"><div class="radio"></div><span>🪦 Already pre-tired</span></button>
+      </div>
+      <div class="progress-row">
+        <span>&gt;</span>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <span>75%</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Q15</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Rubik',sans-serif;background:#f4ecd6;color:#0e3870;min-height:100vh;display:flex;justify-content:center;background-image:radial-gradient(circle,rgba(14,56,112,0.04) 1px,transparent 1px);background-size:3px 3px}
+  .zine{width:100%;max-width:440px;display:flex;flex-direction:column;padding:24px 26px 60px}
+  .top-bar{display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(14,56,112,0.6);padding-bottom:12px;border-bottom:1px solid rgba(14,56,112,0.2);margin-bottom:30px}
+  .top-bar .num{color:#e8576b;font-weight:500}
+  .kicker{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#e8576b;margin-bottom:10px;font-weight:500}
+  .question{font-family:'Rubik Mono One',sans-serif;font-size:32px;line-height:1;letter-spacing:-0.8px;margin:0 0 14px;color:#0e3870}
+  .followup{font-family:'Rubik',sans-serif;font-style:italic;font-size:17px;line-height:1.45;color:rgba(14,56,112,0.85);margin:0 0 32px}
+  .opt-label{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(14,56,112,0.55);margin-bottom:10px;font-weight:500}
+  .options{display:flex;flex-direction:column;gap:6px}
+  .option{background:transparent;border:1px solid rgba(14,56,112,0.3);padding:13px 16px;font:inherit;font-size:14.5px;text-align:left;display:flex;align-items:center;gap:12px;cursor:pointer;color:#0e3870;transition:all .12s;text-decoration:none}
+  .option:hover{border-color:#0e3870;background:rgba(14,56,112,0.04)}
+  .opt-num{font-family:'Rubik Mono One',sans-serif;color:#e8576b;font-size:12px;min-width:20px}
+  .emoji{font-size:18px}
+  .opt-text{flex:1}
+  .progress{margin-top:32px;display:flex;align-items:center;gap:12px}
+  .bar{flex:1;height:2px;background:rgba(14,56,112,0.15)}
+  .bar-fill{height:100%;width:75%;background:#e8576b}
+  .progress-meta{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(14,56,112,0.55)}
+  .next-link{position:fixed;bottom:14px;right:14px;background:#0e3870;color:#f4ecd6;padding:6px 12px;font-size:11px;letter-spacing:0.1em;text-decoration:none;text-transform:uppercase}
+  .prev-link{position:fixed;bottom:14px;left:14px;background:transparent;color:#0e3870;border:1px solid #0e3870;padding:5px 12px;font-size:11px;letter-spacing:0.1em;text-decoration:none;text-transform:uppercase}
+</style>
+</head>
+<body>
+  <div class="zine">
+    <div class="top-bar">
+      <span>Section 5 · The State of You</span>
+      <span><span class="num">15</span> / 20</span>
+    </div>
+    <div class="kicker">— Q15 —</div>
+    <h1 class="question">Sundays.</h1>
+    <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+    <div class="opt-label">Pick one</div>
+    <div class="options">
+      <a href="06-salary.html" class="option"><span class="opt-num">01</span><span class="emoji">🌞</span><span class="opt-text">Excited about the calendar</span></a>
+      <a href="06-salary.html" class="option"><span class="opt-num">02</span><span class="emoji">😐</span><span class="opt-text">Neutral, just Monday</span></a>
+      <a href="06-salary.html" class="option"><span class="opt-num">03</span><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></a>
+      <a href="06-salary.html" class="option"><span class="opt-num">04</span><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></a>
+    </div>
+    <div class="progress">
+      <div class="bar"><div class="bar-fill"></div></div>
+      <span class="progress-meta">5 left</span>
+    </div>
+  </div>
+  <a href="02-booking.html" class="prev-link">← back</a>
+  <a href="06-salary.html" class="next-link">next →</a>
+</body>
+</html>

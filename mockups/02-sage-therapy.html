@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Sage Therapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#f5efe4;--sage:#7a8f6b;--sage-dark:#4d5d42;--ink:#2a342a;--soft:#e0d8c4}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);display:flex;justify-content:center;min-height:100vh}
+  .container{width:100%;max-width:440px;padding:36px 26px;display:flex;flex-direction:column;min-height:100vh}
+  .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:64px}
+  .doctor{display:flex;align-items:center;gap:10px}
+  .avatar{width:36px;height:36px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;color:var(--cream);font-family:'Fraunces';font-weight:500;font-size:16px}
+  .name{font-family:'Fraunces';font-size:16px;font-weight:500}
+  .session{font-size:11px;color:var(--sage-dark);letter-spacing:1.5px;text-transform:uppercase}
+  .question-label{font-size:11px;color:var(--sage-dark);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px}
+  .question{font-family:'Fraunces';font-weight:300;font-variation-settings:'opsz' 144;font-size:36px;line-height:1.1;margin-bottom:14px;letter-spacing:-1px}
+  .followup{font-family:'Fraunces';font-style:italic;font-weight:400;font-size:19px;color:var(--sage-dark);line-height:1.35;margin-bottom:52px}
+  .options{display:flex;flex-direction:column;gap:10px;flex:1}
+  .option{background:transparent;border:1px solid var(--soft);padding:18px 20px;border-radius:18px;font-size:15px;text-align:left;font:inherit;color:var(--ink);cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:14px}
+  .option:hover{background:#fff;border-color:var(--sage);transform:translateX(3px);box-shadow:0 4px 12px rgba(122,143,107,0.15)}
+  .emoji{font-size:22px;width:28px;text-align:center}
+  .progress{margin-top:40px;display:flex;flex-direction:column;gap:10px}
+  .progress-track{height:2px;background:var(--soft);position:relative}
+  .progress-fill{height:100%;background:var(--sage);width:75%}
+  .progress-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--sage-dark);letter-spacing:1.5px;text-transform:uppercase}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <div class="doctor">
+        <div class="avatar">K</div>
+        <div class="name">Dr. K</div>
+      </div>
+      <div class="session">Session · 16 May</div>
+    </div>
+    <div class="question-label">Section 5 — The State of You</div>
+    <h1 class="question">Let's talk about Sundays.</h1>
+    <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+    <div class="options">
+      <button class="option"><span class="emoji">🌞</span><span>Excited about something on the calendar</span></button>
+      <button class="option"><span class="emoji">😐</span><span>Neutral, it's just Monday</span></button>
+      <button class="option"><span class="emoji">😔</span><span>Heavy chest, dread</span></button>
+      <button class="option"><span class="emoji">🪦</span><span>Already pre-tired</span></button>
+    </div>
+    <div class="progress">
+      <div class="progress-track"><div class="progress-fill"></div></div>
+      <div class="progress-meta">
+        <span>Q15 / 20</span>
+        <span>5 left</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

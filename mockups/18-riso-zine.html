@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Riso Zine</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Rubik',sans-serif;background:#f4ecd6;min-height:100vh;display:flex;justify-content:center;padding:16px;color:#0e3870;background-image:radial-gradient(circle,rgba(0,0,0,0.05) 1px,transparent 1px);background-size:2px 2px}
+  .zine{width:100%;max-width:440px;background:#f4ecd6;padding:24px 22px;display:flex;flex-direction:column;border:1px solid #0e3870}
+  .top{display:flex;justify-content:space-between;border-bottom:3px solid #e8576b;padding-bottom:8px;margin-bottom:24px;font-family:'Rubik Mono One',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+  .issue{color:#e8576b}
+  .number{font-size:14px;background:#0e3870;color:#f4ecd6;padding:3px 9px}
+  .kicker{font-family:'Rubik Mono One',sans-serif;font-size:11px;letter-spacing:3px;color:#e8576b;margin-bottom:12px;text-transform:uppercase}
+  .kicker::after{content:'';display:inline-block;width:40px;height:1.5px;background:#e8576b;margin-left:8px;vertical-align:middle}
+  .question-stack{position:relative;margin-bottom:8px}
+  .question{font-family:'Rubik Mono One',sans-serif;font-size:38px;line-height:0.95;color:#0e3870;margin:0;letter-spacing:-1px;text-transform:uppercase;position:relative;z-index:2}
+  .question::after{content:"LET'S TALK ABOUT SUNDAYS.";position:absolute;left:3px;top:3px;color:#e8576b;mix-blend-mode:multiply;z-index:1;opacity:0.85}
+  .followup{font-size:15px;line-height:1.4;margin:24px 0 28px;padding:12px 14px;background:#e8576b;color:#f4ecd6;transform:rotate(-0.5deg);box-shadow:2px 2px 0 #0e3870;font-weight:500}
+  .opt-label{font-family:'Rubik Mono One',sans-serif;font-size:10px;letter-spacing:3px;color:#e8576b;margin-bottom:10px;text-transform:uppercase}
+  .options{display:flex;flex-direction:column;gap:8px}
+  .option{background:transparent;border:2px solid #0e3870;padding:11px 14px;font:inherit;font-size:14px;font-weight:500;text-align:left;display:flex;align-items:center;gap:12px;cursor:pointer;color:#0e3870;position:relative;transition:all .12s}
+  .option:hover{background:#0e3870;color:#f4ecd6}
+  .opt-num{font-family:'Rubik Mono One',sans-serif;color:#e8576b;font-size:13px}
+  .option:hover .opt-num{color:#f4ecd6}
+  .emoji{font-size:20px}
+  .opt-text{flex:1}
+  .footer{margin-top:24px;padding-top:14px;border-top:1px dashed #0e3870;display:flex;justify-content:space-between;font-family:'Rubik Mono One',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#0e3870}
+</style>
+</head>
+<body>
+  <div class="zine">
+    <div class="top">
+      <span class="issue">Dr. K Zine · Issue 1</span>
+      <span class="number">15/20</span>
+    </div>
+    <div class="kicker">Section 05 · The State of You</div>
+    <div class="question-stack">
+      <h1 class="question">Let's talk about Sundays.</h1>
+    </div>
+    <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+    <div class="opt-label">— Pick one —</div>
+    <div class="options">
+      <button class="option"><span class="opt-num">01</span><span class="emoji">🌞</span><span class="opt-text">Excited about the calendar</span></button>
+      <button class="option"><span class="opt-num">02</span><span class="emoji">😐</span><span class="opt-text">Neutral, just Monday</span></button>
+      <button class="option"><span class="opt-num">03</span><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+      <button class="option"><span class="opt-num">04</span><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+    </div>
+    <div class="footer">
+      <span>D.I.Y. CAREER ASSESSMENT</span>
+      <span>16.05.26</span>
+    </div>
+  </div>
+</body>
+</html>

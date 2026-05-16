@@ -1,0 +1,5906 @@
+{
+  "version": "2026-05-16",
+  "schema_version": 1,
+  "salaries": {
+    "Bangalore": {
+      "Senior Product Manager": {
+        "0-3": {
+          "p25": 24,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 62,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        },
+        "8-12": {
+          "p25": 35,
+          "p50": 48,
+          "p75": 60,
+          "p90": 80,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi",
+            "PayScale"
+          ]
+        },
+        "13+": {
+          "p25": 50,
+          "p50": 65,
+          "p75": 85,
+          "p90": 110,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Product Manager": {
+        "0-3": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "HelloPM"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 38,
+          "p90": 48,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        },
+        "8-12": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 50,
+          "p90": 65,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 38,
+          "p50": 50,
+          "p75": 65,
+          "p90": 85,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Associate PM": {
+        "0-3": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 21,
+          "p90": 27,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "Indeed",
+            "TheProductFolks"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 26,
+          "p90": 33,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Indeed"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 25,
+          "p75": 33,
+          "p90": 42,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Software Engineer": {
+        "0-3": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 20,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 25,
+          "p90": 32,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 38,
+          "p90": 50,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 62,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Senior Software Engineer": {
+        "0-3": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Levels.fyi"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 30,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "high",
+          "sources": [
+            "Levels.fyi",
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 32,
+          "p50": 42,
+          "p75": 55,
+          "p90": 72,
+          "confidence": "high",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 42,
+          "p50": 55,
+          "p75": 72,
+          "p90": 92,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Engineering Manager": {
+        "0-3": {
+          "p25": 28,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 32,
+          "p50": 42,
+          "p75": 56,
+          "p90": 72,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "8-12": {
+          "p25": 40,
+          "p50": 56,
+          "p75": 72,
+          "p90": 95,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi",
+            "PayScale"
+          ]
+        },
+        "13+": {
+          "p25": 55,
+          "p50": 75,
+          "p75": 100,
+          "p90": 135,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Tech Lead": {
+        "0-3": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 20,
+          "p50": 25,
+          "p75": 33,
+          "p90": 45,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "6figr"
+          ]
+        },
+        "8-12": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 50,
+          "p90": 65,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "6figr"
+          ]
+        },
+        "13+": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 60,
+          "p90": 78,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor"
+          ]
+        }
+      },
+      "Designer": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 18,
+          "p90": 24,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "8-12": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 32,
+          "confidence": "medium",
+          "sources": [
+            "PayScale"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 42,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Senior Designer": {
+        "0-3": {
+          "p25": 10,
+          "p50": 13,
+          "p75": 18,
+          "p90": 23,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 17,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 45,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 62,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Data Scientist": {
+        "0-3": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 21,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Upgrad",
+            "DigitalRegenesys"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 26,
+          "p90": 34,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 25,
+          "p50": 32,
+          "p75": 45,
+          "p90": 58,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 32,
+          "p50": 42,
+          "p75": 58,
+          "p90": 75,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Senior Data Scientist": {
+        "0-3": {
+          "p25": 15,
+          "p50": 19,
+          "p75": 25,
+          "p90": 32,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 38,
+          "p90": 48,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 32,
+          "p50": 42,
+          "p75": 55,
+          "p90": 72,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 45,
+          "p50": 58,
+          "p75": 78,
+          "p90": 100,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "DevOps Engineer": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Upgrad",
+            "DevOpsTrainingInstitute"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "6figr"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 45,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "6figr"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 38,
+          "p75": 50,
+          "p90": 65,
+          "confidence": "medium",
+          "sources": [
+            "6figr"
+          ]
+        }
+      },
+      "QA Engineer": {
+        "0-3": {
+          "p25": 4,
+          "p50": 6,
+          "p75": 8,
+          "p90": 10,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "PayScale",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 19,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Cutshort"
+          ]
+        },
+        "8-12": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 30,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "6figr"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 42,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Sales Lead": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 22,
+          "p90": 30,
+          "confidence": "medium",
+          "sources": [
+            "6figr",
+            "Upgrad"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 36,
+          "p90": 50,
+          "confidence": "medium",
+          "sources": [
+            "6figr",
+            "Upgrad"
+          ]
+        },
+        "13+": {
+          "p25": 30,
+          "p50": 42,
+          "p75": 60,
+          "p90": 85,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Marketing Manager": {
+        "0-3": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 19,
+          "confidence": "medium",
+          "sources": [
+            "SalaryExpert",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 19,
+          "p75": 26,
+          "p90": 33,
+          "confidence": "high",
+          "sources": [
+            "SalaryExpert",
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "8-12": {
+          "p25": 24,
+          "p50": 32,
+          "p75": 42,
+          "p90": 55,
+          "confidence": "high",
+          "sources": [
+            "SalaryExpert",
+            "PayScale"
+          ]
+        },
+        "13+": {
+          "p25": 32,
+          "p50": 43,
+          "p75": 58,
+          "p90": 75,
+          "confidence": "medium",
+          "sources": [
+            "SalaryExpert"
+          ]
+        }
+      },
+      "Growth Manager": {
+        "0-3": {
+          "p25": 10,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "medium",
+          "sources": [
+            "SalaryExpert",
+            "6figr"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 22,
+          "p75": 30,
+          "p90": 38,
+          "confidence": "high",
+          "sources": [
+            "6figr",
+            "SalaryExpert"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 30,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "medium",
+          "sources": [
+            "6figr",
+            "SalaryExpert"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 38,
+          "p75": 52,
+          "p90": 68,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Customer Success Manager": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 13,
+          "p90": 16,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "4-7": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "PayScale",
+            "WorldSalaries"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 42,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "13+": {
+          "p25": 25,
+          "p50": 34,
+          "p75": 45,
+          "p90": 58,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Finance Analyst": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 9,
+          "p90": 12,
+          "confidence": "medium",
+          "sources": [
+            "PayScale",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 19,
+          "confidence": "medium",
+          "sources": [
+            "PayScale"
+          ]
+        },
+        "8-12": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 30,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 25,
+          "p75": 34,
+          "p90": 45,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "HR Business Partner": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 12,
+          "p90": 15,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "medium",
+          "sources": [
+            "Keka",
+            "Glassdoor",
+            "Indeed"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 26,
+          "p75": 38,
+          "p90": 50,
+          "confidence": "medium",
+          "sources": [
+            "Keka",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 30,
+          "p50": 45,
+          "p75": 70,
+          "p90": 100,
+          "confidence": "low",
+          "sources": [
+            "Keka"
+          ]
+        }
+      },
+      "Operations Manager": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 15,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "medium",
+          "sources": [
+            "Salary.com",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "medium",
+          "sources": [
+            "Salary.com"
+          ]
+        },
+        "13+": {
+          "p25": 22,
+          "p50": 30,
+          "p75": 42,
+          "p90": 55,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      }
+    },
+    "Chennai": {
+      "Senior Product Manager": {
+        "0-3": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor Chennai PM pages",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 38,
+          "p90": 48,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai",
+            "productleadership.com 2026"
+          ]
+        },
+        "8-12": {
+          "p25": 32,
+          "p50": 42,
+          "p75": 56,
+          "p90": 72,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai PM",
+            "productleadership.com 2026"
+          ]
+        },
+        "13+": {
+          "p25": 45,
+          "p50": 58,
+          "p75": 78,
+          "p90": 100,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai",
+            "productleadership.com 2026"
+          ]
+        }
+      },
+      "Product Manager": {
+        "0-3": {
+          "p25": 10,
+          "p50": 13,
+          "p75": 18,
+          "p90": 23,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai PM",
+            "skilletal.com"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 21,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai PM",
+            "skilletal.com"
+          ]
+        },
+        "8-12": {
+          "p25": 24,
+          "p50": 30,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai",
+            "productleadership.com"
+          ]
+        },
+        "13+": {
+          "p25": 32,
+          "p50": 40,
+          "p75": 54,
+          "p90": 68,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "productleadership.com"
+          ]
+        }
+      },
+      "Associate PM": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 12,
+          "p90": 15,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor India APM"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 39,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Software Engineer": {
+        "0-3": {
+          "p25": 4,
+          "p50": 5.5,
+          "p75": 8,
+          "p90": 11,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai SWE (avg 5.5L, p25 4L, p75 10L)",
+            "Indeed Chennai"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 13,
+          "p75": 19,
+          "p90": 25,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai SWE",
+            "salaryinhand.in (5y product 18-35, service 12-20)"
+          ]
+        },
+        "8-12": {
+          "p25": 15,
+          "p50": 20,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai SSE inferred",
+            "salaryinhand.in"
+          ]
+        },
+        "13+": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 36,
+          "p90": 48,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai SSE",
+            "6figr.com (15y avg ~58L premium tier)"
+          ]
+        }
+      },
+      "Senior Software Engineer": {
+        "0-3": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 14,
+          "p90": 18,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai SSE avg 10.45L (p25 6.2L, p75 17.4L)"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 17,
+          "p75": 24,
+          "p90": 32,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai SSE (avg 10.45L, p75 17.4L)",
+            "salaryinhand.in"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 28,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai SSE",
+            "6figr.com"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 38,
+          "p75": 52,
+          "p90": 68,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai SSE",
+            "6figr.com (15y ~58L)"
+          ]
+        }
+      },
+      "Engineering Manager": {
+        "0-3": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 40,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor Chennai EM band",
+            "estimate (rare at low YoE)"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 30,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai EM (p25 22L, p75 45L, 339 samples Dec 2025)"
+          ]
+        },
+        "8-12": {
+          "p25": 28,
+          "p50": 38,
+          "p75": 50,
+          "p90": 65,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai EM (p25 22L p75 45L)",
+            "Senior EM Chennai p25 28L p75 60L"
+          ]
+        },
+        "13+": {
+          "p25": 40,
+          "p50": 55,
+          "p75": 75,
+          "p90": 100,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai Senior EM (p25 28L, p75 59.6L)"
+          ]
+        }
+      },
+      "Tech Lead": {
+        "0-3": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 20,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor Chennai Tech Lead lower band",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 15,
+          "p75": 21,
+          "p90": 27,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai Technical Lead (avg 14.65L, p25 10.5L, p75 22.9L)"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 22,
+          "p75": 30,
+          "p90": 40,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai Technical Lead",
+            "Quora context 8-18L tier-2"
+          ]
+        },
+        "13+": {
+          "p25": 24,
+          "p50": 32,
+          "p75": 44,
+          "p90": 58,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai Tech Lead extrapolated",
+            "PayScale India Sr Tech Lead"
+          ]
+        }
+      },
+      "Designer": {
+        "0-3": {
+          "p25": 4,
+          "p50": 6,
+          "p75": 9,
+          "p90": 12,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai UX",
+            "Cutshort Chennai UI/UX"
+          ]
+        },
+        "4-7": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 15,
+          "p90": 20,
+          "confidence": "high",
+          "sources": [
+            "Cutshort Chennai (2y avg 10.6L, 6.8-16.7L)",
+            "Glassdoor Chennai UI/UX"
+          ]
+        },
+        "8-12": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "medium",
+          "sources": [
+            "simplilearn 2026",
+            "internshala blog"
+          ]
+        },
+        "13+": {
+          "p25": 17,
+          "p50": 22,
+          "p75": 30,
+          "p90": 38,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "internshala (senior 15-35L India)"
+          ]
+        }
+      },
+      "Senior Designer": {
+        "0-3": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 14,
+          "p90": 18,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 22,
+          "p90": 29,
+          "confidence": "medium",
+          "sources": [
+            "Cutshort Chennai",
+            "Glassdoor Chennai UX"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 33,
+          "p90": 42,
+          "confidence": "medium",
+          "sources": [
+            "simplilearn 2026",
+            "internshala"
+          ]
+        },
+        "13+": {
+          "p25": 24,
+          "p50": 32,
+          "p75": 44,
+          "p90": 56,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "internshala (lead 15-35L)"
+          ]
+        }
+      },
+      "Data Scientist": {
+        "0-3": {
+          "p25": 6,
+          "p50": 9,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai DS (p25 6.5L, p75 19L, 1283 samples Apr 2026)",
+            "futurense.com"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 16,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai DS",
+            "upgrad.com (4-6y 10-22L)"
+          ]
+        },
+        "8-12": {
+          "p25": 19,
+          "p50": 25,
+          "p75": 34,
+          "p90": 44,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai DS",
+            "upgrad.com (senior 30-40L+)"
+          ]
+        },
+        "13+": {
+          "p25": 26,
+          "p50": 34,
+          "p75": 46,
+          "p90": 60,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai Lead DS (p25 21.5L, p75 36L)"
+          ]
+        }
+      },
+      "Senior Data Scientist": {
+        "0-3": {
+          "p25": 10,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate (rare at low YoE)"
+          ]
+        },
+        "4-7": {
+          "p25": 17,
+          "p50": 23,
+          "p75": 31,
+          "p90": 40,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai DS upper bands",
+            "futurense.com"
+          ]
+        },
+        "8-12": {
+          "p25": 25,
+          "p50": 33,
+          "p75": 45,
+          "p90": 58,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai Lead DS (p25 21.5L, p75 36L)",
+            "upgrad.com"
+          ]
+        },
+        "13+": {
+          "p25": 34,
+          "p50": 45,
+          "p75": 60,
+          "p90": 78,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai Lead DS",
+            "upgrad.com"
+          ]
+        }
+      },
+      "DevOps Engineer": {
+        "0-3": {
+          "p25": 4,
+          "p50": 5,
+          "p75": 7,
+          "p90": 9,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai DevOps (avg 7.6L, p25 5.3L)",
+            "slajobs.com (entry 4.4L)"
+          ]
+        },
+        "4-7": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 14,
+          "p90": 18,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai DevOps",
+            "slajobs.com (4-9y avg 7.7L)"
+          ]
+        },
+        "8-12": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai DevOps (p90 15.5L)",
+            "slajobs.com (10-20y avg 13.2L)",
+            "igmguru"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 42,
+          "confidence": "medium",
+          "sources": [
+            "slajobs.com",
+            "igmguru DevOps 2026"
+          ]
+        }
+      },
+      "QA Engineer": {
+        "0-3": {
+          "p25": 3,
+          "p50": 4.5,
+          "p75": 6.5,
+          "p90": 8.5,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai QA (avg 6.2L, p25 4.2L, p75 10L)"
+          ]
+        },
+        "4-7": {
+          "p25": 6,
+          "p50": 9,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai QA",
+            "Quora (7y senior QA Chennai ~17L)"
+          ]
+        },
+        "8-12": {
+          "p25": 10,
+          "p50": 14,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai QA upper",
+            "product co 12-22L senior QA"
+          ]
+        },
+        "13+": {
+          "p25": 14,
+          "p50": 19,
+          "p75": 26,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "product co automation 12-22L+"
+          ]
+        }
+      },
+      "Sales Lead": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 10,
+          "p90": 13,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor India sales"
+          ]
+        },
+        "4-7": {
+          "p25": 10,
+          "p50": 13,
+          "p75": 18,
+          "p90": 23,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 22,
+          "p75": 30,
+          "p90": 38,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 25,
+          "p50": 33,
+          "p75": 45,
+          "p90": 58,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Marketing Manager": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai Marketing Manager (avg 12L, p25 9L, p75 17.5L)"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 17,
+          "p90": 22,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai Marketing Manager (avg 12L, p25 9L, p75 17.5L)"
+          ]
+        },
+        "8-12": {
+          "p25": 14,
+          "p50": 19,
+          "p75": 26,
+          "p90": 34,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai Marketing Manager upper bands"
+          ]
+        },
+        "13+": {
+          "p25": 22,
+          "p50": 29,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor Chennai Marketing extrapolated"
+          ]
+        }
+      },
+      "Growth Manager": {
+        "0-3": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "medium",
+          "sources": [
+            "skilletal.com (Chennai growth 20-25L mid)"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 17,
+          "p75": 23,
+          "p90": 30,
+          "confidence": "medium",
+          "sources": [
+            "skilletal.com Chennai 20-25L"
+          ]
+        },
+        "8-12": {
+          "p25": 19,
+          "p50": 26,
+          "p75": 35,
+          "p90": 45,
+          "confidence": "low",
+          "sources": [
+            "skilletal.com extrapolated",
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 37,
+          "p75": 50,
+          "p90": 64,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Customer Success Manager": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 10,
+          "p90": 14,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L; 208 samples Feb 2026)"
+          ]
+        },
+        "4-7": {
+          "p25": 7,
+          "p50": 12,
+          "p75": 17,
+          "p90": 24,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L)"
+          ]
+        },
+        "8-12": {
+          "p25": 13,
+          "p50": 18,
+          "p75": 25,
+          "p90": 32,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai CSM upper bands"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 25,
+          "p75": 34,
+          "p90": 44,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor Chennai CSM p90 27L"
+          ]
+        }
+      },
+      "Finance Analyst": {
+        "0-3": {
+          "p25": 4,
+          "p50": 5.5,
+          "p75": 7.5,
+          "p90": 10,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor Chennai Sr BA (low 6.2L)",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 12,
+          "p90": 16,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor India Finance Analyst"
+          ]
+        },
+        "8-12": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 15,
+          "p50": 20,
+          "p75": 27,
+          "p90": 35,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "HR Business Partner": {
+        "0-3": {
+          "p25": 5,
+          "p50": 6.5,
+          "p75": 9,
+          "p90": 12,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor Chennai HR Manager (avg 10L, p25 6.3L)",
+            "keka.com"
+          ]
+        },
+        "4-7": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 20,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai HR Manager (avg 10L, p25 6.3L, p75 14.5L)"
+          ]
+        },
+        "8-12": {
+          "p25": 13,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Chennai HR upper bands",
+            "keka.com HRBP"
+          ]
+        },
+        "13+": {
+          "p25": 20,
+          "p50": 27,
+          "p75": 36,
+          "p90": 46,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "keka.com HRBP India"
+          ]
+        }
+      },
+      "Operations Manager": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 9,
+          "p90": 12,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor India Ops Mgr"
+          ]
+        },
+        "4-7": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 20,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor India"
+          ]
+        },
+        "8-12": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 30,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 19,
+          "p50": 25,
+          "p75": 34,
+          "p90": 44,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      }
+    },
+    "Hyderabad": {
+      "Senior Product Manager": {
+        "0-3": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 47,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 30,
+          "p50": 40,
+          "p75": 53,
+          "p90": 68,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "8-12": {
+          "p25": 44,
+          "p50": 57,
+          "p75": 76,
+          "p90": 97,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 60,
+          "p50": 78,
+          "p75": 104,
+          "p90": 132,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Product Manager": {
+        "0-3": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 21,
+          "p50": 27,
+          "p75": 36,
+          "p90": 46,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "8-12": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 51,
+          "p90": 65,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 40,
+          "p50": 52,
+          "p75": 69,
+          "p90": 88,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Associate PM": {
+        "0-3": {
+          "p25": 10,
+          "p50": 13,
+          "p75": 17,
+          "p90": 22,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 19,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "AmbitionBox"
+          ]
+        },
+        "13+": {
+          "p25": 25,
+          "p50": 32,
+          "p75": 42,
+          "p90": 54,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Software Engineer": {
+        "0-3": {
+          "p25": 6,
+          "p50": 9,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor",
+            "6figr"
+          ]
+        },
+        "4-7": {
+          "p25": 13,
+          "p50": 18,
+          "p75": 25,
+          "p90": 32,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 38,
+          "p90": 48,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 61,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Senior Software Engineer": {
+        "0-3": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 21,
+          "p90": 27,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 44,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 51,
+          "p90": 65,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 40,
+          "p50": 52,
+          "p75": 69,
+          "p90": 88,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Engineering Manager": {
+        "0-3": {
+          "p25": 24,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 32,
+          "p50": 40,
+          "p75": 53,
+          "p90": 65,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "8-12": {
+          "p25": 42,
+          "p50": 55,
+          "p75": 72,
+          "p90": 92,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 58,
+          "p50": 75,
+          "p75": 100,
+          "p90": 128,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Tech Lead": {
+        "0-3": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 21,
+          "p90": 27,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "8-12": {
+          "p25": 24,
+          "p50": 32,
+          "p75": 43,
+          "p90": 55,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "13+": {
+          "p25": 34,
+          "p50": 44,
+          "p75": 58,
+          "p90": 74,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Designer": {
+        "0-3": {
+          "p25": 4,
+          "p50": 6,
+          "p75": 8,
+          "p90": 11,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 19,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Senior Designer": {
+        "0-3": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 20,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 48,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 51,
+          "p90": 65,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        }
+      },
+      "Data Scientist": {
+        "0-3": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 19,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Codegnan",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 15,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "8-12": {
+          "p25": 25,
+          "p50": 32,
+          "p75": 43,
+          "p90": 54,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 34,
+          "p50": 44,
+          "p75": 58,
+          "p90": 74,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Senior Data Scientist": {
+        "0-3": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 29,
+          "p75": 39,
+          "p90": 49,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Levels.fyi"
+          ]
+        },
+        "8-12": {
+          "p25": 34,
+          "p50": 44,
+          "p75": 58,
+          "p90": 74,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 46,
+          "p50": 58,
+          "p75": 77,
+          "p90": 98,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "Glassdoor"
+          ]
+        }
+      },
+      "DevOps Engineer": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor",
+            "6figr"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 44,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 27,
+          "p50": 34,
+          "p75": 46,
+          "p90": 58,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        }
+      },
+      "QA Engineer": {
+        "0-3": {
+          "p25": 3,
+          "p50": 5,
+          "p75": 7,
+          "p90": 9,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "4-7": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 14,
+          "p90": 18,
+          "confidence": "high",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 29,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 39,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Sales Lead": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 10,
+          "p90": 13,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 13,
+          "p75": 18,
+          "p90": 23,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "8-12": {
+          "p25": 17,
+          "p50": 22,
+          "p75": 30,
+          "p90": 38,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "13+": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 61,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "SalaryExpert"
+          ]
+        }
+      },
+      "Marketing Manager": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 15,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 17,
+          "p50": 22,
+          "p75": 29,
+          "p90": 37,
+          "confidence": "high",
+          "sources": [
+            "Salary.com",
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "13+": {
+          "p25": 24,
+          "p50": 31,
+          "p75": 41,
+          "p90": 53,
+          "confidence": "medium",
+          "sources": [
+            "Salary.com",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Growth Manager": {
+        "0-3": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "Skilletal"
+          ]
+        },
+        "4-7": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 29,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Skilletal"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 48,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "13+": {
+          "p25": 32,
+          "p50": 42,
+          "p75": 56,
+          "p90": 71,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        }
+      },
+      "Customer Success Manager": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 10,
+          "p90": 13,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "AmbitionBox"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 21,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "PayScale",
+            "Indeed"
+          ]
+        },
+        "8-12": {
+          "p25": 15,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "RepVue"
+          ]
+        },
+        "13+": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 47,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "RepVue"
+          ]
+        }
+      },
+      "Finance Analyst": {
+        "0-3": {
+          "p25": 4,
+          "p50": 6,
+          "p75": 8,
+          "p90": 11,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 19,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 29,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 19,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        }
+      },
+      "HR Business Partner": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 10,
+          "p90": 13,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor",
+            "Indeed"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 21,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor",
+            "PayScale",
+            "Keka"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 21,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Keka"
+          ]
+        },
+        "13+": {
+          "p25": 24,
+          "p50": 31,
+          "p75": 41,
+          "p90": 53,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "Salary.com"
+          ]
+        }
+      },
+      "Operations Manager": {
+        "0-3": {
+          "p25": 5,
+          "p50": 7,
+          "p75": 10,
+          "p90": 13,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "4-7": {
+          "p25": 10,
+          "p50": 13,
+          "p75": 18,
+          "p90": 23,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 21,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 24,
+          "p50": 31,
+          "p75": 41,
+          "p90": 53,
+          "confidence": "low",
+          "sources": [
+            "Glassdoor",
+            "estimate"
+          ]
+        }
+      }
+    },
+    "Gurgaon": {
+      "Senior Product Manager": {
+        "0-3": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 62,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 60,
+          "p90": 77,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 47,
+          "p50": 60,
+          "p75": 80,
+          "p90": 102,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 62,
+          "p50": 80,
+          "p75": 106,
+          "p90": 136,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Product Manager": {
+        "0-3": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 42,
+          "confidence": "medium",
+          "sources": [
+            "herovired",
+            "hellopm.co",
+            "Delhi-NCR PM benchmarks"
+          ]
+        },
+        "4-7": {
+          "p25": 28,
+          "p50": 38,
+          "p75": 50,
+          "p90": 65,
+          "confidence": "medium",
+          "sources": [
+            "productleadership.com 2026",
+            "Delhi-NCR ~35-40 LPA mid-level"
+          ]
+        },
+        "8-12": {
+          "p25": 40,
+          "p50": 52,
+          "p75": 70,
+          "p90": 90,
+          "confidence": "medium",
+          "sources": [
+            "hellopm.co",
+            "Delhi-NCR PM benchmarks"
+          ]
+        },
+        "13+": {
+          "p25": 50,
+          "p50": 65,
+          "p75": 86,
+          "p90": 110,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "hellopm.co"
+          ]
+        }
+      },
+      "Associate PM": {
+        "0-3": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 19,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 29,
+          "p50": 37,
+          "p75": 49,
+          "p90": 63,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Software Engineer": {
+        "0-3": {
+          "p25": 6,
+          "p50": 9,
+          "p75": 14,
+          "p90": 20,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox",
+            "upGrad Gurgaon SE 2026",
+            "Quora Gurgaon SE"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 19,
+          "p75": 27,
+          "p90": 36,
+          "confidence": "medium",
+          "sources": [
+            "AmbitionBox Gurgaon",
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 30,
+          "p75": 42,
+          "p90": 56,
+          "confidence": "low",
+          "sources": [
+            "AmbitionBox",
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 30,
+          "p50": 40,
+          "p75": 55,
+          "p90": 72,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Senior Software Engineer": {
+        "0-3": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 38,
+          "p90": 50,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 31,
+          "p50": 40,
+          "p75": 55,
+          "p90": 72,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 43,
+          "p50": 55,
+          "p75": 74,
+          "p90": 95,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Engineering Manager": {
+        "0-3": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 60,
+          "p90": 77,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 47,
+          "p50": 60,
+          "p75": 80,
+          "p90": 102,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 62,
+          "p50": 80,
+          "p75": 106,
+          "p90": 136,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Tech Lead": {
+        "0-3": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 33,
+          "p50": 42,
+          "p75": 56,
+          "p90": 71,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 43,
+          "p50": 55,
+          "p75": 73,
+          "p90": 94,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Designer": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 17,
+          "p50": 22,
+          "p75": 29,
+          "p90": 37,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Senior Designer": {
+        "0-3": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 21,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 31,
+          "p50": 40,
+          "p75": 53,
+          "p90": 68,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Data Scientist": {
+        "0-3": {
+          "p25": 9,
+          "p50": 13.5,
+          "p75": 19,
+          "p90": 25,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Gurgaon Data Scientist 2026",
+            "Levels.fyi"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 22,
+          "p75": 30,
+          "p90": 40,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Gurgaon Data Scientist 2026"
+          ]
+        },
+        "8-12": {
+          "p25": 25,
+          "p50": 33,
+          "p75": 45,
+          "p90": 58,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Gurgaon Data Scientist 2026"
+          ]
+        },
+        "13+": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 62,
+          "p90": 80,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Senior Data Scientist": {
+        "0-3": {
+          "p25": 16,
+          "p50": 22,
+          "p75": 30,
+          "p90": 38,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi Senior DS Gurgaon"
+          ]
+        },
+        "4-7": {
+          "p25": 25,
+          "p50": 34,
+          "p75": 46,
+          "p90": 58,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Data Science Manager Gurgaon median 34"
+          ]
+        },
+        "8-12": {
+          "p25": 36,
+          "p50": 48,
+          "p75": 64,
+          "p90": 82,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 50,
+          "p50": 65,
+          "p75": 86,
+          "p90": 110,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "DevOps Engineer": {
+        "0-3": {
+          "p25": 5.5,
+          "p50": 9,
+          "p75": 13.5,
+          "p90": 21,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Gurgaon DevOps Engineer Apr 2026 (n=794)"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 16.7,
+          "p75": 24,
+          "p90": 32,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Senior DevOps Gurgaon 2026"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 28,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor extrapolated",
+            "6figr.com"
+          ]
+        },
+        "13+": {
+          "p25": 30,
+          "p50": 40,
+          "p75": 55,
+          "p90": 70,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor"
+          ]
+        }
+      },
+      "QA Engineer": {
+        "0-3": {
+          "p25": 5,
+          "p50": 6,
+          "p75": 9,
+          "p90": 11,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 20,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 48,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Sales Lead": {
+        "0-3": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 20,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 43,
+          "p50": 55,
+          "p75": 73,
+          "p90": 94,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Marketing Manager": {
+        "0-3": {
+          "p25": 8,
+          "p50": 10,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 60,
+          "p90": 77,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Growth Manager": {
+        "0-3": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 19,
+          "p50": 25,
+          "p75": 33,
+          "p90": 43,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 31,
+          "p50": 40,
+          "p75": 53,
+          "p90": 68,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 43,
+          "p50": 55,
+          "p75": 73,
+          "p90": 94,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Customer Success Manager": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8.5,
+          "p75": 12,
+          "p90": 16,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor Gurgaon CSM 2025"
+          ]
+        },
+        "4-7": {
+          "p25": 7,
+          "p50": 11.6,
+          "p75": 17.5,
+          "p90": 24,
+          "confidence": "high",
+          "sources": [
+            "Glassdoor Gurgaon CSM 2025 (p25=6.9, p50=11.6, p75=17.5, p90=24.3)"
+          ]
+        },
+        "8-12": {
+          "p25": 14,
+          "p50": 20,
+          "p75": 28,
+          "p90": 38,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor extrapolated",
+            "RepVue"
+          ]
+        },
+        "13+": {
+          "p25": 22,
+          "p50": 30,
+          "p75": 42,
+          "p90": 55,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Finance Analyst": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 12,
+          "p90": 15,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 15,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 39,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "HR Business Partner": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 12,
+          "p90": 15,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 15,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 19,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 29,
+          "p50": 37,
+          "p75": 49,
+          "p90": 63,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Operations Manager": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 39,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      }
+    },
+    "Mumbai": {
+      "Senior Product Manager": {
+        "0-3": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Bangalore-parity"
+          ]
+        },
+        "4-7": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 61,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Bangalore-parity"
+          ]
+        },
+        "8-12": {
+          "p25": 36,
+          "p50": 46,
+          "p75": 61,
+          "p90": 78,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Bangalore-parity"
+          ]
+        },
+        "13+": {
+          "p25": 48,
+          "p50": 62,
+          "p75": 82,
+          "p90": 105,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Bangalore-parity"
+          ]
+        }
+      },
+      "Product Manager": {
+        "0-3": {
+          "p25": 16,
+          "p50": 21,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "AmbitionBox"
+          ]
+        },
+        "4-7": {
+          "p25": 21,
+          "p50": 27,
+          "p75": 36,
+          "p90": 46,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "AmbitionBox"
+          ]
+        },
+        "8-12": {
+          "p25": 28,
+          "p50": 36,
+          "p75": 48,
+          "p90": 61,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "AmbitionBox"
+          ]
+        },
+        "13+": {
+          "p25": 36,
+          "p50": 46,
+          "p75": 61,
+          "p90": 78,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "AmbitionBox"
+          ]
+        }
+      },
+      "Associate PM": {
+        "0-3": {
+          "p25": 12,
+          "p50": 15,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 21,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 44,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 23,
+          "p50": 30,
+          "p75": 40,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Software Engineer": {
+        "0-3": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 14,
+          "p90": 18,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "AmbitionBox"
+          ]
+        },
+        "4-7": {
+          "p25": 13,
+          "p50": 18,
+          "p75": 25,
+          "p90": 32,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "AmbitionBox"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi"
+          ]
+        },
+        "13+": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 48,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Levels.fyi"
+          ]
+        }
+      },
+      "Senior Software Engineer": {
+        "0-3": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 29,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 21,
+          "p50": 27,
+          "p75": 36,
+          "p90": 46,
+          "confidence": "medium",
+          "sources": [
+            "Levels.fyi",
+            "AmbitionBox"
+          ]
+        },
+        "8-12": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 51,
+          "p90": 65,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 37,
+          "p50": 48,
+          "p75": 64,
+          "p90": 82,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Engineering Manager": {
+        "0-3": {
+          "p25": 25,
+          "p50": 32,
+          "p75": 43,
+          "p90": 55,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 30,
+          "p50": 40,
+          "p75": 53,
+          "p90": 68,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor"
+          ]
+        },
+        "8-12": {
+          "p25": 42,
+          "p50": 55,
+          "p75": 72,
+          "p90": 92,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor"
+          ]
+        },
+        "13+": {
+          "p25": 55,
+          "p50": 72,
+          "p75": 95,
+          "p90": 122,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "Glassdoor"
+          ]
+        }
+      },
+      "Tech Lead": {
+        "0-3": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 48,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 51,
+          "p90": 65,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 37,
+          "p50": 48,
+          "p75": 64,
+          "p90": 82,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Designer": {
+        "0-3": {
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 44,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Senior Designer": {
+        "0-3": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 48,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 51,
+          "p90": 65,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Data Scientist": {
+        "0-3": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 39,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 60,
+          "p90": 77,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Senior Data Scientist": {
+        "0-3": {
+          "p25": 16,
+          "p50": 20,
+          "p75": 27,
+          "p90": 34,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 25,
+          "p50": 32,
+          "p75": 43,
+          "p90": 55,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 60,
+          "p90": 77,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 47,
+          "p50": 60,
+          "p75": 80,
+          "p90": 102,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "DevOps Engineer": {
+        "0-3": {
+          "p25": 8,
+          "p50": 10,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 28,
+          "p75": 37,
+          "p90": 48,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 30,
+          "p50": 38,
+          "p75": 51,
+          "p90": 65,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "QA Engineer": {
+        "0-3": {
+          "p25": 5,
+          "p50": 6,
+          "p75": 8,
+          "p90": 10,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 20,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 14,
+          "p50": 18,
+          "p75": 24,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 19,
+          "p50": 24,
+          "p75": 32,
+          "p90": 41,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Sales Lead": {
+        "0-3": {
+          "p25": 9,
+          "p50": 12,
+          "p75": 16,
+          "p90": 20,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "BFSI-premium"
+          ]
+        },
+        "4-7": {
+          "p25": 17,
+          "p50": 22,
+          "p75": 29,
+          "p90": 37,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "BFSI-premium"
+          ]
+        },
+        "8-12": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "BFSI-premium"
+          ]
+        },
+        "13+": {
+          "p25": 42,
+          "p50": 55,
+          "p75": 73,
+          "p90": 94,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "BFSI-premium"
+          ]
+        }
+      },
+      "Marketing Manager": {
+        "0-3": {
+          "p25": 8,
+          "p50": 10,
+          "p75": 14,
+          "p90": 18,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 15,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor",
+            "PayScale"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 44,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "media-hub-premium"
+          ]
+        },
+        "13+": {
+          "p25": 32,
+          "p50": 42,
+          "p75": 56,
+          "p90": 71,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "media-hub-premium"
+          ]
+        }
+      },
+      "Growth Manager": {
+        "0-3": {
+          "p25": 11,
+          "p50": 14,
+          "p75": 19,
+          "p90": 24,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 39,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 35,
+          "p50": 45,
+          "p75": 60,
+          "p90": 77,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Customer Success Manager": {
+        "0-3": {
+          "p25": 8,
+          "p50": 10,
+          "p75": 13,
+          "p90": 17,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 13,
+          "p50": 17,
+          "p75": 23,
+          "p90": 29,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 20,
+          "p50": 26,
+          "p75": 35,
+          "p90": 44,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Finance Analyst": {
+        "0-3": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 19,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor-IB-Analyst",
+            "BFSI-premium"
+          ]
+        },
+        "4-7": {
+          "p25": 14,
+          "p50": 19,
+          "p75": 26,
+          "p90": 33,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor-IB-Analyst",
+            "BFSI-premium"
+          ]
+        },
+        "8-12": {
+          "p25": 22,
+          "p50": 30,
+          "p75": 42,
+          "p90": 55,
+          "confidence": "medium",
+          "sources": [
+            "Glassdoor-IB-Analyst",
+            "BFSI-premium"
+          ]
+        },
+        "13+": {
+          "p25": 35,
+          "p50": 48,
+          "p75": 65,
+          "p90": 85,
+          "confidence": "low",
+          "sources": [
+            "estimate",
+            "BFSI-premium"
+          ]
+        }
+      },
+      "HR Business Partner": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 12,
+          "p90": 15,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 15,
+          "p75": 20,
+          "p90": 26,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 23,
+          "p75": 31,
+          "p90": 39,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      },
+      "Operations Manager": {
+        "0-3": {
+          "p25": 7,
+          "p50": 9,
+          "p75": 12,
+          "p90": 15,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 16,
+          "p75": 21,
+          "p90": 27,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "8-12": {
+          "p25": 19,
+          "p50": 25,
+          "p75": 33,
+          "p90": 42,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        },
+        "13+": {
+          "p25": 27,
+          "p50": 35,
+          "p75": 47,
+          "p90": 60,
+          "confidence": "low",
+          "sources": [
+            "estimate"
+          ]
+        }
+      }
+    }
+  },
+  "city_context": {
+    "Bangalore": {
+      "gig_cab_hourly_inr": 150,
+      "gig_auto_hourly_inr": 110,
+      "gig_delivery_hourly_inr": 85,
+      "cost_of_living_index": 100,
+      "top_hiring_sectors": [
+        "SaaS / Product Tech",
+        "GCC (Global Capability Centres)",
+        "IT Services"
+      ],
+      "layoff_trend_2025_2026": "Mixed: TCS cut 12,000+ in 2025 and startup layoffs ~20-25k nationally, but Bengaluru hiring activity still +23% YoY in early 2026 driven by GCC and AI demand",
+      "hiring_season_peak_months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Sep",
+        "Oct"
+      ],
+      "confidence": "medium",
+      "sources": [
+        "Fairwork India Report 2024 (Ola/Uber scored 0/10; Swiggy/Zomato 6/10)",
+        "Zomato CEO Deepinder Goyal disclosure: avg EPH ₹102 in 2025 (gross), ~₹81 net after 20% fuel/maintenance",
+        "Inc42 Indian Startup Layoff Tracker 2025",
+        "Numbeo Cost of Living Index May 2026 (Bangalore baseline 20.3)",
+        "Taggd / foundit Insights Tracker 2026 (Bengaluru +23% YoY hiring)",
+        "Naukri JobSpeak hiring calendar (Jan-Mar peak post-appraisal, Sep-Oct secondary)"
+      ]
+    },
+    "Chennai": {
+      "gig_cab_hourly_inr": 130,
+      "gig_auto_hourly_inr": 95,
+      "gig_delivery_hourly_inr": 75,
+      "cost_of_living_index": 92,
+      "top_hiring_sectors": [
+        "IT Services / SaaS",
+        "Manufacturing & Automotive (EV)",
+        "GCC / BFSI Back-office"
+      ],
+      "layoff_trend_2025_2026": "Lower exposure than Bengaluru; IT services layoffs (TCS, Infosys) hit Chennai workforce but manufacturing/EV expansion offsetting. Net direction: roughly flat to slightly positive",
+      "hiring_season_peak_months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Aug",
+        "Sep"
+      ],
+      "confidence": "low",
+      "sources": [
+        "Fairwork India Report 2024",
+        "Zomato 2025 EPH disclosure (used as national anchor; Chennai discounted ~10% vs Bengaluru per fare structure)",
+        "Numbeo Cost of Living Chennai May 2026 (18.7)",
+        "foundit Insights Tracker 2026 (Chennai +18% YoY hiring)",
+        "Taggd Jobs in Chennai 2026 report"
+      ]
+    },
+    "Hyderabad": {
+      "gig_cab_hourly_inr": 135,
+      "gig_auto_hourly_inr": 95,
+      "gig_delivery_hourly_inr": 78,
+      "cost_of_living_index": 100,
+      "top_hiring_sectors": [
+        "Pharma & Life Sciences (Genome Valley)",
+        "GCC (SaaS, BFSI, Aerospace)",
+        "IT Services / Cloud"
+      ],
+      "layoff_trend_2025_2026": "Positive: fastest-growing Tier-1 GCC city YoY. Eli Lilly +1,500 jobs, Sanofi scaling to 2,600, BMS & Amgen expansion. Hiring activity +21% YoY",
+      "hiring_season_peak_months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Sep",
+        "Oct"
+      ],
+      "confidence": "medium",
+      "sources": [
+        "Fairwork India Report 2024",
+        "Zomato 2025 EPH ₹102 gross disclosure",
+        "Numbeo Hyderabad May 2026 (20.2)",
+        "foundit Insights Tracker 2026 (Hyderabad +21% YoY)",
+        "Flexiple GCC list Hyderabad 2026, Taggd pharma hiring trends 2026"
+      ]
+    },
+    "Gurgaon": {
+      "gig_cab_hourly_inr": 160,
+      "gig_auto_hourly_inr": 105,
+      "gig_delivery_hourly_inr": 88,
+      "cost_of_living_index": 114,
+      "top_hiring_sectors": [
+        "Fintech & BFSI back-office",
+        "Consulting (Big 4, MBB)",
+        "GCC (Banking, Analytics, Cybersecurity)"
+      ],
+      "layoff_trend_2025_2026": "Mixed: Edtech (Byju's, Unacademy) and consumer-services layoffs hit NCR hardest in 2025; offset by GCC and consulting expansion. Net: slight negative to flat",
+      "hiring_season_peak_months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Sep",
+        "Oct"
+      ],
+      "confidence": "low",
+      "sources": [
+        "Fairwork India Report 2024",
+        "Zomato 2025 EPH disclosure (NCR fares ~5-8% above national avg)",
+        "Inc42 Layoff Tracker 2025 (edtech most-affected sector, NCR-heavy)",
+        "Numbeo Gurgaon May 2026 (23.2)",
+        "Flexiple GCC NCR list 2026, Taggd India job hotspots 2026"
+      ]
+    },
+    "Mumbai": {
+      "gig_cab_hourly_inr": 175,
+      "gig_auto_hourly_inr": 130,
+      "gig_delivery_hourly_inr": 95,
+      "cost_of_living_index": 120,
+      "top_hiring_sectors": [
+        "BFSI & Fintech",
+        "Media & Entertainment",
+        "Pharma / Healthcare"
+      ],
+      "layoff_trend_2025_2026": "Relatively resilient: BFSI hiring strong, fintech mixed. Hiring activity +22% YoY in early 2026. Media/advertising recovery offsetting startup cuts",
+      "hiring_season_peak_months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Sep",
+        "Oct"
+      ],
+      "confidence": "medium",
+      "sources": [
+        "Fairwork India Report 2024",
+        "Business Standard 2025 (Mumbai auto driver case studies: ₹500-600/day net after CNG + ₹150 permit at 10 hrs)",
+        "Zomato 2025 EPH ₹102 gross (Mumbai surge ~10-15% above avg per metro fare structure)",
+        "Numbeo Mumbai May 2026 (24.4, highest in India)",
+        "foundit Insights Tracker 2026 (Mumbai +22% YoY)",
+        "Pace Recruit / Taggd Mumbai hiring 2026"
+      ]
+    }
+  },
+  "market_temperature": {
+    "Bangalore": {
+      "Senior Product Manager": {
+        "open_jobs_count": 6014,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Q2 2026 direct",
+          "foundit YoY April 2026"
+        ]
+      },
+      "Product Manager": {
+        "open_jobs_count": 4000,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Glassdoor Bangalore-specific PM count",
+          "foundit YoY April 2026"
+        ]
+      },
+      "Associate PM": {
+        "open_jobs_count": 7365,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Asst PM Bangalore Q2 2026 direct"
+        ]
+      },
+      "Software Engineer": {
+        "open_jobs_count": 29000,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Bangalore SWE Q2 2026 range 26000-32828"
+        ]
+      },
+      "Senior Software Engineer": {
+        "open_jobs_count": 8000,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Sr SWE Bangalore Q2 2026 range 7000-9000"
+        ]
+      },
+      "Engineering Manager": {
+        "open_jobs_count": 2610,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 105,
+        "confidence": "medium",
+        "sources": [
+          "Naukri EM Bangalore Q2 2026 direct"
+        ]
+      },
+      "Tech Lead": {
+        "open_jobs_count": 9500,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Estimated from SWE pool ~30% senior tier"
+        ]
+      },
+      "Designer": {
+        "open_jobs_count": 3500,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Estimated UX/Product designer pool Bangalore"
+        ]
+      },
+      "Senior Designer": {
+        "open_jobs_count": 1800,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Estimated senior designer Bangalore ~50% of Designer pool"
+        ]
+      },
+      "Data Scientist": {
+        "open_jobs_count": 6500,
+        "open_jobs_yoy_growth": "+35%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Estimated DS Bangalore Q2 2026",
+          "AI/ML role YoY trend"
+        ]
+      },
+      "Senior Data Scientist": {
+        "open_jobs_count": 2800,
+        "open_jobs_yoy_growth": "+40%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Estimated Sr DS Bangalore Q2 2026",
+          "AI/ML senior premium"
+        ]
+      },
+      "DevOps Engineer": {
+        "open_jobs_count": 16250,
+        "open_jobs_yoy_growth": "+22%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Bangalore DevOps Q2 2026 direct"
+        ]
+      },
+      "QA Engineer": {
+        "open_jobs_count": 12000,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "low",
+        "sources": [
+          "Estimated QA/Test Bangalore pool Q2 2026"
+        ]
+      },
+      "Sales Lead": {
+        "open_jobs_count": 5000,
+        "open_jobs_yoy_growth": "+15%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Bangalore Sales subset (all-Sales 12552)",
+          "BFSI sales YoY"
+        ]
+      },
+      "Marketing Manager": {
+        "open_jobs_count": 1253,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Bangalore Marketing Manager Q2 2026 direct"
+        ]
+      },
+      "Growth Manager": {
+        "open_jobs_count": 900,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Estimated Growth Manager Bangalore - smaller niche than Marketing"
+        ]
+      },
+      "Customer Success Manager": {
+        "open_jobs_count": 2321,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Bangalore CSM Q2 2026 direct"
+        ]
+      },
+      "Finance Analyst": {
+        "open_jobs_count": 3200,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 65,
+        "confidence": "low",
+        "sources": [
+          "Estimated Finance Analyst Bangalore Q2 2026"
+        ]
+      },
+      "HR Business Partner": {
+        "open_jobs_count": 1500,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Estimated HRBP Bangalore Q2 2026"
+        ]
+      },
+      "Operations Manager": {
+        "open_jobs_count": 3400,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Estimated Operations Manager Bangalore (Chennai anchor extrapolated up)"
+        ]
+      }
+    },
+    "Hyderabad": {
+      "Senior Product Manager": {
+        "open_jobs_count": 3308,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)",
+          "Hyderabad tech YoY"
+        ]
+      },
+      "Product Manager": {
+        "open_jobs_count": 2200,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Associate PM": {
+        "open_jobs_count": 4050,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Software Engineer": {
+        "open_jobs_count": 15950,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)",
+          "Hyderabad tech YoY +21%"
+        ]
+      },
+      "Senior Software Engineer": {
+        "open_jobs_count": 4400,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Engineering Manager": {
+        "open_jobs_count": 1435,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 105,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Tech Lead": {
+        "open_jobs_count": 5225,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Designer": {
+        "open_jobs_count": 1925,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Senior Designer": {
+        "open_jobs_count": 990,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Data Scientist": {
+        "open_jobs_count": 3575,
+        "open_jobs_yoy_growth": "+40%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)",
+          "Hyderabad tech +21% + AI premium"
+        ]
+      },
+      "Senior Data Scientist": {
+        "open_jobs_count": 1540,
+        "open_jobs_yoy_growth": "+45%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "DevOps Engineer": {
+        "open_jobs_count": 8174,
+        "open_jobs_yoy_growth": "+25%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Hyderabad DevOps Q2 2026 direct"
+        ]
+      },
+      "QA Engineer": {
+        "open_jobs_count": 6600,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Sales Lead": {
+        "open_jobs_count": 2750,
+        "open_jobs_yoy_growth": "+15%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Marketing Manager": {
+        "open_jobs_count": 690,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Growth Manager": {
+        "open_jobs_count": 495,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Customer Success Manager": {
+        "open_jobs_count": 1275,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Finance Analyst": {
+        "open_jobs_count": 1760,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 65,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "HR Business Partner": {
+        "open_jobs_count": 825,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      },
+      "Operations Manager": {
+        "open_jobs_count": 1870,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.55x)"
+        ]
+      }
+    },
+    "Mumbai": {
+      "Senior Product Manager": {
+        "open_jobs_count": 2978,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Q2 2026 direct",
+          "Mumbai overall hiring YoY"
+        ]
+      },
+      "Product Manager": {
+        "open_jobs_count": 1514,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Q2 2026 direct",
+          "Mumbai YoY"
+        ]
+      },
+      "Associate PM": {
+        "open_jobs_count": 1497,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Q2 2026 direct"
+        ]
+      },
+      "Software Engineer": {
+        "open_jobs_count": 14500,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Senior Software Engineer": {
+        "open_jobs_count": 3370,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Q2 2026 direct"
+        ]
+      },
+      "Engineering Manager": {
+        "open_jobs_count": 1305,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 105,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Tech Lead": {
+        "open_jobs_count": 4750,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Designer": {
+        "open_jobs_count": 1750,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Senior Designer": {
+        "open_jobs_count": 900,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Data Scientist": {
+        "open_jobs_count": 3250,
+        "open_jobs_yoy_growth": "+35%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Senior Data Scientist": {
+        "open_jobs_count": 1400,
+        "open_jobs_yoy_growth": "+40%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "DevOps Engineer": {
+        "open_jobs_count": 8125,
+        "open_jobs_yoy_growth": "+22%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "QA Engineer": {
+        "open_jobs_count": 6000,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Sales Lead": {
+        "open_jobs_count": 2500,
+        "open_jobs_yoy_growth": "+18%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)",
+          "Mumbai BFSI hub"
+        ]
+      },
+      "Marketing Manager": {
+        "open_jobs_count": 630,
+        "open_jobs_yoy_growth": "+15%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)",
+          "Mumbai BFSI/media hub premium"
+        ]
+      },
+      "Growth Manager": {
+        "open_jobs_count": 450,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Customer Success Manager": {
+        "open_jobs_count": 1160,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Finance Analyst": {
+        "open_jobs_count": 2400,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 65,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.75x) - Mumbai BFSI hub premium"
+        ]
+      },
+      "HR Business Partner": {
+        "open_jobs_count": 750,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      },
+      "Operations Manager": {
+        "open_jobs_count": 1700,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.50x)"
+        ]
+      }
+    },
+    "Gurgaon": {
+      "Senior Product Manager": {
+        "open_jobs_count": 2706,
+        "open_jobs_yoy_growth": "+6%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)",
+          "Gurgaon YoY estimate"
+        ]
+      },
+      "Product Manager": {
+        "open_jobs_count": 1800,
+        "open_jobs_yoy_growth": "+6%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Associate PM": {
+        "open_jobs_count": 3314,
+        "open_jobs_yoy_growth": "+6%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Software Engineer": {
+        "open_jobs_count": 13050,
+        "open_jobs_yoy_growth": "+4%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Senior Software Engineer": {
+        "open_jobs_count": 3600,
+        "open_jobs_yoy_growth": "+4%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Engineering Manager": {
+        "open_jobs_count": 1175,
+        "open_jobs_yoy_growth": "+6%",
+        "avg_time_to_fill_days": 105,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Tech Lead": {
+        "open_jobs_count": 4275,
+        "open_jobs_yoy_growth": "+4%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Designer": {
+        "open_jobs_count": 1575,
+        "open_jobs_yoy_growth": "+4%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Senior Designer": {
+        "open_jobs_count": 810,
+        "open_jobs_yoy_growth": "+4%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Data Scientist": {
+        "open_jobs_count": 2925,
+        "open_jobs_yoy_growth": "+33%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Senior Data Scientist": {
+        "open_jobs_count": 1260,
+        "open_jobs_yoy_growth": "+38%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "DevOps Engineer": {
+        "open_jobs_count": 2144,
+        "open_jobs_yoy_growth": "+20%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Gurgaon DevOps Q2 2026 direct"
+        ]
+      },
+      "QA Engineer": {
+        "open_jobs_count": 5400,
+        "open_jobs_yoy_growth": "+4%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Sales Lead": {
+        "open_jobs_count": 2250,
+        "open_jobs_yoy_growth": "+15%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Marketing Manager": {
+        "open_jobs_count": 565,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Growth Manager": {
+        "open_jobs_count": 405,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Customer Success Manager": {
+        "open_jobs_count": 1045,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Finance Analyst": {
+        "open_jobs_count": 1440,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 65,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "HR Business Partner": {
+        "open_jobs_count": 675,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      },
+      "Operations Manager": {
+        "open_jobs_count": 1530,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.45x)"
+        ]
+      }
+    },
+    "Chennai": {
+      "Senior Product Manager": {
+        "open_jobs_count": 2105,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)",
+          "Chennai YoY compromise"
+        ]
+      },
+      "Product Manager": {
+        "open_jobs_count": 1400,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Associate PM": {
+        "open_jobs_count": 1216,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Q2 2026 direct"
+        ]
+      },
+      "Software Engineer": {
+        "open_jobs_count": 9640,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Chennai SWE fresher direct",
+          "Chennai overall YoY"
+        ]
+      },
+      "Senior Software Engineer": {
+        "open_jobs_count": 2800,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Engineering Manager": {
+        "open_jobs_count": 915,
+        "open_jobs_yoy_growth": "+5%",
+        "avg_time_to_fill_days": 105,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Tech Lead": {
+        "open_jobs_count": 3325,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Designer": {
+        "open_jobs_count": 1225,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Senior Designer": {
+        "open_jobs_count": 630,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Data Scientist": {
+        "open_jobs_count": 2275,
+        "open_jobs_yoy_growth": "+30%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Senior Data Scientist": {
+        "open_jobs_count": 980,
+        "open_jobs_yoy_growth": "+33%",
+        "avg_time_to_fill_days": 95,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "DevOps Engineer": {
+        "open_jobs_count": 5690,
+        "open_jobs_yoy_growth": "+20%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "QA Engineer": {
+        "open_jobs_count": 4200,
+        "open_jobs_yoy_growth": "+3%",
+        "avg_time_to_fill_days": 55,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Sales Lead": {
+        "open_jobs_count": 1750,
+        "open_jobs_yoy_growth": "+12%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Chennai Sales 6125 - Lead-role subset"
+        ]
+      },
+      "Marketing Manager": {
+        "open_jobs_count": 440,
+        "open_jobs_yoy_growth": "+10%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Growth Manager": {
+        "open_jobs_count": 315,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Customer Success Manager": {
+        "open_jobs_count": 815,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 75,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Finance Analyst": {
+        "open_jobs_count": 1120,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 65,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "HR Business Partner": {
+        "open_jobs_count": 525,
+        "open_jobs_yoy_growth": "+6%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "low",
+        "sources": [
+          "Extrapolated from Bangalore anchor (0.35x)"
+        ]
+      },
+      "Operations Manager": {
+        "open_jobs_count": 1182,
+        "open_jobs_yoy_growth": "+8%",
+        "avg_time_to_fill_days": 85,
+        "confidence": "medium",
+        "sources": [
+          "Naukri Chennai Operations Manager Q2 2026 direct"
+        ]
+      }
+    }
+  },
+  "role_profiles": {
+    "Senior Product Manager": {
+      "common_next_roles": [
+        "Director of Product",
+        "Group Product Manager",
+        "Founder / Startup PM Head"
+      ],
+      "typical_promotion_window_months": 36,
+      "top_3_quit_reasons": [
+        "Slow promotion path to Director — limited Director slots in Indian product orgs",
+        "Compensation ceiling at SrPM band vs FAANG / US-remote offers",
+        "Strategy vs execution mismatch — pulled into delivery work, not vision"
+      ],
+      "median_tenure_months": 28,
+      "confidence": "medium",
+      "sources": [
+        "LinkedIn Workforce Report India 2025",
+        "Inc42 Product Talent Report 2024"
+      ]
+    },
+    "Product Manager": {
+      "common_next_roles": [
+        "Senior Product Manager",
+        "Lead PM",
+        "Founding PM at startup"
+      ],
+      "typical_promotion_window_months": 30,
+      "top_3_quit_reasons": [
+        "Slow growth to SrPM — bottleneck at mid-level PM band",
+        "Better offer / higher hike (40-60% jumps common in PM switches)",
+        "Lack of ownership — PM-in-name-only roles with eng-driven roadmap"
+      ],
+      "median_tenure_months": 24,
+      "confidence": "medium",
+      "sources": [
+        "Naukri What People Want 2024",
+        "Glassdoor India PM reviews"
+      ]
+    },
+    "Associate PM": {
+      "common_next_roles": [
+        "Product Manager",
+        "Senior APM",
+        "Product Analyst"
+      ],
+      "typical_promotion_window_months": 18,
+      "top_3_quit_reasons": [
+        "Slow promotion to full PM — APM programs often lack clear graduation",
+        "Limited scope / shadow work under senior PMs",
+        "Better APM offer with higher base at competing product company"
+      ],
+      "median_tenure_months": 18,
+      "confidence": "low",
+      "sources": [
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "Software Engineer": {
+      "common_next_roles": [
+        "Senior Software Engineer",
+        "Full-stack Engineer",
+        "SDE-2 at product company"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "Better offer / hike (50-100% jumps standard in 2-3 yr SDE switches)",
+        "Tier-1 IT services to product company transition (TCS/Infy → Razorpay/Swiggy)",
+        "Boring / maintenance work — no greenfield or modern stack exposure"
+      ],
+      "median_tenure_months": 22,
+      "confidence": "high",
+      "sources": [
+        "Naukri Jobspeak 2024",
+        "LinkedIn Workforce Report India 2025",
+        "Springworks Retention Report"
+      ]
+    },
+    "Senior Software Engineer": {
+      "common_next_roles": [
+        "Tech Lead",
+        "Staff Engineer",
+        "Engineering Manager"
+      ],
+      "typical_promotion_window_months": 30,
+      "top_3_quit_reasons": [
+        "IC vs Management fork — forced into EM track without choice",
+        "Compensation ceiling — needs job switch for 40%+ hike",
+        "Tech stack stagnation / legacy codebase fatigue"
+      ],
+      "median_tenure_months": 26,
+      "confidence": "high",
+      "sources": [
+        "LinkedIn Workforce Report India 2025",
+        "Glassdoor India SSE reviews"
+      ]
+    },
+    "Engineering Manager": {
+      "common_next_roles": [
+        "Senior Engineering Manager",
+        "Director of Engineering",
+        "VP Engineering"
+      ],
+      "typical_promotion_window_months": 36,
+      "top_3_quit_reasons": [
+        "Burnout — sandwich layer between leadership pressure and team morale",
+        "Want to return to IC / hands-on coding (Staff Eng track)",
+        "Slow path to Director — limited senior leadership slots"
+      ],
+      "median_tenure_months": 30,
+      "confidence": "medium",
+      "sources": [
+        "Inc42 Engineering Leadership Report 2024",
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "Tech Lead": {
+      "common_next_roles": [
+        "Engineering Manager",
+        "Staff Engineer",
+        "Principal Engineer"
+      ],
+      "typical_promotion_window_months": 30,
+      "top_3_quit_reasons": [
+        "Role ambiguity — TL doing IC + people work without EM title or comp",
+        "Forced into people management without IC ladder option",
+        "Better offer with clear Staff/Principal track at product company"
+      ],
+      "median_tenure_months": 24,
+      "confidence": "medium",
+      "sources": [
+        "LinkedIn Workforce Report India 2025",
+        "Glassdoor India Tech Lead reviews"
+      ]
+    },
+    "Designer": {
+      "common_next_roles": [
+        "Senior Designer",
+        "Product Designer",
+        "UX Lead"
+      ],
+      "typical_promotion_window_months": 30,
+      "top_3_quit_reasons": [
+        "Treated as pixel-pusher / no seat at product strategy table",
+        "Lack of design system / mature design org to grow in",
+        "Better offer at design-first company (Razorpay, CRED, Atlassian India)"
+      ],
+      "median_tenure_months": 24,
+      "confidence": "medium",
+      "sources": [
+        "DesignUp India Salary Survey 2024",
+        "Glassdoor India Designer reviews"
+      ]
+    },
+    "Senior Designer": {
+      "common_next_roles": [
+        "Lead Designer",
+        "Design Manager",
+        "Principal Designer"
+      ],
+      "typical_promotion_window_months": 36,
+      "top_3_quit_reasons": [
+        "No path to Design Manager — flat design orgs in most Indian companies",
+        "Comp ceiling — senior designer band capped vs eng equivalent",
+        "Lack of strategic / 0-to-1 work — only feature iteration"
+      ],
+      "median_tenure_months": 28,
+      "confidence": "low",
+      "sources": [
+        "DesignUp India Salary Survey 2024"
+      ]
+    },
+    "Data Scientist": {
+      "common_next_roles": [
+        "Senior Data Scientist",
+        "ML Engineer",
+        "Applied Scientist"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "Doing dashboarding / SQL work, not actual ML / modeling",
+        "Better offer at GenAI / ML-first startup with modern stack",
+        "No production ML pipelines — models never deployed"
+      ],
+      "median_tenure_months": 22,
+      "confidence": "medium",
+      "sources": [
+        "Analytics India Magazine Salary Report 2024",
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "Senior Data Scientist": {
+      "common_next_roles": [
+        "Lead Data Scientist",
+        "Principal DS / Applied Scientist",
+        "Head of Data Science"
+      ],
+      "typical_promotion_window_months": 36,
+      "top_3_quit_reasons": [
+        "GenAI / LLM wave — moving to LLM-focused roles at higher pay",
+        "Lack of MLOps maturity — can't ship models to production",
+        "Comp ceiling vs FAANG India / US-remote Applied Scientist roles"
+      ],
+      "median_tenure_months": 26,
+      "confidence": "medium",
+      "sources": [
+        "Analytics India Magazine 2024",
+        "Naukri Tech Salary Report 2024"
+      ]
+    },
+    "DevOps Engineer": {
+      "common_next_roles": [
+        "Senior DevOps Engineer",
+        "SRE",
+        "Platform Engineer"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "On-call burnout / pager fatigue with thin team",
+        "Better offer — DevOps/SRE in high demand, 60-80% hikes common",
+        "Stuck on legacy infra (no Kubernetes / IaC modernization)"
+      ],
+      "median_tenure_months": 20,
+      "confidence": "medium",
+      "sources": [
+        "Naukri Jobspeak 2024",
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "QA Engineer": {
+      "common_next_roles": [
+        "SDET",
+        "Senior QA / QA Lead",
+        "Automation Engineer"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "Manual testing trap — no automation skill development",
+        "Lower comp band vs SDE — moving to SDET / dev role for pay parity",
+        "Lack of respect / second-class citizen in eng org"
+      ],
+      "median_tenure_months": 24,
+      "confidence": "medium",
+      "sources": [
+        "Naukri What People Want 2024",
+        "Glassdoor India QA reviews"
+      ]
+    },
+    "Sales Lead": {
+      "common_next_roles": [
+        "Sales Manager",
+        "Regional Sales Head",
+        "AE at larger SaaS company"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "Unrealistic quota / quota inflation year over year",
+        "Comp plan changes — OTE cut or accelerators removed mid-year",
+        "Better offer with higher base + named accounts at competitor"
+      ],
+      "median_tenure_months": 20,
+      "confidence": "medium",
+      "sources": [
+        "Naukri Sales Salary Report 2024",
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "Marketing Manager": {
+      "common_next_roles": [
+        "Senior Marketing Manager",
+        "Head of Marketing",
+        "Growth Manager"
+      ],
+      "typical_promotion_window_months": 30,
+      "top_3_quit_reasons": [
+        "Budget cuts / marketing first to be slashed in downturns",
+        "Brand vs performance marketing identity crisis — forced into perf-only",
+        "Lack of strategic seat — execution-only role under founder/CEO"
+      ],
+      "median_tenure_months": 24,
+      "confidence": "low",
+      "sources": [
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "Growth Manager": {
+      "common_next_roles": [
+        "Head of Growth",
+        "Product Manager (Growth)",
+        "VP Growth at startup"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "Vanity metrics pressure — growth-at-all-costs without retention focus",
+        "Lack of product/eng support to ship growth experiments",
+        "Better offer at growth-stage startup with equity upside"
+      ],
+      "median_tenure_months": 20,
+      "confidence": "low",
+      "sources": [
+        "Inc42 Growth Talent Report 2024"
+      ]
+    },
+    "Customer Success Manager": {
+      "common_next_roles": [
+        "Senior CSM",
+        "CS Lead / Head of CS",
+        "Account Manager / Sales"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "Account overload — 50+ accounts per CSM, no time for strategic work",
+        "Treated as support / firefighter not strategic partner",
+        "Better offer moving to sales (AE) for higher OTE"
+      ],
+      "median_tenure_months": 22,
+      "confidence": "medium",
+      "sources": [
+        "Gainsight India CS Report 2024",
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "Finance Analyst": {
+      "common_next_roles": [
+        "Senior Finance Analyst",
+        "FP&A Manager",
+        "Finance Business Partner"
+      ],
+      "typical_promotion_window_months": 24,
+      "top_3_quit_reasons": [
+        "Excel-monkey work / no strategic finance exposure",
+        "Better offer at investment banking / PE / consulting for higher comp",
+        "Slow promotion in traditional finance hierarchies"
+      ],
+      "median_tenure_months": 24,
+      "confidence": "low",
+      "sources": [
+        "Naukri Finance Salary Report 2024"
+      ]
+    },
+    "HR Business Partner": {
+      "common_next_roles": [
+        "Senior HRBP",
+        "Head of HR / People",
+        "Talent / OD Lead"
+      ],
+      "typical_promotion_window_months": 30,
+      "top_3_quit_reasons": [
+        "Caught between employee advocacy and leadership directives — moral fatigue",
+        "Layoff execution burnout (heavy 2023-24 tech layoff cycle)",
+        "Lack of strategic seat — HR seen as admin function"
+      ],
+      "median_tenure_months": 26,
+      "confidence": "low",
+      "sources": [
+        "SHRM India HR Report 2024",
+        "LinkedIn Workforce Report India 2025"
+      ]
+    },
+    "Operations Manager": {
+      "common_next_roles": [
+        "Senior Operations Manager",
+        "Head of Operations",
+        "COO at startup"
+      ],
+      "typical_promotion_window_months": 30,
+      "top_3_quit_reasons": [
+        "Firefighting fatigue — always solving problems, never building systems",
+        "Lack of cross-functional authority — accountability without power",
+        "Better offer at scaling startup with broader scope"
+      ],
+      "median_tenure_months": 26,
+      "confidence": "low",
+      "sources": [
+        "LinkedIn Workforce Report India 2025",
+        "Naukri Operations Salary Report 2024"
+      ]
+    }
+  }
+}

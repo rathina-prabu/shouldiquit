@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Audit Table</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;background:#fbfbfa;color:#0a0a0a;min-height:100vh;display:flex;justify-content:center}
+  .audit{width:100%;max-width:460px;padding:20px 16px;display:flex;flex-direction:column;min-height:100vh}
+  .header{padding-bottom:12px;border-bottom:2px solid #0a0a0a;margin-bottom:0;display:flex;justify-content:space-between;align-items:flex-end}
+  .brand{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0;line-height:1.2}
+  .brand-sub{font-size:10px;font-weight:500;color:#666;margin-top:3px;letter-spacing:1px;text-transform:uppercase}
+  .audit-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;text-align:right;line-height:1.6;color:#0a0a0a}
+  .audit-meta strong{font-weight:700}
+  .table-head{display:grid;grid-template-columns:42px 1fr 86px;background:#f3f3ef;border-bottom:1px solid #0a0a0a;padding:7px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+  .table-head>div{padding:0 6px}
+  .row{display:grid;grid-template-columns:42px 1fr 86px;padding:8px 8px;border-bottom:1px solid #e4e4df;font-size:13px;align-items:center}
+  .row .item{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#666;padding:0 6px;font-weight:500}
+  .row .topic{padding:0 6px;color:#444}
+  .row .status{padding:0 6px;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500}
+  .row.done .status{color:#0a8a4a}
+  .row.future .status{color:#a0a0a0}
+  .row.current{background:#fff8d6;border-left:3px solid #d4a614;padding:14px 8px;border-bottom:2px solid #0a0a0a;display:block}
+  .row.current .current-meta{display:grid;grid-template-columns:42px 1fr 86px;align-items:center;margin-bottom:14px}
+  .row.current .item{font-weight:700;color:#0a0a0a;font-size:12px}
+  .row.current .status{color:#d4a614;font-weight:700}
+  .module-bar{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#d4a614;padding-left:48px;margin-bottom:8px;font-weight:600}
+  .question{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:22px;line-height:1.18;letter-spacing:-0.4px;margin:0 0 6px;padding-left:48px}
+  .followup{font-size:13.5px;line-height:1.5;color:#3a3a3a;margin-bottom:16px;padding-left:48px}
+  .options{padding-left:48px;display:flex;flex-direction:column;gap:5px}
+  .option{background:#fff;border:1px solid #0a0a0a;padding:9px 12px;font:inherit;font-size:13px;font-weight:500;text-align:left;display:flex;align-items:center;gap:12px;cursor:pointer;color:#0a0a0a;transition:all .12s;font-family:'IBM Plex Mono',monospace}
+  .option:hover{background:#0a0a0a;color:#fff}
+  .opt-code{font-weight:700;color:#d4a614;font-size:12px}
+  .option:hover .opt-code{color:#fff8d6}
+  .emoji{font-size:14px}
+  .opt-text{flex:1;font-family:'IBM Plex Sans',sans-serif}
+  .footer-bar{margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#666;border-top:2px solid #0a0a0a;padding:14px 0 0}
+</style>
+</head>
+<body>
+  <div class="audit">
+    <div class="header">
+      <div>
+        <div class="brand">DR.K /AUDIT</div>
+        <div class="brand-sub">Career Assessment · SQ-26</div>
+      </div>
+      <div class="audit-meta">
+        <strong>SESSION 01</strong><br>
+        16.05.2026<br>
+        usr_xk29q
+      </div>
+    </div>
+    <div class="table-head">
+      <div>#</div>
+      <div>ITEM</div>
+      <div>STATUS</div>
+    </div>
+    <div class="row done"><div class="item">Q12</div><div class="topic">Recognition signal</div><div class="status">✓ logged</div></div>
+    <div class="row done"><div class="item">Q13</div><div class="topic">Voice in meetings</div><div class="status">✓ logged</div></div>
+    <div class="row done"><div class="item">Q14</div><div class="topic">Skill development</div><div class="status">✓ logged</div></div>
+    <div class="row current">
+      <div class="current-meta">
+        <div class="item">Q15</div>
+        <div class="topic"><strong>● ACTIVE</strong></div>
+        <div class="status">pending</div>
+      </div>
+      <div class="module-bar">Section 5 · State of You</div>
+      <h2 class="question">Let's talk about Sundays.</h2>
+      <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+      <div class="options">
+        <button class="option"><span class="opt-code">A</span><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+        <button class="option"><span class="opt-code">B</span><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+        <button class="option"><span class="opt-code">C</span><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+        <button class="option"><span class="opt-code">D</span><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+      </div>
+    </div>
+    <div class="row future"><div class="item">Q16</div><div class="topic">PTO disconnect</div><div class="status">queued</div></div>
+    <div class="row future"><div class="item">Q17</div><div class="topic">Notification reflex</div><div class="status">queued</div></div>
+    <div class="row future"><div class="item">Q18</div><div class="topic">Compensation</div><div class="status">queued</div></div>
+    <div class="footer-bar">
+      <span>15 / 20 items</span>
+      <span>5 remaining</span>
+    </div>
+  </div>
+</body>
+</html>

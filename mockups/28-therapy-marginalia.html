@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Case File with Marginalia</title>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Caveat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Courier Prime',monospace;background:#3a2f1f;background-image:repeating-linear-gradient(45deg,transparent 0 4px,rgba(0,0,0,0.05) 4px 5px);min-height:100vh;display:flex;justify-content:center;padding:14px;color:#1a1410}
+  .page{width:100%;max-width:440px;background:#f5edd0;padding:20px 16px 24px;display:flex;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,0.4),inset 4px 0 12px rgba(80,60,30,0.1);border-left:6px solid #c4a574;position:relative}
+  .page::after{content:'';position:absolute;top:140px;bottom:120px;right:28%;width:1px;background:#c83a3a;opacity:0.3}
+  .header-row{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:10px;border-bottom:2px solid #1a1410;margin-bottom:14px}
+  .header-meta{font-size:10px;font-weight:700;line-height:1.6}
+  .header-meta .big{font-size:12px}
+  .stamp{border:1.5px solid #c0392b;color:#c0392b;padding:2px 7px;font-size:8.5px;font-weight:700;letter-spacing:1px;transform:rotate(-3deg)}
+  .row{display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:start;padding:6px 0}
+  .row-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#666;grid-column:1 / -1;border-top:1px dashed #999;padding-top:8px;margin-top:6px}
+  .typed{font-family:'Courier Prime',monospace;font-size:13px;line-height:1.5}
+  .typed-question{font-weight:700;font-size:14px;margin-bottom:4px;line-height:1.35}
+  .handwrite{font-family:'Caveat',cursive;font-size:16px;color:#1a4a6b;line-height:1.1;font-weight:500;transform:rotate(-1deg)}
+  .handwrite.alt{transform:rotate(0.8deg);color:#7a3a14}
+  .opt-row{display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:center;padding:5px 0}
+  .opt{font-family:'Courier Prime',monospace;font-size:12px;border:1.5px solid #1a1410;padding:8px 12px;display:flex;align-items:center;gap:8px;cursor:pointer;background:transparent;text-align:left;color:#1a1410;font-weight:400;transition:all .12s;width:100%}
+  .opt:hover{background:#1a1410;color:#f5edd0}
+  .check{width:10px;height:10px;border:1.5px solid currentColor;flex-shrink:0}
+  .emoji{font-size:13px}
+  .opt-text{flex:1}
+  .opt-note{font-family:'Caveat',cursive;font-size:15px;color:#1a4a6b;line-height:1.1;padding-top:1px}
+  .opt-note.red{color:#c0392b;font-weight:600}
+  .footer{margin-top:14px;padding-top:8px;border-top:2px solid #1a1410;display:flex;justify-content:space-between;font-size:10px;font-weight:700;letter-spacing:1.5px}
+  .arrow-doodle{font-family:'Caveat',cursive;color:#c0392b;font-size:18px;display:inline-block;margin-left:4px}
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-row">
+      <div class="header-meta">
+        <div class="big">CASE FILE SQ-26</div>
+        <div>DR. K · INDEPENDENT</div>
+      </div>
+      <div class="stamp">CONFIDENTIAL</div>
+    </div>
+    <div class="row">
+      <div class="typed">PT: usr_xk29q · 16 MAY 26</div>
+      <div class="handwrite">8 min in</div>
+    </div>
+    <div class="row">
+      <div class="typed">PRESENTING: "should I quit?"</div>
+      <div class="handwrite alt">— body says yes</div>
+    </div>
+    <div class="row-label">Section 5 · Item 15</div>
+    <div class="row">
+      <div class="typed">
+        <div class="typed-question">Q. Let's talk about Sundays.</div>
+        <div>How does your body feel when you remember it's Monday tomorrow?</div>
+      </div>
+      <div class="handwrite">watch this answer<span class="arrow-doodle">←</span></div>
+    </div>
+    <div class="opt-row">
+      <button class="opt"><div class="check"></div><span class="emoji">🌞</span><span class="opt-text">Excited about cal.</span></button>
+      <div class="opt-note">unlikely</div>
+    </div>
+    <div class="opt-row">
+      <button class="opt"><div class="check"></div><span class="emoji">😐</span><span class="opt-text">Neutral, just Mon.</span></button>
+      <div class="opt-note">possible</div>
+    </div>
+    <div class="opt-row">
+      <button class="opt"><div class="check"></div><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+      <div class="opt-note red">★ this one?</div>
+    </div>
+    <div class="opt-row">
+      <button class="opt"><div class="check"></div><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+      <div class="opt-note red">cooked.</div>
+    </div>
+    <div class="footer">
+      <span>PAGE 15 / 20</span>
+      <span>— DR. K</span>
+    </div>
+  </div>
+</body>
+</html>

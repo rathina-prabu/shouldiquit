@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · iMessage</title>
+<style>
+  :root { --bubble-them:#e9e9eb; --bubble-me:#007aff; --muted:#8e8e93; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;background:#fff;display:flex;justify-content:center;min-height:100vh}
+  .phone{width:100%;max-width:414px;display:flex;flex-direction:column;min-height:100vh}
+  .header{border-bottom:1px solid #e5e5ea;padding:14px 12px 10px;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:600}
+  .name-row{display:flex;align-items:center;gap:4px;color:#000;font-size:11px;font-weight:500}
+  .chevron{font-size:11px;color:#c7c7cc}
+  .status{font-size:10px;color:var(--muted)}
+  .progress{padding:8px 16px 0}
+  .progress-bar{height:3px;background:#e5e5ea;border-radius:2px;overflow:hidden}
+  .progress-fill{height:100%;background:#007aff;width:75%}
+  .progress-label{font-size:11px;color:var(--muted);margin-top:6px;text-align:center}
+  .messages{flex:1;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+  .timestamp{text-align:center;color:var(--muted);font-size:11px;margin:12px 0 8px;font-weight:500}
+  .timestamp strong{color:#000;font-weight:600}
+  .bubble-them{background:var(--bubble-them);align-self:flex-start;max-width:78%;padding:9px 14px;border-radius:18px;font-size:16px;line-height:1.3;animation:rise 0.3s ease-out}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .typing{background:var(--bubble-them);align-self:flex-start;padding:11px 16px;border-radius:18px;display:flex;gap:4px;align-items:center;height:14px}
+  .dot{width:7px;height:7px;border-radius:50%;background:#b0b0b3;animation:blink 1.4s infinite}
+  .dot:nth-child(2){animation-delay:.2s}.dot:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+  .options{padding:14px 12px 32px;display:flex;flex-direction:column;gap:8px}
+  .option{background:#fff;border:1.5px solid #e5e5ea;padding:14px 16px;border-radius:18px;font-size:16px;text-align:left;font:inherit;cursor:pointer;transition:all .15s;color:#007aff}
+  .option:hover{background:#f2f2f7;border-color:#007aff;transform:scale(.99)}
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="header">
+      <div class="avatar">K</div>
+      <div class="name-row">Dr. K <span class="chevron">›</span></div>
+      <div class="status">Independent Career Therapist</div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <div class="progress-label">Question 15 of 20 · The State of You</div>
+    </div>
+    <div class="messages">
+      <div class="timestamp"><strong>Today</strong> · Session 1 of 1</div>
+      <div class="bubble-them">Let's talk about Sundays.</div>
+      <div class="bubble-them">How does your body feel when you remember it's Monday tomorrow?</div>
+      <div class="typing"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    </div>
+    <div class="options">
+      <button class="option">🌞 &nbsp; Excited about something on the calendar</button>
+      <button class="option">😐 &nbsp; Neutral, it's just Monday</button>
+      <button class="option">😔 &nbsp; Heavy chest, dread</button>
+      <button class="option">🪦 &nbsp; Already pre-tired</button>
+    </div>
+  </div>
+</body>
+</html>

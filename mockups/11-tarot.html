@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Tarot</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--gold:#d4af37;--cream:#f4ead5;--accent:#8b1e3f}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Cormorant Garamond',serif;background:#0a0518;background-image:radial-gradient(circle at 50% 30%,#1a0d3a 0%,#0a0518 80%);color:var(--cream);min-height:100vh;display:flex;justify-content:center;padding:20px}
+  .card{width:100%;max-width:420px;background:linear-gradient(180deg,#1a0d3a 0%,#0f0820 100%);border:2px solid var(--gold);padding:32px 28px;position:relative;display:flex;flex-direction:column}
+  .corner{position:absolute;width:30px;height:30px;border:2px solid var(--gold)}
+  .corner.tl{top:8px;left:8px;border-right:0;border-bottom:0}
+  .corner.tr{top:8px;right:8px;border-left:0;border-bottom:0}
+  .corner.bl{bottom:8px;left:8px;border-right:0;border-top:0}
+  .corner.br{bottom:8px;right:8px;border-left:0;border-top:0}
+  .header{text-align:center;margin-bottom:28px}
+  .glyph{font-size:22px;color:var(--gold);letter-spacing:8px}
+  .name{font-family:'Cinzel',serif;font-weight:500;font-size:13px;letter-spacing:6px;margin-top:6px;color:var(--gold)}
+  .roman{font-family:'Cinzel',serif;font-size:42px;color:var(--gold);text-align:center;margin:0;font-weight:400;line-height:1}
+  .card-name{font-family:'Cinzel',serif;font-size:11px;letter-spacing:5px;text-align:center;color:var(--cream);opacity:0.7;margin:6px 0 24px;text-transform:uppercase}
+  .question{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:26px;line-height:1.3;text-align:center;margin:0 0 14px;color:var(--cream)}
+  .followup{font-family:'Cormorant Garamond',serif;font-size:16px;line-height:1.45;text-align:center;margin-bottom:30px;color:rgba(244,234,213,0.75)}
+  .divider{text-align:center;color:var(--gold);margin:8px 0 20px;letter-spacing:8px;font-size:14px}
+  .options{display:flex;flex-direction:column;gap:8px}
+  .option{background:rgba(212,175,55,0.05);border:1px solid rgba(212,175,55,0.3);padding:13px 16px;font:inherit;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--cream);text-align:left;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s}
+  .option:hover{background:rgba(212,175,55,0.18);border-color:var(--gold);transform:translateX(2px)}
+  .emoji{font-size:18px}
+  .footer{margin-top:24px;text-align:center;font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;color:var(--gold);opacity:0.7}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+    <div class="header">
+      <div class="glyph">✦ ☾ ✦</div>
+      <div class="name">DR · K</div>
+    </div>
+    <div class="roman">XV</div>
+    <div class="card-name">— The State of You —</div>
+    <p class="question">"Let us speak of Sundays."</p>
+    <p class="followup">How does your body feel when you remember it is Monday tomorrow?</p>
+    <div class="divider">⊹ ─── ⊹</div>
+    <div class="options">
+      <button class="option"><span class="emoji">🌞</span>Excited about something on the calendar</button>
+      <button class="option"><span class="emoji">😐</span>Neutral, it is just Monday</button>
+      <button class="option"><span class="emoji">😔</span>Heavy chest, dread</button>
+      <button class="option"><span class="emoji">🪦</span>Already pre-tired</button>
+    </div>
+    <div class="footer">XV OF XX · 16 · V · MMXXVI</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · SaaS Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter Tight',sans-serif;background:#0e0e10;color:#ededed;min-height:100vh;display:flex;justify-content:center}
+  .app{width:100%;max-width:440px;display:flex;flex-direction:column;min-height:100vh;background:#0e0e10}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #232328}
+  .brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px}
+  .logo{width:22px;height:22px;background:#ededed;color:#0e0e10;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;border-radius:5px}
+  .session-tag{display:flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;color:#a0a0a8}
+  .live{width:6px;height:6px;background:#22c55e;border-radius:50%;box-shadow:0 0 6px #22c55e}
+  .module-rail{display:flex;gap:6px;padding:12px 16px;overflow-x:auto;border-bottom:1px solid #232328;scrollbar-width:none}
+  .module-rail::-webkit-scrollbar{display:none}
+  .module-pill{padding:6px 12px;background:#1c1c20;color:#a0a0a8;font-size:11px;font-weight:500;border-radius:100px;white-space:nowrap;border:1px solid transparent;cursor:pointer;display:flex;align-items:center;gap:6px}
+  .module-pill.done{color:#22c55e}
+  .module-pill.done .num{color:#22c55e}
+  .module-pill.current{background:#fef3c7;color:#1c1c20;font-weight:600;border-color:#fbbf24}
+  .module-pill .num{font-family:'DM Mono',monospace;color:#5a5a62;font-weight:500}
+  .module-pill.current .num{color:#92400e}
+  .main{flex:1;padding:24px 16px}
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-size:11px;font-family:'DM Mono',monospace;color:#5a5a62;margin-bottom:14px}
+  .breadcrumb .accent{color:#fbbf24}
+  .question-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .item-tag{font-family:'DM Mono',monospace;font-size:11px;color:#ededed;background:#1c1c20;padding:3px 8px;border-radius:4px;font-weight:500}
+  .progress-frac{font-family:'DM Mono',monospace;font-size:11px;color:#a0a0a8}
+  .question{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:30px;line-height:1.1;margin:0 0 12px;letter-spacing:-1.2px;color:#fff}
+  .followup{font-size:14.5px;line-height:1.5;color:#a0a0a8;margin-bottom:28px}
+  .options-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#5a5a62;margin-bottom:8px}
+  .options{display:flex;flex-direction:column;gap:6px}
+  .option{background:#1c1c20;border:1px solid #2c2c32;padding:13px 14px;font:inherit;font-size:14px;color:#ededed;text-align:left;display:flex;align-items:center;gap:12px;cursor:pointer;border-radius:8px;transition:all .15s}
+  .option:hover{background:#2c2c32;border-color:#fbbf24;transform:translateY(-1px)}
+  .option:hover .kbd{background:#fbbf24;color:#1c1c20;border-color:#fbbf24}
+  .kbd{font-family:'DM Mono',monospace;font-size:10px;color:#a0a0a8;background:#0e0e10;padding:2px 6px;border:1px solid #2c2c32;border-radius:3px;font-weight:600;min-width:18px;text-align:center}
+  .emoji{font-size:18px}
+  .opt-text{flex:1}
+  .statusbar{padding:8px 16px;border-top:1px solid #232328;display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:10px;color:#5a5a62}
+  .status-left{display:flex;gap:14px}
+</style>
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">K</div>
+        <span>Dr. K</span>
+      </div>
+      <div class="session-tag"><div class="live"></div>session.01 · live</div>
+    </div>
+    <div class="module-rail">
+      <div class="module-pill done"><span class="num">01</span>The Work</div>
+      <div class="module-pill done"><span class="num">02</span>Manager</div>
+      <div class="module-pill done"><span class="num">03</span>People</div>
+      <div class="module-pill done"><span class="num">04</span>Growth</div>
+      <div class="module-pill current"><span class="num">05</span>State of You</div>
+      <div class="module-pill"><span class="num">06</span>Money</div>
+    </div>
+    <div class="main">
+      <div class="breadcrumb">module.<span class="accent">state-of-you</span> / item.15</div>
+      <div class="question-meta">
+        <span class="item-tag">item 15</span>
+        <span class="progress-frac">15 / 20 · 75%</span>
+      </div>
+      <h1 class="question">Let's talk about Sundays.</h1>
+      <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+      <div class="options-label">— select one —</div>
+      <div class="options">
+        <button class="option"><span class="kbd">A</span><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+        <button class="option"><span class="kbd">B</span><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+        <button class="option"><span class="kbd">C</span><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+        <button class="option"><span class="kbd">D</span><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+      </div>
+    </div>
+    <div class="statusbar">
+      <div class="status-left"><span>● connected</span><span>auto-saved</span></div>
+      <span>esc to pause</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+[
+  {"role":"Senior Product Manager","city":"Hyderabad","yoe_band":"0-3","p25":22,"p50":28,"p75":37,"p90":47,"confidence":"low","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Senior Product Manager","city":"Hyderabad","yoe_band":"4-7","p25":30,"p50":40,"p75":53,"p90":68,"confidence":"medium","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Senior Product Manager","city":"Hyderabad","yoe_band":"8-12","p25":44,"p50":57,"p75":76,"p90":97,"confidence":"medium","sources":["AmbitionBox","Levels.fyi","Glassdoor"]},
+  {"role":"Senior Product Manager","city":"Hyderabad","yoe_band":"13+","p25":60,"p50":78,"p75":104,"p90":132,"confidence":"medium","sources":["Levels.fyi","Glassdoor"]},
+
+  {"role":"Product Manager","city":"Hyderabad","yoe_band":"0-3","p25":14,"p50":18,"p75":24,"p90":31,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Product Manager","city":"Hyderabad","yoe_band":"4-7","p25":21,"p50":27,"p75":36,"p90":46,"confidence":"medium","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Product Manager","city":"Hyderabad","yoe_band":"8-12","p25":30,"p50":38,"p75":51,"p90":65,"confidence":"medium","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Product Manager","city":"Hyderabad","yoe_band":"13+","p25":40,"p50":52,"p75":69,"p90":88,"confidence":"low","sources":["Glassdoor","Levels.fyi"]},
+
+  {"role":"Associate PM","city":"Hyderabad","yoe_band":"0-3","p25":10,"p50":13,"p75":17,"p90":22,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Associate PM","city":"Hyderabad","yoe_band":"4-7","p25":14,"p50":18,"p75":24,"p90":31,"confidence":"low","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Associate PM","city":"Hyderabad","yoe_band":"8-12","p25":19,"p50":24,"p75":32,"p90":41,"confidence":"low","sources":["estimate","AmbitionBox"]},
+  {"role":"Associate PM","city":"Hyderabad","yoe_band":"13+","p25":25,"p50":32,"p75":42,"p90":54,"confidence":"low","sources":["estimate"]},
+
+  {"role":"Software Engineer","city":"Hyderabad","yoe_band":"0-3","p25":6,"p50":9,"p75":13,"p90":17,"confidence":"high","sources":["AmbitionBox","Glassdoor","6figr"]},
+  {"role":"Software Engineer","city":"Hyderabad","yoe_band":"4-7","p25":13,"p50":18,"p75":25,"p90":32,"confidence":"high","sources":["AmbitionBox","Levels.fyi","Glassdoor"]},
+  {"role":"Software Engineer","city":"Hyderabad","yoe_band":"8-12","p25":22,"p50":28,"p75":38,"p90":48,"confidence":"medium","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Software Engineer","city":"Hyderabad","yoe_band":"13+","p25":28,"p50":36,"p75":48,"p90":61,"confidence":"medium","sources":["AmbitionBox","Levels.fyi"]},
+
+  {"role":"Senior Software Engineer","city":"Hyderabad","yoe_band":"0-3","p25":12,"p50":16,"p75":21,"p90":27,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Senior Software Engineer","city":"Hyderabad","yoe_band":"4-7","p25":20,"p50":26,"p75":35,"p90":44,"confidence":"high","sources":["AmbitionBox","Levels.fyi","Glassdoor"]},
+  {"role":"Senior Software Engineer","city":"Hyderabad","yoe_band":"8-12","p25":30,"p50":38,"p75":51,"p90":65,"confidence":"high","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Senior Software Engineer","city":"Hyderabad","yoe_band":"13+","p25":40,"p50":52,"p75":69,"p90":88,"confidence":"medium","sources":["Levels.fyi","Glassdoor"]},
+
+  {"role":"Engineering Manager","city":"Hyderabad","yoe_band":"0-3","p25":24,"p50":30,"p75":40,"p90":51,"confidence":"low","sources":["Glassdoor","estimate"]},
+  {"role":"Engineering Manager","city":"Hyderabad","yoe_band":"4-7","p25":32,"p50":40,"p75":53,"p90":65,"confidence":"high","sources":["Glassdoor","AmbitionBox"]},
+  {"role":"Engineering Manager","city":"Hyderabad","yoe_band":"8-12","p25":42,"p50":55,"p75":72,"p90":92,"confidence":"high","sources":["Glassdoor","Levels.fyi"]},
+  {"role":"Engineering Manager","city":"Hyderabad","yoe_band":"13+","p25":58,"p50":75,"p75":100,"p90":128,"confidence":"medium","sources":["Glassdoor","Levels.fyi"]},
+
+  {"role":"Tech Lead","city":"Hyderabad","yoe_band":"0-3","p25":12,"p50":16,"p75":21,"p90":27,"confidence":"low","sources":["Glassdoor","estimate"]},
+  {"role":"Tech Lead","city":"Hyderabad","yoe_band":"4-7","p25":18,"p50":24,"p75":32,"p90":41,"confidence":"medium","sources":["Glassdoor","AmbitionBox"]},
+  {"role":"Tech Lead","city":"Hyderabad","yoe_band":"8-12","p25":24,"p50":32,"p75":43,"p90":55,"confidence":"high","sources":["Glassdoor","AmbitionBox"]},
+  {"role":"Tech Lead","city":"Hyderabad","yoe_band":"13+","p25":34,"p50":44,"p75":58,"p90":74,"confidence":"medium","sources":["Glassdoor","Levels.fyi"]},
+
+  {"role":"Designer","city":"Hyderabad","yoe_band":"0-3","p25":4,"p50":6,"p75":8,"p90":11,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Designer","city":"Hyderabad","yoe_band":"4-7","p25":8,"p50":11,"p75":15,"p90":19,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Designer","city":"Hyderabad","yoe_band":"8-12","p25":14,"p50":18,"p75":24,"p90":31,"confidence":"low","sources":["AmbitionBox","estimate"]},
+  {"role":"Designer","city":"Hyderabad","yoe_band":"13+","p25":18,"p50":24,"p75":32,"p90":41,"confidence":"low","sources":["estimate"]},
+
+  {"role":"Senior Designer","city":"Hyderabad","yoe_band":"0-3","p25":9,"p50":12,"p75":16,"p90":20,"confidence":"low","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Senior Designer","city":"Hyderabad","yoe_band":"4-7","p25":14,"p50":18,"p75":24,"p90":31,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Senior Designer","city":"Hyderabad","yoe_band":"8-12","p25":22,"p50":28,"p75":37,"p90":48,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Senior Designer","city":"Hyderabad","yoe_band":"13+","p25":30,"p50":38,"p75":51,"p90":65,"confidence":"low","sources":["Glassdoor","estimate"]},
+
+  {"role":"Data Scientist","city":"Hyderabad","yoe_band":"0-3","p25":8,"p50":11,"p75":15,"p90":19,"confidence":"high","sources":["AmbitionBox","Codegnan","Glassdoor"]},
+  {"role":"Data Scientist","city":"Hyderabad","yoe_band":"4-7","p25":15,"p50":20,"p75":27,"p90":34,"confidence":"high","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Data Scientist","city":"Hyderabad","yoe_band":"8-12","p25":25,"p50":32,"p75":43,"p90":54,"confidence":"medium","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Data Scientist","city":"Hyderabad","yoe_band":"13+","p25":34,"p50":44,"p75":58,"p90":74,"confidence":"medium","sources":["Levels.fyi","Glassdoor"]},
+
+  {"role":"Senior Data Scientist","city":"Hyderabad","yoe_band":"0-3","p25":14,"p50":18,"p75":24,"p90":31,"confidence":"low","sources":["AmbitionBox","estimate"]},
+  {"role":"Senior Data Scientist","city":"Hyderabad","yoe_band":"4-7","p25":22,"p50":29,"p75":39,"p90":49,"confidence":"medium","sources":["AmbitionBox","Levels.fyi"]},
+  {"role":"Senior Data Scientist","city":"Hyderabad","yoe_band":"8-12","p25":34,"p50":44,"p75":58,"p90":74,"confidence":"medium","sources":["Levels.fyi","Glassdoor"]},
+  {"role":"Senior Data Scientist","city":"Hyderabad","yoe_band":"13+","p25":46,"p50":58,"p75":77,"p90":98,"confidence":"medium","sources":["Levels.fyi","Glassdoor"]},
+
+  {"role":"DevOps Engineer","city":"Hyderabad","yoe_band":"0-3","p25":6,"p50":8,"p75":11,"p90":14,"confidence":"high","sources":["AmbitionBox","Glassdoor","PayScale"]},
+  {"role":"DevOps Engineer","city":"Hyderabad","yoe_band":"4-7","p25":12,"p50":16,"p75":22,"p90":28,"confidence":"high","sources":["AmbitionBox","Glassdoor","6figr"]},
+  {"role":"DevOps Engineer","city":"Hyderabad","yoe_band":"8-12","p25":20,"p50":26,"p75":35,"p90":44,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"DevOps Engineer","city":"Hyderabad","yoe_band":"13+","p25":27,"p50":34,"p75":46,"p90":58,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+
+  {"role":"QA Engineer","city":"Hyderabad","yoe_band":"0-3","p25":3,"p50":5,"p75":7,"p90":9,"confidence":"high","sources":["AmbitionBox","Glassdoor","PayScale"]},
+  {"role":"QA Engineer","city":"Hyderabad","yoe_band":"4-7","p25":7,"p50":10,"p75":14,"p90":18,"confidence":"high","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"QA Engineer","city":"Hyderabad","yoe_band":"8-12","p25":13,"p50":17,"p75":23,"p90":29,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"QA Engineer","city":"Hyderabad","yoe_band":"13+","p25":18,"p50":23,"p75":31,"p90":39,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+
+  {"role":"Sales Lead","city":"Hyderabad","yoe_band":"0-3","p25":5,"p50":7,"p75":10,"p90":13,"confidence":"low","sources":["Glassdoor","estimate"]},
+  {"role":"Sales Lead","city":"Hyderabad","yoe_band":"4-7","p25":9,"p50":13,"p75":18,"p90":23,"confidence":"medium","sources":["Glassdoor","AmbitionBox"]},
+  {"role":"Sales Lead","city":"Hyderabad","yoe_band":"8-12","p25":17,"p50":22,"p75":30,"p90":38,"confidence":"medium","sources":["Glassdoor","AmbitionBox"]},
+  {"role":"Sales Lead","city":"Hyderabad","yoe_band":"13+","p25":28,"p50":36,"p75":48,"p90":61,"confidence":"low","sources":["Glassdoor","SalaryExpert"]},
+
+  {"role":"Marketing Manager","city":"Hyderabad","yoe_band":"0-3","p25":6,"p50":8,"p75":11,"p90":14,"confidence":"low","sources":["Glassdoor","estimate"]},
+  {"role":"Marketing Manager","city":"Hyderabad","yoe_band":"4-7","p25":11,"p50":15,"p75":20,"p90":26,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Marketing Manager","city":"Hyderabad","yoe_band":"8-12","p25":17,"p50":22,"p75":29,"p90":37,"confidence":"high","sources":["Salary.com","Glassdoor","AmbitionBox"]},
+  {"role":"Marketing Manager","city":"Hyderabad","yoe_band":"13+","p25":24,"p50":31,"p75":41,"p90":53,"confidence":"medium","sources":["Salary.com","Glassdoor"]},
+
+  {"role":"Growth Manager","city":"Hyderabad","yoe_band":"0-3","p25":7,"p50":10,"p75":13,"p90":17,"confidence":"low","sources":["Glassdoor","Skilletal"]},
+  {"role":"Growth Manager","city":"Hyderabad","yoe_band":"4-7","p25":13,"p50":17,"p75":23,"p90":29,"confidence":"medium","sources":["Glassdoor","Skilletal"]},
+  {"role":"Growth Manager","city":"Hyderabad","yoe_band":"8-12","p25":22,"p50":28,"p75":37,"p90":48,"confidence":"medium","sources":["Glassdoor","AmbitionBox"]},
+  {"role":"Growth Manager","city":"Hyderabad","yoe_band":"13+","p25":32,"p50":42,"p75":56,"p90":71,"confidence":"low","sources":["Glassdoor","estimate"]},
+
+  {"role":"Customer Success Manager","city":"Hyderabad","yoe_band":"0-3","p25":5,"p50":7,"p75":10,"p90":13,"confidence":"medium","sources":["Glassdoor","AmbitionBox"]},
+  {"role":"Customer Success Manager","city":"Hyderabad","yoe_band":"4-7","p25":9,"p50":12,"p75":16,"p90":21,"confidence":"high","sources":["Glassdoor","PayScale","Indeed"]},
+  {"role":"Customer Success Manager","city":"Hyderabad","yoe_band":"8-12","p25":15,"p50":20,"p75":27,"p90":34,"confidence":"high","sources":["Glassdoor","RepVue"]},
+  {"role":"Customer Success Manager","city":"Hyderabad","yoe_band":"13+","p25":22,"p50":28,"p75":37,"p90":47,"confidence":"medium","sources":["Glassdoor","RepVue"]},
+
+  {"role":"Finance Analyst","city":"Hyderabad","yoe_band":"0-3","p25":4,"p50":6,"p75":8,"p90":11,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Finance Analyst","city":"Hyderabad","yoe_band":"4-7","p25":8,"p50":11,"p75":15,"p90":19,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Finance Analyst","city":"Hyderabad","yoe_band":"8-12","p25":13,"p50":17,"p75":23,"p90":29,"confidence":"low","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Finance Analyst","city":"Hyderabad","yoe_band":"13+","p25":19,"p50":24,"p75":32,"p90":41,"confidence":"low","sources":["Glassdoor","estimate"]},
+
+  {"role":"HR Business Partner","city":"Hyderabad","yoe_band":"0-3","p25":5,"p50":7,"p75":10,"p90":13,"confidence":"medium","sources":["AmbitionBox","Glassdoor","Indeed"]},
+  {"role":"HR Business Partner","city":"Hyderabad","yoe_band":"4-7","p25":9,"p50":12,"p75":16,"p90":21,"confidence":"high","sources":["Glassdoor","PayScale","Keka"]},
+  {"role":"HR Business Partner","city":"Hyderabad","yoe_band":"8-12","p25":16,"p50":21,"p75":28,"p90":36,"confidence":"medium","sources":["Glassdoor","Keka"]},
+  {"role":"HR Business Partner","city":"Hyderabad","yoe_band":"13+","p25":24,"p50":31,"p75":41,"p90":53,"confidence":"low","sources":["Glassdoor","Salary.com"]},
+
+  {"role":"Operations Manager","city":"Hyderabad","yoe_band":"0-3","p25":5,"p50":7,"p75":10,"p90":13,"confidence":"low","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Operations Manager","city":"Hyderabad","yoe_band":"4-7","p25":10,"p50":13,"p75":18,"p90":23,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Operations Manager","city":"Hyderabad","yoe_band":"8-12","p25":16,"p50":21,"p75":28,"p90":36,"confidence":"medium","sources":["AmbitionBox","Glassdoor"]},
+  {"role":"Operations Manager","city":"Hyderabad","yoe_band":"13+","p25":24,"p50":31,"p75":41,"p90":53,"confidence":"low","sources":["Glassdoor","estimate"]}
+]

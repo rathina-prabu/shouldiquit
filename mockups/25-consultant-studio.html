@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Modern Career Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'DM Sans',sans-serif;background:#fafaf9;color:#0a0a0a;min-height:100vh;display:flex;justify-content:center}
+  .page{width:100%;max-width:440px;padding:24px 24px 32px;display:flex;flex-direction:column;min-height:100vh}
+  .header{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid #e8e6e1;margin-bottom:28px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{width:32px;height:32px;background:#0a0a0a;color:#fafaf9;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;border-radius:9px}
+  .brand-name{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:16px;letter-spacing:-0.4px}
+  .brand-sub{font-size:11px;color:#7a7569;font-weight:500;margin-top:1px}
+  .pill{padding:4px 11px;background:#f0ede5;border-radius:100px;font-size:11px;font-weight:600;color:#5a554a;display:flex;align-items:center;gap:6px}
+  .dot{width:6px;height:6px;border-radius:50%;background:#10b981}
+  .progress-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:12px;color:#5a554a;font-weight:500}
+  .progress-meta strong{color:#0a0a0a;font-weight:700}
+  .bar{height:6px;background:#ebe8e0;border-radius:3px;overflow:hidden;margin-bottom:32px}
+  .bar-fill{height:100%;width:75%;background:#0a0a0a;border-radius:3px}
+  .module-tag{display:inline-block;background:#f0ede5;color:#5a554a;padding:5px 12px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.3px;margin-bottom:14px}
+  .module-tag .em{color:#0a0a0a}
+  .question{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:34px;line-height:1.08;letter-spacing:-1.4px;margin:0 0 14px;font-variation-settings:'opsz' 96}
+  .followup{font-size:15.5px;line-height:1.5;color:#525252;margin-bottom:32px}
+  .response-label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#5a554a;margin-bottom:12px}
+  .options{display:flex;flex-direction:column;gap:8px}
+  .option{background:#fff;border:1px solid #e8e6e1;border-radius:14px;padding:14px 16px;font:inherit;font-size:14.5px;font-weight:500;text-align:left;display:flex;align-items:center;gap:14px;cursor:pointer;color:#0a0a0a;transition:all .15s;box-shadow:0 1px 2px rgba(0,0,0,0.02)}
+  .option:hover{border-color:#0a0a0a;background:#fafaf7;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+  .emoji{font-size:18px}
+  .opt-text{flex:1}
+  .arrow{opacity:0;color:#5a554a;transition:opacity .15s}
+  .option:hover .arrow{opacity:1}
+  .footer-note{margin-top:auto;padding-top:24px;font-size:12px;color:#a8a39b;text-align:center;font-style:italic}
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="brand">
+        <div class="logo">k</div>
+        <div>
+          <div class="brand-name">Dr. K · Career Studio</div>
+          <div class="brand-sub">Independent Advisor</div>
+        </div>
+      </div>
+      <div class="pill"><div class="dot"></div>Session live</div>
+    </div>
+    <div class="progress-meta">
+      <span><strong>15</strong> of 20</span>
+      <span>5 to go</span>
+    </div>
+    <div class="bar"><div class="bar-fill"></div></div>
+    <div class="module-tag">Module <span class="em">5</span> — The State of You</div>
+    <h1 class="question">Let's talk about Sundays.</h1>
+    <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+    <div class="response-label">Pick what's true →</div>
+    <div class="options">
+      <button class="option"><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span><span class="arrow">→</span></button>
+      <button class="option"><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span><span class="arrow">→</span></button>
+      <button class="option"><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span><span class="arrow">→</span></button>
+      <button class="option"><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span><span class="arrow">→</span></button>
+    </div>
+    <div class="footer-note">Confidential · We don't ask for your name, ever.</div>
+  </div>
+</body>
+</html>

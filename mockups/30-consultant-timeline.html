@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Vertical Timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Plus Jakarta Sans',sans-serif;background:#f8f7f3;color:#0d1b2a;min-height:100vh;display:flex;justify-content:center}
+  .page{width:100%;max-width:440px;padding:24px 20px;display:flex;flex-direction:column}
+  .header{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid #e2dcca;margin-bottom:24px}
+  .brand{font-family:'Newsreader',serif;font-size:20px;font-weight:500;line-height:1}
+  .brand-sub{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a8090;margin-top:3px;font-weight:500}
+  .session-pill{padding:5px 12px;background:#0d1b2a;color:#f8f7f3;font-size:11px;font-weight:600;border-radius:100px;letter-spacing:0.5px}
+  .timeline{position:relative;padding-left:32px}
+  .timeline::before{content:'';position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:#e2dcca}
+  .node{position:relative;padding-bottom:14px}
+  .node::before{content:'';position:absolute;left:-26px;top:6px;width:14px;height:14px;border-radius:50%;background:#7a8090;border:3px solid #f8f7f3}
+  .node.done::before{background:#0d1b2a}
+  .node.done::after{content:'✓';position:absolute;left:-23px;top:3px;color:#f8f7f3;font-size:9px;font-weight:700}
+  .node.future::before{background:#f8f7f3;border:2px solid #e2dcca}
+  .node-label{font-size:13px;color:#7a8090;font-weight:500}
+  .node.done .node-label{opacity:0.7}
+  .node.done .node-label .topic{text-decoration:line-through}
+  .node.future .node-label{opacity:0.7}
+  .node-label .item-num{font-family:'Newsreader',serif;font-style:italic;font-size:12px;color:#5a606a;margin-right:6px}
+  .node.current{padding-bottom:22px}
+  .node.current::before{background:#c9a227;width:18px;height:18px;left:-28px;top:4px;box-shadow:0 0 0 4px rgba(201,162,39,0.2)}
+  .current-card{background:#fff;border:1.5px solid #0d1b2a;border-radius:12px;padding:18px 18px 20px;margin-top:6px;box-shadow:0 4px 16px rgba(13,27,42,0.08)}
+  .module-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c9a227;font-weight:700;margin-bottom:8px}
+  .question{font-family:'Newsreader',serif;font-weight:400;font-size:24px;line-height:1.15;margin:0 0 10px;letter-spacing:-0.4px}
+  .question .em{font-style:italic}
+  .followup{font-size:14px;line-height:1.5;color:#3a4a5a;margin-bottom:18px}
+  .options{display:flex;flex-direction:column;gap:6px}
+  .option{background:transparent;border:1px solid #d4cdb8;padding:11px 14px;font:inherit;font-size:13.5px;font-weight:500;text-align:left;display:flex;align-items:center;gap:12px;cursor:pointer;color:#0d1b2a;border-radius:8px;transition:all .15s}
+  .option:hover{background:#0d1b2a;color:#f8f7f3;border-color:#0d1b2a}
+  .emoji{font-size:16px}
+  .footer-meta{margin-top:24px;font-size:11px;color:#7a8090;text-align:center;font-style:italic}
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <div>
+        <div class="brand">Dr. K</div>
+        <div class="brand-sub">Career Diagnostic</div>
+      </div>
+      <div class="session-pill">Session 1 · 15 / 20</div>
+    </div>
+    <div class="timeline">
+      <div class="node done"><div class="node-label"><span class="item-num">Q12</span><span class="topic">Recognition signal</span></div></div>
+      <div class="node done"><div class="node-label"><span class="item-num">Q13</span><span class="topic">Voice in meetings</span></div></div>
+      <div class="node done"><div class="node-label"><span class="item-num">Q14</span><span class="topic">Skill development</span></div></div>
+      <div class="node current">
+        <div class="current-card">
+          <div class="module-tag">Section 5 · State of You</div>
+          <h2 class="question">Let's talk about <span class="em">Sundays.</span></h2>
+          <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+          <div class="options">
+            <button class="option"><span class="emoji">🌞</span>Excited about something on the calendar</button>
+            <button class="option"><span class="emoji">😐</span>Neutral, it's just Monday</button>
+            <button class="option"><span class="emoji">😔</span>Heavy chest, dread</button>
+            <button class="option"><span class="emoji">🪦</span>Already pre-tired</button>
+          </div>
+        </div>
+      </div>
+      <div class="node future"><div class="node-label"><span class="item-num">Q16</span><span class="topic">PTO disconnect</span></div></div>
+      <div class="node future"><div class="node-label"><span class="item-num">Q17</span><span class="topic">Slack notification</span></div></div>
+      <div class="node future"><div class="node-label"><span class="item-num">Q18</span><span class="topic">Compensation</span></div></div>
+    </div>
+    <div class="footer-meta">5 more then you get the verdict.</div>
+  </div>
+</body>
+</html>

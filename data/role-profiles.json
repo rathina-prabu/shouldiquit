@@ -1,0 +1,262 @@
+[
+  {
+    "role": "Senior Product Manager",
+    "common_next_roles": ["Director of Product", "Group Product Manager", "Founder / Startup PM Head"],
+    "typical_promotion_window_months": 36,
+    "top_3_quit_reasons": [
+      "Slow promotion path to Director — limited Director slots in Indian product orgs",
+      "Compensation ceiling at SrPM band vs FAANG / US-remote offers",
+      "Strategy vs execution mismatch — pulled into delivery work, not vision"
+    ],
+    "median_tenure_months": 28,
+    "confidence": "medium",
+    "sources": ["LinkedIn Workforce Report India 2025", "Inc42 Product Talent Report 2024"]
+  },
+  {
+    "role": "Product Manager",
+    "common_next_roles": ["Senior Product Manager", "Lead PM", "Founding PM at startup"],
+    "typical_promotion_window_months": 30,
+    "top_3_quit_reasons": [
+      "Slow growth to SrPM — bottleneck at mid-level PM band",
+      "Better offer / higher hike (40-60% jumps common in PM switches)",
+      "Lack of ownership — PM-in-name-only roles with eng-driven roadmap"
+    ],
+    "median_tenure_months": 24,
+    "confidence": "medium",
+    "sources": ["Naukri What People Want 2024", "Glassdoor India PM reviews"]
+  },
+  {
+    "role": "Associate PM",
+    "common_next_roles": ["Product Manager", "Senior APM", "Product Analyst"],
+    "typical_promotion_window_months": 18,
+    "top_3_quit_reasons": [
+      "Slow promotion to full PM — APM programs often lack clear graduation",
+      "Limited scope / shadow work under senior PMs",
+      "Better APM offer with higher base at competing product company"
+    ],
+    "median_tenure_months": 18,
+    "confidence": "low",
+    "sources": ["LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "Software Engineer",
+    "common_next_roles": ["Senior Software Engineer", "Full-stack Engineer", "SDE-2 at product company"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "Better offer / hike (50-100% jumps standard in 2-3 yr SDE switches)",
+      "Tier-1 IT services to product company transition (TCS/Infy → Razorpay/Swiggy)",
+      "Boring / maintenance work — no greenfield or modern stack exposure"
+    ],
+    "median_tenure_months": 22,
+    "confidence": "high",
+    "sources": ["Naukri Jobspeak 2024", "LinkedIn Workforce Report India 2025", "Springworks Retention Report"]
+  },
+  {
+    "role": "Senior Software Engineer",
+    "common_next_roles": ["Tech Lead", "Staff Engineer", "Engineering Manager"],
+    "typical_promotion_window_months": 30,
+    "top_3_quit_reasons": [
+      "IC vs Management fork — forced into EM track without choice",
+      "Compensation ceiling — needs job switch for 40%+ hike",
+      "Tech stack stagnation / legacy codebase fatigue"
+    ],
+    "median_tenure_months": 26,
+    "confidence": "high",
+    "sources": ["LinkedIn Workforce Report India 2025", "Glassdoor India SSE reviews"]
+  },
+  {
+    "role": "Engineering Manager",
+    "common_next_roles": ["Senior Engineering Manager", "Director of Engineering", "VP Engineering"],
+    "typical_promotion_window_months": 36,
+    "top_3_quit_reasons": [
+      "Burnout — sandwich layer between leadership pressure and team morale",
+      "Want to return to IC / hands-on coding (Staff Eng track)",
+      "Slow path to Director — limited senior leadership slots"
+    ],
+    "median_tenure_months": 30,
+    "confidence": "medium",
+    "sources": ["Inc42 Engineering Leadership Report 2024", "LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "Tech Lead",
+    "common_next_roles": ["Engineering Manager", "Staff Engineer", "Principal Engineer"],
+    "typical_promotion_window_months": 30,
+    "top_3_quit_reasons": [
+      "Role ambiguity — TL doing IC + people work without EM title or comp",
+      "Forced into people management without IC ladder option",
+      "Better offer with clear Staff/Principal track at product company"
+    ],
+    "median_tenure_months": 24,
+    "confidence": "medium",
+    "sources": ["LinkedIn Workforce Report India 2025", "Glassdoor India Tech Lead reviews"]
+  },
+  {
+    "role": "Designer",
+    "common_next_roles": ["Senior Designer", "Product Designer", "UX Lead"],
+    "typical_promotion_window_months": 30,
+    "top_3_quit_reasons": [
+      "Treated as pixel-pusher / no seat at product strategy table",
+      "Lack of design system / mature design org to grow in",
+      "Better offer at design-first company (Razorpay, CRED, Atlassian India)"
+    ],
+    "median_tenure_months": 24,
+    "confidence": "medium",
+    "sources": ["DesignUp India Salary Survey 2024", "Glassdoor India Designer reviews"]
+  },
+  {
+    "role": "Senior Designer",
+    "common_next_roles": ["Lead Designer", "Design Manager", "Principal Designer"],
+    "typical_promotion_window_months": 36,
+    "top_3_quit_reasons": [
+      "No path to Design Manager — flat design orgs in most Indian companies",
+      "Comp ceiling — senior designer band capped vs eng equivalent",
+      "Lack of strategic / 0-to-1 work — only feature iteration"
+    ],
+    "median_tenure_months": 28,
+    "confidence": "low",
+    "sources": ["DesignUp India Salary Survey 2024"]
+  },
+  {
+    "role": "Data Scientist",
+    "common_next_roles": ["Senior Data Scientist", "ML Engineer", "Applied Scientist"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "Doing dashboarding / SQL work, not actual ML / modeling",
+      "Better offer at GenAI / ML-first startup with modern stack",
+      "No production ML pipelines — models never deployed"
+    ],
+    "median_tenure_months": 22,
+    "confidence": "medium",
+    "sources": ["Analytics India Magazine Salary Report 2024", "LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "Senior Data Scientist",
+    "common_next_roles": ["Lead Data Scientist", "Principal DS / Applied Scientist", "Head of Data Science"],
+    "typical_promotion_window_months": 36,
+    "top_3_quit_reasons": [
+      "GenAI / LLM wave — moving to LLM-focused roles at higher pay",
+      "Lack of MLOps maturity — can't ship models to production",
+      "Comp ceiling vs FAANG India / US-remote Applied Scientist roles"
+    ],
+    "median_tenure_months": 26,
+    "confidence": "medium",
+    "sources": ["Analytics India Magazine 2024", "Naukri Tech Salary Report 2024"]
+  },
+  {
+    "role": "DevOps Engineer",
+    "common_next_roles": ["Senior DevOps Engineer", "SRE", "Platform Engineer"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "On-call burnout / pager fatigue with thin team",
+      "Better offer — DevOps/SRE in high demand, 60-80% hikes common",
+      "Stuck on legacy infra (no Kubernetes / IaC modernization)"
+    ],
+    "median_tenure_months": 20,
+    "confidence": "medium",
+    "sources": ["Naukri Jobspeak 2024", "LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "QA Engineer",
+    "common_next_roles": ["SDET", "Senior QA / QA Lead", "Automation Engineer"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "Manual testing trap — no automation skill development",
+      "Lower comp band vs SDE — moving to SDET / dev role for pay parity",
+      "Lack of respect / second-class citizen in eng org"
+    ],
+    "median_tenure_months": 24,
+    "confidence": "medium",
+    "sources": ["Naukri What People Want 2024", "Glassdoor India QA reviews"]
+  },
+  {
+    "role": "Sales Lead",
+    "common_next_roles": ["Sales Manager", "Regional Sales Head", "AE at larger SaaS company"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "Unrealistic quota / quota inflation year over year",
+      "Comp plan changes — OTE cut or accelerators removed mid-year",
+      "Better offer with higher base + named accounts at competitor"
+    ],
+    "median_tenure_months": 20,
+    "confidence": "medium",
+    "sources": ["Naukri Sales Salary Report 2024", "LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "Marketing Manager",
+    "common_next_roles": ["Senior Marketing Manager", "Head of Marketing", "Growth Manager"],
+    "typical_promotion_window_months": 30,
+    "top_3_quit_reasons": [
+      "Budget cuts / marketing first to be slashed in downturns",
+      "Brand vs performance marketing identity crisis — forced into perf-only",
+      "Lack of strategic seat — execution-only role under founder/CEO"
+    ],
+    "median_tenure_months": 24,
+    "confidence": "low",
+    "sources": ["LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "Growth Manager",
+    "common_next_roles": ["Head of Growth", "Product Manager (Growth)", "VP Growth at startup"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "Vanity metrics pressure — growth-at-all-costs without retention focus",
+      "Lack of product/eng support to ship growth experiments",
+      "Better offer at growth-stage startup with equity upside"
+    ],
+    "median_tenure_months": 20,
+    "confidence": "low",
+    "sources": ["Inc42 Growth Talent Report 2024"]
+  },
+  {
+    "role": "Customer Success Manager",
+    "common_next_roles": ["Senior CSM", "CS Lead / Head of CS", "Account Manager / Sales"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "Account overload — 50+ accounts per CSM, no time for strategic work",
+      "Treated as support / firefighter not strategic partner",
+      "Better offer moving to sales (AE) for higher OTE"
+    ],
+    "median_tenure_months": 22,
+    "confidence": "medium",
+    "sources": ["Gainsight India CS Report 2024", "LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "Finance Analyst",
+    "common_next_roles": ["Senior Finance Analyst", "FP&A Manager", "Finance Business Partner"],
+    "typical_promotion_window_months": 24,
+    "top_3_quit_reasons": [
+      "Excel-monkey work / no strategic finance exposure",
+      "Better offer at investment banking / PE / consulting for higher comp",
+      "Slow promotion in traditional finance hierarchies"
+    ],
+    "median_tenure_months": 24,
+    "confidence": "low",
+    "sources": ["Naukri Finance Salary Report 2024"]
+  },
+  {
+    "role": "HR Business Partner",
+    "common_next_roles": ["Senior HRBP", "Head of HR / People", "Talent / OD Lead"],
+    "typical_promotion_window_months": 30,
+    "top_3_quit_reasons": [
+      "Caught between employee advocacy and leadership directives — moral fatigue",
+      "Layoff execution burnout (heavy 2023-24 tech layoff cycle)",
+      "Lack of strategic seat — HR seen as admin function"
+    ],
+    "median_tenure_months": 26,
+    "confidence": "low",
+    "sources": ["SHRM India HR Report 2024", "LinkedIn Workforce Report India 2025"]
+  },
+  {
+    "role": "Operations Manager",
+    "common_next_roles": ["Senior Operations Manager", "Head of Operations", "COO at startup"],
+    "typical_promotion_window_months": 30,
+    "top_3_quit_reasons": [
+      "Firefighting fatigue — always solving problems, never building systems",
+      "Lack of cross-functional authority — accountability without power",
+      "Better offer at scaling startup with broader scope"
+    ],
+    "median_tenure_months": 26,
+    "confidence": "low",
+    "sources": ["LinkedIn Workforce Report India 2025", "Naukri Operations Salary Report 2024"]
+  }
+]

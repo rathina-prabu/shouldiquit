@@ -1,0 +1,101 @@
+[
+  {"role": "Senior Product Manager", "city": "Gurgaon", "yoe_band": "0-3", "p25": 28, "p50": 36, "p75": 48, "p90": 62, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Product Manager", "city": "Gurgaon", "yoe_band": "4-7", "p25": 35, "p50": 45, "p75": 60, "p90": 77, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Product Manager", "city": "Gurgaon", "yoe_band": "8-12", "p25": 47, "p50": 60, "p75": 80, "p90": 102, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Product Manager", "city": "Gurgaon", "yoe_band": "13+", "p25": 62, "p50": 80, "p75": 106, "p90": 136, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Product Manager", "city": "Gurgaon", "yoe_band": "0-3", "p25": 18, "p50": 24, "p75": 32, "p90": 42, "confidence": "medium", "sources": ["herovired", "hellopm.co", "Delhi-NCR PM benchmarks"]},
+  {"role": "Product Manager", "city": "Gurgaon", "yoe_band": "4-7", "p25": 28, "p50": 38, "p75": 50, "p90": 65, "confidence": "medium", "sources": ["productleadership.com 2026", "Delhi-NCR ~35-40 LPA mid-level"]},
+  {"role": "Product Manager", "city": "Gurgaon", "yoe_band": "8-12", "p25": 40, "p50": 52, "p75": 70, "p90": 90, "confidence": "medium", "sources": ["hellopm.co", "Delhi-NCR PM benchmarks"]},
+  {"role": "Product Manager", "city": "Gurgaon", "yoe_band": "13+", "p25": 50, "p50": 65, "p75": 86, "p90": 110, "confidence": "low", "sources": ["estimate", "hellopm.co"]},
+
+  {"role": "Associate PM", "city": "Gurgaon", "yoe_band": "0-3", "p25": 14, "p50": 18, "p75": 24, "p90": 31, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Associate PM", "city": "Gurgaon", "yoe_band": "4-7", "p25": 19, "p50": 24, "p75": 32, "p90": 41, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Associate PM", "city": "Gurgaon", "yoe_band": "8-12", "p25": 23, "p50": 30, "p75": 40, "p90": 51, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Associate PM", "city": "Gurgaon", "yoe_band": "13+", "p25": 29, "p50": 37, "p75": 49, "p90": 63, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Software Engineer", "city": "Gurgaon", "yoe_band": "0-3", "p25": 6, "p50": 9, "p75": 14, "p90": 20, "confidence": "medium", "sources": ["AmbitionBox", "upGrad Gurgaon SE 2026", "Quora Gurgaon SE"]},
+  {"role": "Software Engineer", "city": "Gurgaon", "yoe_band": "4-7", "p25": 14, "p50": 19, "p75": 27, "p90": 36, "confidence": "medium", "sources": ["AmbitionBox Gurgaon", "Glassdoor"]},
+  {"role": "Software Engineer", "city": "Gurgaon", "yoe_band": "8-12", "p25": 22, "p50": 30, "p75": 42, "p90": 56, "confidence": "low", "sources": ["AmbitionBox", "estimate"]},
+  {"role": "Software Engineer", "city": "Gurgaon", "yoe_band": "13+", "p25": 30, "p50": 40, "p75": 55, "p90": 72, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Senior Software Engineer", "city": "Gurgaon", "yoe_band": "0-3", "p25": 14, "p50": 18, "p75": 24, "p90": 31, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Software Engineer", "city": "Gurgaon", "yoe_band": "4-7", "p25": 22, "p50": 28, "p75": 38, "p90": 50, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Software Engineer", "city": "Gurgaon", "yoe_band": "8-12", "p25": 31, "p50": 40, "p75": 55, "p90": 72, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Software Engineer", "city": "Gurgaon", "yoe_band": "13+", "p25": 43, "p50": 55, "p75": 74, "p90": 95, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Engineering Manager", "city": "Gurgaon", "yoe_band": "0-3", "p25": 27, "p50": 35, "p75": 47, "p90": 60, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Engineering Manager", "city": "Gurgaon", "yoe_band": "4-7", "p25": 35, "p50": 45, "p75": 60, "p90": 77, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Engineering Manager", "city": "Gurgaon", "yoe_band": "8-12", "p25": 47, "p50": 60, "p75": 80, "p90": 102, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Engineering Manager", "city": "Gurgaon", "yoe_band": "13+", "p25": 62, "p50": 80, "p75": 106, "p90": 136, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Tech Lead", "city": "Gurgaon", "yoe_band": "0-3", "p25": 16, "p50": 20, "p75": 27, "p90": 34, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Tech Lead", "city": "Gurgaon", "yoe_band": "4-7", "p25": 23, "p50": 30, "p75": 40, "p90": 51, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Tech Lead", "city": "Gurgaon", "yoe_band": "8-12", "p25": 33, "p50": 42, "p75": 56, "p90": 71, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Tech Lead", "city": "Gurgaon", "yoe_band": "13+", "p25": 43, "p50": 55, "p75": 73, "p90": 94, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Designer", "city": "Gurgaon", "yoe_band": "0-3", "p25": 6, "p50": 8, "p75": 11, "p90": 14, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Designer", "city": "Gurgaon", "yoe_band": "4-7", "p25": 11, "p50": 14, "p75": 19, "p90": 24, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Designer", "city": "Gurgaon", "yoe_band": "8-12", "p25": 17, "p50": 22, "p75": 29, "p90": 37, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Designer", "city": "Gurgaon", "yoe_band": "13+", "p25": 23, "p50": 30, "p75": 40, "p90": 51, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Senior Designer", "city": "Gurgaon", "yoe_band": "0-3", "p25": 11, "p50": 14, "p75": 19, "p90": 24, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Designer", "city": "Gurgaon", "yoe_band": "4-7", "p25": 16, "p50": 21, "p75": 28, "p90": 36, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Designer", "city": "Gurgaon", "yoe_band": "8-12", "p25": 23, "p50": 30, "p75": 40, "p90": 51, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Designer", "city": "Gurgaon", "yoe_band": "13+", "p25": 31, "p50": 40, "p75": 53, "p90": 68, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Data Scientist", "city": "Gurgaon", "yoe_band": "0-3", "p25": 9, "p50": 13.5, "p75": 19, "p90": 25, "confidence": "medium", "sources": ["Glassdoor Gurgaon Data Scientist 2026", "Levels.fyi"]},
+  {"role": "Data Scientist", "city": "Gurgaon", "yoe_band": "4-7", "p25": 16, "p50": 22, "p75": 30, "p90": 40, "confidence": "medium", "sources": ["Glassdoor Gurgaon Data Scientist 2026"]},
+  {"role": "Data Scientist", "city": "Gurgaon", "yoe_band": "8-12", "p25": 25, "p50": 33, "p75": 45, "p90": 58, "confidence": "medium", "sources": ["Glassdoor Gurgaon Data Scientist 2026"]},
+  {"role": "Data Scientist", "city": "Gurgaon", "yoe_band": "13+", "p25": 35, "p50": 45, "p75": 62, "p90": 80, "confidence": "low", "sources": ["estimate", "Glassdoor"]},
+
+  {"role": "Senior Data Scientist", "city": "Gurgaon", "yoe_band": "0-3", "p25": 16, "p50": 22, "p75": 30, "p90": 38, "confidence": "medium", "sources": ["Levels.fyi Senior DS Gurgaon"]},
+  {"role": "Senior Data Scientist", "city": "Gurgaon", "yoe_band": "4-7", "p25": 25, "p50": 34, "p75": 46, "p90": 58, "confidence": "medium", "sources": ["Glassdoor Data Science Manager Gurgaon median 34"]},
+  {"role": "Senior Data Scientist", "city": "Gurgaon", "yoe_band": "8-12", "p25": 36, "p50": 48, "p75": 64, "p90": 82, "confidence": "medium", "sources": ["Glassdoor", "Levels.fyi"]},
+  {"role": "Senior Data Scientist", "city": "Gurgaon", "yoe_band": "13+", "p25": 50, "p50": 65, "p75": 86, "p90": 110, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "DevOps Engineer", "city": "Gurgaon", "yoe_band": "0-3", "p25": 5.5, "p50": 9, "p75": 13.5, "p90": 21, "confidence": "high", "sources": ["Glassdoor Gurgaon DevOps Engineer Apr 2026 (n=794)"]},
+  {"role": "DevOps Engineer", "city": "Gurgaon", "yoe_band": "4-7", "p25": 11, "p50": 16.7, "p75": 24, "p90": 32, "confidence": "high", "sources": ["Glassdoor Senior DevOps Gurgaon 2026"]},
+  {"role": "DevOps Engineer", "city": "Gurgaon", "yoe_band": "8-12", "p25": 20, "p50": 28, "p75": 40, "p90": 52, "confidence": "medium", "sources": ["Glassdoor extrapolated", "6figr.com"]},
+  {"role": "DevOps Engineer", "city": "Gurgaon", "yoe_band": "13+", "p25": 30, "p50": 40, "p75": 55, "p90": 70, "confidence": "low", "sources": ["estimate", "Glassdoor"]},
+
+  {"role": "QA Engineer", "city": "Gurgaon", "yoe_band": "0-3", "p25": 5, "p50": 6, "p75": 9, "p90": 11, "confidence": "low", "sources": ["estimate"]},
+  {"role": "QA Engineer", "city": "Gurgaon", "yoe_band": "4-7", "p25": 9, "p50": 12, "p75": 16, "p90": 20, "confidence": "low", "sources": ["estimate"]},
+  {"role": "QA Engineer", "city": "Gurgaon", "yoe_band": "8-12", "p25": 16, "p50": 20, "p75": 27, "p90": 34, "confidence": "low", "sources": ["estimate"]},
+  {"role": "QA Engineer", "city": "Gurgaon", "yoe_band": "13+", "p25": 22, "p50": 28, "p75": 37, "p90": 48, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Sales Lead", "city": "Gurgaon", "yoe_band": "0-3", "p25": 9, "p50": 12, "p75": 16, "p90": 20, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Sales Lead", "city": "Gurgaon", "yoe_band": "4-7", "p25": 16, "p50": 20, "p75": 27, "p90": 34, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Sales Lead", "city": "Gurgaon", "yoe_band": "8-12", "p25": 27, "p50": 35, "p75": 47, "p90": 60, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Sales Lead", "city": "Gurgaon", "yoe_band": "13+", "p25": 43, "p50": 55, "p75": 73, "p90": 94, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Marketing Manager", "city": "Gurgaon", "yoe_band": "0-3", "p25": 8, "p50": 10, "p75": 13, "p90": 17, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Marketing Manager", "city": "Gurgaon", "yoe_band": "4-7", "p25": 14, "p50": 18, "p75": 24, "p90": 31, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Marketing Manager", "city": "Gurgaon", "yoe_band": "8-12", "p25": 23, "p50": 30, "p75": 40, "p90": 51, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Marketing Manager", "city": "Gurgaon", "yoe_band": "13+", "p25": 35, "p50": 45, "p75": 60, "p90": 77, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Growth Manager", "city": "Gurgaon", "yoe_band": "0-3", "p25": 11, "p50": 14, "p75": 19, "p90": 24, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Growth Manager", "city": "Gurgaon", "yoe_band": "4-7", "p25": 19, "p50": 25, "p75": 33, "p90": 43, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Growth Manager", "city": "Gurgaon", "yoe_band": "8-12", "p25": 31, "p50": 40, "p75": 53, "p90": 68, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Growth Manager", "city": "Gurgaon", "yoe_band": "13+", "p25": 43, "p50": 55, "p75": 73, "p90": 94, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Customer Success Manager", "city": "Gurgaon", "yoe_band": "0-3", "p25": 6, "p50": 8.5, "p75": 12, "p90": 16, "confidence": "medium", "sources": ["Glassdoor Gurgaon CSM 2025"]},
+  {"role": "Customer Success Manager", "city": "Gurgaon", "yoe_band": "4-7", "p25": 7, "p50": 11.6, "p75": 17.5, "p90": 24, "confidence": "high", "sources": ["Glassdoor Gurgaon CSM 2025 (p25=6.9, p50=11.6, p75=17.5, p90=24.3)"]},
+  {"role": "Customer Success Manager", "city": "Gurgaon", "yoe_band": "8-12", "p25": 14, "p50": 20, "p75": 28, "p90": 38, "confidence": "medium", "sources": ["Glassdoor extrapolated", "RepVue"]},
+  {"role": "Customer Success Manager", "city": "Gurgaon", "yoe_band": "13+", "p25": 22, "p50": 30, "p75": 42, "p90": 55, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Finance Analyst", "city": "Gurgaon", "yoe_band": "0-3", "p25": 7, "p50": 9, "p75": 12, "p90": 15, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Finance Analyst", "city": "Gurgaon", "yoe_band": "4-7", "p25": 12, "p50": 15, "p75": 20, "p90": 26, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Finance Analyst", "city": "Gurgaon", "yoe_band": "8-12", "p25": 18, "p50": 23, "p75": 31, "p90": 39, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Finance Analyst", "city": "Gurgaon", "yoe_band": "13+", "p25": 27, "p50": 35, "p75": 47, "p90": 60, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "HR Business Partner", "city": "Gurgaon", "yoe_band": "0-3", "p25": 7, "p50": 9, "p75": 12, "p90": 15, "confidence": "low", "sources": ["estimate"]},
+  {"role": "HR Business Partner", "city": "Gurgaon", "yoe_band": "4-7", "p25": 12, "p50": 15, "p75": 20, "p90": 26, "confidence": "low", "sources": ["estimate"]},
+  {"role": "HR Business Partner", "city": "Gurgaon", "yoe_band": "8-12", "p25": 19, "p50": 24, "p75": 32, "p90": 41, "confidence": "low", "sources": ["estimate"]},
+  {"role": "HR Business Partner", "city": "Gurgaon", "yoe_band": "13+", "p25": 29, "p50": 37, "p75": 49, "p90": 63, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Operations Manager", "city": "Gurgaon", "yoe_band": "0-3", "p25": 6, "p50": 8, "p75": 11, "p90": 14, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Operations Manager", "city": "Gurgaon", "yoe_band": "4-7", "p25": 11, "p50": 14, "p75": 19, "p90": 24, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Operations Manager", "city": "Gurgaon", "yoe_band": "8-12", "p25": 18, "p50": 23, "p75": 31, "p90": 39, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Operations Manager", "city": "Gurgaon", "yoe_band": "13+", "p25": 27, "p50": 35, "p75": 47, "p90": 60, "confidence": "low", "sources": ["estimate"]}
+]

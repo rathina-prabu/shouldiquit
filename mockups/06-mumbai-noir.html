@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Mumbai Noir</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0908;--ink:#e8e3d8;--neon:#ff2e88;--neon-2:#00f5d4;--neon-3:#f9c80e}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'JetBrains Mono',monospace;background:var(--bg);background-image:radial-gradient(at 80% 0%,rgba(255,46,136,0.15) 0%,transparent 50%),radial-gradient(at 0% 100%,rgba(0,245,212,0.12) 0%,transparent 40%);color:var(--ink);display:flex;justify-content:center;min-height:100vh;position:relative}
+  body::before{content:'';position:fixed;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0 2px,rgba(255,255,255,0.015) 2px 3px);pointer-events:none;z-index:0}
+  .container{width:100%;max-width:440px;padding:32px 24px;position:relative;z-index:1}
+  .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:64px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(232,227,216,0.5)}
+  .live{display:flex;align-items:center;gap:6px}
+  .pulse{width:6px;height:6px;background:var(--neon-2);border-radius:50%;box-shadow:0 0 12px var(--neon-2);animation:pulse 1.5s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .section{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--neon-3);margin-bottom:18px;font-weight:500}
+  .question{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;line-height:1.02;letter-spacing:-1.2px;margin:0 0 14px}
+  .question .glow{color:var(--neon);text-shadow:0 0 24px rgba(255,46,136,0.6)}
+  .followup{font-family:'Syne';font-weight:500;font-size:17px;line-height:1.4;color:rgba(232,227,216,0.7);margin-bottom:52px}
+  .options{display:flex;flex-direction:column;gap:10px}
+  .option{background:rgba(255,255,255,0.02);border:1px solid rgba(232,227,216,0.15);padding:16px 18px;color:var(--ink);font:inherit;font-size:14px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:14px;transition:all .2s;position:relative;overflow:hidden}
+  .option:hover{border-color:var(--neon);background:rgba(255,46,136,0.06);transform:translateX(4px)}
+  .option:hover::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--neon);box-shadow:0 0 12px var(--neon)}
+  .emoji{font-size:20px}
+  .opt-text{flex:1}
+  .arrow{font-size:14px;opacity:0;transition:opacity .2s;color:var(--neon)}
+  .option:hover .arrow{opacity:1}
+  .progress{margin-top:52px;padding-top:16px;border-top:1px solid rgba(232,227,216,0.1);display:flex;justify-content:space-between;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(232,227,216,0.4)}
+  .progress .num{color:var(--neon-2);font-weight:500}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span>DR. K // SESSION 01</span>
+      <span class="live"><span class="pulse"></span> live</span>
+    </div>
+    <div class="section">Section 05 — The State of You</div>
+    <h1 class="question">Sundays. <span class="glow">Tell me.</span></h1>
+    <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+    <div class="options">
+      <button class="option"><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span><span class="arrow">→</span></button>
+      <button class="option"><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span><span class="arrow">→</span></button>
+      <button class="option"><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span><span class="arrow">→</span></button>
+      <button class="option"><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span><span class="arrow">→</span></button>
+    </div>
+    <div class="progress">
+      <span><span class="num">15</span> of 20</span>
+      <span>75% · 5 left</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Journal</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Kalam',cursive;background:#d8c9a3;background-image:radial-gradient(circle at 30% 20%,rgba(0,0,0,0.06) 0%,transparent 40%),radial-gradient(circle at 80% 90%,rgba(80,40,0,0.07) 0%,transparent 50%);min-height:100vh;display:flex;justify-content:center;color:#2a1d0e}
+  .notebook{width:100%;max-width:440px;background:#f4ebd9;background-image:linear-gradient(180deg,transparent 32px,#c5b095 33px,transparent 34px);background-size:100% 34px;background-position:0 24px;padding:54px 28px 36px 60px;position:relative;box-shadow:4px 0 16px rgba(0,0,0,0.12);min-height:100vh}
+  .notebook::before{content:'';position:absolute;left:34px;top:0;bottom:0;width:1px;background:#c83a3a;opacity:0.45}
+  .top-meta{font-family:'Caveat',cursive;font-size:18px;color:#6b4a2b;display:flex;justify-content:space-between;margin-bottom:28px;font-style:italic}
+  .doctor-note{font-family:'Caveat',cursive;font-size:18px;color:#6b4a2b;margin-bottom:0;transform:rotate(-0.5deg)}
+  .question{font-family:'Caveat',cursive;font-weight:700;font-size:38px;line-height:1.05;margin:6px 0 8px;transform:rotate(-0.3deg)}
+  .followup{font-family:'Kalam',cursive;font-size:18px;line-height:1.45;margin-bottom:32px;color:#4a3520}
+  .doodle{display:inline-block;font-family:'Caveat',cursive;color:#c83a3a;transform:rotate(-8deg);margin-left:8px}
+  .options{display:flex;flex-direction:column;gap:2px}
+  .option{background:transparent;border:0;padding:13px 6px;font-family:'Kalam',cursive;font-size:17px;text-align:left;display:flex;align-items:center;gap:14px;cursor:pointer;color:#2a1d0e;border-bottom:1px dashed transparent;position:relative;transition:all .15s}
+  .option:hover{border-color:#c83a3a;padding-left:14px}
+  .option:hover .checkbox::after{content:'✗';position:absolute;left:-3px;top:-9px;font-family:'Caveat',cursive;font-size:32px;color:#c83a3a;line-height:1;transform:rotate(8deg)}
+  .checkbox{width:18px;height:18px;border:1.5px solid #2a1d0e;flex-shrink:0;position:relative}
+  .opt-text{flex:1}
+  .emoji{font-size:18px}
+  .footer{margin-top:36px;padding-top:14px;border-top:1px dashed #c5b095;font-family:'Caveat',cursive;font-size:18px;color:#6b4a2b;display:flex;justify-content:space-between;align-items:center;font-style:italic}
+  .progress-circles{display:flex;gap:5px}
+  .circle{width:11px;height:11px;border-radius:50%;border:1.5px solid #2a1d0e}
+  .circle.filled{background:#2a1d0e}
+</style>
+</head>
+<body>
+  <div class="notebook">
+    <div class="top-meta">
+      <span>Session 1 · page 15</span>
+      <span>16 May '26</span>
+    </div>
+    <div class="doctor-note">— Dr. K asks:</div>
+    <h1 class="question">Let's talk about Sundays.</h1>
+    <p class="followup">How does your body feel when you remember it's Monday tomorrow?<span class="doodle">be honest →</span></p>
+    <div class="options">
+      <button class="option"><div class="checkbox"></div><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+      <button class="option"><div class="checkbox"></div><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+      <button class="option"><div class="checkbox"></div><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+      <button class="option"><div class="checkbox"></div><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+    </div>
+    <div class="footer">
+      <span>state of you</span>
+      <span class="progress-circles">
+        <span class="circle filled"></span><span class="circle filled"></span><span class="circle filled"></span>
+        <span class="circle filled"></span><span class="circle filled"></span><span class="circle"></span>
+      </span>
+    </div>
+  </div>
+</body>
+</html>

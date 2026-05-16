@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Glass</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Geist',sans-serif;background:#1a1428;background-image:radial-gradient(circle at 20% 10%,#7c3aed 0%,transparent 40%),radial-gradient(circle at 80% 90%,#ec4899 0%,transparent 40%),radial-gradient(circle at 50% 50%,#3b82f6 0%,transparent 50%);min-height:100vh;display:flex;justify-content:center;padding:20px;color:#fff}
+  .container{width:100%;max-width:440px;display:flex;flex-direction:column;gap:12px}
+  .glass{background:rgba(255,255,255,0.08);backdrop-filter:blur(24px) saturate(1.4);-webkit-backdrop-filter:blur(24px) saturate(1.4);border:1px solid rgba(255,255,255,0.15);border-radius:24px;padding:20px 22px;box-shadow:0 8px 32px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.2)}
+  .header{display:flex;justify-content:space-between;align-items:center}
+  .doctor{display:flex;align-items:center;gap:10px}
+  .avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,0.4),rgba(255,255,255,0.1));backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;border:1px solid rgba(255,255,255,0.3)}
+  .name{font-weight:600;font-size:15px;letter-spacing:-0.2px}
+  .name-sub{font-size:11px;opacity:0.6;margin-top:1px}
+  .live{font-size:11px;display:flex;align-items:center;gap:6px;opacity:0.7}
+  .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80}
+  .question-card{display:flex;flex-direction:column;gap:6px}
+  .section-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;opacity:0.6;font-weight:500;margin-bottom:4px}
+  .question{font-family:'Instrument Serif',serif;font-weight:400;font-size:34px;line-height:1.1;margin:0;letter-spacing:-0.8px}
+  .question .em{font-style:italic;font-weight:400}
+  .followup{font-size:15px;line-height:1.45;opacity:0.8;margin-top:10px;margin-bottom:0}
+  .options{display:flex;flex-direction:column;gap:8px}
+  .option{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:14px 16px;font:inherit;font-size:14px;color:#fff;text-align:left;display:flex;align-items:center;gap:14px;cursor:pointer;backdrop-filter:blur(8px);transition:all .2s}
+  .option:hover{background:rgba(255,255,255,0.14);border-color:rgba(255,255,255,0.3);transform:translateY(-1px)}
+  .emoji{font-size:20px}
+  .opt-text{flex:1}
+  .chev{opacity:0;transition:opacity .2s}
+  .option:hover .chev{opacity:0.5}
+  .progress-card{display:flex;justify-content:space-between;align-items:center;font-size:12px;opacity:0.85}
+  .progress-bar{flex:1;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;margin:0 14px;overflow:hidden}
+  .progress-fill{height:100%;width:75%;background:linear-gradient(90deg,#a78bfa,#ec4899);border-radius:2px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="glass header">
+      <div class="doctor">
+        <div class="avatar">K</div>
+        <div>
+          <div class="name">Dr. K</div>
+          <div class="name-sub">Session 1 of 1</div>
+        </div>
+      </div>
+      <div class="live"><div class="dot"></div>live</div>
+    </div>
+    <div class="glass question-card">
+      <div class="section-label">Section 05 · The State of You</div>
+      <h1 class="question">Let's talk <span class="em">about Sundays.</span></h1>
+      <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+    </div>
+    <div class="glass">
+      <div class="options">
+        <button class="option"><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span><span class="chev">›</span></button>
+        <button class="option"><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span><span class="chev">›</span></button>
+        <button class="option"><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span><span class="chev">›</span></button>
+        <button class="option"><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span><span class="chev">›</span></button>
+      </div>
+    </div>
+    <div class="glass progress-card">
+      <span>15/20</span>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <span>75%</span>
+    </div>
+  </div>
+</body>
+</html>

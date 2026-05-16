@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Memphis 80s</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Monoton&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Sora',sans-serif;background:#f5f1e8;min-height:100vh;display:flex;justify-content:center;padding:16px;color:#1a1a1a;position:relative;overflow-x:hidden}
+  body::before{content:'';position:fixed;top:-20px;right:-30px;width:100px;height:100px;background:#ff4757;border-radius:50%;z-index:0}
+  body::after{content:'';position:fixed;bottom:-40px;left:-30px;width:120px;height:120px;background:#ffd23f;transform:rotate(15deg);z-index:0}
+  .container{width:100%;max-width:440px;background:#fafaf0;border:3px solid #1a1a1a;padding:24px 22px;position:relative;z-index:1;box-shadow:8px 8px 0 #1a1a1a;display:flex;flex-direction:column}
+  .deco-squiggle{position:absolute;top:10px;right:14px;font-size:22px;color:#ff4757;font-weight:bold}
+  .deco-dots{position:absolute;top:24px;right:48px;display:flex;gap:4px}
+  .deco-dot{width:7px;height:7px;border-radius:50%;background:#0ea5e9}
+  .deco-triangle{position:absolute;bottom:18px;left:14px;width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-bottom:22px solid #06b6d4;transform:rotate(20deg)}
+  .header{margin-bottom:24px;display:flex;align-items:center;gap:12px}
+  .name-block{background:#1a1a1a;color:#fafaf0;padding:5px 12px;font-family:'Monoton',sans-serif;font-size:18px;letter-spacing:2px;transform:rotate(-2deg)}
+  .label-block{background:#06b6d4;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transform:rotate(2deg);border:2px solid #1a1a1a}
+  .section{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#ff4757;margin-bottom:10px;display:inline-block;border-bottom:3px solid #ff4757;padding-bottom:2px}
+  .question{font-family:'Sora',sans-serif;font-weight:800;font-size:34px;line-height:1.05;letter-spacing:-1.5px;margin:0 0 12px;color:#1a1a1a}
+  .question .pop{background:#ffd23f;padding:0 6px;display:inline-block;transform:rotate(-1deg)}
+  .followup{font-size:15px;line-height:1.45;background:#fafaf0;padding:12px 14px;border:2px solid #1a1a1a;border-left:6px solid #0ea5e9;margin:18px 0 28px;position:relative}
+  .followup::after{content:'';position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#ff4757;border:2px solid #1a1a1a}
+  .opt-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;color:#1a1a1a}
+  .options{display:flex;flex-direction:column;gap:9px}
+  .option{background:#fafaf0;border:2.5px solid #1a1a1a;padding:11px 14px;font:inherit;font-size:14px;font-weight:500;text-align:left;display:flex;align-items:center;gap:12px;cursor:pointer;color:#1a1a1a;box-shadow:4px 4px 0 #1a1a1a;transition:all .12s}
+  .option:nth-child(1):hover{background:#ffd23f}
+  .option:nth-child(2):hover{background:#06b6d4}
+  .option:nth-child(3):hover{background:#ff4757;color:#fafaf0}
+  .option:nth-child(4):hover{background:#1a1a1a;color:#fafaf0}
+  .option:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #1a1a1a}
+  .num{font-family:'Monoton',sans-serif;font-size:16px;width:24px}
+  .emoji{font-size:18px}
+  .opt-text{flex:1}
+  .footer{margin-top:24px;padding-top:14px;border-top:2px dashed #1a1a1a;display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+</style>
+</head>
+<body>
+  <div class="container">
+    <span class="deco-squiggle">∿∿∿</span>
+    <div class="deco-dots"><div class="deco-dot"></div><div class="deco-dot"></div><div class="deco-dot"></div></div>
+    <div class="deco-triangle"></div>
+    <div class="header">
+      <span class="name-block">Dr. K</span>
+      <span class="label-block">Sess 1</span>
+    </div>
+    <span class="section">Sec 5 — State of You</span>
+    <h1 class="question">Let's talk <span class="pop">Sundays.</span></h1>
+    <div class="followup">How does your body feel when you remember it's Monday tomorrow?</div>
+    <div class="opt-label">→ Pick one</div>
+    <div class="options">
+      <button class="option"><span class="num">01</span><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+      <button class="option"><span class="num">02</span><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+      <button class="option"><span class="num">03</span><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+      <button class="option"><span class="num">04</span><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+    </div>
+    <div class="footer">
+      <span>15/20</span>
+      <span>★ ★ ★ ★ ★ ☆</span>
+    </div>
+  </div>
+</body>
+</html>

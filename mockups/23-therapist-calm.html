@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Calm</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Albert Sans',sans-serif;background:#1c2434;background-image:radial-gradient(circle at 50% 30%,#3a5570 0%,#1c2434 60%);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:24px 20px;color:#f0ede4;overflow:hidden;position:relative}
+  body::before{content:'';position:absolute;top:20%;left:50%;transform:translateX(-50%);width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,200,140,0.15) 0%,transparent 70%);animation:breathe 6s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.15)}}
+  .container{width:100%;max-width:380px;display:flex;flex-direction:column;align-items:center;position:relative;z-index:1;text-align:center}
+  .top-meta{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(240,237,228,0.5);margin-bottom:48px;display:flex;align-items:center;gap:10px;font-weight:500}
+  .top-meta .dot{width:5px;height:5px;border-radius:50%;background:#ffc88c;box-shadow:0 0 8px #ffc88c}
+  .doctor-line{font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:15px;color:rgba(240,237,228,0.6);margin-bottom:14px}
+  .question{font-family:'Newsreader',serif;font-weight:300;font-size:36px;line-height:1.15;letter-spacing:-0.8px;margin:0 0 16px;color:#fff;font-variation-settings:'opsz' 144}
+  .question .accent{font-style:italic;color:#ffc88c}
+  .followup{font-family:'Newsreader',serif;font-weight:300;font-style:italic;font-size:18px;line-height:1.5;color:rgba(240,237,228,0.75);max-width:320px;margin:0 auto 52px}
+  .options{display:flex;flex-direction:column;gap:10px;width:100%}
+  .option{background:rgba(255,255,255,0.04);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);padding:16px 20px;font:inherit;font-size:14.5px;font-weight:500;color:#f0ede4;cursor:pointer;display:flex;align-items:center;gap:14px;border-radius:100px;transition:all .25s}
+  .option:hover{background:rgba(255,200,140,0.12);border-color:rgba(255,200,140,0.4);transform:scale(1.02)}
+  .emoji{font-size:20px}
+  .opt-text{flex:1;text-align:left}
+  .bottom{margin-top:40px;font-size:11px;letter-spacing:2px;color:rgba(240,237,228,0.4);text-transform:uppercase;font-weight:500}
+  .dots{display:flex;justify-content:center;gap:5px;margin-top:10px}
+  .pd{width:6px;height:6px;border-radius:50%;background:rgba(240,237,228,0.25)}
+  .pd.on{background:#ffc88c}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-meta"><div class="dot"></div>Dr. K · Session 1</div>
+    <div class="doctor-line">— A question, gently:</div>
+    <h1 class="question">"Let's talk about <span class="accent">Sundays.</span>"</h1>
+    <p class="followup">How does your body feel when you remember it's Monday tomorrow?</p>
+    <div class="options">
+      <button class="option"><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+      <button class="option"><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+      <button class="option"><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+      <button class="option"><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+    </div>
+    <div class="bottom">
+      Section 5 · The State of You
+      <div class="dots">
+        <span class="pd on"></span><span class="pd on"></span><span class="pd on"></span>
+        <span class="pd on"></span><span class="pd on"></span><span class="pd"></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

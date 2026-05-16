@@ -1,0 +1,101 @@
+[
+  {"role": "Senior Product Manager", "city": "Bangalore", "yoe_band": "0-3", "p25": 24, "p50": 30, "p75": 40, "p90": 51, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Product Manager", "city": "Bangalore", "yoe_band": "4-7", "p25": 28, "p50": 36, "p75": 48, "p90": 62, "confidence": "medium", "sources": ["Glassdoor", "Levels.fyi"]},
+  {"role": "Senior Product Manager", "city": "Bangalore", "yoe_band": "8-12", "p25": 35, "p50": 48, "p75": 60, "p90": 80, "confidence": "high", "sources": ["Glassdoor", "Levels.fyi", "PayScale"]},
+  {"role": "Senior Product Manager", "city": "Bangalore", "yoe_band": "13+", "p25": 50, "p50": 65, "p75": 85, "p90": 110, "confidence": "medium", "sources": ["Levels.fyi", "Glassdoor"]},
+
+  {"role": "Product Manager", "city": "Bangalore", "yoe_band": "0-3", "p25": 16, "p50": 20, "p75": 27, "p90": 34, "confidence": "medium", "sources": ["Glassdoor", "HelloPM"]},
+  {"role": "Product Manager", "city": "Bangalore", "yoe_band": "4-7", "p25": 22, "p50": 28, "p75": 38, "p90": 48, "confidence": "medium", "sources": ["Glassdoor", "Levels.fyi"]},
+  {"role": "Product Manager", "city": "Bangalore", "yoe_band": "8-12", "p25": 30, "p50": 38, "p75": 50, "p90": 65, "confidence": "medium", "sources": ["Glassdoor", "Levels.fyi"]},
+  {"role": "Product Manager", "city": "Bangalore", "yoe_band": "13+", "p25": 38, "p50": 50, "p75": 65, "p90": 85, "confidence": "low", "sources": ["estimate", "Glassdoor"]},
+
+  {"role": "Associate PM", "city": "Bangalore", "yoe_band": "0-3", "p25": 12, "p50": 16, "p75": 21, "p90": 27, "confidence": "high", "sources": ["Glassdoor", "Indeed", "TheProductFolks"]},
+  {"role": "Associate PM", "city": "Bangalore", "yoe_band": "4-7", "p25": 16, "p50": 20, "p75": 26, "p90": 33, "confidence": "medium", "sources": ["Glassdoor", "Indeed"]},
+  {"role": "Associate PM", "city": "Bangalore", "yoe_band": "8-12", "p25": 20, "p50": 25, "p75": 33, "p90": 42, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Associate PM", "city": "Bangalore", "yoe_band": "13+", "p25": 23, "p50": 30, "p75": 40, "p90": 51, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Software Engineer", "city": "Bangalore", "yoe_band": "0-3", "p25": 8, "p50": 11, "p75": 15, "p90": 20, "confidence": "high", "sources": ["AmbitionBox", "Glassdoor", "Levels.fyi"]},
+  {"role": "Software Engineer", "city": "Bangalore", "yoe_band": "4-7", "p25": 14, "p50": 18, "p75": 25, "p90": 32, "confidence": "high", "sources": ["AmbitionBox", "Levels.fyi", "Glassdoor"]},
+  {"role": "Software Engineer", "city": "Bangalore", "yoe_band": "8-12", "p25": 22, "p50": 28, "p75": 38, "p90": 50, "confidence": "medium", "sources": ["Levels.fyi", "Glassdoor"]},
+  {"role": "Software Engineer", "city": "Bangalore", "yoe_band": "13+", "p25": 28, "p50": 36, "p75": 48, "p90": 62, "confidence": "low", "sources": ["estimate", "Levels.fyi"]},
+
+  {"role": "Senior Software Engineer", "city": "Bangalore", "yoe_band": "0-3", "p25": 14, "p50": 18, "p75": 24, "p90": 31, "confidence": "low", "sources": ["estimate", "Levels.fyi"]},
+  {"role": "Senior Software Engineer", "city": "Bangalore", "yoe_band": "4-7", "p25": 22, "p50": 30, "p75": 40, "p90": 52, "confidence": "high", "sources": ["Levels.fyi", "AmbitionBox", "Glassdoor"]},
+  {"role": "Senior Software Engineer", "city": "Bangalore", "yoe_band": "8-12", "p25": 32, "p50": 42, "p75": 55, "p90": 72, "confidence": "high", "sources": ["Levels.fyi", "Glassdoor"]},
+  {"role": "Senior Software Engineer", "city": "Bangalore", "yoe_band": "13+", "p25": 42, "p50": 55, "p75": 72, "p90": 92, "confidence": "medium", "sources": ["Levels.fyi"]},
+
+  {"role": "Engineering Manager", "city": "Bangalore", "yoe_band": "0-3", "p25": 28, "p50": 35, "p75": 47, "p90": 60, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Engineering Manager", "city": "Bangalore", "yoe_band": "4-7", "p25": 32, "p50": 42, "p75": 56, "p90": 72, "confidence": "medium", "sources": ["Glassdoor", "PayScale"]},
+  {"role": "Engineering Manager", "city": "Bangalore", "yoe_band": "8-12", "p25": 40, "p50": 56, "p75": 72, "p90": 95, "confidence": "high", "sources": ["Glassdoor", "Levels.fyi", "PayScale"]},
+  {"role": "Engineering Manager", "city": "Bangalore", "yoe_band": "13+", "p25": 55, "p50": 75, "p75": 100, "p90": 135, "confidence": "medium", "sources": ["Glassdoor", "Levels.fyi"]},
+
+  {"role": "Tech Lead", "city": "Bangalore", "yoe_band": "0-3", "p25": 14, "p50": 18, "p75": 24, "p90": 31, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Tech Lead", "city": "Bangalore", "yoe_band": "4-7", "p25": 20, "p50": 25, "p75": 33, "p90": 45, "confidence": "high", "sources": ["Glassdoor", "6figr"]},
+  {"role": "Tech Lead", "city": "Bangalore", "yoe_band": "8-12", "p25": 28, "p50": 36, "p75": 50, "p90": 65, "confidence": "high", "sources": ["Glassdoor", "6figr"]},
+  {"role": "Tech Lead", "city": "Bangalore", "yoe_band": "13+", "p25": 35, "p50": 45, "p75": 60, "p90": 78, "confidence": "medium", "sources": ["Glassdoor"]},
+
+  {"role": "Designer", "city": "Bangalore", "yoe_band": "0-3", "p25": 6, "p50": 8, "p75": 11, "p90": 14, "confidence": "medium", "sources": ["Glassdoor", "PayScale"]},
+  {"role": "Designer", "city": "Bangalore", "yoe_band": "4-7", "p25": 9, "p50": 12, "p75": 18, "p90": 24, "confidence": "high", "sources": ["Glassdoor", "PayScale"]},
+  {"role": "Designer", "city": "Bangalore", "yoe_band": "8-12", "p25": 14, "p50": 18, "p75": 24, "p90": 32, "confidence": "medium", "sources": ["PayScale"]},
+  {"role": "Designer", "city": "Bangalore", "yoe_band": "13+", "p25": 18, "p50": 24, "p75": 32, "p90": 42, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Senior Designer", "city": "Bangalore", "yoe_band": "0-3", "p25": 10, "p50": 13, "p75": 18, "p90": 23, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Designer", "city": "Bangalore", "yoe_band": "4-7", "p25": 14, "p50": 17, "p75": 22, "p90": 28, "confidence": "high", "sources": ["Glassdoor", "PayScale"]},
+  {"role": "Senior Designer", "city": "Bangalore", "yoe_band": "8-12", "p25": 20, "p50": 26, "p75": 35, "p90": 45, "confidence": "medium", "sources": ["Glassdoor", "PayScale"]},
+  {"role": "Senior Designer", "city": "Bangalore", "yoe_band": "13+", "p25": 28, "p50": 36, "p75": 48, "p90": 62, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Data Scientist", "city": "Bangalore", "yoe_band": "0-3", "p25": 9, "p50": 12, "p75": 16, "p90": 21, "confidence": "high", "sources": ["AmbitionBox", "Upgrad", "DigitalRegenesys"]},
+  {"role": "Data Scientist", "city": "Bangalore", "yoe_band": "4-7", "p25": 16, "p50": 20, "p75": 26, "p90": 34, "confidence": "high", "sources": ["AmbitionBox", "Glassdoor"]},
+  {"role": "Data Scientist", "city": "Bangalore", "yoe_band": "8-12", "p25": 25, "p50": 32, "p75": 45, "p90": 58, "confidence": "medium", "sources": ["AmbitionBox", "Glassdoor"]},
+  {"role": "Data Scientist", "city": "Bangalore", "yoe_band": "13+", "p25": 32, "p50": 42, "p75": 58, "p90": 75, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Senior Data Scientist", "city": "Bangalore", "yoe_band": "0-3", "p25": 15, "p50": 19, "p75": 25, "p90": 32, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Senior Data Scientist", "city": "Bangalore", "yoe_band": "4-7", "p25": 22, "p50": 28, "p75": 38, "p90": 48, "confidence": "medium", "sources": ["AmbitionBox", "Glassdoor"]},
+  {"role": "Senior Data Scientist", "city": "Bangalore", "yoe_band": "8-12", "p25": 32, "p50": 42, "p75": 55, "p90": 72, "confidence": "medium", "sources": ["Glassdoor", "Levels.fyi"]},
+  {"role": "Senior Data Scientist", "city": "Bangalore", "yoe_band": "13+", "p25": 45, "p50": 58, "p75": 78, "p90": 100, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "DevOps Engineer", "city": "Bangalore", "yoe_band": "0-3", "p25": 6, "p50": 8, "p75": 11, "p90": 14, "confidence": "high", "sources": ["AmbitionBox", "Upgrad", "DevOpsTrainingInstitute"]},
+  {"role": "DevOps Engineer", "city": "Bangalore", "yoe_band": "4-7", "p25": 12, "p50": 16, "p75": 22, "p90": 28, "confidence": "high", "sources": ["AmbitionBox", "6figr"]},
+  {"role": "DevOps Engineer", "city": "Bangalore", "yoe_band": "8-12", "p25": 20, "p50": 26, "p75": 35, "p90": 45, "confidence": "high", "sources": ["AmbitionBox", "6figr"]},
+  {"role": "DevOps Engineer", "city": "Bangalore", "yoe_band": "13+", "p25": 28, "p50": 38, "p75": 50, "p90": 65, "confidence": "medium", "sources": ["6figr"]},
+
+  {"role": "QA Engineer", "city": "Bangalore", "yoe_band": "0-3", "p25": 4, "p50": 6, "p75": 8, "p90": 10, "confidence": "high", "sources": ["AmbitionBox", "PayScale", "Glassdoor"]},
+  {"role": "QA Engineer", "city": "Bangalore", "yoe_band": "4-7", "p25": 8, "p50": 11, "p75": 15, "p90": 19, "confidence": "high", "sources": ["AmbitionBox", "Cutshort"]},
+  {"role": "QA Engineer", "city": "Bangalore", "yoe_band": "8-12", "p25": 13, "p50": 17, "p75": 23, "p90": 30, "confidence": "medium", "sources": ["AmbitionBox", "6figr"]},
+  {"role": "QA Engineer", "city": "Bangalore", "yoe_band": "13+", "p25": 18, "p50": 24, "p75": 32, "p90": 42, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Sales Lead", "city": "Bangalore", "yoe_band": "0-3", "p25": 7, "p50": 9, "p75": 13, "p90": 17, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Sales Lead", "city": "Bangalore", "yoe_band": "4-7", "p25": 12, "p50": 16, "p75": 22, "p90": 30, "confidence": "medium", "sources": ["6figr", "Upgrad"]},
+  {"role": "Sales Lead", "city": "Bangalore", "yoe_band": "8-12", "p25": 20, "p50": 26, "p75": 36, "p90": 50, "confidence": "medium", "sources": ["6figr", "Upgrad"]},
+  {"role": "Sales Lead", "city": "Bangalore", "yoe_band": "13+", "p25": 30, "p50": 42, "p75": 60, "p90": 85, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Marketing Manager", "city": "Bangalore", "yoe_band": "0-3", "p25": 8, "p50": 11, "p75": 15, "p90": 19, "confidence": "medium", "sources": ["SalaryExpert", "Glassdoor"]},
+  {"role": "Marketing Manager", "city": "Bangalore", "yoe_band": "4-7", "p25": 14, "p50": 19, "p75": 26, "p90": 33, "confidence": "high", "sources": ["SalaryExpert", "Glassdoor", "PayScale"]},
+  {"role": "Marketing Manager", "city": "Bangalore", "yoe_band": "8-12", "p25": 24, "p50": 32, "p75": 42, "p90": 55, "confidence": "high", "sources": ["SalaryExpert", "PayScale"]},
+  {"role": "Marketing Manager", "city": "Bangalore", "yoe_band": "13+", "p25": 32, "p50": 43, "p75": 58, "p90": 75, "confidence": "medium", "sources": ["SalaryExpert"]},
+
+  {"role": "Growth Manager", "city": "Bangalore", "yoe_band": "0-3", "p25": 10, "p50": 14, "p75": 19, "p90": 24, "confidence": "medium", "sources": ["SalaryExpert", "6figr"]},
+  {"role": "Growth Manager", "city": "Bangalore", "yoe_band": "4-7", "p25": 16, "p50": 22, "p75": 30, "p90": 38, "confidence": "high", "sources": ["6figr", "SalaryExpert"]},
+  {"role": "Growth Manager", "city": "Bangalore", "yoe_band": "8-12", "p25": 22, "p50": 30, "p75": 40, "p90": 52, "confidence": "medium", "sources": ["6figr", "SalaryExpert"]},
+  {"role": "Growth Manager", "city": "Bangalore", "yoe_band": "13+", "p25": 28, "p50": 38, "p75": 52, "p90": 68, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Customer Success Manager", "city": "Bangalore", "yoe_band": "0-3", "p25": 7, "p50": 9, "p75": 13, "p90": 16, "confidence": "medium", "sources": ["Glassdoor", "PayScale"]},
+  {"role": "Customer Success Manager", "city": "Bangalore", "yoe_band": "4-7", "p25": 13, "p50": 17, "p75": 22, "p90": 28, "confidence": "high", "sources": ["Glassdoor", "PayScale", "WorldSalaries"]},
+  {"role": "Customer Success Manager", "city": "Bangalore", "yoe_band": "8-12", "p25": 18, "p50": 24, "p75": 32, "p90": 42, "confidence": "medium", "sources": ["Glassdoor", "PayScale"]},
+  {"role": "Customer Success Manager", "city": "Bangalore", "yoe_band": "13+", "p25": 25, "p50": 34, "p75": 45, "p90": 58, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "Finance Analyst", "city": "Bangalore", "yoe_band": "0-3", "p25": 5, "p50": 7, "p75": 9, "p90": 12, "confidence": "medium", "sources": ["PayScale", "Glassdoor"]},
+  {"role": "Finance Analyst", "city": "Bangalore", "yoe_band": "4-7", "p25": 8, "p50": 11, "p75": 15, "p90": 19, "confidence": "medium", "sources": ["PayScale"]},
+  {"role": "Finance Analyst", "city": "Bangalore", "yoe_band": "8-12", "p25": 13, "p50": 17, "p75": 23, "p90": 30, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Finance Analyst", "city": "Bangalore", "yoe_band": "13+", "p25": 18, "p50": 25, "p75": 34, "p90": 45, "confidence": "low", "sources": ["estimate"]},
+
+  {"role": "HR Business Partner", "city": "Bangalore", "yoe_band": "0-3", "p25": 7, "p50": 9, "p75": 12, "p90": 15, "confidence": "low", "sources": ["estimate"]},
+  {"role": "HR Business Partner", "city": "Bangalore", "yoe_band": "4-7", "p25": 12, "p50": 16, "p75": 22, "p90": 28, "confidence": "medium", "sources": ["Keka", "Glassdoor", "Indeed"]},
+  {"role": "HR Business Partner", "city": "Bangalore", "yoe_band": "8-12", "p25": 18, "p50": 26, "p75": 38, "p90": 50, "confidence": "medium", "sources": ["Keka", "Glassdoor"]},
+  {"role": "HR Business Partner", "city": "Bangalore", "yoe_band": "13+", "p25": 30, "p50": 45, "p75": 70, "p90": 100, "confidence": "low", "sources": ["Keka"]},
+
+  {"role": "Operations Manager", "city": "Bangalore", "yoe_band": "0-3", "p25": 6, "p50": 8, "p75": 11, "p90": 14, "confidence": "low", "sources": ["estimate"]},
+  {"role": "Operations Manager", "city": "Bangalore", "yoe_band": "4-7", "p25": 11, "p50": 15, "p75": 20, "p90": 26, "confidence": "medium", "sources": ["Salary.com", "Glassdoor"]},
+  {"role": "Operations Manager", "city": "Bangalore", "yoe_band": "8-12", "p25": 16, "p50": 20, "p75": 28, "p90": 36, "confidence": "medium", "sources": ["Salary.com"]},
+  {"role": "Operations Manager", "city": "Bangalore", "yoe_band": "13+", "p25": 22, "p50": 30, "p75": 42, "p90": 55, "confidence": "low", "sources": ["estimate"]}
+]

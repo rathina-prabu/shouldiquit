@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Quit · Polaroid</title>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Patrick Hand',cursive;background:#e8dfc8;background-image:radial-gradient(circle at 20% 30%,rgba(0,0,0,0.04) 0%,transparent 30%);min-height:100vh;display:flex;justify-content:center;padding:24px 16px;color:#2a2418}
+  .scrapbook{width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .meta-tape{font-family:'Special Elite',monospace;background:rgba(255,235,150,0.85);padding:4px 16px;font-size:11px;letter-spacing:1.5px;transform:rotate(-2deg);box-shadow:1px 1px 2px rgba(0,0,0,0.1);align-self:flex-end}
+  .polaroid{background:#fefcf4;padding:14px 14px 32px;box-shadow:3px 4px 14px rgba(0,0,0,0.18);transform:rotate(-1deg);width:90%;position:relative;align-self:flex-start}
+  .polaroid.right{transform:rotate(1.5deg);align-self:flex-end}
+  .polaroid-image{background:#f0e9d2;background-image:repeating-linear-gradient(45deg,rgba(0,0,0,0.04) 0 2px,transparent 2px 8px);height:110px;display:flex;align-items:center;justify-content:center;font-size:48px}
+  .polaroid-caption{font-family:'Permanent Marker',cursive;font-size:17px;color:#2a2418;text-align:center;margin-top:12px;line-height:1.2}
+  .polaroid-caption .sub{font-family:'Patrick Hand',cursive;font-size:14px;font-weight:400;display:block;margin-top:4px;color:#544738}
+  .tape{position:absolute;top:-7px;background:rgba(255,235,150,0.75);width:55px;height:18px;left:50%;margin-left:-27px;transform:rotate(-2deg);box-shadow:0 1px 1px rgba(0,0,0,0.08)}
+  .options{width:100%;display:flex;flex-direction:column;gap:8px;margin-top:8px}
+  .option{background:#fefcf4;border:0;padding:14px 16px;font-family:'Patrick Hand',cursive;font-size:17px;text-align:left;display:flex;align-items:center;gap:14px;cursor:pointer;color:#2a2418;box-shadow:2px 2px 4px rgba(0,0,0,0.08);transform:rotate(-0.3deg);transition:all .15s}
+  .option:nth-child(even){transform:rotate(0.3deg)}
+  .option:hover{background:#fff5b0;transform:rotate(0) scale(1.02)}
+  .emoji{font-size:22px}
+  .opt-text{flex:1}
+  .footer{font-family:'Special Elite',monospace;font-size:11px;color:#544738;margin-top:10px;display:flex;justify-content:space-between;width:100%;padding:0 8px;letter-spacing:1px}
+</style>
+</head>
+<body>
+  <div class="scrapbook">
+    <div class="meta-tape">Session 1 · 16 May '26</div>
+    <div class="polaroid">
+      <div class="tape"></div>
+      <div class="polaroid-image">🌅</div>
+      <div class="polaroid-caption">"Let's talk about Sundays."<span class="sub">— Dr. K · Section 5: The State of You</span></div>
+    </div>
+    <div class="polaroid right">
+      <div class="polaroid-image">🛌</div>
+      <div class="polaroid-caption">How does your body feel<span class="sub">when you remember it's Monday tomorrow?</span></div>
+    </div>
+    <div class="options">
+      <button class="option"><span class="emoji">🌞</span><span class="opt-text">Excited about something on the calendar</span></button>
+      <button class="option"><span class="emoji">😐</span><span class="opt-text">Neutral, it's just Monday</span></button>
+      <button class="option"><span class="emoji">😔</span><span class="opt-text">Heavy chest, dread</span></button>
+      <button class="option"><span class="emoji">🪦</span><span class="opt-text">Already pre-tired</span></button>
+    </div>
+    <div class="footer"><span>Page 15 of 20</span><span>★★★★★ ☆</span></div>
+  </div>
+</body>
+</html>
