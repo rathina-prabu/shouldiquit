@@ -29,10 +29,11 @@ export default function StartPage() {
 
   useEffect(() => {
     setUserId(getShortUserId())
-    reset()
-  }, [reset])
+  }, [])
 
   const submit = () => {
+    // Start a fresh quiz: wipe previous run before storing the new setup.
+    reset()
     setSetup({ city, role, yoe })
     router.push("/quiz")
   }

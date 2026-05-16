@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { RisoLayout } from "@/components/RisoLayout"
-import { useQuizStore } from "@/store/quiz-store"
+import { useQuizStore, useHasHydrated } from "@/store/quiz-store"
 import { getOrCreateUserUuid } from "@/lib/user-uuid"
 
 export default function SalaryPage() {
@@ -14,11 +14,15 @@ export default function SalaryPage() {
   const [variable, setVariable] = useState<number>(4)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const hydrated = useHasHydrated()
 
   useEffect(() => {
+    if (!hydrated) return
     if (!setup) router.replace("/start")
     else if (answers.length === 0) router.replace("/quiz")
-  }, [setup, answers, router])
+  }, [hydrated, setup, answers, router])
+
+  if (!hydrated) return null
 
   const total = (fixed || 0) + (variable || 0)
 

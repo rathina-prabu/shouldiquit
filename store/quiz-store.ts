@@ -6,10 +6,12 @@ interface QuizState {
   setup: SetupData | null
   answers: Answer[]
   salary: SalaryData | null
+  _hasHydrated: boolean
   setSetup: (s: SetupData) => void
   answer: (question_id: string, choice_index: 0 | 1 | 2 | 3) => void
   setSalary: (s: SalaryData) => void
   reset: () => void
+  setHasHydrated: (h: boolean) => void
 }
 
 const memStore: Record<string, string> = {}
@@ -49,6 +51,7 @@ export const useQuizStore = create<QuizState>()(
       setup: null,
       answers: [],
       salary: null,
+      _hasHydrated: false,
       setSetup: (s) => set({ setup: s }),
       answer: (question_id, choice_index) =>
         set((state) => ({
@@ -59,10 +62,24 @@ export const useQuizStore = create<QuizState>()(
         })),
       setSalary: (s) => set({ salary: s }),
       reset: () => set({ setup: null, answers: [], salary: null }),
+      setHasHydrated: (h) => set({ _hasHydrated: h }),
     }),
     {
       name: "siq-quiz-state",
       storage: createJSONStorage(pickStorage),
+      partialize: (state) => ({
+        setup: state.setup,
+        answers: state.answers,
+        salary: state.salary,
+      }),
+      onRehydrateStorage: () => (state) => {
+        state?.setHasHydrated(true)
+      },
     },
   ),
 )
+
+export function useHasHydrated(): boolean {
+  // Triggers a re-render when hydration finishes.
+  return useQuizStore((s) => s._hasHydrated)
+}

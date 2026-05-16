@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { RisoLayout } from "@/components/RisoLayout"
 import { QuestionCard } from "@/components/QuestionCard"
-import { useQuizStore } from "@/store/quiz-store"
+import { useQuizStore, useHasHydrated } from "@/store/quiz-store"
 import { QUESTIONS, MODULE_LABELS } from "@/lib/questions"
 
 const SECTION_NUM: Record<string, number> = {
@@ -15,12 +15,13 @@ export default function QuizPage() {
   const [index, setIndex] = useState(0)
   const setup = useQuizStore((s) => s.setup)
   const answer = useQuizStore((s) => s.answer)
+  const hydrated = useHasHydrated()
 
   useEffect(() => {
-    if (!setup) router.replace("/start")
-  }, [setup, router])
+    if (hydrated && !setup) router.replace("/start")
+  }, [hydrated, setup, router])
 
-  if (!setup) return null
+  if (!hydrated || !setup) return null
 
   const q = QUESTIONS[index]
   if (!q) return null
