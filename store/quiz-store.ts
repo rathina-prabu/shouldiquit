@@ -1,0 +1,68 @@
+import { create } from "zustand"
+import { persist, createJSONStorage } from "zustand/middleware"
+import type { Answer, SetupData, SalaryData } from "@/lib/types"
+
+interface QuizState {
+  setup: SetupData | null
+  answers: Answer[]
+  salary: SalaryData | null
+  setSetup: (s: SetupData) => void
+  answer: (question_id: string, choice_index: 0 | 1 | 2 | 3) => void
+  setSalary: (s: SalaryData) => void
+  reset: () => void
+}
+
+const memStore: Record<string, string> = {}
+const memStorage: Storage = {
+  get length() {
+    return Object.keys(memStore).length
+  },
+  key: (i: number) => Object.keys(memStore)[i] ?? null,
+  getItem: (k: string) => (k in memStore ? memStore[k] : null),
+  setItem: (k: string, v: string) => {
+    memStore[k] = String(v)
+  },
+  removeItem: (k: string) => {
+    delete memStore[k]
+  },
+  clear: () => {
+    for (const k of Object.keys(memStore)) delete memStore[k]
+  },
+}
+
+function pickStorage(): Storage {
+  if (typeof globalThis === "undefined") return memStorage
+  try {
+    const ls = (globalThis as { localStorage?: Storage }).localStorage
+    if (ls && typeof ls.setItem === "function" && typeof ls.getItem === "function") {
+      return ls
+    }
+  } catch {
+    // ignore
+  }
+  return memStorage
+}
+
+export const useQuizStore = create<QuizState>()(
+  persist(
+    (set) => ({
+      setup: null,
+      answers: [],
+      salary: null,
+      setSetup: (s) => set({ setup: s }),
+      answer: (question_id, choice_index) =>
+        set((state) => ({
+          answers: [
+            ...state.answers.filter((a) => a.question_id !== question_id),
+            { question_id, choice_index },
+          ],
+        })),
+      setSalary: (s) => set({ salary: s }),
+      reset: () => set({ setup: null, answers: [], salary: null }),
+    }),
+    {
+      name: "siq-quiz-state",
+      storage: createJSONStorage(pickStorage),
+    },
+  ),
+)
