@@ -28,8 +28,12 @@ export function DiagnosisBlock({ blocks, loading }: Props) {
     )
   }
 
-  // Aggregate every block's actions into one combined "This week, try" list.
-  const allActions = blocks.flatMap((b) => b.actions)
+  // One action from each weak module (weakest first), capped at 3 — so the
+  // "This week, try" list stays tight even when multiple modules are weak.
+  const allActions = blocks
+    .map((b) => b.actions[0])
+    .filter((a): a is string => Boolean(a))
+    .slice(0, 3)
 
   return (
     <>
