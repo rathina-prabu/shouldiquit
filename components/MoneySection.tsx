@@ -35,10 +35,12 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
             <Row
               label="Product Company median"
               value={`₹${salaryCell.p50} L`}
+              muted
             />
             <Row
               label="Service Company median"
               value={`₹${servicesMedian(salaryCell.p50, yoe)} L`}
+              muted
             />
           </>
         )}
