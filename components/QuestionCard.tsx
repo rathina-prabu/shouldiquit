@@ -64,32 +64,36 @@ export function QuestionCard({ question, questionNumber, totalQuestions, selecte
           )
         })}
       </div>
-      <div className="mt-8 h-[2px] bg-ink/15">
-        <div className="h-full bg-accent transition-all" style={{ width: `${percentDone}%` }} />
-      </div>
-      <div className="mt-4 flex justify-between items-center min-h-[20px]">
-        {onPrevious ? (
-          <button
-            type="button"
-            onClick={onPrevious}
-            className="text-[12px] tracking-[0.12em] uppercase text-ink/70 hover:text-ink font-medium"
-            aria-label={previousLabel}
-          >
-            ← {previousLabel}
-          </button>
-        ) : (
-          <span />
-        )}
-        {onNext && (
-          <button
-            type="button"
-            onClick={onNext}
-            className="text-[12px] tracking-[0.12em] uppercase text-ink/70 hover:text-ink font-medium"
-            aria-label="Next question"
-          >
-            Next →
-          </button>
-        )}
+      {/* Progress bar + nav row pinned to the bottom of the viewport so they
+          don't shift as option heights change between questions. */}
+      <div className="mt-auto pt-8">
+        <div className="h-[2px] bg-ink/15">
+          <div className="h-full bg-accent transition-all" style={{ width: `${percentDone}%` }} />
+        </div>
+        <div className="mt-4 flex justify-between items-center min-h-[20px]">
+          {onPrevious ? (
+            <button
+              type="button"
+              onClick={onPrevious}
+              className="text-[12px] tracking-[0.12em] uppercase text-ink/70 hover:text-ink font-medium"
+              aria-label={previousLabel}
+            >
+              ← {previousLabel}
+            </button>
+          ) : (
+            <span />
+          )}
+          {onNext && (
+            <button
+              type="button"
+              onClick={onNext}
+              className="text-[12px] tracking-[0.12em] uppercase text-ink/70 hover:text-ink font-medium"
+              aria-label="Next question"
+            >
+              Next →
+            </button>
+          )}
+        </div>
       </div>
     </>
   )
