@@ -11,8 +11,11 @@ export const QUESTION_COUNT = 18
  */
 export async function pickAnswer(page: Page, letter: AnswerLetter): Promise<void> {
   const index = ANSWER_LETTER_TO_INDEX[letter]
-  // The QuestionCard renders exactly 4 buttons (the answer options) — pick by index.
-  await page.locator('button').nth(index).click()
+  // Skip the back-arrow button (only present on Q2+).
+  await page
+    .locator('button:not([aria-label="Previous question"])')
+    .nth(index)
+    .click()
 }
 
 export async function fillSetup(

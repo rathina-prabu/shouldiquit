@@ -183,7 +183,7 @@ test.describe("UI specifics — visual + interaction", () => {
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
     for (let i = 1; i <= 18; i++) {
       await expect(page.locator(`text=/^Q${i}$/`).first()).toBeVisible({ timeout: 5000 })
-      await page.locator('button').first().click()
+      await page.locator('button:not([aria-label="Previous question"])').first().click()
     }
     await page.waitForURL(/\/salary$/)
   })

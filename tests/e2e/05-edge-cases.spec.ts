@@ -44,7 +44,7 @@ test.describe("Edge cases and navigation guards", () => {
     await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
     await expect(page.getByRole("button", { name: "Previous question" })).toHaveCount(0)
     // Answer Q1, move to Q2
-    await page.locator("button").first().click()
+    await page.locator('button:not([aria-label="Previous question"])').first().click()
     await expect(page.locator(`text=/^Q2$/`).first()).toBeVisible()
     // Back arrow visible on Q2
     const back = page.getByRole("button", { name: "Previous question" })
