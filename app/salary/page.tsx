@@ -16,7 +16,14 @@ export default function SalaryPage() {
   const variable = parseFloat(variableText) || 0
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [warn, setWarn] = useState<string | null>(null)
   const hydrated = useHasHydrated()
+
+  // Sanity caps for the salary inputs. Values are *in lakhs* — anything past
+  // ~200L is almost certainly someone typing rupees by mistake (e.g. 800000
+  // when they mean 8L). Hard-cap fixed at 200L, variable at 100L.
+  const FIXED_MAX = 200
+  const VARIABLE_MAX = 100
 
   useEffect(() => {
     if (!hydrated) return
@@ -30,6 +37,16 @@ export default function SalaryPage() {
 
   const submit = async () => {
     if (submitting) return
+    // Block submission when values exceed sane lakh-scale bounds. The user
+    // probably typed the rupee amount; show a clear correction instead of
+    // silently scoring them as a crorepati.
+    if (fixed > FIXED_MAX || variable > VARIABLE_MAX) {
+      setWarn(
+        `That looks like rupees, not lakhs. Try ${Math.round(fixed / 100000) || "8"} instead of ${fixed}.`,
+      )
+      return
+    }
+    setWarn(null)
     setSubmitting(true)
     setError(null)
     setSalary({ fixed_lakhs: fixed, variable_lakhs: variable })
@@ -82,6 +99,11 @@ export default function SalaryPage() {
         <span className="font-display text-[28px] tracking-tight">₹{total} L</span>
       </div>
 
+      {warn && (
+        <div className="mt-4 p-3 border border-accent text-[12.5px] text-accent bg-accent/5 leading-snug">
+          {warn}
+        </div>
+      )}
       {error && (
         <div className="mt-4 p-3 border border-accent text-[12px] text-accent bg-accent/5">
           Submit failed. {error}
