@@ -4,11 +4,11 @@ import { createClient } from "@supabase/supabase-js"
 export const runtime = "edge"
 
 const TIER_TEXT: Record<string, string> = {
-  STAY_THRIVE: "Stay & Thrive ✅",
-  STAY_FIX: "Stay & Fix 🤔",
-  ITS_COMPLICATED: "It's Complicated 🤷",
-  START_LOOKING: "Start Looking 🚪",
-  LEAVE_NOW: "Leave Now 🔥",
+  STAY_THRIVE: "Stay & Thrive",
+  STAY_FIX: "Stay & Fix",
+  ITS_COMPLICATED: "It's Complicated",
+  START_LOOKING: "Start Looking",
+  LEAVE_NOW: "Leave Now",
 }
 
 const TIER_TAGLINES: Record<string, string> = {

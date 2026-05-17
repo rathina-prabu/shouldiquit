@@ -39,8 +39,17 @@ describe("getUberDriverDaily", () => {
 })
 
 describe("computeRealDailyRate", () => {
-  it("(18 L + 4 L) / 250 days = 8800", () => {
-    expect(computeRealDailyRate(18, 4)).toBe(8800)
+  it("returns post-tax daily for 22L gross (~₹7.8k/day under new regime)", () => {
+    const daily = computeRealDailyRate(18, 4)
+    expect(daily).toBeGreaterThan(7500)
+    expect(daily).toBeLessThan(8200)
+  })
+  it("returns 0 for zero salary", () => {
+    expect(computeRealDailyRate(0, 0)).toBe(0)
+  })
+  it("for 12L gross (87A rebate territory), take-home ≈ gross / 250", () => {
+    const daily = computeRealDailyRate(12, 0)
+    expect(daily).toBe(Math.round((12 * 100000) / 250)) // no tax at this band
   })
 })
 

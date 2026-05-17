@@ -43,7 +43,11 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
             />
           </>
         )}
-        <Row label="Your real take-home / day" value={`₹${realDaily.toLocaleString("en-IN")}`} highlight />
+        <Row
+          label="Your take-home / day (after tax)"
+          value={`₹${realDaily.toLocaleString("en-IN")}`}
+          highlight
+        />
         <Row
           label={`🚗 ${city} Uber driver / day`}
           value={`₹${uberDaily.toLocaleString("en-IN")}`}

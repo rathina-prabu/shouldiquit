@@ -103,9 +103,63 @@ export function getUberDriverDaily(city: City): number {
   return UBER_DRIVER_DAILY_INR[city] ?? 600
 }
 
+/**
+ * India New Tax Regime — FY 2025-26 (AY 2026-27).
+ * Applies:
+ *  - Standard deduction ₹75,000 (salaried)
+ *  - Slabs: 0-4L: 0%, 4-8L: 5%, 8-12L: 10%, 12-16L: 15%, 16-20L: 20%,
+ *           20-24L: 25%, >24L: 30%
+ *  - Section 87A rebate: zero tax if taxable income ≤ ₹12L
+ *  - Surcharge: 10% (50L-1Cr), 15% (1-2Cr), 25% (>2Cr, capped under new regime)
+ *  - Health & Education Cess: 4% on tax + surcharge
+ * Skips marginal relief, HRA, 80C and other deductions (most don't apply
+ * under new regime by default; standard deduction is the main one).
+ */
+export function postTaxAnnualLakhs(grossLakhs: number): number {
+  const gross = (grossLakhs || 0) * 100000
+  if (gross <= 0) return 0
+
+  const standardDeduction = 75000
+  const taxableIncome = Math.max(0, gross - standardDeduction)
+
+  const slabs: Array<{ upTo: number; rate: number }> = [
+    { upTo: 400000, rate: 0 },
+    { upTo: 800000, rate: 0.05 },
+    { upTo: 1200000, rate: 0.1 },
+    { upTo: 1600000, rate: 0.15 },
+    { upTo: 2000000, rate: 0.2 },
+    { upTo: 2400000, rate: 0.25 },
+    { upTo: Number.POSITIVE_INFINITY, rate: 0.3 },
+  ]
+
+  let tax = 0
+  let prevLimit = 0
+  for (const slab of slabs) {
+    if (taxableIncome > prevLimit) {
+      const slabIncome = Math.min(taxableIncome, slab.upTo) - prevLimit
+      tax += slabIncome * slab.rate
+    }
+    prevLimit = slab.upTo
+  }
+
+  // Section 87A full rebate up to ₹12L taxable income (new regime)
+  if (taxableIncome <= 1200000) tax = 0
+
+  // Surcharge on tax
+  let surcharge = 0
+  if (gross > 20000000) surcharge = tax * 0.25
+  else if (gross > 10000000) surcharge = tax * 0.15
+  else if (gross > 5000000) surcharge = tax * 0.1
+
+  const cess = (tax + surcharge) * 0.04
+  const totalTax = tax + surcharge + cess
+  return (gross - totalTax) / 100000
+}
+
 export function computeRealDailyRate(fixedLakhs: number, variableLakhs: number): number {
   const totalLakhs = (fixedLakhs || 0) + (variableLakhs || 0)
-  return Math.round((totalLakhs * 100000) / WORKING_DAYS_PER_YEAR)
+  const postTaxLakhs = postTaxAnnualLakhs(totalLakhs)
+  return Math.round((postTaxLakhs * 100000) / WORKING_DAYS_PER_YEAR)
 }
 
 /**

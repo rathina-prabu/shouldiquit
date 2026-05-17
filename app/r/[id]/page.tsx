@@ -48,11 +48,11 @@ const TIER_TAGLINES: Record<VerdictTier, string> = {
 }
 
 const TIER_LABELS: Record<VerdictTier, string> = {
-  STAY_THRIVE: "Stay & Thrive ✅",
-  STAY_FIX: "Stay & Fix 🤔",
-  ITS_COMPLICATED: "It's Complicated 🤷",
-  START_LOOKING: "Start Looking 🚪",
-  LEAVE_NOW: "Leave Now 🔥",
+  STAY_THRIVE: "Stay & Thrive",
+  STAY_FIX: "Stay & Fix",
+  ITS_COMPLICATED: "It's Complicated",
+  START_LOOKING: "Start Looking",
+  LEAVE_NOW: "Leave Now",
 }
 
 export default function ResultPage() {
