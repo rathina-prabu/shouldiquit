@@ -91,38 +91,19 @@ export default function StartPage() {
         />
       </Field>
 
-      <div className="mb-4 mt-2">
-        <div className="text-[11px] tracking-[0.15em] uppercase text-ink/70 mb-2 block font-medium">
-          Work setup
-        </div>
-        <div className="flex flex-col gap-1.5">
-          {(Object.keys(WORK_TYPE_LABELS) as WorkType[]).map((wt) => {
-            const selected = workType === wt
-            return (
-              <button
-                key={wt}
-                type="button"
-                onClick={() => setWorkType(wt)}
-                className={[
-                  "border py-2.5 px-4 text-left text-[14.5px] flex items-center gap-3 transition-colors",
-                  selected
-                    ? "border-ink bg-ink/[0.04]"
-                    : "border-ink/30 hover:border-ink hover:bg-ink/[0.03]",
-                ].join(" ")}
-                aria-pressed={selected}
-              >
-                <span
-                  className={[
-                    "h-3 w-3 rounded-full border-[1.5px] flex-shrink-0",
-                    selected ? "border-accent bg-accent" : "border-ink/40",
-                  ].join(" ")}
-                />
-                <span className="flex-1">{WORK_TYPE_LABELS[wt]}</span>
-              </button>
-            )
-          })}
-        </div>
-      </div>
+      <Field label="Work setup">
+        <select
+          className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none"
+          value={workType}
+          onChange={(e) => setWorkType(e.target.value as WorkType)}
+        >
+          {(Object.keys(WORK_TYPE_LABELS) as WorkType[]).map((wt) => (
+            <option key={wt} value={wt}>
+              {WORK_TYPE_LABELS[wt]}
+            </option>
+          ))}
+        </select>
+      </Field>
 
       {!isRemote && (
         <Field label="Work location">

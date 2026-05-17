@@ -36,9 +36,9 @@ test.describe("Happy path — full user journey", () => {
     await expect(page.getByText(/First, the basics/i)).toBeVisible()
     await expect(page.getByText(/Tell us about you/)).toBeVisible()
     const selects = page.locator("select")
-    // Default work_type is hybrid_flex → both Role and Work location dropdowns visible
-    await expect(selects).toHaveCount(2)
-    // Role first, then Work location
+    // Default work_type is hybrid_flex → 3 dropdowns: Role, Work setup, Work location
+    await expect(selects).toHaveCount(3)
+    // Role first
     const roleOptions = await selects.nth(0).locator("option").allTextContents()
     expect(roleOptions).toEqual([
       "Engineer (IC)",
@@ -54,7 +54,16 @@ test.describe("Happy path — full user journey", () => {
       "Customer Success",
       "Business Ops",
     ])
-    const cityOptions = await selects.nth(1).locator("option").allTextContents()
+    // Work setup second
+    const workSetupOptions = await selects.nth(1).locator("option").allTextContents()
+    expect(workSetupOptions).toEqual([
+      "Fully remote",
+      "Hybrid (fixed days)",
+      "Hybrid (flexible)",
+      "Fully in office",
+    ])
+    // Work location third
+    const cityOptions = await selects.nth(2).locator("option").allTextContents()
     expect(cityOptions).toEqual([
       "Bangalore",
       "Mumbai",
@@ -63,11 +72,6 @@ test.describe("Happy path — full user journey", () => {
       "Gurgaon",
       "Others",
     ])
-    // Work setup radio block — all 4 options visible
-    await expect(page.getByText("Fully remote", { exact: true })).toBeVisible()
-    await expect(page.getByText("Hybrid (fixed days)", { exact: true })).toBeVisible()
-    await expect(page.getByText("Hybrid (flexible)", { exact: true })).toBeVisible()
-    await expect(page.getByText("Fully in office", { exact: true })).toBeVisible()
     // Anonymous ID block must NOT be shown to the user
     await expect(page.getByText(/Your anonymous ID/)).toHaveCount(0)
     await expect(page.locator("text=/^usr_[a-f0-9]{5}$/")).toHaveCount(0)
@@ -75,14 +79,14 @@ test.describe("Happy path — full user journey", () => {
 
   test("picking 'Fully remote' hides the Work location dropdown", async ({ page }) => {
     await page.goto("/start")
-    // Initially both dropdowns visible
+    // Initially 3 dropdowns
+    await expect(page.locator("select")).toHaveCount(3)
+    await page.selectOption('select >> nth=1', "remote")
+    // After remote, only Role + Work setup remain
     await expect(page.locator("select")).toHaveCount(2)
-    await page.getByRole("button", { name: "Fully remote", exact: true }).click()
-    // After remote, only the Role dropdown remains
-    await expect(page.locator("select")).toHaveCount(1)
     // Toggle back to hybrid — Work location returns
-    await page.getByRole("button", { name: "Hybrid (flexible)", exact: true }).click()
-    await expect(page.locator("select")).toHaveCount(2)
+    await page.selectOption('select >> nth=1', "hybrid_flex")
+    await expect(page.locator("select")).toHaveCount(3)
   })
 
   test("complete journey landing → quiz → salary → result (taker view)", async ({ page }) => {

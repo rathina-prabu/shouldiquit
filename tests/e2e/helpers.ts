@@ -20,25 +20,19 @@ export async function fillSetup(
   page: Page,
   opts: { city: string; role: string; yoe: number; workType?: "remote" | "hybrid_fixed" | "hybrid_flex" | "office" },
 ): Promise<void> {
-  // Field order on /start: Role → YoE → Work setup → (optional) Work location
+  // Field order on /start: Role (select #0) → YoE → Work setup (select #1) → optional Work location (select #2)
   await page.selectOption('select >> nth=0', opts.role)
   const yoeInput = page.locator('input[type="number"]').first()
   await yoeInput.fill(String(opts.yoe))
 
-  // Work setup radio (default: hybrid_flex). Only click if a different value is requested.
+  // Work setup dropdown (default: hybrid_flex)
   if (opts.workType && opts.workType !== "hybrid_flex") {
-    const labelMap = {
-      remote: "Fully remote",
-      hybrid_fixed: "Hybrid (fixed days)",
-      hybrid_flex: "Hybrid (flexible)",
-      office: "Fully in office",
-    } as const
-    await page.getByRole("button", { name: labelMap[opts.workType], exact: true }).click()
+    await page.selectOption('select >> nth=1', opts.workType)
   }
 
   // Work location only appears when work setup is NOT remote
   if (opts.workType !== "remote") {
-    await page.selectOption('select >> nth=1', opts.city)
+    await page.selectOption('select >> nth=2', opts.city)
   }
 
   await page.getByRole("button", { name: /Start the questions/ }).click()
