@@ -14,7 +14,7 @@ function renderLeft(node: ReactNode): ReactNode {
     return (
       <Link
         href="/"
-        className="inline-block text-ink font-semibold uppercase tracking-[0.15em] text-[12px] [text-shadow:2px_2px_0_#e8576b] hover:opacity-75 transition-opacity"
+        className="inline-block text-ink font-bold text-[11px] tracking-[0.14em] uppercase bg-accent/25 px-2 py-1 border-l-[3px] border-accent hover:bg-accent/30 transition-colors"
       >
         {node}
       </Link>
@@ -27,8 +27,8 @@ export function RisoLayout({ children, topBarLeft, topBarRight }: Props) {
   return (
     <div className="w-full max-w-mobile mx-auto min-h-screen flex flex-col px-6 py-6 pb-16">
       {(topBarLeft || topBarRight) && (
-        <div className="flex justify-between text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-8">
-          <span>{renderLeft(topBarLeft)}</span>
+        <div className="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-8">
+          <span className="inline-flex">{renderLeft(topBarLeft)}</span>
           <span className="text-accent font-medium">{topBarRight}</span>
         </div>
       )}

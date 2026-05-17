@@ -32,7 +32,7 @@ export function QuestionCard({ question, questionNumber, totalQuestions, selecte
       <div className="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
         <a
           href="/"
-          className="inline-block text-ink font-semibold uppercase tracking-[0.15em] text-[12px] [text-shadow:2px_2px_0_#e8576b] hover:opacity-75 transition-opacity"
+          className="inline-block text-ink font-bold text-[11px] tracking-[0.14em] uppercase bg-accent/25 px-2 py-1 border-l-[3px] border-accent hover:bg-accent/30 transition-colors"
         >
           shouldiquit.work
         </a>

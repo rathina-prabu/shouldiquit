@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>shouldiquit · wordmark options</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Rubik',sans-serif;
+    background:#f4ecd6;
+    background-image:radial-gradient(circle,rgba(14,56,112,0.05) 1px,transparent 1px);
+    background-size:3px 3px;
+    color:#0e3870;
+    min-height:100vh;
+    padding:28px 22px 80px;
+  }
+  .wrap{max-width:480px;margin:0 auto}
+  h1{
+    font-family:'Rubik Mono One',sans-serif;
+    font-size:28px;
+    letter-spacing:-0.5px;
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .lede{font-size:14px;line-height:1.5;color:rgba(14,56,112,0.7);margin-bottom:28px}
+  .card{
+    border:1px solid rgba(14,56,112,0.18);
+    padding:18px 20px 22px;
+    margin-bottom:18px;
+    background:rgba(255,255,255,0.35);
+  }
+  .tag{
+    display:inline-block;
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:#e8576b;
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:10px;
+    border-bottom:1px solid rgba(14,56,112,0.2);
+    font-size:11px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:rgba(14,56,112,0.6);
+    min-height:44px;
+  }
+  .right{color:#e8576b;font-weight:500}
+  .note{
+    font-size:12px;
+    color:rgba(14,56,112,0.55);
+    margin-top:10px;
+    font-style:italic;
+    line-height:1.4;
+  }
+  a.mark{text-decoration:none;display:inline-block;cursor:pointer}
+
+  /* —— OPTION 1 · 2-px pink offset shadow on ink letters —————————————— */
+  .opt1 .mark{
+    color:#0e3870;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    text-shadow:2px 2px 0 #e8576b;
+  }
+
+  /* —— OPTION 2 · Heavier 3-px riso offset, bumped to 13px ——————————— */
+  .opt2 .mark{
+    color:#0e3870;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    text-shadow:3px 3px 0 #e8576b;
+  }
+
+  /* —— OPTION 3 · Inverted: pink letters with ink offset shadow ————— */
+  .opt3 .mark{
+    color:#e8576b;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    text-shadow:2px 2px 0 #0e3870;
+  }
+
+  /* —— OPTION 4 · Display font (Rubik Mono One) + pink shadow ——————— */
+  .opt4 .mark{
+    font-family:'Rubik Mono One',sans-serif;
+    color:#0e3870;
+    font-size:13px;
+    letter-spacing:0.02em;
+    text-transform:lowercase;
+    text-shadow:2px 2px 0 #e8576b;
+  }
+
+  /* —— OPTION 5 · Split colors: "shouldiquit" pink, ".work" ink ——— */
+  .opt5 .mark{
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+  }
+  .opt5 .mark .a{color:#e8576b}
+  .opt5 .mark .b{color:#0e3870}
+
+  /* —— OPTION 6 · Outline (text-stroke pink) + cream fill + ink shadow */
+  .opt6 .mark{
+    color:#f4ecd6;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    -webkit-text-stroke:1px #e8576b;
+    text-shadow:1.5px 1.5px 0 #0e3870;
+  }
+
+  /* —— OPTION 7 · Pink underline under ink text ————————————————————— */
+  .opt7 .mark{
+    color:#0e3870;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    text-decoration:underline;
+    text-decoration-color:#e8576b;
+    text-decoration-thickness:2px;
+    text-underline-offset:4px;
+  }
+
+  /* —— OPTION 8 · Pink-block sticker behind ink text —————————————— */
+  .opt8 .mark{
+    color:#0e3870;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    background:rgba(232,87,107,0.22);
+    padding:4px 8px;
+    border-left:3px solid #e8576b;
+  }
+
+  .footer{
+    margin-top:30px;
+    padding-top:18px;
+    border-top:1px dashed rgba(14,56,112,0.3);
+    font-size:12px;
+    color:rgba(14,56,112,0.65);
+    line-height:1.5;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>shouldiquit.work</h1>
+<p class="lede">Eight wordmark explorations, shown in their actual top-bar context. Tap whichever you want, tell me the number.</p>
+
+<div class="card opt1">
+  <span class="tag">Option 1 · 2-px shadow</span>
+  <div class="topbar">
+    <a class="mark" href="#1">shouldiquit.work</a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">Subtle, what we have now. 2px solid pink offset behind ink letters.</div>
+</div>
+
+<div class="card opt2">
+  <span class="tag">Option 2 · 3-px shadow, bolder</span>
+  <div class="topbar">
+    <a class="mark" href="#2">shouldiquit.work</a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">Chunkier offset, slightly bigger type. More commanding.</div>
+</div>
+
+<div class="card opt3">
+  <span class="tag">Option 3 · Inverted (pink fill, ink shadow)</span>
+  <div class="topbar">
+    <a class="mark" href="#3">shouldiquit.work</a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">Pink in front, ink behind. Loud / playful.</div>
+</div>
+
+<div class="card opt4">
+  <span class="tag">Option 4 · Display font (Rubik Mono One) + shadow</span>
+  <div class="topbar">
+    <a class="mark" href="#4">shouldiquit.work</a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">Lowercase chunky display font. Reads as a logo, not metadata.</div>
+</div>
+
+<div class="card opt5">
+  <span class="tag">Option 5 · Split colors</span>
+  <div class="topbar">
+    <a class="mark" href="#5"><span class="a">shouldiquit</span><span class="b">.work</span></a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">"shouldiquit" pink, ".work" ink. Cleaner — both colors in the wordmark itself, no shadow.</div>
+</div>
+
+<div class="card opt6">
+  <span class="tag">Option 6 · Pink outline, cream fill, ink shadow</span>
+  <div class="topbar">
+    <a class="mark" href="#6">shouldiquit.work</a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">Outlined letters in pink with the paper colour as fill, ink offset behind. Sticker-y.</div>
+</div>
+
+<div class="card opt7">
+  <span class="tag">Option 7 · Pink underline</span>
+  <div class="topbar">
+    <a class="mark" href="#7">shouldiquit.work</a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">Ink text, thick pink line under it. Minimal but distinctive.</div>
+</div>
+
+<div class="card opt8">
+  <span class="tag">Option 8 · Pink-block sticker</span>
+  <div class="topbar">
+    <a class="mark" href="#8">shouldiquit.work</a>
+    <span class="right">The Basics</span>
+  </div>
+  <div class="note">Ink letters on a tinted-pink block with a pink left stroke. Like a callout label.</div>
+</div>
+
+<div class="footer">
+  Pick a number → I'll ship it across all top-bars (landing, /start, /quiz, /salary, /r/[id]).
+</div>
+</div>
+</body>
+</html>
