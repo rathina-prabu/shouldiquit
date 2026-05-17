@@ -8,7 +8,6 @@ import { VerdictBlock } from "@/components/VerdictBlock"
 import { MoneySection } from "@/components/MoneySection"
 import { DiagnosisBlock } from "@/components/DiagnosisBlock"
 import { ShareButtons } from "@/components/ShareButtons"
-import { HelplineFooter } from "@/components/HelplineFooter"
 import { getOrCreateUserUuid } from "@/lib/user-uuid"
 import type { City, Role, VerdictTier, ModuleName } from "@/lib/types"
 import { MODULE_LABELS } from "@/lib/questions"
@@ -221,7 +220,6 @@ export default function ResultPage() {
         actions={diagnosis?.actions ?? null}
         loading={!diagnosis}
       />
-      <HelplineFooter />
     </RisoLayout>
   )
 }
