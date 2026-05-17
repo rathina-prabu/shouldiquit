@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import Link from "next/link"
 
 interface Props {
-  children: ReactNode
+  children?: ReactNode
   topBarLeft?: ReactNode
   topBarRight?: ReactNode
 }
