@@ -46,8 +46,7 @@ export default function StartPage() {
         Tell us about you.
       </h1>
       <p className="text-[15px] leading-[1.55] mb-7">
-        Three things to compare your situation.{" "}
-        <strong className="font-medium">We never ask your name, email, or where you work.</strong>
+        Three things to compare your situation.
       </p>
 
       <Field label="Your city">
