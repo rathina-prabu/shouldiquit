@@ -91,10 +91,26 @@ function averageCells(cells: SalaryCell[]): SalaryCell {
 
 export function lookupSalary(city: City, role: Role, yoe: number): SalaryCell | undefined {
   const band = yoeToBand(yoe)
-  const cityRoles = (benchmarksJson as unknown as { salaries: Record<string, Record<string, Record<string, SalaryCell>>> }).salaries?.[city]
+  const allSalaries = (benchmarksJson as unknown as { salaries: Record<string, Record<string, Record<string, SalaryCell>>> }).salaries
+  const underlying = resolveUnderlyingRoles(role, band)
+
+  // "Others" (catch-all for non-metro / remote workers) has no city-specific
+  // dataset — average the cells across all five metros for that role+band.
+  if (city === "Others") {
+    const cells: SalaryCell[] = []
+    for (const c of Object.keys(allSalaries)) {
+      for (const r of underlying) {
+        const cell = allSalaries[c]?.[r]?.[band]
+        if (cell) cells.push(cell)
+      }
+    }
+    if (cells.length === 0) return undefined
+    return averageCells(cells)
+  }
+
+  const cityRoles = allSalaries?.[city]
   if (!cityRoles) return undefined
 
-  const underlying = resolveUnderlyingRoles(role, band)
   const cells = underlying
     .map((r) => cityRoles[r]?.[band])
     .filter((c): c is SalaryCell => Boolean(c))

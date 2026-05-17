@@ -35,7 +35,7 @@ export default async function LandingPage() {
   const takers = await getTakerCount()
   return (
     <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Anonymous">
-      <div className="flex flex-col flex-1 justify-center">
+      <div className="flex flex-col">
         <div className="text-[13px] tracking-[0.2em] uppercase text-accent mb-5 font-medium">
           ~5 minutes
         </div>

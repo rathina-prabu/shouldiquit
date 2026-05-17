@@ -50,25 +50,36 @@ function StartForm() {
   const reset = useQuizStore((s) => s.reset)
   const saved = useQuizStore.getState().setup
 
-  const [role, setRole] = useState<Role>(saved?.role ?? "Engineer (IC)")
-  const [yoeText, setYoeText] = useState<string>(String(saved?.yoe ?? 8))
-  const [workType, setWorkType] = useState<WorkType>(saved?.work_type ?? "hybrid_flex")
-  const [city, setCity] = useState<City>(saved?.city ?? "Bangalore")
+  const [role, setRole] = useState<Role | "">(saved?.role ?? "")
+  const [yoeText, setYoeText] = useState<string>(saved?.yoe != null ? String(saved.yoe) : "")
+  const [workType, setWorkType] = useState<WorkType | "">(saved?.work_type ?? "")
+  const [city, setCity] = useState<City | "">(saved?.city ?? "")
 
   const isRemote = workType === "remote"
-  const yoe = yoeText === "" ? 0 : parseInt(yoeText) || 0
+  const yoe = yoeText === "" ? NaN : parseInt(yoeText)
   const [showSeniorWarning, setShowSeniorWarning] = useState(false)
+  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false)
 
   const submit = () => {
+    const incomplete =
+      !role ||
+      !workType ||
+      yoeText === "" ||
+      Number.isNaN(yoe) ||
+      (!isRemote && !city)
+    if (incomplete) {
+      setShowIncompleteWarning(true)
+      return
+    }
     if (yoe > 40) {
       setShowSeniorWarning(true)
       return
     }
     const next = {
-      city: isRemote ? "Others" : city,
-      role,
+      city: isRemote ? ("Others" as City) : (city as City),
+      role: role as Role,
       yoe,
-      work_type: workType,
+      work_type: workType as WorkType,
     }
     // Only wipe quiz progress when the user has actually changed their setup.
     // If they came back to /start just to peek and didn't change anything,
@@ -96,10 +107,16 @@ function StartForm() {
 
       <Field label="Your role">
         <select
-          className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none"
+          className={`w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none ${role === "" ? "text-ink/40" : ""}`}
           value={role}
-          onChange={(e) => setRole(e.target.value as Role)}
+          onChange={(e) => {
+            setRole(e.target.value as Role)
+            if (showIncompleteWarning) setShowIncompleteWarning(false)
+          }}
         >
+          <option value="" disabled>
+            Select your role
+          </option>
           {ROLES.map((r) => (
             <option key={r} value={r}>
               {r}
@@ -115,12 +132,14 @@ function StartForm() {
           pattern="[0-9]*"
           className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none"
           value={yoeText}
+          placeholder="e.g. 5"
           onChange={(e) => {
             const digits = e.target.value.replace(/[^0-9]/g, "")
             // Normalize leading-zero entries: "02" → "2", "002" → "2", but keep "0" as-is.
             setYoeText(digits === "" ? "" : String(parseInt(digits)))
             // Hide the senior warning on any change so the user can adjust and retry.
             if (showSeniorWarning) setShowSeniorWarning(false)
+            if (showIncompleteWarning) setShowIncompleteWarning(false)
           }}
         />
         {showSeniorWarning && (
@@ -132,10 +151,16 @@ function StartForm() {
 
       <Field label="Work setup">
         <select
-          className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none"
+          className={`w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none ${workType === "" ? "text-ink/40" : ""}`}
           value={workType}
-          onChange={(e) => setWorkType(e.target.value as WorkType)}
+          onChange={(e) => {
+            setWorkType(e.target.value as WorkType)
+            if (showIncompleteWarning) setShowIncompleteWarning(false)
+          }}
         >
+          <option value="" disabled>
+            Select your work setup
+          </option>
           {(Object.keys(WORK_TYPE_LABELS) as WorkType[]).map((wt) => (
             <option key={wt} value={wt}>
               {WORK_TYPE_LABELS[wt]}
@@ -147,10 +172,16 @@ function StartForm() {
       {!isRemote && (
         <Field label="Work location">
           <select
-            className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none"
+            className={`w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none ${city === "" ? "text-ink/40" : ""}`}
             value={city}
-            onChange={(e) => setCity(e.target.value as City)}
+            onChange={(e) => {
+              setCity(e.target.value as City)
+              if (showIncompleteWarning) setShowIncompleteWarning(false)
+            }}
           >
+            <option value="" disabled>
+              Select your city
+            </option>
             {CITIES.map((c) => (
               <option key={c} value={c}>
                 {c}
@@ -160,6 +191,11 @@ function StartForm() {
         </Field>
       )}
 
+      {showIncompleteWarning && (
+        <div className="mt-2 text-[12.5px] text-accent italic leading-snug">
+          Fill all the details to continue.
+        </div>
+      )}
       <button
         onClick={submit}
         className="mt-10 bg-ink text-paper px-6 py-4 font-medium text-[15px] tracking-[0.05em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all text-center"
