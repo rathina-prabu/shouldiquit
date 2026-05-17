@@ -16,7 +16,7 @@ export default function LandingPage() {
         </p>
         <p className="text-[17px] leading-[1.45] mb-8 max-w-[340px]">
           <em className="text-accent font-medium not-italic">
-            You&apos;ll walk in with a question. You&apos;ll leave with an answer.
+            You walked in with this question — and you&apos;ll leave with an honest answer.
           </em>
         </p>
         <Link
