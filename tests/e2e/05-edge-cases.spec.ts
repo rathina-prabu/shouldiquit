@@ -37,6 +37,24 @@ test.describe("Edge cases and navigation guards", () => {
     await expect(page.getByRole("link", { name: /Take the quiz/ })).toBeVisible()
   })
 
+  test("back arrow goes to the previous question", async ({ page }) => {
+    await page.goto("/start")
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
+    // No back arrow on Q1
+    await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
+    await expect(page.getByRole("button", { name: "Previous question" })).toHaveCount(0)
+    // Answer Q1, move to Q2
+    await page.locator("button").first().click()
+    await expect(page.locator(`text=/^Q2$/`).first()).toBeVisible()
+    // Back arrow visible on Q2
+    const back = page.getByRole("button", { name: "Previous question" })
+    await expect(back).toBeVisible()
+    await back.click()
+    await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
+    // Back arrow gone again on Q1
+    await expect(page.getByRole("button", { name: "Previous question" })).toHaveCount(0)
+  })
+
   test("quiz state persists across refresh mid-quiz", async ({ page }) => {
     await page.goto("/start")
     await fillSetup(page, { city: "Mumbai", role: "Engineer (IC)", yoe: 7 })

@@ -5,6 +5,7 @@ interface Props {
   questionNumber: number
   totalQuestions: number
   onAnswer: (choiceIndex: 0 | 1 | 2 | 3) => void
+  onBack?: () => void
 }
 
 function renderLabel(label: string, highlight?: string) {
@@ -20,13 +21,25 @@ function renderLabel(label: string, highlight?: string) {
   )
 }
 
-export function QuestionCard({ question, questionNumber, totalQuestions, onAnswer }: Props) {
+export function QuestionCard({ question, questionNumber, totalQuestions, onAnswer, onBack }: Props) {
   const percentDone = Math.round((questionNumber / totalQuestions) * 100)
 
   return (
     <>
-      <div className="flex justify-between items-baseline text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
-        <span>shouldiquit.app</span>
+      <div className="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
+        <span className="flex items-center gap-2">
+          {onBack && (
+            <button
+              type="button"
+              onClick={onBack}
+              aria-label="Previous question"
+              className="-ml-1 px-1 py-0.5 text-ink/70 hover:text-ink text-[14px] leading-none"
+            >
+              ←
+            </button>
+          )}
+          <span>shouldiquit.app</span>
+        </span>
         <span className="text-accent font-medium">Q{questionNumber}</span>
       </div>
       <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-6 mt-2">

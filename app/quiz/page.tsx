@@ -31,6 +31,8 @@ export default function QuizPage() {
     }
   }
 
+  const goBack = index > 0 ? () => setIndex(index - 1) : undefined
+
   return (
     <RisoLayout>
       <QuestionCard
@@ -38,6 +40,7 @@ export default function QuizPage() {
         questionNumber={index + 1}
         totalQuestions={QUESTIONS.length}
         onAnswer={handleAnswer}
+        onBack={goBack}
       />
     </RisoLayout>
   )
