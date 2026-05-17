@@ -26,8 +26,8 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
         <Row label="Your salary" value={`₹${Math.round(total * 10) / 10} L`} highlight />
         {salaryCell && (
           <Row
-            label={`Market · ${role} · ${city} · ${band} yr`}
-            value={`₹${salaryCell.p50} L (p50)`}
+            label={`Market median · ${role} · ${city} · ${band} yr`}
+            value={`₹${salaryCell.p50} L`}
           />
         )}
         <Row label="Your real take-home / day" value={`₹${realDaily.toLocaleString("en-IN")}`} highlight />
