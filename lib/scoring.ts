@@ -1,5 +1,5 @@
 import { QUESTIONS } from "./questions"
-import type { Answer, ModuleName, Scores, VerdictTier } from "./types"
+import type { Answer, ModuleName, Scores, VerdictTier, WorkType } from "./types"
 
 const MODULE_WEIGHTS: Record<ModuleName, number> = {
   work: 0.11,
@@ -87,24 +87,68 @@ export function findWeakestModule(modules: Record<ModuleName, number>): ModuleNa
   return weakest
 }
 
-export function recomputeMasterWithMoneyOffset(
+/**
+ * Work-setup offset, in percentage points on the relevant modules.
+ * "Flexibility wins": remote / hybrid-flex score positively on wellbeing,
+ * hybrid-fixed is neutral, full WFO is penalised. Magnitudes are tuned to
+ * shift the master score by roughly ±3 points after weighting (wellbeing × 0.18).
+ */
+export function computeWorkTypeOffset(
+  workType: WorkType | null | undefined,
+): { wellbeing: number; work: number } {
+  switch (workType) {
+    case "remote":
+      return { wellbeing: 15, work: 5 }
+    case "hybrid_flex":
+      return { wellbeing: 10, work: 0 }
+    case "hybrid_fixed":
+      return { wellbeing: 0, work: 0 }
+    case "wfo":
+      return { wellbeing: -15, work: 0 }
+    default:
+      return { wellbeing: 0, work: 0 }
+  }
+}
+
+export function recomputeMasterWithOffsets(
   modules: Record<ModuleName, number>,
   moneyOffset: number,
-): { adjMoney: number; adjMaster: number } {
+  workTypeOffset: { wellbeing: number; work: number },
+): {
+  adjMoney: number
+  adjWellbeing: number
+  adjWork: number
+  adjMaster: number
+} {
   const adjMoney = Math.max(0, Math.min(100, modules.money + moneyOffset))
+  const adjWellbeing = Math.max(0, Math.min(100, modules.wellbeing + workTypeOffset.wellbeing))
+  const adjWork = Math.max(0, Math.min(100, modules.work + workTypeOffset.work))
   const adjMaster = Math.max(
     0,
     Math.min(
       100,
       Math.round(
-        MODULE_WEIGHTS.work * modules.work +
+        MODULE_WEIGHTS.work * adjWork +
           MODULE_WEIGHTS.manager * modules.manager +
           MODULE_WEIGHTS.people * modules.people +
           MODULE_WEIGHTS.growth * modules.growth +
           MODULE_WEIGHTS.money * adjMoney +
-          MODULE_WEIGHTS.wellbeing * modules.wellbeing,
+          MODULE_WEIGHTS.wellbeing * adjWellbeing,
       ),
     ),
+  )
+  return { adjMoney, adjWellbeing, adjWork, adjMaster }
+}
+
+// Back-compat shim — keep old callers working until they migrate.
+export function recomputeMasterWithMoneyOffset(
+  modules: Record<ModuleName, number>,
+  moneyOffset: number,
+): { adjMoney: number; adjMaster: number } {
+  const { adjMoney, adjMaster } = recomputeMasterWithOffsets(
+    modules,
+    moneyOffset,
+    { wellbeing: 0, work: 0 },
   )
   return { adjMoney, adjMaster }
 }

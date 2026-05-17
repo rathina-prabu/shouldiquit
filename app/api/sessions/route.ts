@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { supabaseServer } from "@/lib/supabase"
-import { computeScores, recomputeMasterWithMoneyOffset, deriveVerdict, findWeakestModule } from "@/lib/scoring"
+import { computeScores, recomputeMasterWithOffsets, computeWorkTypeOffset, deriveVerdict, findWeakestModule } from "@/lib/scoring"
 import { computeSalaryOffset } from "@/lib/benchmarks"
 import { generateShortId } from "@/lib/short-id"
 import type { Answer, City, Role, SetupData, SalaryData } from "@/lib/types"
@@ -29,15 +29,25 @@ export async function POST(req: NextRequest) {
   }
 
   const scores = computeScores(answers)
-  const offset = computeSalaryOffset(
+  const moneyOffset = computeSalaryOffset(
     (salary.fixed_lakhs || 0) + (salary.variable_lakhs || 0),
     setup.city as City,
     setup.role as Role,
     setup.yoe,
   )
-  const { adjMoney, adjMaster } = recomputeMasterWithMoneyOffset(scores.modules, offset)
+  const workTypeOffset = computeWorkTypeOffset(setup.work_type)
+  const { adjMoney, adjWellbeing, adjWork, adjMaster } = recomputeMasterWithOffsets(
+    scores.modules,
+    moneyOffset,
+    workTypeOffset,
+  )
   // Re-derive verdict + weakest module from offset-adjusted modules
-  const adjModules = { ...scores.modules, money: adjMoney }
+  const adjModules = {
+    ...scores.modules,
+    money: adjMoney,
+    wellbeing: adjWellbeing,
+    work: adjWork,
+  }
   const adjTier = deriveVerdict(adjMaster)
   const adjWeakest = findWeakestModule(adjModules)
 
@@ -54,12 +64,12 @@ export async function POST(req: NextRequest) {
     salary_fixed_lakhs: salary.fixed_lakhs,
     salary_variable_lakhs: salary.variable_lakhs,
     master_score: adjMaster,
-    module_work: scores.modules.work,
+    module_work: adjWork,
     module_manager: scores.modules.manager,
     module_people: scores.modules.people,
     module_growth: scores.modules.growth,
     module_money: adjMoney,
-    module_wellbeing: scores.modules.wellbeing,
+    module_wellbeing: adjWellbeing,
     verdict_tier: adjTier,
     weakest_module: adjWeakest,
     intent_to_quit: scores.intent_to_quit,
