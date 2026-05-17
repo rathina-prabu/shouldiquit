@@ -103,7 +103,7 @@ export function computeWorkTypeOffset(
       return { wellbeing: 10, work: 0 }
     case "hybrid_fixed":
       return { wellbeing: 0, work: 0 }
-    case "wfo":
+    case "office":
       return { wellbeing: -15, work: 0 }
     default:
       return { wellbeing: 0, work: 0 }
