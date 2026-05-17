@@ -118,7 +118,7 @@ export default function ResultPage() {
 
   if (missing) {
     return (
-      <RisoLayout topBarLeft="shouldiquit.app" topBarRight="Not found">
+      <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Not found">
         <div className="flex-1 flex flex-col justify-center items-center text-center">
           <h1 className="font-display text-[32px] mb-3">This page didn&apos;t make it.</h1>
           <p className="text-[14px] mb-6">The session you were looking for isn&apos;t here.</p>
@@ -135,7 +135,7 @@ export default function ResultPage() {
 
   if (!session) {
     return (
-      <RisoLayout topBarLeft="shouldiquit.app" topBarRight="Loading…">
+      <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Loading…">
         <div className="flex-1 flex items-center justify-center text-[13px] text-ink/60">
           Reading the verdict…
         </div>
@@ -148,7 +148,7 @@ export default function ResultPage() {
 
   if (!isTaker) {
     return (
-      <RisoLayout topBarLeft={`shouldiquit.app/r/${session.id}`} topBarRight="Visitor view">
+      <RisoLayout topBarLeft={`shouldiquit.work/r/${session.id}`} topBarRight="Visitor view">
         <div className="text-[12px] tracking-[0.2em] uppercase text-accent text-center mb-2 font-medium">
           — Someone shared this —
         </div>

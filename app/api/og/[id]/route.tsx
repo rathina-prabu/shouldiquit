@@ -87,7 +87,7 @@ export async function GET(
             opacity: 0.7,
           }}
         >
-          <div style={{ display: "flex" }}>shouldiquit.app</div>
+          <div style={{ display: "flex" }}>shouldiquit.work</div>
           <div style={{ display: "flex", color: ACCENT, fontWeight: 600 }}>Anonymous</div>
         </div>
 
@@ -207,7 +207,7 @@ export async function GET(
             <div style={{ display: "flex", color: ACCENT, fontWeight: 600 }}>
               shouldiquit
             </div>
-            <div style={{ display: "flex" }}>.app/r/{params.id}</div>
+            <div style={{ display: "flex" }}>.work/r/{params.id}</div>
           </div>
           <div style={{ display: "flex", fontWeight: 600 }}>Take yours →</div>
         </div>

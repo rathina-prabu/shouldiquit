@@ -37,22 +37,39 @@ test.describe("Edge cases and navigation guards", () => {
     await expect(page.getByRole("link", { name: /Take the quiz/ })).toBeVisible()
   })
 
-  test("back arrow goes to the previous question", async ({ page }) => {
+  test("back arrow goes to previous question; from Q1 goes back to /start", async ({ page }) => {
     await page.goto("/start")
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
-    // No back arrow on Q1
     await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
-    await expect(page.getByRole("button", { name: "Previous question" })).toHaveCount(0)
-    // Answer Q1, move to Q2
-    await page.locator('button:not([aria-label="Previous question"])').first().click()
-    await expect(page.locator(`text=/^Q2$/`).first()).toBeVisible()
-    // Back arrow visible on Q2
+
+    // Back arrow visible on Q1 — clicking goes back to /start
     const back = page.getByRole("button", { name: "Previous question" })
     await expect(back).toBeVisible()
     await back.click()
-    await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
-    // Back arrow gone again on Q1
-    await expect(page.getByRole("button", { name: "Previous question" })).toHaveCount(0)
+    await page.waitForURL(/\/start$/, { timeout: 5000 })
+  })
+
+  test("back arrow on Q3 returns to Q2 (within quiz)", async ({ page }) => {
+    await page.goto("/start")
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
+    await page.locator('button:not([aria-label="Previous question"])').first().click()
+    await page.locator('button:not([aria-label="Previous question"])').first().click()
+    await expect(page.locator(`text=/^Q3$/`).first()).toBeVisible()
+    await page.getByRole("button", { name: "Previous question" }).click()
+    await expect(page.locator(`text=/^Q2$/`).first()).toBeVisible()
+  })
+
+  test("quiz progress survives refresh — resumes at the same question", async ({ page }) => {
+    await page.goto("/start")
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
+    // Answer 4 questions, land on Q5
+    for (let i = 0; i < 4; i++) {
+      await page.locator('button:not([aria-label="Previous question"])').first().click()
+    }
+    await expect(page.locator(`text=/^Q5$/`).first()).toBeVisible()
+    // Refresh — should stay on Q5
+    await page.reload()
+    await expect(page.locator(`text=/^Q5$/`).first()).toBeVisible({ timeout: 10000 })
   })
 
   test("quiz state persists across refresh mid-quiz", async ({ page }) => {

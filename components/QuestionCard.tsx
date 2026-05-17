@@ -38,7 +38,7 @@ export function QuestionCard({ question, questionNumber, totalQuestions, onAnswe
               ←
             </button>
           )}
-          <span>shouldiquit.app</span>
+          <span>shouldiquit.work</span>
         </span>
         <span className="text-accent font-medium">Q{questionNumber}</span>
       </div>

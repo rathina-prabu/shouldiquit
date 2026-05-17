@@ -6,10 +6,12 @@ interface QuizState {
   setup: SetupData | null
   answers: Answer[]
   salary: SalaryData | null
+  quizIndex: number
   _hasHydrated: boolean
   setSetup: (s: SetupData) => void
   answer: (question_id: string, choice_index: 0 | 1 | 2 | 3) => void
   setSalary: (s: SalaryData) => void
+  setQuizIndex: (i: number) => void
   reset: () => void
   setHasHydrated: (h: boolean) => void
 }
@@ -51,6 +53,7 @@ export const useQuizStore = create<QuizState>()(
       setup: null,
       answers: [],
       salary: null,
+      quizIndex: 0,
       _hasHydrated: false,
       setSetup: (s) => set({ setup: s }),
       answer: (question_id, choice_index) =>
@@ -61,7 +64,8 @@ export const useQuizStore = create<QuizState>()(
           ],
         })),
       setSalary: (s) => set({ salary: s }),
-      reset: () => set({ setup: null, answers: [], salary: null }),
+      setQuizIndex: (i) => set({ quizIndex: i }),
+      reset: () => set({ setup: null, answers: [], salary: null, quizIndex: 0 }),
       setHasHydrated: (h) => set({ _hasHydrated: h }),
     }),
     {
@@ -71,6 +75,7 @@ export const useQuizStore = create<QuizState>()(
         setup: state.setup,
         answers: state.answers,
         salary: state.salary,
+        quizIndex: state.quizIndex,
       }),
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated(true)
