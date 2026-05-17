@@ -46,9 +46,9 @@ export default async function LandingPage() {
           It&apos;s a hard question. It keeps coming back. There&apos;s no one safe to ask.
         </p>
         <p className="text-[17px] leading-[1.45] mb-8 max-w-[340px]">
-          <em className="text-accent font-medium not-italic">
-            You walked in with this question and you&apos;ll leave with an honest answer.
-          </em>
+          <strong className="text-accent font-semibold">{takers.toLocaleString("en-IN")}</strong>{" "}
+          people walked in with this question and left with an{" "}
+          <strong className="text-accent font-semibold">honest answer</strong>.
         </p>
         <Link
           href="/start"
@@ -56,10 +56,6 @@ export default async function LandingPage() {
         >
           Start →
         </Link>
-        <div className="mt-4 text-[12.5px] text-ink/65">
-          <strong className="font-semibold text-accent">{takers.toLocaleString("en-IN")}</strong>{" "}
-          have already taken it.
-        </div>
       </div>
     </RisoLayout>
   )
