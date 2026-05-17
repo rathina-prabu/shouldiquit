@@ -59,7 +59,7 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
           highlight
         />
         <Row
-          label={`${city} chaiwala / day`}
+          label="Chaiwala income per day"
           value={`₹${chaiwalaDaily.toLocaleString("en-IN")}`}
           muted
         />
