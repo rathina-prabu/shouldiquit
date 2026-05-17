@@ -19,15 +19,6 @@ const TIER_TAGLINES: Record<string, string> = {
   LEAVE_NOW: "The math is done. Open LinkedIn.",
 }
 
-const MODULE_LABELS: Record<string, string> = {
-  work: "The Work",
-  manager: "The Manager",
-  people: "The People",
-  growth: "The Growth",
-  money: "The Money",
-  wellbeing: "The State of You",
-}
-
 const PAPER = "#f4ecd6"
 const INK = "#0e3870"
 const ACCENT = "#e8576b"
@@ -46,7 +37,7 @@ export async function GET(
 
   const { data: session } = await supabase
     .from("sessions")
-    .select("master_score, verdict_tier, weakest_module")
+    .select("master_score, verdict_tier")
     .eq("id", params.id)
     .single()
 
@@ -55,10 +46,8 @@ export async function GET(
   }
 
   const tier = (session.verdict_tier as string) || ""
-  const weakest = (session.weakest_module as string) || "work"
   const tierText = TIER_TEXT[tier] ?? tier
   const tagline = TIER_TAGLINES[tier] ?? ""
-  const weakestLabel = MODULE_LABELS[weakest] ?? weakest
 
   return new ImageResponse(
     (
@@ -157,27 +146,11 @@ export async function GET(
               /100
             </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              marginTop: 28,
-              fontSize: 26,
-              letterSpacing: 4,
-              color: INK,
-              textTransform: "uppercase",
-              opacity: 0.85,
-            }}
-          >
-            <div style={{ display: "flex" }}>Weakest:&nbsp;</div>
-            <div style={{ display: "flex", color: ACCENT, fontWeight: 600 }}>
-              {weakestLabel}
-            </div>
-          </div>
           {tagline ? (
             <div
               style={{
                 display: "flex",
-                marginTop: 22,
+                marginTop: 36,
                 fontSize: 26,
                 fontStyle: "italic",
                 color: INK,
