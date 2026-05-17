@@ -20,7 +20,7 @@ export function VerdictBlock({ tier, score }: { tier: VerdictTier; score: number
   return (
     <div className="bg-accent text-paper py-9 px-5 -mx-6 mb-8 text-center">
       <div className="text-[11px] tracking-[0.2em] uppercase opacity-75 mb-2.5 font-medium">
-        — Recommendation —
+        Should I Quit?
       </div>
       <h1 className="font-display text-[32px] leading-[1] tracking-tight mb-4 uppercase break-words px-1">
         {TIER_LABELS[tier]}
