@@ -11,11 +11,15 @@ export const QUESTION_COUNT = 18
  */
 export async function pickAnswer(page: Page, letter: AnswerLetter): Promise<void> {
   const index = ANSWER_LETTER_TO_INDEX[letter]
-  // Skip the back-arrow button (only present on Q2+).
-  await page
-    .locator('button:not([aria-label="Previous question"])')
-    .nth(index)
-    .click()
+  // Skip the nav buttons below the progress bar (Previous question / Next question).
+  await answerButtons(page).nth(index).click()
+}
+
+export function answerButtons(page: Page) {
+  return page
+    .locator("button")
+    .filter({ hasNotText: "Previous" })
+    .filter({ hasNotText: "Next" })
 }
 
 export async function fillSetup(

@@ -9,6 +9,7 @@ import { QUESTIONS } from "@/lib/questions"
 export default function QuizPage() {
   const router = useRouter()
   const setup = useQuizStore((s) => s.setup)
+  const answers = useQuizStore((s) => s.answers)
   const answer = useQuizStore((s) => s.answer)
   const quizIndex = useQuizStore((s) => s.quizIndex)
   const setQuizIndex = useQuizStore((s) => s.setQuizIndex)
@@ -20,7 +21,6 @@ export default function QuizPage() {
 
   if (!hydrated || !setup) return null
 
-  // Guard: if quizIndex somehow exceeds the question list, snap back.
   const safeIndex = Math.max(0, Math.min(quizIndex, QUESTIONS.length - 1))
   const q = QUESTIONS[safeIndex]
   if (!q) return null
@@ -34,13 +34,17 @@ export default function QuizPage() {
     }
   }
 
-  // Back arrow is always available:
-  //  • Q2+ → previous question
-  //  • Q1   → back to /start (lets the user edit role/yoe/work setup/city)
-  const goBack = () => {
-    if (safeIndex > 0) setQuizIndex(safeIndex - 1)
-    else router.push("/start")
-  }
+  // Previous: visible only from Q2 onwards
+  const onPrevious = safeIndex > 0 ? () => setQuizIndex(safeIndex - 1) : undefined
+
+  // Next: visible if the user has already been past the CURRENT question.
+  // Concretely, the user has answered at least `safeIndex + 1` questions, meaning
+  // they reached at least index safeIndex + 1 before going back. Doesn't require
+  // the upcoming question itself to be answered (matches the case where the user
+  // finished Q3 → landed on Q4 → went Previous → expects Next on Q3).
+  const canGoNext =
+    safeIndex < QUESTIONS.length - 1 && answers.length > safeIndex
+  const onNext = canGoNext ? () => setQuizIndex(safeIndex + 1) : undefined
 
   return (
     <RisoLayout>
@@ -49,7 +53,8 @@ export default function QuizPage() {
         questionNumber={safeIndex + 1}
         totalQuestions={QUESTIONS.length}
         onAnswer={handleAnswer}
-        onBack={goBack}
+        onPrevious={onPrevious}
+        onNext={onNext}
       />
     </RisoLayout>
   )

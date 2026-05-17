@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test"
-import { clearAllStorage, fillSetup, pickAnswer } from "./helpers"
+import { answerButtons, clearAllStorage, fillSetup, pickAnswer } from "./helpers"
 
 test.describe("Edge cases and navigation guards", () => {
   test.beforeEach(async ({ page }) => {
@@ -37,26 +37,40 @@ test.describe("Edge cases and navigation guards", () => {
     await expect(page.getByRole("link", { name: /Take the quiz/ })).toBeVisible()
   })
 
-  test("back arrow goes to previous question; from Q1 goes back to /start", async ({ page }) => {
+  test("Previous and Next buttons are hidden on the very first visit to Q1", async ({ page }) => {
     await page.goto("/start")
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
     await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
-
-    // Back arrow visible on Q1 — clicking goes back to /start
-    const back = page.getByRole("button", { name: "Previous question" })
-    await expect(back).toBeVisible()
-    await back.click()
-    await page.waitForURL(/\/start$/, { timeout: 5000 })
+    await expect(page.getByRole("button", { name: "Previous question" })).toHaveCount(0)
+    await expect(page.getByRole("button", { name: "Next question" })).toHaveCount(0)
   })
 
-  test("back arrow on Q3 returns to Q2 (within quiz)", async ({ page }) => {
+  test("after finishing Q3 → Q4, Previous returns to Q3 AND Next is visible (the bug)", async ({ page }) => {
     await page.goto("/start")
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
-    await page.locator('button:not([aria-label="Previous question"])').first().click()
-    await page.locator('button:not([aria-label="Previous question"])').first().click()
-    await expect(page.locator(`text=/^Q3$/`).first()).toBeVisible()
+    // Answer Q1, Q2, Q3 → land on Q4
+    await answerButtons(page).first().click()
+    await answerButtons(page).first().click()
+    await answerButtons(page).first().click()
+    await expect(page.locator(`text=/^Q4$/`).first()).toBeVisible()
+    // Previous → Q3
     await page.getByRole("button", { name: "Previous question" }).click()
+    await expect(page.locator(`text=/^Q3$/`).first()).toBeVisible()
+    // Both Previous AND Next should be visible (user was past Q3)
+    await expect(page.getByRole("button", { name: "Previous question" })).toBeVisible()
+    await expect(page.getByRole("button", { name: "Next question" })).toBeVisible()
+    // Next → Q4
+    await page.getByRole("button", { name: "Next question" }).click()
+    await expect(page.locator(`text=/^Q4$/`).first()).toBeVisible()
+  })
+
+  test("on Q2 after only answering Q1, Next is NOT visible (Q2 itself not answered)", async ({ page }) => {
+    await page.goto("/start")
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
+    await answerButtons(page).first().click() // answer Q1
     await expect(page.locator(`text=/^Q2$/`).first()).toBeVisible()
+    await expect(page.getByRole("button", { name: "Previous question" })).toBeVisible()
+    await expect(page.getByRole("button", { name: "Next question" })).toHaveCount(0)
   })
 
   test("quiz progress survives refresh — resumes at the same question", async ({ page }) => {
@@ -64,7 +78,7 @@ test.describe("Edge cases and navigation guards", () => {
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
     // Answer 4 questions, land on Q5
     for (let i = 0; i < 4; i++) {
-      await page.locator('button:not([aria-label="Previous question"])').first().click()
+      await answerButtons(page).first().click()
     }
     await expect(page.locator(`text=/^Q5$/`).first()).toBeVisible()
     // Refresh — should stay on Q5
