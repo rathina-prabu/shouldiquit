@@ -2,11 +2,11 @@ import { QUESTIONS } from "./questions"
 import type { Answer, ModuleName, Scores, VerdictTier, WorkType } from "./types"
 
 const MODULE_WEIGHTS: Record<ModuleName, number> = {
-  work: 0.11,
+  work: 0.14,
   manager: 0.18,
-  people: 0.10,
+  people: 0.14,
   growth: 0.18,
-  money: 0.25,
+  money: 0.18,
   wellbeing: 0.18,
 }
 
@@ -89,22 +89,21 @@ export function findWeakestModule(modules: Record<ModuleName, number>): ModuleNa
 
 /**
  * Work-setup offset, in percentage points on the relevant modules.
- * "Flexibility wins": remote / hybrid-flex score positively on wellbeing,
- * hybrid-fixed is neutral, full WFO is penalised. Magnitudes are tuned to
- * shift the master score by roughly ±3 points after weighting (wellbeing × 0.18).
+ * Shrunk so the wellbeing *questions* still do the heavy lifting — setup
+ * nudges by ~±1.5 master points instead of dominating.
  */
 export function computeWorkTypeOffset(
   workType: WorkType | null | undefined,
 ): { wellbeing: number; work: number } {
   switch (workType) {
     case "remote":
-      return { wellbeing: 15, work: 5 }
+      return { wellbeing: 8, work: 3 }
     case "hybrid_flex":
-      return { wellbeing: 10, work: 0 }
+      return { wellbeing: 5, work: 0 }
     case "hybrid_fixed":
       return { wellbeing: 0, work: 0 }
     case "office":
-      return { wellbeing: -15, work: 0 }
+      return { wellbeing: -8, work: 0 }
     default:
       return { wellbeing: 0, work: 0 }
   }
@@ -120,7 +119,12 @@ export function recomputeMasterWithOffsets(
   adjWork: number
   adjMaster: number
 } {
-  const adjMoney = Math.max(0, Math.min(100, modules.money + moneyOffset))
+  // When the salary number says "underpaid", the money quiz answers (hike,
+  // peer pay) often confirm the same signal. Adding both penalties would
+  // double-count. Soften the quiz contribution by giving the module a small
+  // rebate before applying the salary offset.
+  const quizRebate = moneyOffset < 0 ? 10 : 0
+  const adjMoney = Math.max(0, Math.min(100, modules.money + quizRebate + moneyOffset))
   const adjWellbeing = Math.max(0, Math.min(100, modules.wellbeing + workTypeOffset.wellbeing))
   const adjWork = Math.max(0, Math.min(100, modules.work + workTypeOffset.work))
   const adjMaster = Math.max(
