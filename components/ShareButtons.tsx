@@ -51,24 +51,19 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
   }
 
   return (
-    <div className="mt-8 pt-4 border-t border-ink/20">
-      <div className="text-[11px] tracking-[0.2em] uppercase text-ink/60 mb-2.5 text-center font-medium">
-        Share
-      </div>
-      <div className="flex gap-2 justify-center flex-wrap">
-        <button
-          onClick={share}
-          className="border border-ink px-3.5 py-2 text-[12px] font-medium hover:bg-ink hover:text-paper transition-colors"
-        >
-          📱 {copied === "text" ? "Copied!" : "Share"}
-        </button>
-        <button
-          onClick={copyLink}
-          className="border border-ink px-3.5 py-2 text-[12px] font-medium hover:bg-ink hover:text-paper transition-colors"
-        >
-          🔗 {copied === "link" ? "Copied!" : "Copy link"}
-        </button>
-      </div>
+    <div className="mt-1 mb-5 flex gap-2 justify-center">
+      <button
+        onClick={share}
+        className="flex-1 border border-ink px-3.5 py-2.5 text-[13px] font-medium hover:bg-ink hover:text-paper transition-colors"
+      >
+        📱 {copied === "text" ? "Copied!" : "Share"}
+      </button>
+      <button
+        onClick={copyLink}
+        className="flex-1 border border-ink px-3.5 py-2.5 text-[13px] font-medium hover:bg-ink hover:text-paper transition-colors"
+      >
+        🔗 {copied === "link" ? "Copied!" : "Copy link"}
+      </button>
     </div>
   )
 }
