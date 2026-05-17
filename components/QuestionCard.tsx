@@ -46,11 +46,14 @@ export function QuestionCard({ question, questionNumber, totalQuestions, selecte
           const isSelected = selectedIndex === i
           return (
             <button
-              key={i}
+              // Key includes question.id so React mounts fresh DOM nodes per
+              // question — prevents the previous click's focus ring from
+              // appearing 'selected' on the next question.
+              key={`${question.id}-${i}`}
               onClick={() => onAnswer(i as 0 | 1 | 2 | 3)}
               aria-pressed={isSelected}
               className={[
-                "border py-3 px-4 text-left text-[14.5px] leading-snug transition-colors",
+                "border py-3 px-4 text-left text-[14.5px] leading-snug transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ink/40",
                 isSelected
                   ? "border-ink bg-ink/[0.06] hover:bg-ink/[0.09]"
                   : "border-ink/30 hover:border-ink hover:bg-ink/[0.04] active:bg-ink/[0.08]",
