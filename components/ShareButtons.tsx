@@ -56,25 +56,30 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule: _weakestMod
   const [copied, setCopied] = useState<"link" | "native" | null>(null)
   const [sharing, setSharing] = useState(false)
 
-  // 'Take yours' should drop friends on the landing page so they start fresh,
-  // not on the sharer's visitor view.
-  let landingUrl = shareUrl
+  // Share-preview URL: a route that has the verdict OG image in its metadata
+  // (so WhatsApp/X/LinkedIn render the card as preview) but redirects browsers
+  // to the landing page — so tapping the link in a chat takes friends straight
+  // to '/' to start their own quiz.
+  let previewUrl = shareUrl
   try {
-    landingUrl = new URL("/", shareUrl).toString()
+    const idMatch = shareUrl.match(/\/r\/([A-Za-z0-9]+)/)
+    if (idMatch) {
+      previewUrl = new URL(`/s/${idMatch[1]}`, shareUrl).toString()
+    } else {
+      previewUrl = new URL("/", shareUrl).toString()
+    }
   } catch {
     /* shareUrl may be empty during first paint */
   }
   const tierLine = `${TIER_TEXT[tier] ?? tier} (${score}/100)`
 
-  // Long-form message for WhatsApp / native share / copy-text.
-  const message = `Should I Quit my Job?\n\nMy verdict: ${tierLine}\n\nTake yours (5 min, anonymous): ${landingUrl}`
-  // Tighter version for X (280-char tweet budget).
+  const message = `Should I Quit my Job?\n\nMy verdict: ${tierLine}\n\nTake yours (5 min, anonymous): ${previewUrl}`
   const xMessage = `Should I quit my job?\n\nVerdict: ${tierLine}\n\nTake yours:`
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`
-  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xMessage)}&url=${encodeURIComponent(landingUrl)}`
-  const linkedInWeb = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(landingUrl)}`
-  const linkedInApp = `linkedin://shareArticle?mini=true&url=${encodeURIComponent(landingUrl)}&title=${encodeURIComponent("Should I Quit?")}`
+  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xMessage)}&url=${encodeURIComponent(previewUrl)}`
+  const linkedInWeb = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(previewUrl)}`
+  const linkedInApp = `linkedin://shareArticle?mini=true&url=${encodeURIComponent(previewUrl)}&title=${encodeURIComponent("Should I Quit?")}`
 
   const openLinkedIn = (e: React.MouseEvent) => {
     if (!isMobile()) return
@@ -115,7 +120,7 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule: _weakestMod
         const data: ShareData = {
           title: "Should I Quit?",
           text: message,
-          url: landingUrl,
+          url: previewUrl,
         }
         const image = await fetchVerdictImage()
         if (image && navigator.canShare?.({ files: [image] })) {
@@ -125,9 +130,12 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule: _weakestMod
           await navigator.share(data)
           return
         } catch {
-          /* user cancelled or unsupported — fall through to clipboard */
+          /* user cancelled — silent return */
+          return
         }
       }
+      // Desktop / no Web Share API → copy the message to clipboard so the
+      // user can paste into Telegram/Gmail/etc. manually.
       const ok = await writeClipboard(message)
       if (ok) {
         setCopied("native")
