@@ -28,7 +28,7 @@ export function QuestionCard({ question, questionNumber, totalQuestions, onAnswe
   return (
     <>
       <div className="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
-        <span>shouldiquit.work</span>
+        <a href="/" className="hover:text-ink transition-colors">shouldiquit.work</a>
         <span className="text-accent font-medium">Q{questionNumber}</span>
       </div>
       <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-6 mt-2">
