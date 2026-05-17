@@ -127,9 +127,6 @@ export default function StartPage() {
       >
         Start the questions →
       </button>
-      <div className="text-[11px] text-center mt-3 text-ink/55 italic">
-        18 questions · ~5 minutes
-      </div>
     </RisoLayout>
   )
 }
