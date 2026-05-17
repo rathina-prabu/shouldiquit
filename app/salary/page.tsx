@@ -75,7 +75,7 @@ export default function SalaryPage() {
         onChange={setVariable}
       />
 
-      <div className="mt-5 py-4 border-t border-b border-ink flex justify-between items-center">
+      <div className="mt-5 py-4 border-b border-ink flex justify-between items-center">
         <span className="text-[11px] tracking-[0.18em] uppercase text-ink/60">Total</span>
         <span className="font-display text-[28px] tracking-tight">₹{total} L</span>
       </div>
