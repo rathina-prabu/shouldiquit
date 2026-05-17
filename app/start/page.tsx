@@ -108,6 +108,11 @@ function StartForm() {
             setYoeText(digits === "" ? "" : String(parseInt(digits)))
           }}
         />
+        {yoe > 40 && (
+          <div className="mt-2 text-[12.5px] text-accent italic leading-snug">
+            Boss, 40+ years in? You don&apos;t need a quiz, you need a holiday. This one isn&apos;t for you.
+          </div>
+        )}
       </Field>
 
       <Field label="Work setup">
