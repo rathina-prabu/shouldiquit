@@ -1,10 +1,22 @@
 # Deploying shouldiquit.work to Vercel
 
-## What's already done
-- Code is on GitHub (private repo)
-- Supabase schema + `Project / Program Manager` benchmarks live in `yojxqkwqlnodtllkmauq`
-- All env values are in `.env.local` (gitignored — not pushed)
-- 90 tests passing (39 vitest + 51 Playwright)
+## Live state
+
+- **GitHub repo:** https://github.com/rathinaprabu/shouldiquit (private)
+- **Vercel project:** `rathinaprabu-4745s-projects/shouldiquit`
+- **Production env vars set on Vercel:**
+  - `NEXT_PUBLIC_SUPABASE_URL` ✓
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY` ✓
+  - `SUPABASE_URL` ✓
+  - `SUPABASE_SERVICE_ROLE_KEY` ✓ (using the publishable key — permissive RLS lets it work)
+  - `ANTHROPIC_API_KEY` ⏸️ not yet set — templated fallback fires until you add the real key
+
+## What's left (you)
+
+1. Wait for the current `vercel --prod` to finish — should land at `https://shouldiquit-*.vercel.app`
+2. Walk the prod URL on your phone to confirm everything works
+3. Attach the domain (see "Domain" below)
+4. When the Anthropic org is restored, add `ANTHROPIC_API_KEY` via `vercel env add` and redeploy
 
 ## What you do (one-time)
 

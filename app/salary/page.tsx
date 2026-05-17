@@ -10,8 +10,10 @@ export default function SalaryPage() {
   const setup = useQuizStore((s) => s.setup)
   const answers = useQuizStore((s) => s.answers)
   const setSalary = useQuizStore((s) => s.setSalary)
-  const [fixed, setFixed] = useState<number>(18)
-  const [variable, setVariable] = useState<number>(4)
+  const [fixedText, setFixedText] = useState<string>("18")
+  const [variableText, setVariableText] = useState<string>("4")
+  const fixed = parseFloat(fixedText) || 0
+  const variable = parseFloat(variableText) || 0
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const hydrated = useHasHydrated()
@@ -67,12 +69,12 @@ export default function SalaryPage() {
         Your salary. One of the biggest inputs into the verdict.
       </p>
 
-      <SalaryField label="Annual fixed (LPA)" value={fixed} onChange={setFixed} />
+      <SalaryField label="Annual fixed (LPA)" value={fixedText} onChange={setFixedText} />
       <SalaryField
         label="Variable + bonus (LPA)"
         hint="Don't include ESOPs — they're not cash in hand."
-        value={variable}
-        onChange={setVariable}
+        value={variableText}
+        onChange={setVariableText}
       />
 
       <div className="mt-5 py-4 border-b border-ink flex justify-between items-center">
@@ -105,8 +107,8 @@ function SalaryField({
 }: {
   label: string
   hint?: string
-  value: number
-  onChange: (n: number) => void
+  value: string
+  onChange: (text: string) => void
 }) {
   return (
     <div className="mb-4">
@@ -116,11 +118,30 @@ function SalaryField({
       <div className="flex items-center border-b-[1.5px] border-ink py-1.5 focus-within:border-accent">
         <span className="font-display text-[18px] text-accent mr-2">₹</span>
         <input
-          type="number"
+          type="text"
           inputMode="decimal"
-          min={0}
+          pattern="[0-9]*\.?[0-9]*"
           value={value}
-          onChange={(e) => onChange(parseFloat(e.target.value) || 0)}
+          onChange={(e) => {
+            // Allow digits and a single decimal point
+            let v = e.target.value.replace(/[^0-9.]/g, "")
+            const firstDot = v.indexOf(".")
+            if (firstDot >= 0) {
+              v = v.slice(0, firstDot + 1) + v.slice(firstDot + 1).replace(/\./g, "")
+            }
+            // Strip leading zeros on integer part: "02" → "2"; keep "0", "0.5"
+            if (v && !v.startsWith(".")) {
+              const dot = v.indexOf(".")
+              if (dot === -1) {
+                v = v === "0" ? "0" : String(parseInt(v) || 0)
+              } else {
+                const intPart = v.slice(0, dot)
+                const fracPart = v.slice(dot)
+                v = (intPart === "" || intPart === "0" ? "0" : String(parseInt(intPart) || 0)) + fracPart
+              }
+            }
+            onChange(v)
+          }}
           className="flex-1 bg-transparent border-0 outline-none font-display text-[22px]"
         />
         <span className="text-[11px] text-ink/55 tracking-[0.1em] uppercase">Lakhs</span>
