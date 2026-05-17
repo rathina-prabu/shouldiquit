@@ -67,9 +67,9 @@ export default function SalaryPage() {
         Your salary. The biggest input into the verdict.
       </p>
 
-      <SalaryField label="Annual fixed (CTC)" value={fixed} onChange={setFixed} />
+      <SalaryField label="Annual fixed (LPA)" value={fixed} onChange={setFixed} />
       <SalaryField
-        label="Variable + bonus"
+        label="Variable + bonus (LPA)"
         hint="Don't include ESOPs — they're not cash in hand."
         value={variable}
         onChange={setVariable}
