@@ -55,9 +55,9 @@ test.describe("Happy path — full user journey", () => {
       "Customer Success",
       "Business Ops",
     ])
-    // Anonymous ID is visible
-    await expect(page.getByText(/Your anonymous ID/)).toBeVisible()
-    await expect(page.locator("text=/^usr_[a-f0-9]{5}$/")).toBeVisible()
+    // Anonymous ID block must NOT be shown to the user
+    await expect(page.getByText(/Your anonymous ID/)).toHaveCount(0)
+    await expect(page.locator("text=/^usr_[a-f0-9]{5}$/")).toHaveCount(0)
   })
 
   test("complete journey landing → quiz → salary → result (taker view)", async ({ page }) => {

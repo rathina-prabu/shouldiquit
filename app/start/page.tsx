@@ -1,9 +1,8 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { RisoLayout } from "@/components/RisoLayout"
 import { useQuizStore } from "@/store/quiz-store"
-import { getShortUserId } from "@/lib/user-uuid"
 import type { City, Role } from "@/lib/types"
 
 const CITIES: City[] = ["Bangalore", "Mumbai", "Chennai", "Hyderabad", "Gurgaon"]
@@ -30,11 +29,6 @@ export default function StartPage() {
   const [city, setCity] = useState<City>("Bangalore")
   const [role, setRole] = useState<Role>("Engineer (IC)")
   const [yoe, setYoe] = useState<number>(8)
-  const [userId, setUserId] = useState("")
-
-  useEffect(() => {
-    setUserId(getShortUserId())
-  }, [])
 
   const submit = () => {
     // Start a fresh quiz: wipe previous run before storing the new setup.
@@ -96,23 +90,9 @@ export default function StartPage() {
         />
       </Field>
 
-      <div className="mt-8 p-4 border-l-[3px] border-accent bg-accent/[0.08] flex justify-between items-center">
-        <div>
-          <div className="text-[11px] tracking-[0.15em] uppercase text-accent font-medium mb-1">
-            Your anonymous ID
-          </div>
-          <div className="font-display text-[16px]">{userId || "usr_….."}</div>
-        </div>
-        <div className="text-[11px] text-ink/60 text-right leading-tight">
-          Generated.
-          <br />
-          No name attached.
-        </div>
-      </div>
-
       <button
         onClick={submit}
-        className="mt-8 bg-ink text-paper px-6 py-4 font-medium text-[15px] tracking-[0.05em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all text-center"
+        className="mt-10 bg-ink text-paper px-6 py-4 font-medium text-[15px] tracking-[0.05em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all text-center"
       >
         Start the questions →
       </button>
