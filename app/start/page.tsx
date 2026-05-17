@@ -64,13 +64,24 @@ function StartForm() {
       setShowSeniorWarning(true)
       return
     }
-    reset()
-    setSetup({
+    const next = {
       city: isRemote ? "Others" : city,
       role,
       yoe,
       work_type: workType,
-    })
+    }
+    // Only wipe quiz progress when the user has actually changed their setup.
+    // If they came back to /start just to peek and didn't change anything,
+    // preserve their answers + question index so they resume where they were.
+    const current = useQuizStore.getState().setup
+    const setupChanged =
+      !current ||
+      current.role !== next.role ||
+      current.yoe !== next.yoe ||
+      current.work_type !== next.work_type ||
+      current.city !== next.city
+    if (setupChanged) reset()
+    setSetup(next)
     router.push("/quiz")
   }
 
