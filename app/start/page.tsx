@@ -7,7 +7,7 @@ import { getOrCreateUserUuid } from "@/lib/user-uuid"
 import type { City, Role, WorkType } from "@/lib/types"
 import { WORK_TYPE_LABELS } from "@/lib/types"
 
-const CITIES: City[] = ["Bangalore", "Mumbai", "Chennai", "Hyderabad", "Gurgaon"]
+const CITIES: City[] = ["Bangalore", "Mumbai", "Chennai", "Hyderabad", "Gurgaon", "Others"]
 
 const ROLES: Role[] = [
   "Engineer (IC)",
@@ -28,10 +28,10 @@ export default function StartPage() {
   const router = useRouter()
   const setSetup = useQuizStore((s) => s.setSetup)
   const reset = useQuizStore((s) => s.reset)
-  const [city, setCity] = useState<City>("Bangalore")
   const [role, setRole] = useState<Role>("Engineer (IC)")
   const [yoe, setYoe] = useState<number>(8)
   const [workType, setWorkType] = useState<WorkType>("hybrid_flex")
+  const [city, setCity] = useState<City>("Bangalore")
 
   // Ensure the anonymous user_uuid exists in localStorage on first /start visit,
   // even though we no longer display it. The result page's taker-vs-visitor match
@@ -40,10 +40,16 @@ export default function StartPage() {
     getOrCreateUserUuid()
   }, [])
 
+  const isRemote = workType === "remote"
+
   const submit = () => {
-    // Start a fresh quiz: wipe previous run before storing the new setup.
     reset()
-    setSetup({ city, role, yoe, work_type: workType })
+    setSetup({
+      city: isRemote ? "Others" : city,
+      role,
+      yoe,
+      work_type: workType,
+    })
     router.push("/quiz")
   }
 
@@ -58,20 +64,6 @@ export default function StartPage() {
       <p className="text-[15px] leading-[1.55] mb-7">
         Three things to compare your situation.
       </p>
-
-      <Field label="Your city">
-        <select
-          className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none"
-          value={city}
-          onChange={(e) => setCity(e.target.value as City)}
-        >
-          {CITIES.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          ))}
-        </select>
-      </Field>
 
       <Field label="Your role">
         <select
@@ -99,7 +91,7 @@ export default function StartPage() {
         />
       </Field>
 
-      <div className="mb-2 mt-2">
+      <div className="mb-4 mt-2">
         <div className="text-[11px] tracking-[0.15em] uppercase text-ink/70 mb-2 block font-medium">
           Work setup
         </div>
@@ -131,6 +123,22 @@ export default function StartPage() {
           })}
         </div>
       </div>
+
+      {!isRemote && (
+        <Field label="Work location">
+          <select
+            className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none appearance-none"
+            value={city}
+            onChange={(e) => setCity(e.target.value as City)}
+          >
+            {CITIES.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+        </Field>
+      )}
 
       <button
         onClick={submit}

@@ -7,6 +7,7 @@ const UBER_DRIVER_DAILY_INR: Record<City, number> = {
   Gurgaon: 650,
   Chennai: 500,
   Hyderabad: 550,
+  Others: 600, // tier-2 cities + remote — use Bangalore baseline as a reasonable Indian average
 }
 
 const WORKING_DAYS_PER_YEAR = 250

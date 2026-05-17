@@ -1,4 +1,4 @@
-export type City = "Bangalore" | "Chennai" | "Hyderabad" | "Gurgaon" | "Mumbai"
+export type City = "Bangalore" | "Chennai" | "Hyderabad" | "Gurgaon" | "Mumbai" | "Others"
 
 export type Role =
   | "Engineer (IC)"
