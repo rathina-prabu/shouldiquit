@@ -140,3 +140,21 @@ export function salaryVsMarket(
   if (totalLakhs > cell.p75) return "above"
   return "near"
 }
+
+/**
+ * The 'Market median' in our dataset is product-company-skewed (Razorpay, Flipkart,
+ * Swiggy, GCC tier). Services / IT consulting medians (TCS, Infosys, Wipro,
+ * Cognizant) run substantially lower — the gap is biggest at fresher level and
+ * narrows with seniority. Returns an estimate of the services p50.
+ */
+const SERVICES_MULTIPLIER: Record<YoeBand, number> = {
+  "0-3": 0.40,
+  "4-7": 0.45,
+  "8-12": 0.55,
+  "13+": 0.60,
+}
+
+export function servicesMedian(productMedian: number, yoe: number): number {
+  const band = yoeToBand(yoe)
+  return Math.round(productMedian * SERVICES_MULTIPLIER[band])
+}

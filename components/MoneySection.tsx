@@ -1,5 +1,11 @@
 import type { City, Role } from "@/lib/types"
-import { lookupSalary, computeRealDailyRate, getUberDriverDaily, yoeToBand } from "@/lib/benchmarks"
+import {
+  lookupSalary,
+  computeRealDailyRate,
+  getUberDriverDaily,
+  yoeToBand,
+  servicesMedian,
+} from "@/lib/benchmarks"
 
 interface Props {
   city: City
@@ -25,10 +31,17 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
       <div className="flex flex-col">
         <Row label="Your salary" value={`₹${Math.round(total * 10) / 10} L`} highlight />
         {salaryCell && (
-          <Row
-            label={`Market median · ${role} · ${city} · ${band} yr`}
-            value={`₹${salaryCell.p50} L`}
-          />
+          <>
+            <Row
+              label={`Product co median · ${role} · ${city} · ${band} yr`}
+              value={`₹${salaryCell.p50} L`}
+            />
+            <Row
+              label="Services median (TCS, Infosys, etc.)"
+              value={`₹${servicesMedian(salaryCell.p50, yoe)} L`}
+              muted
+            />
+          </>
         )}
         <Row label="Your real take-home / day" value={`₹${realDaily.toLocaleString("en-IN")}`} highlight />
         <Row
