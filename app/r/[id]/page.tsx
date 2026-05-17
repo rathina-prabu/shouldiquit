@@ -200,9 +200,8 @@ export default function ResultPage() {
   }
 
   // Taker view
-  const userIdShort = "usr_" + session.user_uuid.replace(/-/g, "").slice(0, 5)
   return (
-    <RisoLayout topBarLeft={userIdShort} topBarRight="Confidential">
+    <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Verdict">
       <VerdictBlock tier={tier} score={session.master_score} />
       <MoneySection
         city={session.city as City}

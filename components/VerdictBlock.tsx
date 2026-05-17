@@ -22,7 +22,7 @@ export function VerdictBlock({ tier, score }: { tier: VerdictTier; score: number
       <div className="text-[11px] tracking-[0.2em] uppercase opacity-75 mb-2.5 font-medium">
         — Recommendation —
       </div>
-      <h1 className="font-display text-[40px] leading-[0.95] tracking-tight mb-4 uppercase">
+      <h1 className="font-display text-[32px] leading-[1] tracking-tight mb-4 uppercase break-words px-1">
         {TIER_LABELS[tier]}
       </h1>
       <div className="flex justify-center items-baseline gap-1.5 font-display">
