@@ -18,10 +18,13 @@ test.describe("Happy path — full user journey", () => {
   test("landing renders the hook and Start CTA", async ({ page }) => {
     await expect(page.locator("text=/Should/").first()).toBeVisible()
     await expect(page.locator("text=/I Quit/").first()).toBeVisible()
-    await expect(page.getByText("10 minutes · 18 questions", { exact: false })).toBeVisible()
+    await expect(page.getByText(/~5 minutes/i)).toBeVisible()
     await expect(page.getByText(/We don.t know who you are/i)).toBeVisible()
     await expect(page.getByRole("link", { name: /Start →/ })).toBeVisible()
-    await expect(page.getByText(/Anonymous/).first()).toBeVisible()
+    // Question count and footer privacy line are NOT shown
+    await expect(page.getByText(/18 questions/i)).toHaveCount(0)
+    await expect(page.getByText(/No name. No email/i)).toHaveCount(0)
+    await expect(page.getByText(/Confidentiality is the whole point/i)).toHaveCount(0)
   })
 
   test("start page renders setup form with all 5 cities and 12 tracks + anon ID", async ({
