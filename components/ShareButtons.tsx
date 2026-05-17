@@ -63,15 +63,26 @@ function isMobile(): boolean {
 export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
   const [copied, setCopied] = useState<"link" | "native" | null>(null)
   const moduleName = MODULE_NAMES[weakestModule] ?? weakestModule
-  const message = `Just got diagnosed: ${TIER_TEXT[tier] ?? tier} (${score}/100). The ${moduleName} problem.\n\nTake yours (5 min, anonymous): ${shareUrl}`
+
+  // 'Take yours' should drop friends on the landing page so they start fresh,
+  // not on the sharer's visitor view. The verdict is already communicated in
+  // the message text, so the link's only job is the CTA.
+  let landingUrl = shareUrl
+  try {
+    landingUrl = new URL("/", shareUrl).toString()
+  } catch {
+    /* shareUrl may be empty during first paint */
+  }
+
+  const message = `Just got diagnosed: ${TIER_TEXT[tier] ?? tier} (${score}/100). The ${moduleName} problem.\n\nTake yours (5 min, anonymous): ${landingUrl}`
   const xMessage = `Just got diagnosed: ${TIER_TEXT[tier] ?? tier} (${score}/100). The ${moduleName} problem. Take yours:`
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`
-  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xMessage)}&url=${encodeURIComponent(shareUrl)}`
-  const linkedInWeb = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`
+  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xMessage)}&url=${encodeURIComponent(landingUrl)}`
+  const linkedInWeb = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(landingUrl)}`
   // LinkedIn deep-link scheme — opens the LinkedIn app's share sheet when installed.
   // Falls back to the web share dialog if the scheme times out.
-  const linkedInApp = `linkedin://shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent("My Should I Quit verdict")}`
+  const linkedInApp = `linkedin://shareArticle?mini=true&url=${encodeURIComponent(landingUrl)}&title=${encodeURIComponent("Should I Quit?")}`
 
   const openLinkedIn = (e: React.MouseEvent) => {
     if (!isMobile()) return // let the <a> handle desktop normally
@@ -95,7 +106,7 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
   const nativeShare = async () => {
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
-        await navigator.share({ text: message, url: shareUrl })
+        await navigator.share({ text: message, url: landingUrl })
         return
       } catch {
         /* user cancelled or unsupported — fall through to clipboard */
