@@ -1,13 +1,22 @@
 import benchmarksJson from "../data/benchmarks.json"
 import type { City, Role, YoeBand } from "./types"
 
-const UBER_DRIVER_DAILY_INR: Record<City, number> = {
-  Bangalore: 600,
-  Mumbai: 700,
-  Gurgaon: 650,
-  Chennai: 500,
-  Hyderabad: 550,
-  Others: 600, // tier-2 cities + remote — use Bangalore baseline as a reasonable Indian average
+/**
+ * Estimated net daily take-home for a corporate-area chaiwala — 700-1000 cups
+ * per day × ₹10-15 per cup × ~50% margin. Picked from tech-park / CBD locations
+ * (Bangalore: Whitefield/Indiranagar, Mumbai: BKC/Andheri, Gurgaon: Cyber Hub,
+ * Hyderabad: HiTech City, Chennai: OMR). Sources:
+ *  - businesstoday.in (tea stall ₹18L/yr → ₹5k/day)
+ *  - marketingmind.in (₹3-5k/day common, up to ₹15k for top operators)
+ *  - dnaindia.com (₹90L/yr top tier)
+ */
+const CHAIWALA_DAILY_INR: Record<City, number> = {
+  Bangalore: 4000,
+  Mumbai: 4500,
+  Gurgaon: 4500,
+  Hyderabad: 3500,
+  Chennai: 3000,
+  Others: 3500, // tier-2 cities + remote — slightly below Bangalore tech park baseline
 }
 
 const WORKING_DAYS_PER_YEAR = 250
@@ -99,8 +108,8 @@ export function lookupCityContext(city: City) {
   return (benchmarksJson as unknown as { city_context: Record<string, unknown> }).city_context?.[city]
 }
 
-export function getUberDriverDaily(city: City): number {
-  return UBER_DRIVER_DAILY_INR[city] ?? 600
+export function getChaiwalaDaily(city: City): number {
+  return CHAIWALA_DAILY_INR[city] ?? 3500
 }
 
 /**

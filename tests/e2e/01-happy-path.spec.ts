@@ -115,8 +115,8 @@ test.describe("Happy path — full user journey", () => {
     // Money section visible
     await expect(page.getByText(/The Money/i)).toBeVisible()
     await expect(page.locator("text=/Your salary/i")).toBeVisible()
-    // Uber row label is rendered as: "🚗 <City> Uber driver / day"
-    await expect(page.locator("text=/Uber driver \\/ day/i")).toBeVisible()
+    // Chaiwala comparison row
+    await expect(page.locator("text=/chaiwala \\/ day/i")).toBeVisible()
     // Diagnosis loads (template fires since no Anthropic key)
     await expect(page.getByText(/Your diagnosis/i)).toBeVisible({ timeout: 15000 })
     await expect(page.locator('h2:has-text("This week, try")')).toBeVisible({ timeout: 15000 })

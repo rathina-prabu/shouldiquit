@@ -2,7 +2,7 @@ import type { City, Role } from "@/lib/types"
 import {
   lookupSalary,
   computeRealDailyRate,
-  getUberDriverDaily,
+  getChaiwalaDaily,
   yoeToBand,
   servicesMedian,
 } from "@/lib/benchmarks"
@@ -19,8 +19,8 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
   const total = (fixed_lakhs || 0) + (variable_lakhs || 0)
   const salaryCell = lookupSalary(city, role, yoe)
   const realDaily = computeRealDailyRate(fixed_lakhs, variable_lakhs)
-  const uberDaily = getUberDriverDaily(city)
-  const delta = realDaily - uberDaily
+  const chaiwalaDaily = getChaiwalaDaily(city)
+  const delta = realDaily - chaiwalaDaily
   const band = yoeToBand(yoe)
 
   return (
@@ -50,8 +50,8 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
           highlight
         />
         <Row
-          label={`🚗 ${city} Uber driver / day`}
-          value={`₹${uberDaily.toLocaleString("en-IN")}`}
+          label={`${city} chaiwala / day`}
+          value={`₹${chaiwalaDaily.toLocaleString("en-IN")}`}
           muted
         />
       </div>
@@ -62,15 +62,15 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
             <strong className="font-medium text-accent">
               ₹{delta.toLocaleString("en-IN")} more
             </strong>{" "}
-            per day than an Uber driver. ☠️
+            per day than a chaiwala. Barely.
           </>
         ) : (
           <>
-            You earn{" "}
+            A {city} chaiwala earns{" "}
             <strong className="font-medium text-accent">
-              ₹{Math.abs(delta).toLocaleString("en-IN")} LESS
+              ₹{Math.abs(delta).toLocaleString("en-IN")} MORE
             </strong>{" "}
-            per day than an Uber driver. ☠️☠️
+            per day than you. Read that again.
           </>
         )}
       </div>

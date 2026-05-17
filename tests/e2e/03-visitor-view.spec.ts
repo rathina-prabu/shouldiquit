@@ -58,7 +58,7 @@ test.describe("Visitor view (someone else's URL)", () => {
 
     // Visitor must NOT see salary, money section, full diagnosis paragraph, or share buttons
     await expect(page.getByText(/Your salary/i)).toHaveCount(0)
-    await expect(page.getByText(/Uber driver/i)).toHaveCount(0)
+    await expect(page.getByText(/chaiwala/i)).toHaveCount(0)
     await expect(page.getByText(/Your diagnosis/i)).toHaveCount(0)
     await expect(page.getByText(/iCall 9152987821/)).toHaveCount(0)
     await expect(page.getByRole("button", { name: /Copy link/ })).toHaveCount(0)

@@ -5,7 +5,7 @@ import {
   lookupCityContext,
   computeRealDailyRate,
   computeSalaryOffset,
-  getUberDriverDaily,
+  getChaiwalaDaily,
   salaryVsMarket,
 } from "@/lib/benchmarks"
 
@@ -33,9 +33,9 @@ describe("lookupCityContext", () => {
   })
 })
 
-describe("getUberDriverDaily", () => {
-  it("Bangalore = 600", () => expect(getUberDriverDaily("Bangalore")).toBe(600))
-  it("Mumbai = 700", () => expect(getUberDriverDaily("Mumbai")).toBe(700))
+describe("getChaiwalaDaily", () => {
+  it("Bangalore = 4000", () => expect(getChaiwalaDaily("Bangalore")).toBe(4000))
+  it("Mumbai = 4500", () => expect(getChaiwalaDaily("Mumbai")).toBe(4500))
 })
 
 describe("computeRealDailyRate", () => {
