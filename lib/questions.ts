@@ -8,8 +8,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Engaging and varied. Real challenges, things to figure out.", highlight: "Engaging and varied", scores: { work: 5 } },
       { label: "Mostly repetitive, occasional spike of something interesting.", highlight: "Mostly repetitive", scores: { work: 3 } },
-      { label: "Directionless. You do work, no one's quite sure why.", highlight: "Directionless", scores: { work: 1, cynicism: 2 } },
-      { label: "Pure execution of someone else's blueprint. No thinking.", highlight: "Pure execution", scores: { work: 0, cynicism: 3 } },
+      { label: "Directionless. You do work, no one's quite sure why.", highlight: "Directionless", scores: { work: -1, cynicism: 2 } },
+      { label: "Pure execution of someone else's blueprint. No thinking.", highlight: "Pure execution", scores: { work: -3, cynicism: 3 } },
     ],
   },
   {
@@ -18,8 +18,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Going wide, picking up new skills regularly.", highlight: "Going wide", scores: { work: 5, growth: 3 } },
       { label: "Going deep, sharpening a few skills into real expertise.", highlight: "Going deep", scores: { work: 5, growth: 3 } },
-      { label: "Plateaued. No real skill movement in a while.", highlight: "Plateaued", scores: { work: 1, cynicism: 2 } },
-      { label: "Going backwards, losing edges you had when you joined.", highlight: "Going backwards", scores: { work: 0, cynicism: 3, intent_to_quit: 3 } },
+      { label: "Plateaued. No real skill movement in a while.", highlight: "Plateaued", scores: { work: -1, cynicism: 2 } },
+      { label: "Going backwards, losing edges you had when you joined.", highlight: "Going backwards", scores: { work: -3, cynicism: 3, intent_to_quit: 3 } },
     ],
   },
   {
@@ -28,8 +28,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Customers.", highlight: "Customers", scores: { work: 5 } },
       { label: "Leadership / the wider org.", highlight: "Leadership", scores: { work: 4 } },
-      { label: "Just my manager.", highlight: "Just my manager", scores: { work: 2 } },
-      { label: "Honestly, nobody.", highlight: "Honestly, nobody", scores: { work: 0, cynicism: 3 } },
+      { label: "Just my manager.", highlight: "Just my manager", scores: { work: 0 } },
+      { label: "Honestly, nobody.", highlight: "Honestly, nobody", scores: { work: -3, cynicism: 3 } },
     ],
   },
   // Module 2: THE MANAGER (4 questions)
@@ -39,8 +39,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Send them a \"feel better\" note. And mean it.", highlight: "\"feel better\" note", scores: { manager: 5 } },
       { label: "Carry on. They're fine, you're fine.", highlight: "Carry on", scores: { manager: 3 } },
-      { label: "Quiet relief. The day just got easier.", highlight: "Quiet relief", scores: { manager: 1, cynicism: 2 } },
-      { label: "Praying it's a broken leg. Both ideally.", highlight: "broken leg. Both ideally", scores: { manager: 0, cynicism: 3, intent_to_quit: 2 } },
+      { label: "Quiet relief. The day just got easier.", highlight: "Quiet relief", scores: { manager: -3, cynicism: 2 } },
+      { label: "Praying it's a broken leg. Both ideally.", highlight: "broken leg. Both ideally", scores: { manager: -5, cynicism: 3, intent_to_quit: 2 } },
     ],
   },
   {
@@ -49,8 +49,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Respects them. No pings after work hours.", highlight: "Respects them", scores: { manager: 5 } },
       { label: "Slacks at 10pm but writes \"no rush\" and means it.", highlight: "\"no rush\" and means it", scores: { manager: 4 } },
-      { label: "Pings whenever. Expects replies fast.", highlight: "Pings whenever", scores: { manager: 1, intent_to_quit: 1 } },
-      { label: "Phone calls. At 11pm. On a Sunday. About something that could've waited.", highlight: "11pm. On a Sunday", scores: { manager: 0, intent_to_quit: 3 } },
+      { label: "Pings whenever. Expects replies fast.", highlight: "Pings whenever", scores: { manager: -3, intent_to_quit: 1 } },
+      { label: "Phone calls. At 11pm. On a Sunday. About something that could've waited.", highlight: "11pm. On a Sunday", scores: { manager: -5, intent_to_quit: 3 } },
     ],
   },
   {
@@ -59,8 +59,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Sharp and specific. You leave 1:1s with something to do.", highlight: "Sharp and specific", scores: { manager: 5 } },
       { label: "\"Keep doing what you're doing.\" Said warmly. Useless.", highlight: "Useless", scores: { manager: 3 } },
-      { label: "Silent when it works. Loud when something breaks.", highlight: "Loud when something breaks", scores: { manager: 1, cynicism: 2 } },
-      { label: "\"Be more proactive.\" \"Create visibility.\" Same words, every year.", highlight: "Same words, every year", scores: { manager: 0, cynicism: 4 } },
+      { label: "Silent when it works. Loud when something breaks.", highlight: "Loud when something breaks", scores: { manager: -1, cynicism: 2 } },
+      { label: "\"Be more proactive.\" \"Create visibility.\" Same words, every year.", highlight: "Same words, every year", scores: { manager: -3, cynicism: 4 } },
     ],
   },
   {
@@ -69,8 +69,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "They name you. By name. Unprompted.", highlight: "By name. Unprompted", scores: { manager: 5 } },
       { label: "Mentioned when relevant. Fair share.", highlight: "Fair share", scores: { manager: 4 } },
-      { label: "\"The team did great work.\" Your specific bit, invisible.", highlight: "Your specific bit, invisible", scores: { manager: 1, cynicism: 2 } },
-      { label: "They take it. Personally. Like you weren't even in the room.", highlight: "They take it. Personally", scores: { manager: 0, cynicism: 4, intent_to_quit: 3 } },
+      { label: "\"The team did great work.\" Your specific bit, invisible.", highlight: "Your specific bit, invisible", scores: { manager: -3, cynicism: 2 } },
+      { label: "They take it. Personally. Like you weren't even in the room.", highlight: "They take it. Personally", scores: { manager: -5, cynicism: 4, intent_to_quit: 3 } },
     ],
   },
   // Module 3: THE PEOPLE (4 questions)
@@ -80,8 +80,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Multiple. You'd still hang out with them even if you quit tomorrow.", highlight: "Multiple", scores: { people: 5 } },
       { label: "One real one. Your work-survival lifeline. Mostly at work though.", highlight: "One real one", scores: { people: 4 } },
-      { label: "Friendly with everyone. Close to no one.", highlight: "Close to no one", scores: { people: 2 } },
-      { label: "Pretty sure there's a team WhatsApp without you in it.", highlight: "WhatsApp without you", scores: { people: 0, cynicism: 3 } },
+      { label: "Friendly with everyone. Close to no one.", highlight: "Close to no one", scores: { people: 0 } },
+      { label: "Pretty sure there's a team WhatsApp without you in it.", highlight: "WhatsApp without you", scores: { people: -3, cynicism: 3 } },
     ],
   },
   {
@@ -90,8 +90,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "What politics? People mostly just work.", highlight: "What politics?", scores: { people: 5 } },
       { label: "Some politics. You know the landmines.", highlight: "Some politics", scores: { people: 3 } },
-      { label: "Active warzone. Half your energy goes to surviving it.", highlight: "Active warzone", scores: { people: 1, intent_to_quit: 2 } },
-      { label: "Every resignation story here starts with the politics.", highlight: "Every resignation story", scores: { people: 0, cynicism: 4, intent_to_quit: 4 } },
+      { label: "Active warzone. Half your energy goes to surviving it.", highlight: "Active warzone", scores: { people: -3, intent_to_quit: 2 } },
+      { label: "Every resignation story here starts with the politics.", highlight: "Every resignation story", scores: { people: -5, cynicism: 4, intent_to_quit: 4 } },
     ],
   },
   {
@@ -100,8 +100,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Someone senior is invested in your growth. They actually check in.", highlight: "actually check in", scores: { people: 5, growth: 3 } },
       { label: "A few people you can ping. Informal but real.", highlight: "Informal but real", scores: { people: 3, growth: 2 } },
-      { label: "The senior who said \"reach out anytime\" has never replied.", highlight: "never replied", scores: { people: 1, growth: 1, cynicism: 2 } },
-      { label: "Nobody here is worth learning from. ChatGPT is your mentor.", highlight: "ChatGPT is your mentor", scores: { people: 0, growth: 0, cynicism: 4, intent_to_quit: 2 } },
+      { label: "The senior who said \"reach out anytime\" has never replied.", highlight: "never replied", scores: { people: -1, growth: 1, cynicism: 2 } },
+      { label: "Nobody here is worth learning from. ChatGPT is your mentor.", highlight: "ChatGPT is your mentor", scores: { people: -3, growth: 0, cynicism: 4, intent_to_quit: 2 } },
     ],
   },
   {
@@ -110,8 +110,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Genuinely on your side. They've fought for you behind the scenes.", highlight: "Genuinely on your side", scores: { people: 4 } },
       { label: "Diwali emails. Engagement surveys. Background noise.", highlight: "Background noise", scores: { people: 3 } },
-      { label: "\"Open door policy.\" Nobody home when you knock.", highlight: "Nobody home when you knock", scores: { people: 1, cynicism: 2 } },
-      { label: "They take leadership's side. Every time.", highlight: "leadership's side", scores: { people: 0, cynicism: 3 } },
+      { label: "\"Open door policy.\" Nobody home when you knock.", highlight: "Nobody home when you knock", scores: { people: -1, cynicism: 2 } },
+      { label: "They take leadership's side. Every time.", highlight: "leadership's side", scores: { people: -3, cynicism: 3 } },
     ],
   },
   // Module 4: THE GROWTH (3 questions)
@@ -121,8 +121,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Clear criteria, clear timeline. You know what to hit.", highlight: "Clear criteria, clear timeline", scores: { growth: 5, agency: 2 } },
       { label: "Discussed broadly. No dates yet, but it's on the radar.", highlight: "No dates yet", scores: { growth: 3 } },
-      { label: "\"You need more impact.\" Ask what impact means. Silence.", highlight: "Silence", scores: { growth: 1, cynicism: 3 } },
-      { label: "The cycle closed without you. You found out from someone else's promo announcement.", highlight: "cycle closed without you", scores: { growth: 0, cynicism: 4, intent_to_quit: 4 } },
+      { label: "\"You need more impact.\" Ask what impact means. Silence.", highlight: "Silence", scores: { growth: -3, cynicism: 3 } },
+      { label: "The cycle closed without you. You found out from someone else's promo announcement.", highlight: "cycle closed without you", scores: { growth: -5, cynicism: 4, intent_to_quit: 4 } },
     ],
   },
   {
@@ -131,8 +131,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "People wait for your take. They act on it.", highlight: "wait for your take", scores: { growth: 5, agency: 2 } },
       { label: "Heard. Sometimes acted on. Mostly polite.", highlight: "Mostly polite", scores: { growth: 3 } },
-      { label: "Polite nods. Then ignored. You've started noticing the pattern.", highlight: "Polite nods. Then ignored", scores: { growth: 1, cynicism: 2 } },
-      { label: "Anything you say gets shot down. So you stopped speaking up.", highlight: "stopped speaking up", scores: { growth: 0, cynicism: 4, agency: -2 } },
+      { label: "Polite nods. Then ignored. You've started noticing the pattern.", highlight: "Polite nods. Then ignored", scores: { growth: -1, cynicism: 2 } },
+      { label: "Anything you say gets shot down. So you stopped speaking up.", highlight: "stopped speaking up", scores: { growth: -3, cynicism: 4, agency: -2 } },
     ],
   },
   {
@@ -141,8 +141,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Real. You log off and have a life.", highlight: "log off and have a life", scores: { growth: 5, wellbeing: 3 } },
       { label: "A few late evenings each week to finish things. Weekends stay yours.", highlight: "Weekends stay yours", scores: { growth: 3, wellbeing: 2 } },
-      { label: "Work bleeds into evenings often. Weekends sometimes too.", highlight: "Work bleeds into evenings", scores: { growth: 1, wellbeing: 0, cynicism: 2 } },
-      { label: "Laptop on every trip. On-call through weddings and weekend getaways.", highlight: "On-call through weddings", scores: { growth: 0, wellbeing: 0, cynicism: 3, intent_to_quit: 3 } },
+      { label: "Work bleeds into evenings often. Weekends sometimes too.", highlight: "Work bleeds into evenings", scores: { growth: -3, wellbeing: -2, cynicism: 2 } },
+      { label: "Laptop on every trip. On-call through weddings and weekend getaways.", highlight: "On-call through weddings", scores: { growth: -5, wellbeing: -4, cynicism: 3, intent_to_quit: 3 } },
     ],
   },
   // Module 5: THE MONEY (2 questions)
@@ -152,8 +152,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Solid double-digit hike. Above inflation. Made you feel valued.", highlight: "double-digit hike", scores: { money: 5 } },
       { label: "Standard hike. Around market rate. Nothing to complain about.", highlight: "Standard hike", scores: { money: 4 } },
-      { label: "Below inflation. You did the math. You're earning less in real terms.", highlight: "Below inflation", scores: { money: 1, cynicism: 2, intent_to_quit: 1 } },
-      { label: "Zero hike. \"It's been a tough year for the company.\"", highlight: "Zero hike", scores: { money: 0, cynicism: 4, intent_to_quit: 4 } },
+      { label: "Below inflation. You did the math. You're earning less in real terms.", highlight: "Below inflation", scores: { money: -1, cynicism: 2, intent_to_quit: 1 } },
+      { label: "Zero hike. \"It's been a tough year for the company.\"", highlight: "Zero hike", scores: { money: -3, cynicism: 4, intent_to_quit: 4 } },
     ],
   },
   {
@@ -162,8 +162,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Higher. You quietly know it.", highlight: "Higher", scores: { money: 5, agency: 2 } },
       { label: "About the same. The system feels fair enough.", highlight: "About the same", scores: { money: 4 } },
-      { label: "Lower. Same work, same title. The gap stings.", highlight: "Lower", scores: { money: 1, intent_to_quit: 3, cynicism: 2 } },
-      { label: "No clue. Nobody here talks pay. You've stopped guessing.", highlight: "stopped guessing", scores: { money: 0, cynicism: 4, agency: -2 } },
+      { label: "Lower. Same work, same title. The gap stings.", highlight: "Lower", scores: { money: -1, intent_to_quit: 3, cynicism: 2 } },
+      { label: "No clue. Nobody here talks pay. You've stopped guessing.", highlight: "stopped guessing", scores: { money: -3, cynicism: 4, agency: -2 } },
     ],
   },
   // Module 6: THE STATE OF YOU / wellbeing (2 questions)
@@ -173,8 +173,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Looking forward. Tomorrow has something you actually want to do.", highlight: "Looking forward", scores: { wellbeing: 5 } },
       { label: "It's Monday. So what.", highlight: "So what", scores: { wellbeing: 3 } },
-      { label: "Mood drops around 7 PM. The week starts arriving.", highlight: "Mood drops", scores: { wellbeing: 1, intent_to_quit: 2 } },
-      { label: "Can't sleep. Tomorrow's meetings already running in your head.", highlight: "Can't sleep", scores: { wellbeing: 0, intent_to_quit: 3 } },
+      { label: "Mood drops around 7 PM. The week starts arriving.", highlight: "Mood drops", scores: { wellbeing: -3, intent_to_quit: 2 } },
+      { label: "Can't sleep. Tomorrow's meetings already running in your head.", highlight: "Can't sleep", scores: { wellbeing: -5, intent_to_quit: 3 } },
     ],
   },
   {
@@ -183,8 +183,8 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "There's a full \"you\": friends, hobbies, plans of your own.", highlight: "a full \"you\"", scores: { wellbeing: 5 } },
       { label: "Less than there used to be. But the \"you\" is still there.", highlight: "the \"you\" is still there", scores: { wellbeing: 3 } },
-      { label: "Even when you're enjoying something, thoughts of work pop in. The mood crashes.", highlight: "thoughts of work pop in", scores: { wellbeing: 1, cynicism: 2 } },
-      { label: "Mentally, you're still at the office. Always.", highlight: "still at the office", scores: { wellbeing: 0, intent_to_quit: 3, cynicism: 2 } },
+      { label: "Even when you're enjoying something, thoughts of work pop in. The mood crashes.", highlight: "thoughts of work pop in", scores: { wellbeing: -3, cynicism: 2 } },
+      { label: "Mentally, you're still at the office. Always.", highlight: "still at the office", scores: { wellbeing: -5, intent_to_quit: 3, cynicism: 2 } },
     ],
   },
 ]
