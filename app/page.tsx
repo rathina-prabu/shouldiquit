@@ -6,7 +6,7 @@ export default function LandingPage() {
     <RisoLayout topBarLeft="shouldiquit.app" topBarRight="Anonymous">
       <div className="flex flex-col flex-1 justify-center">
         <div className="text-[13px] tracking-[0.2em] uppercase text-accent mb-5 font-medium">
-          — ~5 minutes —
+          ~5 minutes
         </div>
         <h1 className="font-display text-[56px] leading-[0.95] tracking-[-2px] mb-6">
           Should<br />I Quit?
