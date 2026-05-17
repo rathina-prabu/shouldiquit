@@ -6,7 +6,7 @@ export const QUESTIONS: Question[] = [
     id: "q1", module: "work",
     prompt: "The nature of your work, usually:",
     choices: [
-      { label: "A meaty mix. Real challenges, things to figure out.", highlight: "A meaty mix", scores: { work: 5 } },
+      { label: "Engaging and varied. Real challenges, things to figure out.", highlight: "Engaging and varied", scores: { work: 5 } },
       { label: "Mostly repetitive, occasional spike of something interesting.", highlight: "Mostly repetitive", scores: { work: 3 } },
       { label: "Directionless. You do work, no one's quite sure why.", highlight: "Directionless", scores: { work: 1, cynicism: 2 } },
       { label: "Pure execution of someone else's blueprint. No thinking.", highlight: "Pure execution", scores: { work: 0, cynicism: 3 } },
