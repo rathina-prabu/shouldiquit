@@ -41,7 +41,11 @@ export function QuestionCard({ question, questionNumber, totalQuestions, selecte
       <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-6 mt-2">
         {question.prompt}
       </h1>
-      <div className="flex flex-col gap-1.5">
+      {/* min-h reserves enough room for the tallest 4-option set; shorter
+          questions get extra empty space below their options. This keeps the
+          progress bar + nav row at the same vertical position across every
+          question, instead of shifting with each option's line count. */}
+      <div className="flex flex-col gap-1.5 min-h-[360px]">
         {question.choices.map((c, i) => {
           const isSelected = selectedIndex === i
           return (
@@ -64,9 +68,7 @@ export function QuestionCard({ question, questionNumber, totalQuestions, selecte
           )
         })}
       </div>
-      {/* Progress bar + nav row pinned to the bottom of the viewport so they
-          don't shift as option heights change between questions. */}
-      <div className="mt-auto pt-8">
+      <div className="mt-8">
         <div className="h-[2px] bg-ink/15">
           <div className="h-full bg-accent transition-all" style={{ width: `${percentDone}%` }} />
         </div>
