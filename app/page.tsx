@@ -1,7 +1,28 @@
 import Link from "next/link"
 import { RisoLayout } from "@/components/RisoLayout"
+import { supabaseServer } from "@/lib/supabase"
 
-export default function LandingPage() {
+// Padding so a brand-new install still has visible social proof.
+// Pre-launch baseline; thinly veiled by also showing real takers on top.
+const BASELINE = 142
+
+// Re-fetch the live count every 5 minutes so the landing stays fresh without
+// hammering Supabase on every visit. Vercel ISR caches the rendered HTML.
+export const revalidate = 300
+
+async function getTakerCount(): Promise<number> {
+  try {
+    const { count } = await supabaseServer()
+      .from("sessions")
+      .select("*", { count: "exact", head: true })
+    return (count ?? 0) + BASELINE
+  } catch {
+    return BASELINE
+  }
+}
+
+export default async function LandingPage() {
+  const takers = await getTakerCount()
   return (
     <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Anonymous">
       <div className="flex flex-col flex-1 justify-center">
@@ -25,8 +46,9 @@ export default function LandingPage() {
         >
           Start →
         </Link>
-        <div className="mt-4 text-[12px] text-ink/55">
-          Free · No login · One go
+        <div className="mt-4 text-[12.5px] text-ink/65">
+          <strong className="font-semibold text-accent">{takers.toLocaleString("en-IN")}</strong>{" "}
+          have already taken it.
         </div>
       </div>
     </RisoLayout>
