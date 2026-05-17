@@ -7,6 +7,19 @@ interface Props {
   onAnswer: (choiceIndex: 0 | 1 | 2 | 3) => void
 }
 
+function renderLabel(label: string, highlight?: string) {
+  if (!highlight) return label
+  const idx = label.indexOf(highlight)
+  if (idx === -1) return label
+  return (
+    <>
+      {label.slice(0, idx)}
+      <span className="text-accent font-medium">{label.slice(idx, idx + highlight.length)}</span>
+      {label.slice(idx + highlight.length)}
+    </>
+  )
+}
+
 export function QuestionCard({ question, questionNumber, totalQuestions, onAnswer }: Props) {
   const percentDone = Math.round((questionNumber / totalQuestions) * 100)
 
@@ -16,19 +29,17 @@ export function QuestionCard({ question, questionNumber, totalQuestions, onAnswe
         <span>shouldiquit.app</span>
         <span className="text-accent font-medium">Q{questionNumber}</span>
       </div>
-      <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-3 mt-2">
+      <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-6 mt-2">
         {question.prompt}
       </h1>
-      <div className="text-[11px] tracking-[0.15em] uppercase text-ink/55 mb-3 mt-8 font-medium">Pick one</div>
       <div className="flex flex-col gap-1.5">
         {question.choices.map((c, i) => (
           <button
             key={i}
             onClick={() => onAnswer(i as 0 | 1 | 2 | 3)}
-            className="border border-ink/30 hover:border-ink hover:bg-ink/[0.04] active:bg-ink/[0.08] py-3 px-4 text-left text-[14.5px] flex items-start gap-3 transition-colors"
+            className="border border-ink/30 hover:border-ink hover:bg-ink/[0.04] active:bg-ink/[0.08] py-3 px-4 text-left text-[14.5px] leading-snug transition-colors"
           >
-            <span className="font-display text-accent text-[12px] min-w-[20px] pt-0.5">0{i + 1}</span>
-            <span className="flex-1 leading-snug">{c.label}</span>
+            {renderLabel(c.label, c.highlight)}
           </button>
         ))}
       </div>

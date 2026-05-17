@@ -11,9 +11,8 @@ export const QUESTION_COUNT = 18
  */
 export async function pickAnswer(page: Page, letter: AnswerLetter): Promise<void> {
   const index = ANSWER_LETTER_TO_INDEX[letter]
-  // The 4 visible buttons are the 4 answer options.
-  const button = page.locator('button:has-text("0")').nth(index)
-  await button.click()
+  // The QuestionCard renders exactly 4 buttons (the answer options) — pick by index.
+  await page.locator('button').nth(index).click()
 }
 
 export async function fillSetup(

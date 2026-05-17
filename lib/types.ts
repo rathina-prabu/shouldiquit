@@ -40,6 +40,8 @@ export type VerdictTier =
 
 export interface Choice {
   label: string
+  /** Substring of `label` to render in accent color (the punchline / lead phrase). */
+  highlight?: string
   scores: Partial<Record<Dimension, number>>
 }
 
