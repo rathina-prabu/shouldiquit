@@ -46,8 +46,10 @@ export default async function LandingPage() {
           It&apos;s a hard question. It keeps coming back. There&apos;s no one safe to ask.
         </p>
         <p className="text-[17px] leading-[1.45] mb-8 max-w-[340px]">
-          <strong className="text-accent font-semibold">{takers.toLocaleString("en-IN")}</strong>{" "}
-          people walked in with this question and left with an{" "}
+          <strong className="text-accent font-semibold">
+            {takers.toLocaleString("en-IN")} people
+          </strong>{" "}
+          walked in with this question and left with an{" "}
           <strong className="text-accent font-semibold">honest answer</strong>.
         </p>
         <Link
