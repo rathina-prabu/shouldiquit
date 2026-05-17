@@ -80,7 +80,7 @@ function StartForm() {
         Tell us about you.
       </h1>
       <p className="text-[15px] leading-[1.55] mb-7">
-        Quick setup so we can place you against people like you.
+        Before the questions: a few details so we can place you against people like you.
       </p>
 
       <Field label="Your role">
