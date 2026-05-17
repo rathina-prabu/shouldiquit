@@ -51,11 +51,12 @@ function StartForm() {
   const saved = useQuizStore.getState().setup
 
   const [role, setRole] = useState<Role>(saved?.role ?? "Engineer (IC)")
-  const [yoe, setYoe] = useState<number>(saved?.yoe ?? 8)
+  const [yoeText, setYoeText] = useState<string>(String(saved?.yoe ?? 8))
   const [workType, setWorkType] = useState<WorkType>(saved?.work_type ?? "hybrid_flex")
   const [city, setCity] = useState<City>(saved?.city ?? "Bangalore")
 
   const isRemote = workType === "remote"
+  const yoe = yoeText === "" ? 0 : parseInt(yoeText) || 0
 
   const submit = () => {
     reset()
@@ -96,13 +97,16 @@ function StartForm() {
 
       <Field label="Total years of experience">
         <input
-          type="number"
+          type="text"
           inputMode="numeric"
-          min={0}
-          max={50}
+          pattern="[0-9]*"
           className="w-full bg-transparent border-0 border-b-[1.5px] border-ink py-2 text-[16px] font-medium focus:border-accent focus:outline-none"
-          value={yoe}
-          onChange={(e) => setYoe(parseInt(e.target.value) || 0)}
+          value={yoeText}
+          onChange={(e) => {
+            const digits = e.target.value.replace(/[^0-9]/g, "")
+            // Normalize leading-zero entries: "02" → "2", "002" → "2", but keep "0" as-is.
+            setYoeText(digits === "" ? "" : String(parseInt(digits)))
+          }}
         />
       </Field>
 
