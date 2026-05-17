@@ -1,21 +1,31 @@
 import Link from "next/link"
+import { unstable_noStore as noStore } from "next/cache"
 import { RisoLayout } from "@/components/RisoLayout"
-import { supabaseServer } from "@/lib/supabase"
 
 // Padding so a brand-new install still has visible social proof.
 // Pre-launch baseline; thinly veiled by also showing real takers on top.
 const BASELINE = 142
 
-// Re-fetch the live count every 5 minutes so the landing stays fresh without
-// hammering Supabase on every visit. Vercel ISR caches the rendered HTML.
-export const revalidate = 300
+// Always render server-side with the latest count so the social-proof number is
+// real, not a cached snapshot.
+export const dynamic = "force-dynamic"
 
 async function getTakerCount(): Promise<number> {
+  noStore()
   try {
-    const { count } = await supabaseServer()
-      .from("sessions")
-      .select("*", { count: "exact", head: true })
-    return (count ?? 0) + BASELINE
+    const url = `${process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/sessions?select=count`
+    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ""
+    const res = await fetch(url, {
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        Prefer: "count=exact",
+      },
+      cache: "no-store",
+    })
+    const range = res.headers.get("content-range") ?? "*/0"
+    const total = parseInt(range.split("/")[1] || "0", 10) || 0
+    return total + BASELINE
   } catch {
     return BASELINE
   }
