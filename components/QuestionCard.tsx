@@ -30,7 +30,12 @@ export function QuestionCard({ question, questionNumber, totalQuestions, selecte
   return (
     <>
       <div className="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
-        <a href="/" className="hover:text-ink transition-colors">shouldiquit.work</a>
+        <a
+          href="/"
+          className="inline-block text-ink font-semibold uppercase tracking-[0.15em] text-[12px] [text-shadow:2px_2px_0_#e8576b] hover:opacity-75 transition-opacity"
+        >
+          shouldiquit.work
+        </a>
         <span className="text-accent font-medium">Q{questionNumber}</span>
       </div>
       <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-6 mt-2">
