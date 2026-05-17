@@ -117,7 +117,7 @@ function StartForm() {
         />
         {showSeniorWarning && (
           <div className="mt-2 text-[12.5px] text-accent italic leading-snug">
-            Boss, you&apos;ve outgrown this quiz. You&apos;ve already made it.
+            Boss, you&apos;ve outgrown this quiz.
           </div>
         )}
       </Field>
