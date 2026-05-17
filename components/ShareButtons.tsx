@@ -16,15 +16,6 @@ const TIER_TEXT: Record<string, string> = {
   LEAVE_NOW: "LEAVE NOW 🔥",
 }
 
-const MODULE_NAMES: Record<string, string> = {
-  work: "Work",
-  manager: "Manager",
-  people: "People",
-  growth: "Growth",
-  money: "Money",
-  wellbeing: "Wellbeing",
-}
-
 async function writeClipboard(value: string): Promise<boolean> {
   if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
     try {
@@ -60,62 +51,90 @@ function isMobile(): boolean {
   return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 }
 
-export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function ShareButtons({ shareUrl, tier, score, weakestModule: _weakestModule }: Props) {
   const [copied, setCopied] = useState<"link" | "native" | null>(null)
-  const moduleName = MODULE_NAMES[weakestModule] ?? weakestModule
+  const [sharing, setSharing] = useState(false)
 
   // 'Take yours' should drop friends on the landing page so they start fresh,
-  // not on the sharer's visitor view. The verdict is already communicated in
-  // the message text, so the link's only job is the CTA.
+  // not on the sharer's visitor view.
   let landingUrl = shareUrl
   try {
     landingUrl = new URL("/", shareUrl).toString()
   } catch {
     /* shareUrl may be empty during first paint */
   }
+  const tierLine = `${TIER_TEXT[tier] ?? tier} (${score}/100)`
 
-  const message = `Just got diagnosed: ${TIER_TEXT[tier] ?? tier} (${score}/100). The ${moduleName} problem.\n\nTake yours (5 min, anonymous): ${landingUrl}`
-  const xMessage = `Just got diagnosed: ${TIER_TEXT[tier] ?? tier} (${score}/100). The ${moduleName} problem. Take yours:`
+  // Long-form message for WhatsApp / native share / copy-text.
+  const message = `Should I Quit my Job?\n\nMy verdict: ${tierLine}\n\nTake yours (5 min, anonymous): ${landingUrl}`
+  // Tighter version for X (280-char tweet budget).
+  const xMessage = `Should I quit my job?\n\nVerdict: ${tierLine}\n\nTake yours:`
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`
   const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xMessage)}&url=${encodeURIComponent(landingUrl)}`
   const linkedInWeb = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(landingUrl)}`
-  // LinkedIn deep-link scheme — opens the LinkedIn app's share sheet when installed.
-  // Falls back to the web share dialog if the scheme times out.
   const linkedInApp = `linkedin://shareArticle?mini=true&url=${encodeURIComponent(landingUrl)}&title=${encodeURIComponent("Should I Quit?")}`
 
   const openLinkedIn = (e: React.MouseEvent) => {
-    if (!isMobile()) return // let the <a> handle desktop normally
+    if (!isMobile()) return
     e.preventDefault()
     let appOpened = false
     const onBlur = () => {
       appOpened = true
     }
     window.addEventListener("blur", onBlur, { once: true })
-    // Best-effort: try the LinkedIn app scheme
     window.location.href = linkedInApp
     setTimeout(() => {
       window.removeEventListener("blur", onBlur)
       if (!appOpened) {
-        // App didn't take over — fall back to the web share dialog
         window.location.href = linkedInWeb
       }
     }, 1200)
   }
 
-  const nativeShare = async () => {
-    if (typeof navigator !== "undefined" && navigator.share) {
-      try {
-        await navigator.share({ text: message, url: landingUrl })
-        return
-      } catch {
-        /* user cancelled or unsupported — fall through to clipboard */
-      }
+  // Pull the verdict OG card image so we can attach it to the native share.
+  async function fetchVerdictImage(): Promise<File | null> {
+    const match = shareUrl.match(/\/r\/([A-Za-z0-9]+)/)
+    if (!match) return null
+    try {
+      const res = await fetch(`/api/og/${match[1]}`, { cache: "no-store" })
+      if (!res.ok) return null
+      const blob = await res.blob()
+      return new File([blob], "should-i-quit-verdict.png", { type: "image/png" })
+    } catch {
+      return null
     }
-    const ok = await writeClipboard(message)
-    if (ok) {
-      setCopied("native")
-      setTimeout(() => setCopied(null), 2000)
+  }
+
+  const nativeShare = async () => {
+    if (sharing) return
+    setSharing(true)
+    try {
+      if (typeof navigator !== "undefined" && navigator.share) {
+        const data: ShareData = {
+          title: "Should I Quit?",
+          text: message,
+          url: landingUrl,
+        }
+        const image = await fetchVerdictImage()
+        if (image && navigator.canShare?.({ files: [image] })) {
+          data.files = [image]
+        }
+        try {
+          await navigator.share(data)
+          return
+        } catch {
+          /* user cancelled or unsupported — fall through to clipboard */
+        }
+      }
+      const ok = await writeClipboard(message)
+      if (ok) {
+        setCopied("native")
+        setTimeout(() => setCopied(null), 2000)
+      }
+    } finally {
+      setSharing(false)
     }
   }
 
@@ -170,10 +189,13 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
         <button
           type="button"
           onClick={nativeShare}
-          aria-label="More share options"
+          aria-label="Share with image"
+          disabled={sharing}
           className={outlineCls}
         >
-          {copied === "native" ? (
+          {sharing ? (
+            <span className="text-[11px] text-ink/60">…</span>
+          ) : copied === "native" ? (
             <span className="text-[12px] text-ink">Copied!</span>
           ) : (
             <IconShare />
@@ -191,7 +213,6 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
 }
 
 function IconWhatsAppFilled() {
-  // White WhatsApp glyph on the green button bg.
   return (
     <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden>
       <path
@@ -203,7 +224,6 @@ function IconWhatsAppFilled() {
 }
 
 function IconXFilled() {
-  // Paper-coloured X glyph on the ink button bg.
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden>
       <path
@@ -215,7 +235,6 @@ function IconXFilled() {
 }
 
 function IconLinkedInFilled() {
-  // White LinkedIn glyph on the blue button bg.
   return (
     <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden>
       <path
