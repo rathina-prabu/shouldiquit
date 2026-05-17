@@ -20,7 +20,8 @@ test.describe("Happy path — full user journey", () => {
     await expect(page.locator("text=/I Quit/").first()).toBeVisible()
     await expect(page.getByText(/~5 minutes/i)).toBeVisible()
     await expect(page.getByText(/no one safe to ask/i)).toBeVisible()
-    await expect(page.getByText(/answer the one you came for/i)).toBeVisible()
+    await expect(page.getByText(/walk in with a question/i)).toBeVisible()
+    await expect(page.getByText(/leave with an answer/i)).toBeVisible()
     await expect(page.getByRole("link", { name: /Start →/ })).toBeVisible()
     // Old copy and removed privacy footer must NOT be shown
     await expect(page.getByText(/18 questions/i)).toHaveCount(0)
