@@ -58,7 +58,7 @@ export default function SalaryPage() {
   return (
     <RisoLayout topBarLeft="shouldiquit.work" topBarRight="The Big One">
       <div className="text-[12px] tracking-[0.18em] uppercase text-accent mb-2 font-medium">
-        — Almost done —
+        Almost done
       </div>
       <h1 className="font-display text-[28px] leading-tight tracking-tight mb-4">
         One last thing.
