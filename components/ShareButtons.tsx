@@ -46,11 +46,6 @@ async function writeClipboard(value: string): Promise<boolean> {
   return ok
 }
 
-function isMobile(): boolean {
-  if (typeof navigator === "undefined") return false
-  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-}
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function ShareButtons({ shareUrl, tier, score, weakestModule: _weakestModule }: Props) {
   const [copied, setCopied] = useState<"link" | "native" | null>(null)
@@ -78,25 +73,10 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule: _weakestMod
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`
   const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xMessage)}&url=${encodeURIComponent(previewUrl)}`
+  // Plain share-offsite URL: iOS / Android Universal Links route this to the
+  // LinkedIn app if installed. Any extra JS (custom URL schemes, location.href
+  // hops) breaks that handoff — keep it as a vanilla anchor.
   const linkedInWeb = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(previewUrl)}`
-  const linkedInApp = `linkedin://shareArticle?mini=true&url=${encodeURIComponent(previewUrl)}&title=${encodeURIComponent("Should I Quit?")}`
-
-  const openLinkedIn = (e: React.MouseEvent) => {
-    if (!isMobile()) return
-    e.preventDefault()
-    let appOpened = false
-    const onBlur = () => {
-      appOpened = true
-    }
-    window.addEventListener("blur", onBlur, { once: true })
-    window.location.href = linkedInApp
-    setTimeout(() => {
-      window.removeEventListener("blur", onBlur)
-      if (!appOpened) {
-        window.location.href = linkedInWeb
-      }
-    }, 1200)
-  }
 
   // Pull the verdict OG card image so we can attach it to the native share.
   async function fetchVerdictImage(): Promise<File | null> {
@@ -186,7 +166,6 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule: _weakestMod
         </a>
         <a
           href={linkedInWeb}
-          onClick={openLinkedIn}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Share to LinkedIn"
