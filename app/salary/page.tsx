@@ -64,10 +64,7 @@ export default function SalaryPage() {
         One last thing.
       </h1>
       <p className="text-[15px] leading-[1.55] mb-7">
-        Your salary. The biggest input into the verdict.{" "}
-        <strong className="font-medium">
-          Anonymous. Stored as a number, never tied to you.
-        </strong>
+        Your salary. The biggest input into the verdict.
       </p>
 
       <SalaryField label="Annual fixed (CTC)" value={fixed} onChange={setFixed} />
