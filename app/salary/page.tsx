@@ -68,7 +68,12 @@ export default function SalaryPage() {
       </p>
 
       <SalaryField label="Annual fixed (CTC)" value={fixed} onChange={setFixed} />
-      <SalaryField label="Variable + bonus + ESOPs" value={variable} onChange={setVariable} />
+      <SalaryField
+        label="Variable + bonus"
+        hint="Don't include ESOPs — they're not cash in hand."
+        value={variable}
+        onChange={setVariable}
+      />
 
       <div className="mt-5 py-4 border-t border-b border-ink flex justify-between items-center">
         <span className="text-[11px] tracking-[0.18em] uppercase text-ink/60">Total</span>
@@ -97,10 +102,12 @@ export default function SalaryPage() {
 
 function SalaryField({
   label,
+  hint,
   value,
   onChange,
 }: {
   label: string
+  hint?: string
   value: number
   onChange: (n: number) => void
 }) {
@@ -121,6 +128,9 @@ function SalaryField({
         />
         <span className="text-[11px] text-ink/55 tracking-[0.1em] uppercase">Lakhs</span>
       </div>
+      {hint && (
+        <div className="mt-1 text-[11.5px] text-ink/55 italic leading-snug">{hint}</div>
+      )}
     </div>
   )
 }
