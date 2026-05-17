@@ -90,6 +90,10 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
 
   return (
     <div className="mt-1 mb-6 flex flex-col items-center gap-3">
+      <div className="text-[12px] leading-relaxed text-ink/70 text-center px-2">
+        Recipients see <strong className="text-ink font-medium">only your verdict + score</strong>.
+        Your salary and answers stay private.
+      </div>
       <button
         onClick={share}
         className="w-full bg-ink text-paper px-5 py-3.5 font-medium text-[15px] tracking-[0.04em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all flex items-center justify-center gap-2"
