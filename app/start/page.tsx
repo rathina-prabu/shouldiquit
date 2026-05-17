@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { RisoLayout } from "@/components/RisoLayout"
-import { useQuizStore } from "@/store/quiz-store"
+import { useQuizStore, useHasHydrated } from "@/store/quiz-store"
 import { getOrCreateUserUuid } from "@/lib/user-uuid"
 import type { City, Role, WorkType } from "@/lib/types"
 import { WORK_TYPE_LABELS } from "@/lib/types"
@@ -25,20 +25,35 @@ const ROLES: Role[] = [
 ]
 
 export default function StartPage() {
-  const router = useRouter()
-  const setSetup = useQuizStore((s) => s.setSetup)
-  const reset = useQuizStore((s) => s.reset)
-  const [role, setRole] = useState<Role>("Engineer (IC)")
-  const [yoe, setYoe] = useState<number>(8)
-  const [workType, setWorkType] = useState<WorkType>("hybrid_flex")
-  const [city, setCity] = useState<City>("Bangalore")
+  const hydrated = useHasHydrated()
 
-  // Ensure the anonymous user_uuid exists in localStorage on first /start visit,
-  // even though we no longer display it. The result page's taker-vs-visitor match
-  // depends on this UUID being set before the session is created.
+  // Ensure the anonymous user_uuid exists in localStorage on first /start visit
+  // (we no longer display it, but the result page's taker-vs-visitor match
+  // depends on this UUID being set before the session is created).
   useEffect(() => {
     getOrCreateUserUuid()
   }, [])
+
+  if (!hydrated) {
+    return <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Step 1 of 3" />
+  }
+  return <StartForm />
+}
+
+/**
+ * Inner form — only mounts after Zustand has hydrated from localStorage, so
+ * useState's lazy initializers correctly seed from any previously-saved setup.
+ */
+function StartForm() {
+  const router = useRouter()
+  const setSetup = useQuizStore((s) => s.setSetup)
+  const reset = useQuizStore((s) => s.reset)
+  const saved = useQuizStore.getState().setup
+
+  const [role, setRole] = useState<Role>(saved?.role ?? "Engineer (IC)")
+  const [yoe, setYoe] = useState<number>(saved?.yoe ?? 8)
+  const [workType, setWorkType] = useState<WorkType>(saved?.work_type ?? "hybrid_flex")
+  const [city, setCity] = useState<City>(saved?.city ?? "Bangalore")
 
   const isRemote = workType === "remote"
 
