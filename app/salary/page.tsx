@@ -64,7 +64,7 @@ export default function SalaryPage() {
         One last thing.
       </h1>
       <p className="text-[15px] leading-[1.55] mb-7">
-        Your salary. The biggest input into the verdict.
+        Your salary. One of the biggest inputs into the verdict.
       </p>
 
       <SalaryField label="Annual fixed (LPA)" value={fixed} onChange={setFixed} />
