@@ -180,11 +180,14 @@ export function computeRealDailyRate(fixedLakhs: number, variableLakhs: number):
 }
 
 /**
- * Salary offset applied to the Money module score (asymmetric):
- *  - below p25  → -15
- *  - p25..p50   → -5
- *  - p50..p75   →  0
- *  - above p75  →  0  (overpaid doesn't pull score toward stay)
+ * Salary offset applied to the Money module score (heavily asymmetric).
+ * Being underpaid bites; being well-paid lifts only modestly — a high salary
+ * doesn't fix a miserable job, but a low salary makes a decent one worse.
+ *   - below p25   → -25  (severely underpaid)
+ *   - p25..p50    → -12  (underpaid)
+ *   - p50..p75    →   0  (fair)
+ *   - p75..p90    →  +4  (well paid)
+ *   - above p90   →  +7  (top of market)
  */
 export function computeSalaryOffset(
   totalLakhs: number,
@@ -194,9 +197,11 @@ export function computeSalaryOffset(
 ): number {
   const cell = lookupSalary(city, role, yoe)
   if (!cell) return 0
-  if (totalLakhs < cell.p25) return -15
-  if (totalLakhs < cell.p50) return -5
-  return 0
+  if (totalLakhs < cell.p25) return -25
+  if (totalLakhs < cell.p50) return -12
+  if (totalLakhs < cell.p75) return 0
+  if (totalLakhs < cell.p90) return 4
+  return 7
 }
 
 export function salaryVsMarket(

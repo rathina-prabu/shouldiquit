@@ -54,13 +54,14 @@ describe("computeRealDailyRate", () => {
 })
 
 describe("computeSalaryOffset", () => {
-  it("returns negative for below-p25 salary", () => {
+  it("returns a large negative for below-p25 salary", () => {
     const offset = computeSalaryOffset(15, "Bangalore", "Product Manager", 10)
-    expect(offset).toBeLessThan(0)
+    expect(offset).toBeLessThanOrEqual(-12)
   })
-  it("returns 0 for above-p75 salary (asymmetric)", () => {
+  it("returns a small positive for far-above-p90 salary (asymmetric)", () => {
     const offset = computeSalaryOffset(120, "Bangalore", "Product Manager", 10)
-    expect(offset).toBe(0)
+    expect(offset).toBeGreaterThan(0)
+    expect(offset).toBeLessThanOrEqual(10)
   })
 })
 
