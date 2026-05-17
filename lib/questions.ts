@@ -6,9 +6,9 @@ export const QUESTIONS: Question[] = [
     id: "q1", module: "work",
     prompt: "The nature of your work, usually:",
     choices: [
-      { label: "A meaty mix — real challenges, things to figure out.", scores: { work: 5 } },
+      { label: "A meaty mix. Real challenges, things to figure out.", scores: { work: 5 } },
       { label: "Mostly repetitive, occasional spike of something interesting.", scores: { work: 3 } },
-      { label: "Directionless — you do work, no one's quite sure why.", scores: { work: 1, cynicism: 2 } },
+      { label: "Directionless. You do work, no one's quite sure why.", scores: { work: 1, cynicism: 2 } },
       { label: "Pure execution of someone else's blueprint. No thinking.", scores: { work: 0, cynicism: 3 } },
     ],
   },
@@ -16,10 +16,10 @@ export const QUESTIONS: Question[] = [
     id: "q2", module: "work",
     prompt: "Skill development at this job:",
     choices: [
-      { label: "Going wide — picking up new skills regularly.", scores: { work: 5, growth: 3 } },
-      { label: "Going deep — sharpening a few skills into real expertise.", scores: { work: 5, growth: 3 } },
-      { label: "Plateaued — no real skill movement in a while.", scores: { work: 1, cynicism: 2 } },
-      { label: "Going backwards — losing edges you had when you joined.", scores: { work: 0, cynicism: 3, intent_to_quit: 3 } },
+      { label: "Going wide, picking up new skills regularly.", scores: { work: 5, growth: 3 } },
+      { label: "Going deep, sharpening a few skills into real expertise.", scores: { work: 5, growth: 3 } },
+      { label: "Plateaued. No real skill movement in a while.", scores: { work: 1, cynicism: 2 } },
+      { label: "Going backwards, losing edges you had when you joined.", scores: { work: 0, cynicism: 3, intent_to_quit: 3 } },
     ],
   },
   {
@@ -48,7 +48,7 @@ export const QUESTIONS: Question[] = [
     prompt: "How does your manager treat off-hours?",
     choices: [
       { label: "Respects them. No pings after work hours.", scores: { manager: 5 } },
-      { label: "Slacks at 10pm but writes \"no rush\" — and means it.", scores: { manager: 4 } },
+      { label: "Slacks at 10pm but writes \"no rush\" and means it.", scores: { manager: 4 } },
       { label: "Pings whenever. Expects replies fast.", scores: { manager: 1, intent_to_quit: 1 } },
       { label: "Phone calls. At 11pm. On a Sunday. About something that could've waited.", scores: { manager: 0, intent_to_quit: 3 } },
     ],
@@ -152,7 +152,7 @@ export const QUESTIONS: Question[] = [
     choices: [
       { label: "Solid double-digit hike. Above inflation. Made you feel valued.", scores: { money: 5 } },
       { label: "Standard hike. Around market rate. Nothing to complain about.", scores: { money: 4 } },
-      { label: "Below inflation. You did the math — you're earning less in real terms.", scores: { money: 1, cynicism: 2, intent_to_quit: 1 } },
+      { label: "Below inflation. You did the math. You're earning less in real terms.", scores: { money: 1, cynicism: 2, intent_to_quit: 1 } },
       { label: "Zero hike. \"It's been a tough year for the company.\"", scores: { money: 0, cynicism: 4, intent_to_quit: 4 } },
     ],
   },
@@ -181,7 +181,7 @@ export const QUESTIONS: Question[] = [
     id: "q18", module: "wellbeing",
     prompt: "Outside of your job:",
     choices: [
-      { label: "There's a full \"you\" — friends, hobbies, plans of your own.", scores: { wellbeing: 5 } },
+      { label: "There's a full \"you\": friends, hobbies, plans of your own.", scores: { wellbeing: 5 } },
       { label: "Less than there used to be. But the \"you\" is still there.", scores: { wellbeing: 3 } },
       { label: "Even when you're enjoying something, thoughts of work pop in. The mood crashes.", scores: { wellbeing: 1, cynicism: 2 } },
       { label: "Mentally, you're still at the office. Always.", scores: { wellbeing: 0, intent_to_quit: 3, cynicism: 2 } },
