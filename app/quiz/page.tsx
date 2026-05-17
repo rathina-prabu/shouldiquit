@@ -46,12 +46,16 @@ export default function QuizPage() {
     safeIndex < QUESTIONS.length - 1 && answers.length > safeIndex
   const onNext = canGoNext ? () => setQuizIndex(safeIndex + 1) : undefined
 
+  // Previously selected answer (if revisiting) — mildly indicated in the UI.
+  const previousAnswer = answers.find((a) => a.question_id === q.id)?.choice_index
+
   return (
     <RisoLayout>
       <QuestionCard
         question={q}
         questionNumber={safeIndex + 1}
         totalQuestions={QUESTIONS.length}
+        selectedIndex={previousAnswer}
         onAnswer={handleAnswer}
         onPrevious={onPrevious}
         onNext={onNext}

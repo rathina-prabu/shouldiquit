@@ -64,6 +64,24 @@ test.describe("Edge cases and navigation guards", () => {
     await expect(page.locator(`text=/^Q4$/`).first()).toBeVisible()
   })
 
+  test("revisited answered question shows the previously-picked option as selected", async ({ page }) => {
+    await page.goto("/start")
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
+    // Pick option B on Q1
+    await answerButtons(page).nth(1).click()
+    await expect(page.locator(`text=/^Q2$/`).first()).toBeVisible()
+    // Go back to Q1
+    await page.getByRole("button", { name: "Previous question" }).click()
+    await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
+    // The second option should be aria-pressed=true
+    const second = answerButtons(page).nth(1)
+    await expect(second).toHaveAttribute("aria-pressed", "true")
+    // Other options should be aria-pressed=false
+    await expect(answerButtons(page).nth(0)).toHaveAttribute("aria-pressed", "false")
+    await expect(answerButtons(page).nth(2)).toHaveAttribute("aria-pressed", "false")
+    await expect(answerButtons(page).nth(3)).toHaveAttribute("aria-pressed", "false")
+  })
+
   test("on Q2 after only answering Q1, Next is NOT visible (Q2 itself not answered)", async ({ page }) => {
     await page.goto("/start")
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })

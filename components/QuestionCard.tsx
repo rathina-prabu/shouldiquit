@@ -4,6 +4,7 @@ interface Props {
   question: Question
   questionNumber: number
   totalQuestions: number
+  selectedIndex?: 0 | 1 | 2 | 3
   onAnswer: (choiceIndex: 0 | 1 | 2 | 3) => void
   onPrevious?: () => void
   onNext?: () => void
@@ -22,7 +23,7 @@ function renderLabel(label: string, highlight?: string) {
   )
 }
 
-export function QuestionCard({ question, questionNumber, totalQuestions, onAnswer, onPrevious, onNext }: Props) {
+export function QuestionCard({ question, questionNumber, totalQuestions, selectedIndex, onAnswer, onPrevious, onNext }: Props) {
   const percentDone = Math.round((questionNumber / totalQuestions) * 100)
 
   return (
@@ -35,15 +36,24 @@ export function QuestionCard({ question, questionNumber, totalQuestions, onAnswe
         {question.prompt}
       </h1>
       <div className="flex flex-col gap-1.5">
-        {question.choices.map((c, i) => (
-          <button
-            key={i}
-            onClick={() => onAnswer(i as 0 | 1 | 2 | 3)}
-            className="border border-ink/30 hover:border-ink hover:bg-ink/[0.04] active:bg-ink/[0.08] py-3 px-4 text-left text-[14.5px] leading-snug transition-colors"
-          >
-            {renderLabel(c.label, c.highlight)}
-          </button>
-        ))}
+        {question.choices.map((c, i) => {
+          const isSelected = selectedIndex === i
+          return (
+            <button
+              key={i}
+              onClick={() => onAnswer(i as 0 | 1 | 2 | 3)}
+              aria-pressed={isSelected}
+              className={[
+                "border py-3 px-4 text-left text-[14.5px] leading-snug transition-colors",
+                isSelected
+                  ? "border-ink bg-ink/[0.06] hover:bg-ink/[0.09]"
+                  : "border-ink/30 hover:border-ink hover:bg-ink/[0.04] active:bg-ink/[0.08]",
+              ].join(" ")}
+            >
+              {renderLabel(c.label, c.highlight)}
+            </button>
+          )
+        })}
       </div>
       <div className="mt-8 h-[2px] bg-ink/15">
         <div className="h-full bg-accent transition-all" style={{ width: `${percentDone}%` }} />
