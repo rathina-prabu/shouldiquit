@@ -93,9 +93,6 @@ export default function SalaryPage() {
       >
         {submitting ? "Computing…" : "See the verdict →"}
       </button>
-      <div className="text-[11px] text-center mt-3 text-ink/55 italic">
-        Anonymous · Never tied to you
-      </div>
     </RisoLayout>
   )
 }
