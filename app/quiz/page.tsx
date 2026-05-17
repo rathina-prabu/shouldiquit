@@ -4,11 +4,7 @@ import { useRouter } from "next/navigation"
 import { RisoLayout } from "@/components/RisoLayout"
 import { QuestionCard } from "@/components/QuestionCard"
 import { useQuizStore, useHasHydrated } from "@/store/quiz-store"
-import { QUESTIONS, MODULE_LABELS } from "@/lib/questions"
-
-const SECTION_NUM: Record<string, number> = {
-  work: 1, manager: 2, people: 3, growth: 4, money: 5, wellbeing: 6,
-}
+import { QUESTIONS } from "@/lib/questions"
 
 export default function QuizPage() {
   const router = useRouter()
@@ -35,15 +31,12 @@ export default function QuizPage() {
     }
   }
 
-  const moduleLabel = `Section ${SECTION_NUM[q.module]} · ${MODULE_LABELS[q.module]}`
-
   return (
     <RisoLayout>
       <QuestionCard
         question={q}
         questionNumber={index + 1}
         totalQuestions={QUESTIONS.length}
-        moduleLabel={moduleLabel}
         onAnswer={handleAnswer}
       />
     </RisoLayout>

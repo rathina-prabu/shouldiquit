@@ -19,7 +19,7 @@ describe("yoeToBand", () => {
 
 describe("lookupSalary", () => {
   it("returns a cell for Sr PM Bangalore 8-12", () => {
-    const s = lookupSalary("Bangalore", "Senior Product Manager", 10)
+    const s = lookupSalary("Bangalore", "Product Manager", 10)
     expect(s).toBeDefined()
     expect(s!.p50).toBeGreaterThan(20)
   })
@@ -46,20 +46,20 @@ describe("computeRealDailyRate", () => {
 
 describe("computeSalaryOffset", () => {
   it("returns negative for below-p25 salary", () => {
-    const offset = computeSalaryOffset(15, "Bangalore", "Senior Product Manager", 10)
+    const offset = computeSalaryOffset(15, "Bangalore", "Product Manager", 10)
     expect(offset).toBeLessThan(0)
   })
   it("returns 0 for above-p75 salary (asymmetric)", () => {
-    const offset = computeSalaryOffset(120, "Bangalore", "Senior Product Manager", 10)
+    const offset = computeSalaryOffset(120, "Bangalore", "Product Manager", 10)
     expect(offset).toBe(0)
   })
 })
 
 describe("salaryVsMarket", () => {
   it("classifies a very low salary as below", () => {
-    expect(salaryVsMarket(8, "Bangalore", "Senior Product Manager", 10)).toBe("below")
+    expect(salaryVsMarket(8, "Bangalore", "Product Manager", 10)).toBe("below")
   })
   it("classifies a very high salary as above", () => {
-    expect(salaryVsMarket(120, "Bangalore", "Senior Product Manager", 10)).toBe("above")
+    expect(salaryVsMarket(120, "Bangalore", "Product Manager", 10)).toBe("above")
   })
 })

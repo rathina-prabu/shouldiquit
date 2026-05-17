@@ -6,7 +6,7 @@ test.describe("Visitor view (someone else's URL)", () => {
   test.beforeAll(async ({ request }) => {
     const res = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 8 },
+        setup: { city: "Bangalore", role: "Product Manager", yoe: 8 },
         salary: { fixed_lakhs: 26, variable_lakhs: 3 },
         user_uuid: "33333333-3333-4333-8333-333333333333",
         answers: [

@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test"
 
 const VALID_PAYLOAD = {
-  setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 8 },
+  setup: { city: "Bangalore", role: "Product Manager", yoe: 8 },
   salary: { fixed_lakhs: 26, variable_lakhs: 3 },
   user_uuid: "44444444-4444-4444-8444-444444444444",
   answers: Array.from({ length: 18 }, (_, i) => ({

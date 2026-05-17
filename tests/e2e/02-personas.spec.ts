@@ -12,7 +12,7 @@ import {
 const PERSONAS = [
   {
     name: "HAPPY",
-    setup: { city: "Bangalore", role: "Senior Software Engineer", yoe: 5 },
+    setup: { city: "Bangalore", role: "Engineer (IC)", yoe: 5 },
     salary: { fixed: 32, variable: 6 },
     answers: ["A","B","B","A","A","A","A","A","A","A","B","B","A","B","A","A","A","A"] as AnswerLetter[],
     expectMinScore: 75,
@@ -30,7 +30,7 @@ const PERSONAS = [
   },
   {
     name: "FRUSTRATED",
-    setup: { city: "Gurgaon", role: "Senior Product Manager", yoe: 8 },
+    setup: { city: "Gurgaon", role: "Product Manager", yoe: 8 },
     salary: { fixed: 26, variable: 3 },
     answers: ["A","B","A","C","D","D","D","A","A","A","B","D","D","D","D","C","D","C"] as AnswerLetter[],
     expectMaxScore: 39,

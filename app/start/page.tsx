@@ -9,13 +9,18 @@ import type { City, Role } from "@/lib/types"
 const CITIES: City[] = ["Bangalore", "Mumbai", "Chennai", "Hyderabad", "Gurgaon"]
 
 const ROLES: Role[] = [
-  "Senior Product Manager", "Product Manager", "Associate PM",
-  "Software Engineer", "Senior Software Engineer", "Engineering Manager", "Tech Lead",
-  "Designer", "Senior Designer",
-  "Data Scientist", "Senior Data Scientist",
-  "DevOps Engineer", "QA Engineer",
-  "Sales Lead", "Marketing Manager", "Growth Manager", "Customer Success Manager",
-  "Finance Analyst", "HR Business Partner", "Operations Manager",
+  "Engineer (IC)",
+  "Engineering Manager",
+  "DevOps / SRE",
+  "QA",
+  "Data Scientist",
+  "Product Manager",
+  "Project / Program Manager",
+  "Designer",
+  "Sales",
+  "Marketing / Growth",
+  "Customer Success",
+  "Business Ops",
 ]
 
 export default function StartPage() {
@@ -23,7 +28,7 @@ export default function StartPage() {
   const setSetup = useQuizStore((s) => s.setSetup)
   const reset = useQuizStore((s) => s.reset)
   const [city, setCity] = useState<City>("Bangalore")
-  const [role, setRole] = useState<Role>("Senior Product Manager")
+  const [role, setRole] = useState<Role>("Engineer (IC)")
   const [yoe, setYoe] = useState<number>(8)
   const [userId, setUserId] = useState("")
 

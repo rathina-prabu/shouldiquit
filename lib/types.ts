@@ -1,13 +1,18 @@
 export type City = "Bangalore" | "Chennai" | "Hyderabad" | "Gurgaon" | "Mumbai"
 
 export type Role =
-  | "Senior Product Manager" | "Product Manager" | "Associate PM"
-  | "Software Engineer" | "Senior Software Engineer" | "Engineering Manager" | "Tech Lead"
-  | "Designer" | "Senior Designer"
-  | "Data Scientist" | "Senior Data Scientist"
-  | "DevOps Engineer" | "QA Engineer"
-  | "Sales Lead" | "Marketing Manager" | "Growth Manager" | "Customer Success Manager"
-  | "Finance Analyst" | "HR Business Partner" | "Operations Manager"
+  | "Engineer (IC)"
+  | "Engineering Manager"
+  | "DevOps / SRE"
+  | "QA"
+  | "Data Scientist"
+  | "Product Manager"
+  | "Project / Program Manager"
+  | "Designer"
+  | "Sales"
+  | "Marketing / Growth"
+  | "Customer Success"
+  | "Business Ops"
 
 export type YoeBand = "0-3" | "4-7" | "8-12" | "13+"
 

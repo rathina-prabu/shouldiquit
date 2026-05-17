@@ -11,7 +11,7 @@ test.describe("Salary offset semantics (asymmetric, per spec §6)", () => {
     }))
     const lowSalary = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 10 },
+        setup: { city: "Bangalore", role: "Product Manager", yoe: 10 },
         salary: { fixed_lakhs: 10, variable_lakhs: 0 }, // below p25 for sure
         user_uuid: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbb01",
         answers: allAs,
@@ -22,7 +22,7 @@ test.describe("Salary offset semantics (asymmetric, per spec §6)", () => {
 
     const fairSalary = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 10 },
+        setup: { city: "Bangalore", role: "Product Manager", yoe: 10 },
         salary: { fixed_lakhs: 60, variable_lakhs: 10 }, // around p50
         user_uuid: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbb02",
         answers: allAs,
@@ -42,7 +42,7 @@ test.describe("Salary offset semantics (asymmetric, per spec §6)", () => {
     }))
     const r = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Hyderabad", role: "Software Engineer", yoe: 5 },
+        setup: { city: "Hyderabad", role: "Engineer (IC)", yoe: 5 },
         salary: { fixed_lakhs: 18, variable_lakhs: 2 }, // around market
         user_uuid: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbb03",
         answers: allAs,
@@ -58,7 +58,7 @@ test.describe("Extreme answer patterns produce extreme tiers", () => {
   test("all-A answers → STAY_THRIVE (100)", async ({ request }) => {
     const r = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Software Engineer", yoe: 3 },
+        setup: { city: "Bangalore", role: "Engineer (IC)", yoe: 3 },
         salary: { fixed_lakhs: 15, variable_lakhs: 2 }, // fair for early-career
         user_uuid: "cccccccc-cccc-4ccc-8ccc-cccccccccc01",
         answers: Array.from({ length: 18 }, (_, i) => ({
@@ -75,7 +75,7 @@ test.describe("Extreme answer patterns produce extreme tiers", () => {
   test("all-D answers → LEAVE_NOW (≤ 5)", async ({ request }) => {
     const r = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Software Engineer", yoe: 3 },
+        setup: { city: "Bangalore", role: "Engineer (IC)", yoe: 3 },
         salary: { fixed_lakhs: 12, variable_lakhs: 1 },
         user_uuid: "cccccccc-cccc-4ccc-8ccc-cccccccccc02",
         answers: Array.from({ length: 18 }, (_, i) => ({
@@ -119,7 +119,7 @@ test.describe("Each YoE band looks up benchmarks correctly", () => {
     test(`yoe=${c.yoe} resolves to band ${c.label} without crash`, async ({ request }) => {
       const r = await request.post("/api/sessions", {
         data: {
-          setup: { city: "Bangalore", role: "Software Engineer", yoe: c.yoe },
+          setup: { city: "Bangalore", role: "Engineer (IC)", yoe: c.yoe },
           salary: { fixed_lakhs: 20, variable_lakhs: 2 },
           user_uuid: c.uuid,
           answers: Array.from({ length: 18 }, (_, i) => ({
@@ -143,7 +143,7 @@ test.describe("Cross-module scoring (q10, q14, q2)", () => {
     }))
     const r = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Software Engineer", yoe: 3 },
+        setup: { city: "Bangalore", role: "Engineer (IC)", yoe: 3 },
         salary: { fixed_lakhs: 20, variable_lakhs: 2 },
         user_uuid: "eeeeeeee-eeee-4eee-8eee-eeeeeeeeee01",
         answers: allABut10,
@@ -161,7 +161,7 @@ test.describe("Cross-module scoring (q10, q14, q2)", () => {
     }))
     const r = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Software Engineer", yoe: 3 },
+        setup: { city: "Bangalore", role: "Engineer (IC)", yoe: 3 },
         salary: { fixed_lakhs: 20, variable_lakhs: 2 },
         user_uuid: "eeeeeeee-eeee-4eee-8eee-eeeeeeeeee02",
         answers: allABut14,
@@ -178,29 +178,20 @@ test.describe("UI specifics — visual + interaction", () => {
     await clearAllStorage(page)
   })
 
-  test("module section label changes between Module 1 (Work) and Module 2 (Manager) and so on", async ({ page }) => {
+  test("question counter and progress bar advance through all 18 questions", async ({ page }) => {
     await page.goto("/start")
-    await fillSetup(page, { city: "Bangalore", role: "Software Engineer", yoe: 3 })
-    // Q1-Q3 = Work
-    await expect(page.locator('text=/Section 1 · The Work/')).toBeVisible()
-    await page.locator('button:has-text("01")').first().click() // q1
-    await expect(page.locator('text=/Section 1 · The Work/')).toBeVisible()
-    await page.locator('button:has-text("01")').first().click() // q2
-    await expect(page.locator('text=/Section 1 · The Work/')).toBeVisible()
-    await page.locator('button:has-text("01")').first().click() // q3
-    // Q4 = Manager
-    await expect(page.locator('text=/Section 2 · The Manager/')).toBeVisible()
-    // Fast-forward through manager + people + growth + money
-    for (let i = 0; i < 14; i++) {
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
+    for (let i = 1; i <= 18; i++) {
+      await expect(page.locator(`text=/^${i} / 18$/`).first()).toBeVisible({ timeout: 5000 })
+      await expect(page.locator(`text=/— Q${i} —/`).first()).toBeVisible()
       await page.locator('button:has-text("01")').first().click()
     }
-    // After 17 questions, we're on q18 = Module 6
-    await expect(page.locator('text=/Section 6 · The State of You/')).toBeVisible()
+    await page.waitForURL(/\/salary$/)
   })
 
   test("verdict block shows correct tier emoji + tagline", async ({ page }) => {
     await page.goto("/start")
-    await fillSetup(page, { city: "Bangalore", role: "Software Engineer", yoe: 3 })
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
     // Answer all A's for STAY_THRIVE
     await answerAll(page, Array(18).fill("A"))
     await page.waitForURL(/\/salary$/)
@@ -214,7 +205,7 @@ test.describe("UI specifics — visual + interaction", () => {
   test("Copy link button copies the URL to clipboard", async ({ page, context }) => {
     await context.grantPermissions(["clipboard-read", "clipboard-write"])
     await page.goto("/start")
-    await fillSetup(page, { city: "Bangalore", role: "Software Engineer", yoe: 3 })
+    await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
     await answerAll(page, Array(18).fill("B"))
     await page.waitForURL(/\/salary$/)
     await fillSalary(page, { fixed: 20, variable: 2 })
@@ -233,7 +224,7 @@ test.describe("UI specifics — visual + interaction", () => {
     // Make a session as user X
     const r = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 8 },
+        setup: { city: "Bangalore", role: "Product Manager", yoe: 8 },
         salary: { fixed_lakhs: 26, variable_lakhs: 3 },
         user_uuid: "ffffffff-ffff-4fff-8fff-ffffffffff01",
         answers: Array.from({ length: 18 }, (_, i) => ({
@@ -263,7 +254,7 @@ test.describe("UI specifics — visual + interaction", () => {
     // Submit a FRUSTRATED-pattern session (weakest = manager or money)
     const r = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Gurgaon", role: "Senior Product Manager", yoe: 8 },
+        setup: { city: "Gurgaon", role: "Product Manager", yoe: 8 },
         salary: { fixed_lakhs: 26, variable_lakhs: 3 },
         user_uuid: "00000000-9999-4000-8000-000000000099",
         answers: [0, 1, 0, 2, 3, 3, 3, 0, 0, 0, 1, 3, 3, 3, 3, 2, 3, 2].map((c, i) => ({

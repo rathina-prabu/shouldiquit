@@ -24,7 +24,7 @@ test.describe("Happy path — full user journey", () => {
     await expect(page.getByText(/Anonymous/).first()).toBeVisible()
   })
 
-  test("start page renders setup form with all 5 cities and 20 roles + anon ID", async ({
+  test("start page renders setup form with all 5 cities and 12 tracks + anon ID", async ({
     page,
   }) => {
     await page.goto("/start")
@@ -41,9 +41,20 @@ test.describe("Happy path — full user journey", () => {
       "Gurgaon",
     ])
     const roleOptions = await selects.nth(1).locator("option").allTextContents()
-    expect(roleOptions.length).toBe(20)
-    expect(roleOptions).toContain("Senior Product Manager")
-    expect(roleOptions).toContain("Tech Lead")
+    expect(roleOptions).toEqual([
+      "Engineer (IC)",
+      "Engineering Manager",
+      "DevOps / SRE",
+      "QA",
+      "Data Scientist",
+      "Product Manager",
+      "Project / Program Manager",
+      "Designer",
+      "Sales",
+      "Marketing / Growth",
+      "Customer Success",
+      "Business Ops",
+    ])
     // Anonymous ID is visible
     await expect(page.getByText(/Your anonymous ID/)).toBeVisible()
     await expect(page.locator("text=/^usr_[a-f0-9]{5}$/")).toBeVisible()
@@ -55,7 +66,7 @@ test.describe("Happy path — full user journey", () => {
     await page.waitForURL(/\/start$/)
 
     // Intake
-    await fillSetup(page, { city: "Bangalore", role: "Senior Product Manager", yoe: 8 })
+    await fillSetup(page, { city: "Bangalore", role: "Product Manager", yoe: 8 })
     await page.waitForURL(/\/quiz$/)
 
     // 18 questions — pick all B's
@@ -90,13 +101,11 @@ test.describe("Happy path — full user journey", () => {
 
   test("progress counter increments correctly across all 18 questions", async ({ page }) => {
     await page.goto("/start")
-    await fillSetup(page, { city: "Mumbai", role: "Software Engineer", yoe: 4 })
+    await fillSetup(page, { city: "Mumbai", role: "Engineer (IC)", yoe: 4 })
 
     for (let i = 1; i <= 18; i++) {
       // Header shows "<n> / 18"
       await expect(page.locator(`text=/^${i} / 18$/i`).first()).toBeVisible({ timeout: 5000 })
-      // Section label visible
-      await expect(page.locator('text=/Section [1-6] · /').first()).toBeVisible()
       await pickAnswer(page, "B")
     }
     await page.waitForURL(/\/salary$/)

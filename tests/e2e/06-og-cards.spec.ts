@@ -29,7 +29,7 @@ for (const profile of TIER_PROFILES) {
   test(`OG card renders for tier ${profile.tier}`, async ({ request }) => {
     const session = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 8 },
+        setup: { city: "Bangalore", role: "Product Manager", yoe: 8 },
         salary: profile.salary,
         user_uuid: `00000000-0000-4000-8000-${Date.now().toString().padStart(12, "0").slice(-12)}`,
         answers: Array.from({ length: 18 }, (_, i) => ({
@@ -55,7 +55,7 @@ test("OG metadata is set on /r/[id]", async ({ page, request }) => {
   // Create a session first
   const r = await request.post("/api/sessions", {
     data: {
-      setup: { city: "Mumbai", role: "Senior Software Engineer", yoe: 5 },
+      setup: { city: "Mumbai", role: "Engineer (IC)", yoe: 5 },
       salary: { fixed_lakhs: 30, variable_lakhs: 5 },
       user_uuid: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
       answers: Array.from({ length: 18 }, (_, i) => ({

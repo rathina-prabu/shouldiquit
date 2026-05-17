@@ -4,18 +4,17 @@ interface Props {
   question: Question
   questionNumber: number
   totalQuestions: number
-  moduleLabel: string
   onAnswer: (choiceIndex: 0 | 1 | 2 | 3) => void
 }
 
-export function QuestionCard({ question, questionNumber, totalQuestions, moduleLabel, onAnswer }: Props) {
+export function QuestionCard({ question, questionNumber, totalQuestions, onAnswer }: Props) {
   const remaining = totalQuestions - questionNumber
   const percentDone = Math.round((questionNumber / totalQuestions) * 100)
 
   return (
     <>
-      <div className="flex justify-between text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
-        <span>{moduleLabel}</span>
+      <div className="flex justify-between items-baseline text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
+        <span>shouldiquit.app</span>
         <span>
           <span className="text-accent font-medium">{questionNumber}</span> / {totalQuestions}
         </span>

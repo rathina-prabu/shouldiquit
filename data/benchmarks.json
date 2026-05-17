@@ -905,6 +905,60 @@
             "estimate"
           ]
         }
+      },
+      "Project / Program Manager": {
+        "0-3": {
+          "p25": 8,
+          "p50": 12,
+          "p75": 16,
+          "p90": 22,
+          "confidence": "medium",
+          "sources": [
+            "upGrad PgM 2026",
+            "Glassdoor India",
+            "Levels.fyi",
+            "Indeed India"
+          ]
+        },
+        "4-7": {
+          "p25": 12,
+          "p50": 18,
+          "p75": 26,
+          "p90": 35,
+          "confidence": "medium",
+          "sources": [
+            "upGrad PgM 2026",
+            "Glassdoor India",
+            "Levels.fyi",
+            "Indeed India"
+          ]
+        },
+        "8-12": {
+          "p25": 18,
+          "p50": 25,
+          "p75": 34,
+          "p90": 45,
+          "confidence": "medium",
+          "sources": [
+            "upGrad PgM 2026",
+            "Glassdoor India",
+            "Levels.fyi",
+            "Indeed India"
+          ]
+        },
+        "13+": {
+          "p25": 22,
+          "p50": 32,
+          "p75": 45,
+          "p90": 60,
+          "confidence": "medium",
+          "sources": [
+            "upGrad PgM 2026",
+            "Glassdoor India",
+            "Levels.fyi",
+            "Indeed India"
+          ]
+        }
       }
     },
     "Chennai": {
@@ -1798,6 +1852,48 @@
           "confidence": "low",
           "sources": [
             "estimate"
+          ]
+        }
+      },
+      "Project / Program Manager": {
+        "0-3": {
+          "p25": 6,
+          "p50": 10,
+          "p75": 13,
+          "p90": 18,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "4-7": {
+          "p25": 10,
+          "p50": 14,
+          "p75": 21,
+          "p90": 28,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "8-12": {
+          "p25": 14,
+          "p50": 20,
+          "p75": 27,
+          "p90": 36,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "13+": {
+          "p25": 18,
+          "p50": 26,
+          "p75": 36,
+          "p90": 48,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
           ]
         }
       }
@@ -2732,6 +2828,48 @@
             "estimate"
           ]
         }
+      },
+      "Project / Program Manager": {
+        "0-3": {
+          "p25": 7,
+          "p50": 11,
+          "p75": 14,
+          "p90": 19,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 16,
+          "p75": 23,
+          "p90": 31,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "8-12": {
+          "p25": 16,
+          "p50": 22,
+          "p75": 30,
+          "p90": 40,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "13+": {
+          "p25": 19,
+          "p50": 28,
+          "p75": 40,
+          "p90": 53,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        }
       }
     },
     "Gurgaon": {
@@ -3587,6 +3725,48 @@
           "confidence": "low",
           "sources": [
             "estimate"
+          ]
+        }
+      },
+      "Project / Program Manager": {
+        "0-3": {
+          "p25": 8,
+          "p50": 11,
+          "p75": 15,
+          "p90": 21,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "4-7": {
+          "p25": 11,
+          "p50": 17,
+          "p75": 25,
+          "p90": 33,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "8-12": {
+          "p25": 17,
+          "p50": 24,
+          "p75": 32,
+          "p90": 43,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "13+": {
+          "p25": 21,
+          "p50": 30,
+          "p75": 43,
+          "p90": 57,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
           ]
         }
       }
@@ -4456,6 +4636,48 @@
             "estimate"
           ]
         }
+      },
+      "Project / Program Manager": {
+        "0-3": {
+          "p25": 7,
+          "p50": 10,
+          "p75": 14,
+          "p90": 19,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "4-7": {
+          "p25": 10,
+          "p50": 15,
+          "p75": 22,
+          "p90": 30,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "8-12": {
+          "p25": 15,
+          "p50": 21,
+          "p75": 29,
+          "p90": 38,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        },
+        "13+": {
+          "p25": 19,
+          "p50": 27,
+          "p75": 38,
+          "p90": 51,
+          "confidence": "low",
+          "sources": [
+            "derived from Bangalore \u00d7 city multiplier"
+          ]
+        }
       }
     }
   },
@@ -4481,7 +4703,7 @@
       "confidence": "medium",
       "sources": [
         "Fairwork India Report 2024 (Ola/Uber scored 0/10; Swiggy/Zomato 6/10)",
-        "Zomato CEO Deepinder Goyal disclosure: avg EPH ₹102 in 2025 (gross), ~₹81 net after 20% fuel/maintenance",
+        "Zomato CEO Deepinder Goyal disclosure: avg EPH \u20b9102 in 2025 (gross), ~\u20b981 net after 20% fuel/maintenance",
         "Inc42 Indian Startup Layoff Tracker 2025",
         "Numbeo Cost of Living Index May 2026 (Bangalore baseline 20.3)",
         "Taggd / foundit Insights Tracker 2026 (Bengaluru +23% YoY hiring)",
@@ -4536,7 +4758,7 @@
       "confidence": "medium",
       "sources": [
         "Fairwork India Report 2024",
-        "Zomato 2025 EPH ₹102 gross disclosure",
+        "Zomato 2025 EPH \u20b9102 gross disclosure",
         "Numbeo Hyderabad May 2026 (20.2)",
         "foundit Insights Tracker 2026 (Hyderabad +21% YoY)",
         "Flexiple GCC list Hyderabad 2026, Taggd pharma hiring trends 2026"
@@ -4590,8 +4812,8 @@
       "confidence": "medium",
       "sources": [
         "Fairwork India Report 2024",
-        "Business Standard 2025 (Mumbai auto driver case studies: ₹500-600/day net after CNG + ₹150 permit at 10 hrs)",
-        "Zomato 2025 EPH ₹102 gross (Mumbai surge ~10-15% above avg per metro fare structure)",
+        "Business Standard 2025 (Mumbai auto driver case studies: \u20b9500-600/day net after CNG + \u20b9150 permit at 10 hrs)",
+        "Zomato 2025 EPH \u20b9102 gross (Mumbai surge ~10-15% above avg per metro fare structure)",
         "Numbeo Mumbai May 2026 (24.4, highest in India)",
         "foundit Insights Tracker 2026 (Mumbai +22% YoY)",
         "Pace Recruit / Taggd Mumbai hiring 2026"
@@ -5534,9 +5756,9 @@
       ],
       "typical_promotion_window_months": 36,
       "top_3_quit_reasons": [
-        "Slow promotion path to Director — limited Director slots in Indian product orgs",
+        "Slow promotion path to Director \u2014 limited Director slots in Indian product orgs",
         "Compensation ceiling at SrPM band vs FAANG / US-remote offers",
-        "Strategy vs execution mismatch — pulled into delivery work, not vision"
+        "Strategy vs execution mismatch \u2014 pulled into delivery work, not vision"
       ],
       "median_tenure_months": 28,
       "confidence": "medium",
@@ -5553,9 +5775,9 @@
       ],
       "typical_promotion_window_months": 30,
       "top_3_quit_reasons": [
-        "Slow growth to SrPM — bottleneck at mid-level PM band",
+        "Slow growth to SrPM \u2014 bottleneck at mid-level PM band",
         "Better offer / higher hike (40-60% jumps common in PM switches)",
-        "Lack of ownership — PM-in-name-only roles with eng-driven roadmap"
+        "Lack of ownership \u2014 PM-in-name-only roles with eng-driven roadmap"
       ],
       "median_tenure_months": 24,
       "confidence": "medium",
@@ -5572,7 +5794,7 @@
       ],
       "typical_promotion_window_months": 18,
       "top_3_quit_reasons": [
-        "Slow promotion to full PM — APM programs often lack clear graduation",
+        "Slow promotion to full PM \u2014 APM programs often lack clear graduation",
         "Limited scope / shadow work under senior PMs",
         "Better APM offer with higher base at competing product company"
       ],
@@ -5591,8 +5813,8 @@
       "typical_promotion_window_months": 24,
       "top_3_quit_reasons": [
         "Better offer / hike (50-100% jumps standard in 2-3 yr SDE switches)",
-        "Tier-1 IT services to product company transition (TCS/Infy → Razorpay/Swiggy)",
-        "Boring / maintenance work — no greenfield or modern stack exposure"
+        "Tier-1 IT services to product company transition (TCS/Infy \u2192 Razorpay/Swiggy)",
+        "Boring / maintenance work \u2014 no greenfield or modern stack exposure"
       ],
       "median_tenure_months": 22,
       "confidence": "high",
@@ -5610,8 +5832,8 @@
       ],
       "typical_promotion_window_months": 30,
       "top_3_quit_reasons": [
-        "IC vs Management fork — forced into EM track without choice",
-        "Compensation ceiling — needs job switch for 40%+ hike",
+        "IC vs Management fork \u2014 forced into EM track without choice",
+        "Compensation ceiling \u2014 needs job switch for 40%+ hike",
         "Tech stack stagnation / legacy codebase fatigue"
       ],
       "median_tenure_months": 26,
@@ -5629,9 +5851,9 @@
       ],
       "typical_promotion_window_months": 36,
       "top_3_quit_reasons": [
-        "Burnout — sandwich layer between leadership pressure and team morale",
+        "Burnout \u2014 sandwich layer between leadership pressure and team morale",
         "Want to return to IC / hands-on coding (Staff Eng track)",
-        "Slow path to Director — limited senior leadership slots"
+        "Slow path to Director \u2014 limited senior leadership slots"
       ],
       "median_tenure_months": 30,
       "confidence": "medium",
@@ -5648,7 +5870,7 @@
       ],
       "typical_promotion_window_months": 30,
       "top_3_quit_reasons": [
-        "Role ambiguity — TL doing IC + people work without EM title or comp",
+        "Role ambiguity \u2014 TL doing IC + people work without EM title or comp",
         "Forced into people management without IC ladder option",
         "Better offer with clear Staff/Principal track at product company"
       ],
@@ -5686,9 +5908,9 @@
       ],
       "typical_promotion_window_months": 36,
       "top_3_quit_reasons": [
-        "No path to Design Manager — flat design orgs in most Indian companies",
-        "Comp ceiling — senior designer band capped vs eng equivalent",
-        "Lack of strategic / 0-to-1 work — only feature iteration"
+        "No path to Design Manager \u2014 flat design orgs in most Indian companies",
+        "Comp ceiling \u2014 senior designer band capped vs eng equivalent",
+        "Lack of strategic / 0-to-1 work \u2014 only feature iteration"
       ],
       "median_tenure_months": 28,
       "confidence": "low",
@@ -5706,7 +5928,7 @@
       "top_3_quit_reasons": [
         "Doing dashboarding / SQL work, not actual ML / modeling",
         "Better offer at GenAI / ML-first startup with modern stack",
-        "No production ML pipelines — models never deployed"
+        "No production ML pipelines \u2014 models never deployed"
       ],
       "median_tenure_months": 22,
       "confidence": "medium",
@@ -5723,8 +5945,8 @@
       ],
       "typical_promotion_window_months": 36,
       "top_3_quit_reasons": [
-        "GenAI / LLM wave — moving to LLM-focused roles at higher pay",
-        "Lack of MLOps maturity — can't ship models to production",
+        "GenAI / LLM wave \u2014 moving to LLM-focused roles at higher pay",
+        "Lack of MLOps maturity \u2014 can't ship models to production",
         "Comp ceiling vs FAANG India / US-remote Applied Scientist roles"
       ],
       "median_tenure_months": 26,
@@ -5743,7 +5965,7 @@
       "typical_promotion_window_months": 24,
       "top_3_quit_reasons": [
         "On-call burnout / pager fatigue with thin team",
-        "Better offer — DevOps/SRE in high demand, 60-80% hikes common",
+        "Better offer \u2014 DevOps/SRE in high demand, 60-80% hikes common",
         "Stuck on legacy infra (no Kubernetes / IaC modernization)"
       ],
       "median_tenure_months": 20,
@@ -5761,8 +5983,8 @@
       ],
       "typical_promotion_window_months": 24,
       "top_3_quit_reasons": [
-        "Manual testing trap — no automation skill development",
-        "Lower comp band vs SDE — moving to SDET / dev role for pay parity",
+        "Manual testing trap \u2014 no automation skill development",
+        "Lower comp band vs SDE \u2014 moving to SDET / dev role for pay parity",
         "Lack of respect / second-class citizen in eng org"
       ],
       "median_tenure_months": 24,
@@ -5781,7 +6003,7 @@
       "typical_promotion_window_months": 24,
       "top_3_quit_reasons": [
         "Unrealistic quota / quota inflation year over year",
-        "Comp plan changes — OTE cut or accelerators removed mid-year",
+        "Comp plan changes \u2014 OTE cut or accelerators removed mid-year",
         "Better offer with higher base + named accounts at competitor"
       ],
       "median_tenure_months": 20,
@@ -5800,8 +6022,8 @@
       "typical_promotion_window_months": 30,
       "top_3_quit_reasons": [
         "Budget cuts / marketing first to be slashed in downturns",
-        "Brand vs performance marketing identity crisis — forced into perf-only",
-        "Lack of strategic seat — execution-only role under founder/CEO"
+        "Brand vs performance marketing identity crisis \u2014 forced into perf-only",
+        "Lack of strategic seat \u2014 execution-only role under founder/CEO"
       ],
       "median_tenure_months": 24,
       "confidence": "low",
@@ -5817,7 +6039,7 @@
       ],
       "typical_promotion_window_months": 24,
       "top_3_quit_reasons": [
-        "Vanity metrics pressure — growth-at-all-costs without retention focus",
+        "Vanity metrics pressure \u2014 growth-at-all-costs without retention focus",
         "Lack of product/eng support to ship growth experiments",
         "Better offer at growth-stage startup with equity upside"
       ],
@@ -5835,7 +6057,7 @@
       ],
       "typical_promotion_window_months": 24,
       "top_3_quit_reasons": [
-        "Account overload — 50+ accounts per CSM, no time for strategic work",
+        "Account overload \u2014 50+ accounts per CSM, no time for strategic work",
         "Treated as support / firefighter not strategic partner",
         "Better offer moving to sales (AE) for higher OTE"
       ],
@@ -5872,9 +6094,9 @@
       ],
       "typical_promotion_window_months": 30,
       "top_3_quit_reasons": [
-        "Caught between employee advocacy and leadership directives — moral fatigue",
+        "Caught between employee advocacy and leadership directives \u2014 moral fatigue",
         "Layoff execution burnout (heavy 2023-24 tech layoff cycle)",
-        "Lack of strategic seat — HR seen as admin function"
+        "Lack of strategic seat \u2014 HR seen as admin function"
       ],
       "median_tenure_months": 26,
       "confidence": "low",
@@ -5891,8 +6113,8 @@
       ],
       "typical_promotion_window_months": 30,
       "top_3_quit_reasons": [
-        "Firefighting fatigue — always solving problems, never building systems",
-        "Lack of cross-functional authority — accountability without power",
+        "Firefighting fatigue \u2014 always solving problems, never building systems",
+        "Lack of cross-functional authority \u2014 accountability without power",
         "Better offer at scaling startup with broader scope"
       ],
       "median_tenure_months": 26,

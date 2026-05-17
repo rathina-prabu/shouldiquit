@@ -23,7 +23,7 @@ test.describe("Edge cases and navigation guards", () => {
     await page.evaluate(() => {
       const raw = window.localStorage.getItem("siq-quiz-state")
       const parsed = raw ? JSON.parse(raw) : { state: {}, version: 0 }
-      parsed.state.setup = { city: "Bangalore", role: "Software Engineer", yoe: 5 }
+      parsed.state.setup = { city: "Bangalore", role: "Engineer (IC)", yoe: 5 }
       parsed.state.answers = []
       window.localStorage.setItem("siq-quiz-state", JSON.stringify(parsed))
     })
@@ -39,7 +39,7 @@ test.describe("Edge cases and navigation guards", () => {
 
   test("quiz state persists across refresh mid-quiz", async ({ page }) => {
     await page.goto("/start")
-    await fillSetup(page, { city: "Mumbai", role: "Tech Lead", yoe: 7 })
+    await fillSetup(page, { city: "Mumbai", role: "Engineer (IC)", yoe: 7 })
     await pickAnswer(page, "A")
     await pickAnswer(page, "A")
     // Now we're on Q3
@@ -67,7 +67,7 @@ test.describe("Edge cases and navigation guards", () => {
   test("zero salary submission still produces a verdict (no crash)", async ({ request }) => {
     const res = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Software Engineer", yoe: 2 },
+        setup: { city: "Bangalore", role: "Engineer (IC)", yoe: 2 },
         salary: { fixed_lakhs: 0, variable_lakhs: 0 },
         user_uuid: "77777777-7777-4777-8777-777777777777",
         answers: Array.from({ length: 18 }, (_, i) => ({
@@ -86,7 +86,7 @@ test.describe("Edge cases and navigation guards", () => {
   }) => {
     const veryHigh = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 10 },
+        setup: { city: "Bangalore", role: "Product Manager", yoe: 10 },
         salary: { fixed_lakhs: 200, variable_lakhs: 50 },
         user_uuid: "88888888-8888-4888-8888-888888888888",
         answers: Array.from({ length: 18 }, (_, i) => ({
@@ -98,7 +98,7 @@ test.describe("Edge cases and navigation guards", () => {
     const veryHighBody = await veryHigh.json()
     const normal = await request.post("/api/sessions", {
       data: {
-        setup: { city: "Bangalore", role: "Senior Product Manager", yoe: 10 },
+        setup: { city: "Bangalore", role: "Product Manager", yoe: 10 },
         salary: { fixed_lakhs: 50, variable_lakhs: 10 }, // p50-ish
         user_uuid: "88888888-8888-4888-8888-888888888889",
         answers: Array.from({ length: 18 }, (_, i) => ({

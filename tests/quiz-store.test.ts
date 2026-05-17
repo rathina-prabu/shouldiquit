@@ -22,7 +22,7 @@ describe("quiz store", () => {
     expect(useQuizStore.getState().answers[0].choice_index).toBe(3)
   })
   it("stores setup data", () => {
-    useQuizStore.getState().setSetup({ city: "Bangalore", role: "Software Engineer", yoe: 5 })
+    useQuizStore.getState().setSetup({ city: "Bangalore", role: "Engineer (IC)", yoe: 5 })
     expect(useQuizStore.getState().setup?.city).toBe("Bangalore")
   })
   it("stores salary data", () => {
