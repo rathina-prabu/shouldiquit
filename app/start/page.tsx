@@ -57,10 +57,13 @@ function StartForm() {
 
   const isRemote = workType === "remote"
   const yoe = yoeText === "" ? 0 : parseInt(yoeText) || 0
-  const tooSenior = yoe > 40
+  const [showSeniorWarning, setShowSeniorWarning] = useState(false)
 
   const submit = () => {
-    if (tooSenior) return
+    if (yoe > 40) {
+      setShowSeniorWarning(true)
+      return
+    }
     reset()
     setSetup({
       city: isRemote ? "Others" : city,
@@ -108,9 +111,11 @@ function StartForm() {
             const digits = e.target.value.replace(/[^0-9]/g, "")
             // Normalize leading-zero entries: "02" → "2", "002" → "2", but keep "0" as-is.
             setYoeText(digits === "" ? "" : String(parseInt(digits)))
+            // Hide the senior warning on any change so the user can adjust and retry.
+            if (showSeniorWarning) setShowSeniorWarning(false)
           }}
         />
-        {tooSenior && (
+        {showSeniorWarning && (
           <div className="mt-2 text-[12.5px] text-accent italic leading-snug">
             Boss, you&apos;ve outgrown this quiz. You&apos;ve already made it.
           </div>
@@ -149,8 +154,7 @@ function StartForm() {
 
       <button
         onClick={submit}
-        disabled={tooSenior}
-        className="mt-10 bg-ink text-paper px-6 py-4 font-medium text-[15px] tracking-[0.05em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all text-center disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[3px_3px_0_#e8576b]"
+        className="mt-10 bg-ink text-paper px-6 py-4 font-medium text-[15px] tracking-[0.05em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all text-center"
       >
         Start the questions →
       </button>
