@@ -35,6 +35,35 @@ export default function SalaryPage() {
 
   const total = (fixed || 0) + (variable || 0)
 
+  const [showSkipDialog, setShowSkipDialog] = useState(false)
+
+  const submitWithPayload = async (salaryPayload: {
+    fixed_lakhs: number | null
+    variable_lakhs: number | null
+    skipped?: boolean
+  }) => {
+    setSubmitting(true)
+    setError(null)
+    setSalary(salaryPayload)
+    try {
+      const user_uuid = getOrCreateUserUuid()
+      const res = await fetch("/api/sessions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ setup, answers, salary: salaryPayload, user_uuid }),
+      })
+      if (!res.ok) {
+        const body = await res.text()
+        throw new Error(body || `HTTP ${res.status}`)
+      }
+      const { id } = await res.json()
+      router.push(`/r/${id}`)
+    } catch (err: unknown) {
+      setSubmitting(false)
+      setError(err instanceof Error ? err.message : String(err))
+    }
+  }
+
   const submit = async () => {
     if (submitting) return
     // Block submission when values exceed sane lakh-scale bounds. The user
@@ -47,31 +76,12 @@ export default function SalaryPage() {
       return
     }
     setWarn(null)
-    setSubmitting(true)
-    setError(null)
-    setSalary({ fixed_lakhs: fixed, variable_lakhs: variable })
-    try {
-      const user_uuid = getOrCreateUserUuid()
-      const res = await fetch("/api/sessions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          setup,
-          answers,
-          salary: { fixed_lakhs: fixed, variable_lakhs: variable },
-          user_uuid,
-        }),
-      })
-      if (!res.ok) {
-        const body = await res.text()
-        throw new Error(body || `HTTP ${res.status}`)
-      }
-      const { id } = await res.json()
-      router.push(`/r/${id}`)
-    } catch (err: unknown) {
-      setSubmitting(false)
-      setError(err instanceof Error ? err.message : String(err))
-    }
+    await submitWithPayload({ fixed_lakhs: fixed, variable_lakhs: variable })
+  }
+
+  const confirmSkip = async () => {
+    setShowSkipDialog(false)
+    await submitWithPayload({ fixed_lakhs: null, variable_lakhs: null, skipped: true })
   }
 
   return (
@@ -117,7 +127,77 @@ export default function SalaryPage() {
       >
         {submitting ? "Computing…" : "See the verdict →"}
       </button>
+
+      <button
+        type="button"
+        onClick={() => setShowSkipDialog(true)}
+        disabled={submitting}
+        className="mt-4 self-start text-[12.5px] text-ink/60 hover:text-ink/90 underline decoration-ink/30 decoration-1 underline-offset-[4px] disabled:opacity-50"
+      >
+        Skip — I&apos;d rather not share my salary
+      </button>
+
+      {showSkipDialog && (
+        <SkipDialog
+          onCancel={() => setShowSkipDialog(false)}
+          onConfirm={confirmSkip}
+          submitting={submitting}
+        />
+      )}
     </RisoLayout>
+  )
+}
+
+function SkipDialog({
+  onCancel,
+  onConfirm,
+  submitting,
+}: {
+  onCancel: () => void
+  onConfirm: () => void
+  submitting: boolean
+}) {
+  return (
+    <div className="fixed inset-0 bg-ink/40 flex items-center justify-center p-5 z-50">
+      <div
+        role="dialog"
+        aria-modal="true"
+        className="bg-paper border-[1.5px] border-ink shadow-[6px_6px_0_#e8576b] max-w-[360px] w-full p-5"
+      >
+        <div className="text-[11px] tracking-[0.18em] uppercase text-accent mb-2 font-semibold">
+          — Hold on —
+        </div>
+        <h3 className="font-display text-[22px] leading-tight mb-3">
+          Skipping salary will make your verdict less accurate.
+        </h3>
+        <p className="text-[13.5px] leading-[1.55] text-ink/80 mb-2">
+          Salary is one of the strongest signals. Without it we can&apos;t check
+          you against the market, can&apos;t calculate your real take-home, and
+          can&apos;t show you how you stack up.
+        </p>
+        <p className="text-[13.5px] leading-[1.55] text-ink/80 mb-5">
+          Your salary stays anonymous. We don&apos;t know who you are.
+        </p>
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={onCancel}
+            disabled={submitting}
+            className="flex-1 bg-ink text-paper px-4 py-3 font-medium text-[13.5px] shadow-[3px_3px_0_#e8576b] disabled:opacity-50"
+          >
+            Go back, I&apos;ll add it
+          </button>
+          <button
+            type="button"
+            onClick={onConfirm}
+            disabled={submitting}
+            className="flex-1 border-[1.5px] border-ink/60 text-ink/80 px-4 py-3 text-[13.5px] hover:bg-ink/5 disabled:opacity-50"
+          >
+            {submitting ? "…" : "Skip anyway"}
+          </button>
+        </div>
+      </div>
+    </div>
   )
 }
 

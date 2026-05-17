@@ -29,12 +29,21 @@ export async function POST(req: NextRequest) {
   }
 
   const scores = computeScores(answers)
-  const moneyOffset = computeSalaryOffset(
-    offsetEligibleTotal(salary.fixed_lakhs, salary.variable_lakhs),
-    setup.city as City,
-    setup.role as Role,
-    setup.yoe,
-  )
+  // Salary may be skipped — in that case fixed/variable are null and we don't
+  // apply any salary-vs-market offset. The money module then reflects the
+  // quiz answers alone.
+  const salaryProvided =
+    !salary.skipped &&
+    salary.fixed_lakhs != null &&
+    !Number.isNaN(salary.fixed_lakhs)
+  const moneyOffset = salaryProvided
+    ? computeSalaryOffset(
+        offsetEligibleTotal(salary.fixed_lakhs as number, (salary.variable_lakhs ?? 0) as number),
+        setup.city as City,
+        setup.role as Role,
+        setup.yoe,
+      )
+    : 0
   const workTypeOffset = computeWorkTypeOffset(setup.work_type)
   const { adjMoney, adjWellbeing, adjWork, adjMaster } = recomputeMasterWithOffsets(
     scores.modules,
@@ -61,8 +70,8 @@ export async function POST(req: NextRequest) {
     role: setup.role,
     yoe: setup.yoe,
     work_type: setup.work_type ?? null,
-    salary_fixed_lakhs: salary.fixed_lakhs,
-    salary_variable_lakhs: salary.variable_lakhs,
+    salary_fixed_lakhs: salaryProvided ? salary.fixed_lakhs : null,
+    salary_variable_lakhs: salaryProvided ? salary.variable_lakhs ?? 0 : null,
     master_score: adjMaster,
     module_work: adjWork,
     module_manager: scores.modules.manager,

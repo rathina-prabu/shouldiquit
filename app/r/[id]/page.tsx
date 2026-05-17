@@ -18,8 +18,8 @@ interface Session {
   city: string
   role: string
   yoe: number
-  salary_fixed_lakhs: number
-  salary_variable_lakhs: number
+  salary_fixed_lakhs: number | null
+  salary_variable_lakhs: number | null
   master_score: number
   module_work: number
   module_manager: number
@@ -212,13 +212,15 @@ export default function ResultPage() {
         score={session.master_score}
         weakestModule={session.weakest_module}
       />
-      <MoneySection
-        city={session.city as City}
-        role={session.role as Role}
-        yoe={session.yoe}
-        fixed_lakhs={session.salary_fixed_lakhs}
-        variable_lakhs={session.salary_variable_lakhs}
-      />
+      {session.salary_fixed_lakhs != null && (
+        <MoneySection
+          city={session.city as City}
+          role={session.role as Role}
+          yoe={session.yoe}
+          fixed_lakhs={session.salary_fixed_lakhs}
+          variable_lakhs={session.salary_variable_lakhs ?? 0}
+        />
+      )}
       <DiagnosisBlock blocks={diagnosisBlocks} loading={!diagnosisBlocks} />
     </RisoLayout>
   )

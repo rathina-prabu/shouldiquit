@@ -60,8 +60,9 @@ export interface SetupData {
 }
 
 export interface SalaryData {
-  fixed_lakhs: number
-  variable_lakhs: number
+  fixed_lakhs: number | null
+  variable_lakhs: number | null
+  skipped?: boolean
 }
 
 export interface Answer {
