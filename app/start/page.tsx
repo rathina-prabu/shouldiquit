@@ -40,7 +40,7 @@ export default function StartPage() {
   return (
     <RisoLayout topBarLeft="shouldiquit.app" topBarRight="Step 1 of 3">
       <div className="text-[12px] tracking-[0.18em] uppercase text-accent mb-2 font-medium">
-        — First, the basics —
+        First, the basics
       </div>
       <h1 className="font-display text-[30px] leading-tight tracking-tight mb-3">
         Tell us about you.
