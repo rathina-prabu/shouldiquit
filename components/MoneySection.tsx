@@ -29,7 +29,16 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
         The Money
       </h2>
       <div className="flex flex-col">
-        <Row label="Your salary" value={`₹${Math.round(total * 10) / 10} L`} highlight />
+        <Row
+          label="Your salary"
+          value={
+            <span className="inline-flex items-baseline gap-2">
+              <span>₹{Math.round(total * 10) / 10} L</span>
+              {salaryCell && <SalaryIndicator salary={total} median={salaryCell.p50} />}
+            </span>
+          }
+          highlight
+        />
         {salaryCell && (
           <>
             <Row
@@ -78,6 +87,49 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
   )
 }
 
+/**
+ * Visual cue next to the user's salary, benchmarked against the product-co median:
+ *  < 1.33× median   → red ▼  (close to / below market)
+ *  1.33×–1.60×      → amber ●  (comfortably above, but not exceptional)
+ *  ≥ 1.60× median   → green ▲  (well above market)
+ */
+function SalaryIndicator({ salary, median }: { salary: number; median: number }) {
+  if (!median || median <= 0) return null
+  const ratio = salary / median
+
+  if (ratio < 1.33) {
+    return (
+      <span
+        className="text-[#e8576b] text-[15px] leading-none"
+        aria-label="Salary is below or close to product-company market median"
+        title="Below 33% over product median"
+      >
+        ▼
+      </span>
+    )
+  }
+  if (ratio < 1.6) {
+    return (
+      <span
+        className="text-[#c9a227] text-[14px] leading-none"
+        aria-label="Salary is moderately above product-company market median"
+        title="33–60% over product median"
+      >
+        ●
+      </span>
+    )
+  }
+  return (
+    <span
+      className="text-[#5a8a5a] text-[15px] leading-none"
+      aria-label="Salary is well above product-company market median"
+      title="60%+ over product median"
+    >
+      ▲
+    </span>
+  )
+}
+
 function Row({
   label,
   value,
@@ -85,7 +137,7 @@ function Row({
   muted,
 }: {
   label: string
-  value: string
+  value: React.ReactNode
   highlight?: boolean
   muted?: boolean
 }) {
