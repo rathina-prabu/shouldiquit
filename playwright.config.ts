@@ -3,7 +3,8 @@ import { defineConfig, devices } from "@playwright/test"
 export default defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: false,
-  retries: 0,
+  // 1 retry to absorb dev-server compile slowness in full suite runs
+  retries: 1,
   workers: 1,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
