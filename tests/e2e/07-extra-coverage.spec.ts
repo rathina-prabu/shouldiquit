@@ -182,8 +182,7 @@ test.describe("UI specifics — visual + interaction", () => {
     await page.goto("/start")
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
     for (let i = 1; i <= 18; i++) {
-      await expect(page.locator(`text=/^${i} / 18$/`).first()).toBeVisible({ timeout: 5000 })
-      await expect(page.locator(`text=/— Q${i} —/`).first()).toBeVisible()
+      await expect(page.locator(`text=/^Q${i}$/`).first()).toBeVisible({ timeout: 5000 })
       await page.locator('button:has-text("01")').first().click()
     }
     await page.waitForURL(/\/salary$/)

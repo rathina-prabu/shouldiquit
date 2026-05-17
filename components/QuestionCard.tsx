@@ -8,21 +8,15 @@ interface Props {
 }
 
 export function QuestionCard({ question, questionNumber, totalQuestions, onAnswer }: Props) {
-  const remaining = totalQuestions - questionNumber
   const percentDone = Math.round((questionNumber / totalQuestions) * 100)
 
   return (
     <>
       <div className="flex justify-between items-baseline text-[11px] tracking-[0.15em] uppercase text-ink/60 pb-3 border-b border-ink/20 mb-6">
         <span>shouldiquit.app</span>
-        <span>
-          <span className="text-accent font-medium">{questionNumber}</span> / {totalQuestions}
-        </span>
+        <span className="text-accent font-medium">Q{questionNumber}</span>
       </div>
-      <div className="text-[12px] tracking-[0.18em] uppercase text-accent mb-3 font-medium">
-        — Q{questionNumber} —
-      </div>
-      <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-3">
+      <h1 className="font-display text-[28px] leading-[1.05] tracking-tight mb-3 mt-2">
         {question.prompt}
       </h1>
       <div className="text-[11px] tracking-[0.15em] uppercase text-ink/55 mb-3 mt-8 font-medium">Pick one</div>
@@ -38,11 +32,8 @@ export function QuestionCard({ question, questionNumber, totalQuestions, onAnswe
           </button>
         ))}
       </div>
-      <div className="mt-8 flex items-center gap-3">
-        <div className="flex-1 h-[2px] bg-ink/15">
-          <div className="h-full bg-accent transition-all" style={{ width: `${percentDone}%` }} />
-        </div>
-        <span className="text-[11px] tracking-[0.15em] uppercase text-ink/55">{remaining} left</span>
+      <div className="mt-8 h-[2px] bg-ink/15">
+        <div className="h-full bg-accent transition-all" style={{ width: `${percentDone}%` }} />
       </div>
     </>
   )

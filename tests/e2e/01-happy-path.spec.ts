@@ -133,8 +133,8 @@ test.describe("Happy path — full user journey", () => {
     await fillSetup(page, { city: "Mumbai", role: "Engineer (IC)", yoe: 4 })
 
     for (let i = 1; i <= 18; i++) {
-      // Header shows "<n> / 18"
-      await expect(page.locator(`text=/^${i} / 18$/i`).first()).toBeVisible({ timeout: 5000 })
+      // Header shows "Q<n>" in the top-right
+      await expect(page.locator(`text=/^Q${i}$/`).first()).toBeVisible({ timeout: 5000 })
       await pickAnswer(page, "B")
     }
     await page.waitForURL(/\/salary$/)
