@@ -49,6 +49,7 @@ export async function POST(req: NextRequest) {
     scores.modules,
     moneyOffset,
     workTypeOffset,
+    { salaryProvided },
   )
   // Re-derive verdict + weakest module from offset-adjusted modules
   const adjModules = {
@@ -58,7 +59,12 @@ export async function POST(req: NextRequest) {
     work: adjWork,
   }
   const adjTier = deriveVerdict(adjMaster)
-  const adjWeakest = findWeakestModule(adjModules)
+  // When salary was skipped, money carries 0 weight in the master and has only
+  // 2 quiz answers behind it — exclude it from the "weakest module" pick.
+  const weakestModulesPool: typeof adjModules = salaryProvided
+    ? adjModules
+    : { ...adjModules, money: 101 }
+  const adjWeakest = findWeakestModule(weakestModulesPool)
 
   const id = generateShortId()
   const supabase = supabaseServer()

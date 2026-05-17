@@ -10,6 +10,18 @@ const MODULE_WEIGHTS: Record<ModuleName, number> = {
   wellbeing: 0.18,
 }
 
+// When the taker skips salary, the money module has nothing but two quiz
+// answers behind it — too thin a signal to carry 18% of the verdict. Drop
+// money to 0 and spread its weight evenly across the remaining five modules.
+const MODULE_WEIGHTS_NO_SALARY: Record<ModuleName, number> = {
+  work: 0.176,
+  manager: 0.216,
+  people: 0.176,
+  growth: 0.216,
+  money: 0,
+  wellbeing: 0.216,
+}
+
 const MODULES: ModuleName[] = ["work", "manager", "people", "growth", "money", "wellbeing"]
 
 export function computeScores(answers: Answer[]): Scores {
@@ -113,6 +125,7 @@ export function recomputeMasterWithOffsets(
   modules: Record<ModuleName, number>,
   moneyOffset: number,
   workTypeOffset: { wellbeing: number; work: number },
+  opts: { salaryProvided?: boolean } = {},
 ): {
   adjMoney: number
   adjWellbeing: number
@@ -127,17 +140,23 @@ export function recomputeMasterWithOffsets(
   const adjMoney = Math.max(0, Math.min(100, modules.money + quizRebate + moneyOffset))
   const adjWellbeing = Math.max(0, Math.min(100, modules.wellbeing + workTypeOffset.wellbeing))
   const adjWork = Math.max(0, Math.min(100, modules.work + workTypeOffset.work))
+
+  // Default opts.salaryProvided to true to preserve behavior for callers that
+  // don't pass the flag.
+  const weights =
+    opts.salaryProvided === false ? MODULE_WEIGHTS_NO_SALARY : MODULE_WEIGHTS
+
   const adjMaster = Math.max(
     0,
     Math.min(
       100,
       Math.round(
-        MODULE_WEIGHTS.work * adjWork +
-          MODULE_WEIGHTS.manager * modules.manager +
-          MODULE_WEIGHTS.people * modules.people +
-          MODULE_WEIGHTS.growth * modules.growth +
-          MODULE_WEIGHTS.money * adjMoney +
-          MODULE_WEIGHTS.wellbeing * adjWellbeing,
+        weights.work * adjWork +
+          weights.manager * modules.manager +
+          weights.people * modules.people +
+          weights.growth * modules.growth +
+          weights.money * adjMoney +
+          weights.wellbeing * adjWellbeing,
       ),
     ),
   )
