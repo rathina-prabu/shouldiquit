@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
     city: setup.city,
     role: setup.role,
     yoe: setup.yoe,
+    work_type: setup.work_type ?? null,
     salary_fixed_lakhs: salary.fixed_lakhs,
     salary_variable_lakhs: salary.variable_lakhs,
     master_score: adjMaster,

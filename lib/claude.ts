@@ -1,10 +1,12 @@
 import Anthropic from "@anthropic-ai/sdk"
-import type { ModuleName, VerdictTier } from "./types"
+import type { ModuleName, VerdictTier, WorkType } from "./types"
+import { WORK_TYPE_LABELS } from "./types"
 
 interface DiagnoseInput {
   city: string
   role: string
   yoe: number
+  work_type: WorkType | null
   tier: VerdictTier
   master: number
   modules: Record<ModuleName, number>
@@ -30,6 +32,8 @@ Tone:
 - Never use: "leverage", "synergy", "journey", "actionable", "ecosystem", "ownership", "stakeholder", "drive impact", "passionate"
 - If they're below-market on salary AND in a leave-leaning tier, prioritize building runway over quitting today
 - If they're above-market on salary, name the golden-cage trap directly
+- If their work setup is "Fully in office" or "Hybrid (fixed days)" AND wellbeing/manager is weak, the mandated commute is likely a real factor — name it
+- If their work setup is "Fully remote" AND people module is weak, isolation is likely a real factor — name it
 
 Format your response as JSON only:
 {
@@ -46,8 +50,10 @@ export async function diagnose(input: DiagnoseInput): Promise<DiagnosisResult> {
   }
   const client = new Anthropic({ apiKey })
 
+  const workTypeLabel = input.work_type ? WORK_TYPE_LABELS[input.work_type] : "unknown"
   const userMessage = `User context:
 - Role: ${input.role} in ${input.city}, ${input.yoe} YoE
+- Work setup: ${workTypeLabel}
 - Verdict: ${input.tier} (${input.master}/100)
 - Module scores: work ${input.modules.work}, manager ${input.modules.manager}, people ${input.modules.people}, growth ${input.modules.growth}, money ${input.modules.money}, wellbeing ${input.modules.wellbeing}
 - Weakest module: ${input.weakest_module}

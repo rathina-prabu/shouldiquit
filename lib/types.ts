@@ -16,6 +16,15 @@ export type Role =
 
 export type YoeBand = "0-3" | "4-7" | "8-12" | "13+"
 
+export type WorkType = "remote" | "hybrid_fixed" | "hybrid_flex" | "office"
+
+export const WORK_TYPE_LABELS: Record<WorkType, string> = {
+  remote: "Fully remote",
+  hybrid_fixed: "Hybrid (fixed days)",
+  hybrid_flex: "Hybrid (flexible)",
+  office: "Fully in office",
+}
+
 export type ModuleName = "work" | "manager" | "people" | "growth" | "money" | "wellbeing"
 
 export type AccumulatorName = "intent_to_quit" | "cynicism" | "agency"
@@ -45,6 +54,7 @@ export interface SetupData {
   city: City
   role: Role
   yoe: number
+  work_type: WorkType
 }
 
 export interface SalaryData {

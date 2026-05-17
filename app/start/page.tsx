@@ -1,9 +1,11 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { RisoLayout } from "@/components/RisoLayout"
 import { useQuizStore } from "@/store/quiz-store"
-import type { City, Role } from "@/lib/types"
+import { getOrCreateUserUuid } from "@/lib/user-uuid"
+import type { City, Role, WorkType } from "@/lib/types"
+import { WORK_TYPE_LABELS } from "@/lib/types"
 
 const CITIES: City[] = ["Bangalore", "Mumbai", "Chennai", "Hyderabad", "Gurgaon"]
 
@@ -29,11 +31,19 @@ export default function StartPage() {
   const [city, setCity] = useState<City>("Bangalore")
   const [role, setRole] = useState<Role>("Engineer (IC)")
   const [yoe, setYoe] = useState<number>(8)
+  const [workType, setWorkType] = useState<WorkType>("hybrid_flex")
+
+  // Ensure the anonymous user_uuid exists in localStorage on first /start visit,
+  // even though we no longer display it. The result page's taker-vs-visitor match
+  // depends on this UUID being set before the session is created.
+  useEffect(() => {
+    getOrCreateUserUuid()
+  }, [])
 
   const submit = () => {
     // Start a fresh quiz: wipe previous run before storing the new setup.
     reset()
-    setSetup({ city, role, yoe })
+    setSetup({ city, role, yoe, work_type: workType })
     router.push("/quiz")
   }
 
@@ -88,6 +98,39 @@ export default function StartPage() {
           onChange={(e) => setYoe(parseInt(e.target.value) || 0)}
         />
       </Field>
+
+      <div className="mb-2 mt-2">
+        <div className="text-[11px] tracking-[0.15em] uppercase text-ink/70 mb-2 block font-medium">
+          Work setup
+        </div>
+        <div className="flex flex-col gap-1.5">
+          {(Object.keys(WORK_TYPE_LABELS) as WorkType[]).map((wt) => {
+            const selected = workType === wt
+            return (
+              <button
+                key={wt}
+                type="button"
+                onClick={() => setWorkType(wt)}
+                className={[
+                  "border py-2.5 px-4 text-left text-[14.5px] flex items-center gap-3 transition-colors",
+                  selected
+                    ? "border-ink bg-ink/[0.04]"
+                    : "border-ink/30 hover:border-ink hover:bg-ink/[0.03]",
+                ].join(" ")}
+                aria-pressed={selected}
+              >
+                <span
+                  className={[
+                    "h-3 w-3 rounded-full border-[1.5px] flex-shrink-0",
+                    selected ? "border-accent bg-accent" : "border-ink/40",
+                  ].join(" ")}
+                />
+                <span className="flex-1">{WORK_TYPE_LABELS[wt]}</span>
+              </button>
+            )
+          })}
+        </div>
+      </div>
 
       <button
         onClick={submit}

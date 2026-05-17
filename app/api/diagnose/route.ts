@@ -3,7 +3,7 @@ import { supabaseServer } from "@/lib/supabase"
 import { diagnose, templatedDiagnosis } from "@/lib/claude"
 import { QUESTIONS } from "@/lib/questions"
 import { salaryVsMarket } from "@/lib/benchmarks"
-import type { City, Role, ModuleName, VerdictTier } from "@/lib/types"
+import type { City, Role, ModuleName, VerdictTier, WorkType } from "@/lib/types"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
@@ -70,6 +70,7 @@ export async function POST(req: NextRequest) {
       city: session.city,
       role: session.role,
       yoe: session.yoe,
+      work_type: (session.work_type ?? null) as WorkType | null,
       tier: session.verdict_tier as VerdictTier,
       master: session.master_score,
       modules: {
