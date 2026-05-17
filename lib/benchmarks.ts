@@ -2,21 +2,22 @@ import benchmarksJson from "../data/benchmarks.json"
 import type { City, Role, YoeBand } from "./types"
 
 /**
- * Estimated net daily take-home for a corporate-area chaiwala — 700-1000 cups
- * per day × ₹10-15 per cup × ~50% margin. Picked from tech-park / CBD locations
- * (Bangalore: Whitefield/Indiranagar, Mumbai: BKC/Andheri, Gurgaon: Cyber Hub,
- * Hyderabad: HiTech City, Chennai: OMR). Sources:
- *  - businesstoday.in (tea stall ₹18L/yr → ₹5k/day)
- *  - marketingmind.in (₹3-5k/day common, up to ₹15k for top operators)
+ * Estimated net daily take-home for a corporate-area chaiwala who *also* sells
+ * samosas — base chai (700-1000 cups × ₹10-15 × ~50% margin) + samosa add-on
+ * (~250-400 samosas × ₹15-20 × ~50% margin = ₹2k-4k/day extra). Picked from
+ * tech-park / CBD locations (Bangalore: Whitefield/Indiranagar, Mumbai: BKC/
+ * Andheri, Gurgaon: Cyber Hub, Hyderabad: HiTech City, Chennai: OMR). Sources:
+ *  - businesstoday.in (tea stall ₹18L/yr → ₹5k/day, chai-only)
+ *  - marketingmind.in (₹3-5k/day chai common; ₹15k top operators with snacks)
  *  - dnaindia.com (₹90L/yr top tier)
  */
 const CHAIWALA_DAILY_INR: Record<City, number> = {
-  Bangalore: 4000,
-  Mumbai: 4500,
-  Gurgaon: 4500,
-  Hyderabad: 3500,
-  Chennai: 3000,
-  Others: 3500, // tier-2 cities + remote — slightly below Bangalore tech park baseline
+  Bangalore: 5340,
+  Mumbai: 6285,
+  Gurgaon: 6395,
+  Hyderabad: 4810,
+  Chennai: 3805,
+  Others: 3860, // tier-2 cities + remote — mirror Chennai (same fallback used for salaries)
 }
 
 const WORKING_DAYS_PER_YEAR = 250
@@ -95,20 +96,10 @@ export function lookupSalary(city: City, role: Role, yoe: number): SalaryCell | 
   const underlying = resolveUnderlyingRoles(role, band)
 
   // "Others" (catch-all for non-metro / remote workers) has no city-specific
-  // dataset — average the cells across all five metros for that role+band.
-  if (city === "Others") {
-    const cells: SalaryCell[] = []
-    for (const c of Object.keys(allSalaries)) {
-      for (const r of underlying) {
-        const cell = allSalaries[c]?.[r]?.[band]
-        if (cell) cells.push(cell)
-      }
-    }
-    if (cells.length === 0) return undefined
-    return averageCells(cells)
-  }
-
-  const cityRoles = allSalaries?.[city]
+  // dataset — fall back to Chennai numbers, which sit in the middle of the
+  // metro range and reasonably approximate non-metro India.
+  const resolvedCity = city === "Others" ? "Chennai" : city
+  const cityRoles = allSalaries?.[resolvedCity]
   if (!cityRoles) return undefined
 
   const cells = underlying
@@ -121,7 +112,8 @@ export function lookupSalary(city: City, role: Role, yoe: number): SalaryCell | 
 }
 
 export function lookupCityContext(city: City) {
-  return (benchmarksJson as unknown as { city_context: Record<string, unknown> }).city_context?.[city]
+  const resolvedCity = city === "Others" ? "Chennai" : city
+  return (benchmarksJson as unknown as { city_context: Record<string, unknown> }).city_context?.[resolvedCity]
 }
 
 export function getChaiwalaDaily(city: City): number {
