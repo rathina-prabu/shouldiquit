@@ -7,6 +7,7 @@ interface Props {
   selectedIndex?: 0 | 1 | 2 | 3
   onAnswer: (choiceIndex: 0 | 1 | 2 | 3) => void
   onPrevious?: () => void
+  previousLabel?: string
   onNext?: () => void
 }
 
@@ -23,7 +24,7 @@ function renderLabel(label: string, highlight?: string) {
   )
 }
 
-export function QuestionCard({ question, questionNumber, totalQuestions, selectedIndex, onAnswer, onPrevious, onNext }: Props) {
+export function QuestionCard({ question, questionNumber, totalQuestions, selectedIndex, onAnswer, onPrevious, previousLabel = "Previous", onNext }: Props) {
   const percentDone = Math.round((questionNumber / totalQuestions) * 100)
 
   return (
@@ -64,9 +65,9 @@ export function QuestionCard({ question, questionNumber, totalQuestions, selecte
             type="button"
             onClick={onPrevious}
             className="text-[12px] tracking-[0.12em] uppercase text-ink/70 hover:text-ink font-medium"
-            aria-label="Previous question"
+            aria-label={previousLabel}
           >
-            ← Previous
+            ← {previousLabel}
           </button>
         ) : (
           <span />

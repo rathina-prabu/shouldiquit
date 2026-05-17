@@ -37,12 +37,17 @@ test.describe("Edge cases and navigation guards", () => {
     await expect(page.getByRole("link", { name: /Take the quiz/ })).toBeVisible()
   })
 
-  test("Previous and Next buttons are hidden on the very first visit to Q1", async ({ page }) => {
+  test("Q1 shows 'About Me' as the back button (goes to /start); no Next on first visit", async ({ page }) => {
     await page.goto("/start")
     await fillSetup(page, { city: "Bangalore", role: "Engineer (IC)", yoe: 3 })
     await expect(page.locator(`text=/^Q1$/`).first()).toBeVisible()
-    await expect(page.getByRole("button", { name: "Previous question" })).toHaveCount(0)
-    await expect(page.getByRole("button", { name: "Next question" })).toHaveCount(0)
+    const aboutMe = page.getByRole("button", { name: "About Me" })
+    await expect(aboutMe).toBeVisible()
+    // Next is hidden on fresh Q1
+    await expect(page.getByRole("button", { name: /Next question/i })).toHaveCount(0)
+    // Clicking About Me returns to /start
+    await aboutMe.click()
+    await page.waitForURL(/\/start$/, { timeout: 5000 })
   })
 
   test("after finishing Q3 → Q4, Previous returns to Q3 AND Next is visible (the bug)", async ({ page }) => {

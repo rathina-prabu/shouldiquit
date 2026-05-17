@@ -34,8 +34,14 @@ export default function QuizPage() {
     }
   }
 
-  // Previous: visible only from Q2 onwards
-  const onPrevious = safeIndex > 0 ? () => setQuizIndex(safeIndex - 1) : undefined
+  // Previous: always available.
+  //  • Q1   → "← About Me" returns to /start (lets the user edit Role/YoE/etc.)
+  //  • Q2+  → "← Previous" decrements the index
+  const onPrevious =
+    safeIndex > 0
+      ? () => setQuizIndex(safeIndex - 1)
+      : () => router.push("/start")
+  const previousLabel = safeIndex > 0 ? "Previous" : "About Me"
 
   // Next: visible if the user has already been past the CURRENT question.
   // Concretely, the user has answered at least `safeIndex + 1` questions, meaning
@@ -58,6 +64,7 @@ export default function QuizPage() {
         selectedIndex={previousAnswer}
         onAnswer={handleAnswer}
         onPrevious={onPrevious}
+        previousLabel={previousLabel}
         onNext={onNext}
       />
     </RisoLayout>
