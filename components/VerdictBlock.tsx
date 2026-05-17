@@ -19,7 +19,7 @@ const TIER_TAGLINES: Record<VerdictTier, string> = {
 export function VerdictBlock({ tier, score }: { tier: VerdictTier; score: number }) {
   return (
     <div className="bg-accent text-paper py-9 px-5 -mx-6 mb-8 text-center">
-      <div className="text-[11px] tracking-[0.2em] uppercase opacity-75 mb-2.5 font-medium">
+      <div className="text-[13px] tracking-[0.04em] opacity-80 mb-2.5 italic">
         Should I Quit?
       </div>
       <h1 className="font-display text-[32px] leading-[1] tracking-tight mb-4 uppercase break-words px-1">
