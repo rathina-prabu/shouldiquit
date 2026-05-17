@@ -4,7 +4,7 @@ export const QUESTIONS: Question[] = [
   // Module 1: THE WORK (3 questions)
   {
     id: "q1", module: "work",
-    prompt: "The nature of your work, most weeks:",
+    prompt: "The nature of your work, usually:",
     choices: [
       { label: "A meaty mix — real challenges, things to figure out.", scores: { work: 5 } },
       { label: "Mostly repetitive, occasional spike of something interesting.", scores: { work: 3 } },
