@@ -11,10 +11,12 @@ export default function LandingPage() {
         <h1 className="font-display text-[56px] leading-[0.95] tracking-[-2px] mb-6">
           Should<br />I Quit?
         </h1>
+        <p className="text-[17px] leading-[1.45] mb-4 max-w-[340px]">
+          It&apos;s a hard question. It keeps coming back. There&apos;s no one safe to ask.
+        </p>
         <p className="text-[17px] leading-[1.45] mb-8 max-w-[340px]">
-          An app that asks the questions and answers one.{" "}
           <em className="text-accent font-medium not-italic">
-            We don&apos;t know who you are. That&apos;s the point.
+            We&apos;ll do the asking — and answer the one you came for. Anonymously.
           </em>
         </p>
         <Link
