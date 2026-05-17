@@ -14,7 +14,7 @@ function renderLabel(label: string, highlight?: string) {
   return (
     <>
       {label.slice(0, idx)}
-      <span className="text-accent font-medium">{label.slice(idx, idx + highlight.length)}</span>
+      <span className="text-accent">{label.slice(idx, idx + highlight.length)}</span>
       {label.slice(idx + highlight.length)}
     </>
   )
