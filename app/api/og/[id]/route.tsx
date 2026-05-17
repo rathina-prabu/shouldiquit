@@ -13,7 +13,7 @@ const TIER_TEXT: Record<string, string> = {
 
 const TIER_TAGLINES: Record<string, string> = {
   STAY_THRIVE: "You're winning. Close the tabs. Touch grass.",
-  STAY_FIX: "Mostly fine. Fix the one broken thing.",
+  STAY_FIX: "Mostly fine. Fix the small broken things.",
   ITS_COMPLICATED: "The middle. You know it. The data confirms it.",
   START_LOOKING: "Update the CV. You don't need to bolt today, but start.",
   LEAVE_NOW: "The math is done. Open LinkedIn.",
