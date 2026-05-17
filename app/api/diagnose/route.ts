@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from "next/server"
 import { supabaseServer } from "@/lib/supabase"
-import { templatedDiagnosis } from "@/lib/claude"
+import { templatedDiagnoses } from "@/lib/claude"
 import type { ModuleName, VerdictTier } from "@/lib/types"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
 
 // Diagnosis is template-driven (no AI calls). 30 hand-written templates cover
-// every (weakest_module × verdict_tier) pair. The Claude SDK wiring in
-// lib/claude.ts is preserved for a future switch but not invoked.
+// every (module × verdict_tier) pair. We now return one block per weak module
+// (score < 60), sorted weakest-first, so users see *every* problem area —
+// not just the single lowest score.
 export async function POST(req: NextRequest) {
   let session_id: string | undefined
   try {
@@ -32,28 +33,45 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "session not found" }, { status: 404 })
   }
 
-  // Return cached if already computed for this session.
-  if (session.diagnosis_paragraph) {
+  // Return cached blocks if already computed for this session.
+  // `diagnosis_actions` now stores the structured blocks array (JSONB).
+  if (
+    Array.isArray(session.diagnosis_actions) &&
+    session.diagnosis_actions.length > 0 &&
+    typeof session.diagnosis_actions[0] === "object"
+  ) {
     return NextResponse.json({
-      diagnosis: session.diagnosis_paragraph,
-      actions: session.diagnosis_actions ?? [],
+      blocks: session.diagnosis_actions,
       source: "cached",
     })
   }
 
-  const result = templatedDiagnosis(
-    session.weakest_module as ModuleName,
+  const moduleScores: Record<ModuleName, number> = {
+    work: session.module_work,
+    manager: session.module_manager,
+    people: session.module_people,
+    growth: session.module_growth,
+    money: session.module_money,
+    wellbeing: session.module_wellbeing,
+  }
+
+  const blocks = templatedDiagnoses(
+    moduleScores,
     session.verdict_tier as VerdictTier,
   )
 
-  // Cache for next visit (visitor view + result page rerenders).
+  // Cache. Put structured blocks in diagnosis_actions (JSONB) and a flat
+  // concatenated text in diagnosis_paragraph for any legacy consumer / search.
+  const flatText = blocks
+    .map((b) => `${b.label}\n${b.diagnosis}`)
+    .join("\n\n")
   await supabase
     .from("sessions")
     .update({
-      diagnosis_paragraph: result.diagnosis,
-      diagnosis_actions: result.actions,
+      diagnosis_paragraph: flatText,
+      diagnosis_actions: blocks,
     })
     .eq("id", session_id)
 
-  return NextResponse.json({ ...result, source: "template" })
+  return NextResponse.json({ blocks, source: "template" })
 }

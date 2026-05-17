@@ -6,7 +6,7 @@ import { supabaseBrowser } from "@/lib/supabase"
 import { RisoLayout } from "@/components/RisoLayout"
 import { VerdictBlock } from "@/components/VerdictBlock"
 import { MoneySection } from "@/components/MoneySection"
-import { DiagnosisBlock } from "@/components/DiagnosisBlock"
+import { DiagnosisBlock, type DiagnosisBlockData } from "@/components/DiagnosisBlock"
 import { ShareButtons } from "@/components/ShareButtons"
 import { getOrCreateUserUuid } from "@/lib/user-uuid"
 import type { City, Role, VerdictTier, ModuleName } from "@/lib/types"
@@ -30,13 +30,12 @@ interface Session {
   verdict_tier: VerdictTier
   weakest_module: ModuleName
   diagnosis_paragraph: string | null
-  diagnosis_actions: string[] | null
+  diagnosis_actions: unknown
   created_at: string
 }
 
-interface DiagnosisData {
-  diagnosis: string
-  actions: string[]
+interface DiagnoseResponse {
+  blocks: DiagnosisBlockData[]
 }
 
 const TIER_TAGLINES: Record<VerdictTier, string> = {
@@ -60,7 +59,7 @@ export default function ResultPage() {
   const id = params?.id
   const [session, setSession] = useState<Session | null>(null)
   const [missing, setMissing] = useState(false)
-  const [diagnosis, setDiagnosis] = useState<DiagnosisData | null>(null)
+  const [diagnosisBlocks, setDiagnosisBlocks] = useState<DiagnosisBlockData[] | null>(null)
   const [isTaker, setIsTaker] = useState(false)
   const [shareUrl, setShareUrl] = useState("")
 
@@ -86,8 +85,13 @@ export default function ResultPage() {
         setSession(s)
         const myUuid = getOrCreateUserUuid()
         setIsTaker(Boolean(myUuid && myUuid === s.user_uuid))
-        if (s.diagnosis_paragraph && Array.isArray(s.diagnosis_actions)) {
-          setDiagnosis({ diagnosis: s.diagnosis_paragraph, actions: s.diagnosis_actions })
+        // diagnosis_actions now holds the structured blocks array (JSONB).
+        if (
+          Array.isArray(s.diagnosis_actions) &&
+          s.diagnosis_actions.length > 0 &&
+          typeof s.diagnosis_actions[0] === "object"
+        ) {
+          setDiagnosisBlocks(s.diagnosis_actions as DiagnosisBlockData[])
         }
       })
     return () => {
@@ -96,7 +100,7 @@ export default function ResultPage() {
   }, [id])
 
   useEffect(() => {
-    if (!session || !isTaker || diagnosis) return
+    if (!session || !isTaker || diagnosisBlocks) return
     let cancelled = false
     fetch("/api/diagnose", {
       method: "POST",
@@ -104,8 +108,8 @@ export default function ResultPage() {
       body: JSON.stringify({ session_id: id }),
     })
       .then((r) => r.json())
-      .then((data: DiagnosisData) => {
-        if (!cancelled) setDiagnosis(data)
+      .then((data: DiagnoseResponse) => {
+        if (!cancelled && Array.isArray(data.blocks)) setDiagnosisBlocks(data.blocks)
       })
       .catch(() => {
         // server will fall back internally; if even that fails, render empty
@@ -113,7 +117,7 @@ export default function ResultPage() {
     return () => {
       cancelled = true
     }
-  }, [session, isTaker, id, diagnosis])
+  }, [session, isTaker, id, diagnosisBlocks])
 
   if (missing) {
     return (
@@ -215,11 +219,7 @@ export default function ResultPage() {
         fixed_lakhs={session.salary_fixed_lakhs}
         variable_lakhs={session.salary_variable_lakhs}
       />
-      <DiagnosisBlock
-        diagnosis={diagnosis?.diagnosis ?? null}
-        actions={diagnosis?.actions ?? null}
-        loading={!diagnosis}
-      />
+      <DiagnosisBlock blocks={diagnosisBlocks} loading={!diagnosisBlocks} />
     </RisoLayout>
   )
 }

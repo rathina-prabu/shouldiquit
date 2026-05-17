@@ -391,3 +391,42 @@ export function templatedDiagnosis(
   const key = `${weakest}_${tier}` as TemplateKey
   return TEMPLATES[key] ?? FALLBACK
 }
+
+export interface DiagnosisBlockData extends DiagnosisResult {
+  module: ModuleName
+  label: string
+  score: number
+}
+
+/**
+ * Picks every module that scored below `weakThreshold` and returns a hand-
+ * written diagnosis block for each, sorted weakest-first. If nothing falls
+ * below the threshold, returns just the single weakest module — so users
+ * with strong scores still get one paragraph.
+ */
+export function templatedDiagnoses(
+  moduleScores: Record<ModuleName, number>,
+  tier: VerdictTier,
+  weakThreshold = 60,
+): DiagnosisBlockData[] {
+  const labels: Record<ModuleName, string> = {
+    work: "The Work",
+    manager: "The Manager",
+    people: "The People",
+    growth: "The Growth",
+    money: "The Money",
+    wellbeing: "The State of You",
+  }
+
+  const ranked = (Object.keys(moduleScores) as ModuleName[])
+    .map((m) => ({ module: m, score: moduleScores[m] }))
+    .sort((a, b) => a.score - b.score)
+
+  const picks = ranked.filter((r) => r.score < weakThreshold)
+  const finalPicks = picks.length > 0 ? picks : ranked.slice(0, 1)
+
+  return finalPicks.map(({ module, score }) => {
+    const { diagnosis, actions } = templatedDiagnosis(module, tier)
+    return { module, label: labels[module], score, diagnosis, actions }
+  })
+}
