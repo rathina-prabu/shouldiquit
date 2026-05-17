@@ -12,10 +12,7 @@ interface Props {
 function renderLeft(node: ReactNode): ReactNode {
   if (typeof node === "string" && node.startsWith("shouldiquit.work")) {
     return (
-      <Link
-        href="/"
-        className="text-ink font-medium hover:opacity-80 transition-opacity [text-shadow:1px_1.5px_0_#e8576b]"
-      >
+      <Link href="/" className="hover:text-ink transition-colors">
         {node}
       </Link>
     )
