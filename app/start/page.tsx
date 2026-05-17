@@ -57,8 +57,10 @@ function StartForm() {
 
   const isRemote = workType === "remote"
   const yoe = yoeText === "" ? 0 : parseInt(yoeText) || 0
+  const tooSenior = yoe > 40
 
   const submit = () => {
+    if (tooSenior) return
     reset()
     setSetup({
       city: isRemote ? "Others" : city,
@@ -108,9 +110,9 @@ function StartForm() {
             setYoeText(digits === "" ? "" : String(parseInt(digits)))
           }}
         />
-        {yoe > 40 && (
+        {tooSenior && (
           <div className="mt-2 text-[12.5px] text-accent italic leading-snug">
-            Boss, 40+ years in? You don&apos;t need a quiz, you need a holiday. This one isn&apos;t for you.
+            Boss, you&apos;ve outgrown this quiz. You&apos;ve already made it.
           </div>
         )}
       </Field>
@@ -147,7 +149,8 @@ function StartForm() {
 
       <button
         onClick={submit}
-        className="mt-10 bg-ink text-paper px-6 py-4 font-medium text-[15px] tracking-[0.05em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all text-center"
+        disabled={tooSenior}
+        className="mt-10 bg-ink text-paper px-6 py-4 font-medium text-[15px] tracking-[0.05em] shadow-[3px_3px_0_#e8576b] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#e8576b] transition-all text-center disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[3px_3px_0_#e8576b]"
       >
         Start the questions →
       </button>
