@@ -8,6 +8,40 @@ interface Props {
   weakestModule: string
 }
 
+// navigator.clipboard.writeText only exists in secure contexts (https or
+// localhost). On a phone hitting http://192.168.x:3000 over LAN it's undefined.
+// Falls back to a hidden <textarea> + document.execCommand('copy') which works
+// everywhere.
+async function writeClipboard(value: string): Promise<boolean> {
+  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(value)
+      return true
+    } catch {
+      // fall through
+    }
+  }
+  if (typeof document === "undefined") return false
+  const ta = document.createElement("textarea")
+  ta.value = value
+  ta.style.position = "fixed"
+  ta.style.top = "-9999px"
+  ta.style.left = "-9999px"
+  ta.style.opacity = "0"
+  ta.setAttribute("readonly", "")
+  document.body.appendChild(ta)
+  ta.select()
+  ta.setSelectionRange(0, value.length)
+  let ok = false
+  try {
+    ok = document.execCommand("copy")
+  } catch {
+    ok = false
+  }
+  document.body.removeChild(ta)
+  return ok
+}
+
 const TIER_TEXT: Record<string, string> = {
   STAY_THRIVE: "STAY & THRIVE ✅",
   STAY_FIX: "STAY & FIX 🤔",
@@ -39,15 +73,19 @@ export function ShareButtons({ shareUrl, tier, score, weakestModule }: Props) {
         // user cancelled or unsupported, fall through to copy
       }
     }
-    await navigator.clipboard.writeText(text)
-    setCopied("text")
-    setTimeout(() => setCopied(null), 2000)
+    const ok = await writeClipboard(text)
+    if (ok) {
+      setCopied("text")
+      setTimeout(() => setCopied(null), 2000)
+    }
   }
 
   const copyLink = async () => {
-    await navigator.clipboard.writeText(shareUrl)
-    setCopied("link")
-    setTimeout(() => setCopied(null), 2000)
+    const ok = await writeClipboard(shareUrl)
+    if (ok) {
+      setCopied("link")
+      setTimeout(() => setCopied(null), 2000)
+    }
   }
 
   return (
