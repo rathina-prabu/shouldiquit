@@ -203,6 +203,12 @@ export default function ResultPage() {
   return (
     <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Verdict">
       <VerdictBlock tier={tier} score={session.master_score} />
+      <ShareButtons
+        shareUrl={shareUrl}
+        tier={tier}
+        score={session.master_score}
+        weakestModule={session.weakest_module}
+      />
       <MoneySection
         city={session.city as City}
         role={session.role as Role}
@@ -214,12 +220,6 @@ export default function ResultPage() {
         diagnosis={diagnosis?.diagnosis ?? null}
         actions={diagnosis?.actions ?? null}
         loading={!diagnosis}
-      />
-      <ShareButtons
-        shareUrl={shareUrl}
-        tier={tier}
-        score={session.master_score}
-        weakestModule={session.weakest_module}
       />
       <HelplineFooter />
     </RisoLayout>
