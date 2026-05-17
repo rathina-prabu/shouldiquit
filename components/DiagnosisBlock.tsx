@@ -28,12 +28,18 @@ export function DiagnosisBlock({ blocks, loading }: Props) {
     )
   }
 
-  // One action from each weak module (weakest first), capped at 3 — so the
-  // "This week, try" list stays tight even when multiple modules are weak.
-  const allActions = blocks
-    .map((b) => b.actions[0])
-    .filter((a): a is string => Boolean(a))
-    .slice(0, 3)
+  // "This week, try" rules:
+  //  - multiple weak modules → 1 action from each (weakest-first), max 3.
+  //    Guarantees variety; never 3 actions from the same module.
+  //  - single block → use that module's first 3 actions (otherwise the list
+  //    would be a lonely one-liner).
+  const allActions =
+    blocks.length > 1
+      ? blocks
+          .map((b) => b.actions[0])
+          .filter((a): a is string => Boolean(a))
+          .slice(0, 3)
+      : (blocks[0]?.actions ?? []).slice(0, 3)
 
   return (
     <>
