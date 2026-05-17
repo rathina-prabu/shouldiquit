@@ -111,7 +111,7 @@ export const QUESTIONS: Question[] = [
       { label: "Genuinely on your side. They've fought for you behind the scenes.", highlight: "Genuinely on your side", scores: { people: 4 } },
       { label: "Diwali emails. Engagement surveys. Background noise.", highlight: "Background noise", scores: { people: 3 } },
       { label: "\"Open door policy.\" Nobody home when you knock.", highlight: "Nobody home when you knock", scores: { people: 1, cynicism: 2 } },
-      { label: "They take leadership's side. Every time.", highlight: "Every time", scores: { people: 0, cynicism: 3 } },
+      { label: "They take leadership's side. Every time.", highlight: "leadership's side", scores: { people: 0, cynicism: 3 } },
     ],
   },
   // Module 4: THE GROWTH (3 questions)
