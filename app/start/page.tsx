@@ -35,7 +35,7 @@ export default function StartPage() {
   }, [])
 
   if (!hydrated) {
-    return <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Step 1 of 3" />
+    return <RisoLayout topBarLeft="shouldiquit.work" topBarRight="The Basics" />
   }
   return <StartForm />
 }
@@ -75,11 +75,8 @@ function StartForm() {
   }
 
   return (
-    <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Step 1 of 3">
-      <div className="text-[12px] tracking-[0.18em] uppercase text-accent mb-2 font-medium">
-        First, the basics
-      </div>
-      <h1 className="font-display text-[30px] leading-tight tracking-tight mb-3">
+    <RisoLayout topBarLeft="shouldiquit.work" topBarRight="The Basics">
+      <h1 className="font-display text-[30px] leading-tight tracking-tight mb-3 mt-2">
         Tell us about you.
       </h1>
       <p className="text-[15px] leading-[1.55] mb-7">
