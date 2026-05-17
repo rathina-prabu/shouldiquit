@@ -180,6 +180,16 @@ export function computeRealDailyRate(fixedLakhs: number, variableLakhs: number):
 }
 
 /**
+ * Variable / bonus is conditional — only paid if targets land. We treat it
+ * as 0.8 of fixed for benchmark comparisons so heavy-target packages don't
+ * look artificially well-paid. UI still shows the user their full reported
+ * total; this discount only feeds the salary-vs-market offset.
+ */
+export function offsetEligibleTotal(fixedLakhs: number, variableLakhs: number): number {
+  return (fixedLakhs || 0) + (variableLakhs || 0) * 0.8
+}
+
+/**
  * Salary offset applied to the Money module score. Still asymmetric — being
  * underpaid hurts more than being top-of-market helps — but capped so the
  * money quiz answers can still influence the verdict even when the salary

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { supabaseServer } from "@/lib/supabase"
 import { computeScores, recomputeMasterWithOffsets, computeWorkTypeOffset, deriveVerdict, findWeakestModule } from "@/lib/scoring"
-import { computeSalaryOffset } from "@/lib/benchmarks"
+import { computeSalaryOffset, offsetEligibleTotal } from "@/lib/benchmarks"
 import { generateShortId } from "@/lib/short-id"
 import type { Answer, City, Role, SetupData, SalaryData } from "@/lib/types"
 
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
   const scores = computeScores(answers)
   const moneyOffset = computeSalaryOffset(
-    (salary.fixed_lakhs || 0) + (salary.variable_lakhs || 0),
+    offsetEligibleTotal(salary.fixed_lakhs, salary.variable_lakhs),
     setup.city as City,
     setup.role as Role,
     setup.yoe,
