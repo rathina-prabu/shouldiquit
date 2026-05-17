@@ -172,8 +172,7 @@ function SkipDialog({
         </h3>
         <p className="text-[13.5px] leading-[1.55] text-ink/80 mb-2">
           Salary is one of the strongest signals. Without it we can&apos;t check
-          you against the market, can&apos;t calculate your real take-home, and
-          can&apos;t show you how you stack up.
+          you against the market.
         </p>
         <p className="text-[13.5px] leading-[1.55] text-ink/80 mb-5">
           Your salary stays anonymous. We don&apos;t know who you are.
