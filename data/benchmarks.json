@@ -242,7 +242,7 @@
           "p90": 60,
           "confidence": "low",
           "sources": [
-            "estimate"
+            "estimate (EM role typically requires 5+y experience)"
           ]
         },
         "4-7": {
@@ -252,20 +252,21 @@
           "p90": 72,
           "confidence": "medium",
           "sources": [
-            "Glassdoor",
-            "PayScale"
+            "Glassdoor Bangalore EM",
+            "PayScale Bangalore EM avg 40.9L"
           ]
         },
         "8-12": {
-          "p25": 40,
-          "p50": 56,
-          "p75": 72,
-          "p90": 95,
+          "p25": 35,
+          "p50": 45,
+          "p75": 65,
+          "p90": 83,
           "confidence": "high",
           "sources": [
-            "Glassdoor",
-            "Levels.fyi",
-            "PayScale"
+            "Glassdoor Bangalore EM (avg 45.5L, p90 82.7L; 2026)",
+            "PayScale Bangalore EM avg 40.9L (2026)",
+            "Levels.fyi Bangalore SWE Mgr 68.6-130L range",
+            "6figr Bangalore EM"
           ]
         },
         "13+": {
@@ -273,10 +274,12 @@
           "p50": 75,
           "p75": 100,
           "p90": 135,
-          "confidence": "medium",
+          "confidence": "high",
           "sources": [
-            "Glassdoor",
-            "Levels.fyi"
+            "Levels.fyi Bangalore SWE Mgr 68.6-130L (mid to senior IC)",
+            "Google Bangalore SWE Mgr L5-L7 109.8-321.7L",
+            "Microsoft Bangalore SWE Mgr lvl 64-67 104.7-241.2L",
+            "Glassdoor Bangalore EM p90 82.7L (broad cohort)"
           ]
         }
       },
@@ -538,13 +541,16 @@
           ]
         },
         "13+": {
-          "p25": 28,
-          "p50": 38,
-          "p75": 50,
-          "p90": 65,
-          "confidence": "medium",
+          "p25": 25,
+          "p50": 33,
+          "p75": 45,
+          "p90": 58,
+          "confidence": "high",
           "sources": [
-            "6figr"
+            "Glassdoor Bangalore Sr DevOps Engineer (avg 21.75L, p25 14L, p75 29.6L; 13+ above)",
+            "Glassdoor Bangalore DevOps p90 24.7L (general cohort; 13+ top)",
+            "6figr Bangalore Sr DevOps",
+            "Quora context Sr DevOps Bangalore 25-50L"
           ]
         }
       },
@@ -986,25 +992,27 @@
           ]
         },
         "8-12": {
-          "p25": 34,
-          "p50": 44,
-          "p75": 59,
-          "p90": 76,
-          "confidence": "medium",
+          "p25": 22,
+          "p50": 33,
+          "p75": 43,
+          "p90": 52,
+          "confidence": "high",
           "sources": [
-            "Glassdoor Chennai PM",
+            "Glassdoor Chennai Senior Product Manager (avg 33L, p25 22L, p75 43L, p90 52L; 2026)",
+            "PayScale Chennai Sr PM",
             "productleadership.com 2026"
           ]
         },
         "13+": {
-          "p25": 50,
-          "p50": 64,
-          "p75": 86,
-          "p90": 110,
+          "p25": 38,
+          "p50": 50,
+          "p75": 65,
+          "p90": 85,
           "confidence": "medium",
           "sources": [
-            "Glassdoor Chennai",
-            "productleadership.com 2026"
+            "Glassdoor Chennai SPM upper bands (p90 ~52L for avg cohort; 13+ extrapolates higher)",
+            "productleadership.com 2026 (Sr/Group PM 55-90L national)",
+            "PayScale Chennai Sr PM"
           ]
         }
       },
@@ -1266,14 +1274,16 @@
           ]
         },
         "13+": {
-          "p25": 25,
-          "p50": 35,
-          "p75": 45,
-          "p90": 60,
-          "confidence": "medium",
+          "p25": 24,
+          "p50": 32,
+          "p75": 42,
+          "p90": 55,
+          "confidence": "high",
           "sources": [
-            "Glassdoor Chennai Tech Lead extrapolated",
-            "PayScale India Sr Tech Lead"
+            "Glassdoor Chennai Technical Lead avg 14.65L (general cohort; 13+ at top quartile + senior premium)",
+            "6figr Senior Technical Lead India avg 21L (p75 ~30L)",
+            "PayScale India Sr Technical Lead avg 20.98L",
+            "Chennai Sr Tech Lead 13+y typically 25-50L range"
           ]
         }
       },
@@ -1331,40 +1341,44 @@
           "p90": 18,
           "confidence": "low",
           "sources": [
-            "estimate"
+            "estimate",
+            "AmbitionBox UX India entry 2-7L"
           ]
         },
         "4-7": {
-          "p25": 12,
-          "p50": 16,
-          "p75": 22,
-          "p90": 29,
-          "confidence": "medium",
+          "p25": 11,
+          "p50": 15,
+          "p75": 21,
+          "p90": 27,
+          "confidence": "high",
           "sources": [
-            "Cutshort Chennai",
-            "Glassdoor Chennai UX"
+            "Glassdoor India Senior UX Designer (avg 15.3L, p25 9.9L, p75 21.5L)",
+            "PayScale Chennai UX Designer avg 7L (mid bracket)",
+            "Cutshort Chennai Senior Designer listings"
           ]
         },
         "8-12": {
-          "p25": 19,
-          "p50": 25,
-          "p75": 35,
-          "p90": 44,
-          "confidence": "medium",
+          "p25": 16,
+          "p50": 22,
+          "p75": 28,
+          "p90": 36,
+          "confidence": "high",
           "sources": [
-            "simplilearn 2026",
-            "internshala"
+            "6figr Sr UX Designer India avg 27L",
+            "Glassdoor India Sr UX Designer p75 21.5L (Chennai slightly below)",
+            "simplilearn UI/UX 2026 senior bracket"
           ]
         },
         "13+": {
-          "p25": 26,
-          "p50": 35,
-          "p75": 48,
-          "p90": 62,
-          "confidence": "low",
+          "p25": 22,
+          "p50": 30,
+          "p75": 40,
+          "p90": 52,
+          "confidence": "medium",
           "sources": [
-            "estimate",
-            "internshala (lead 15-35L)"
+            "6figr Sr UX India top quartile 30-42L",
+            "internshala lead designer 15-35L (Chennai)",
+            "Glassdoor India Sr UX 90th ~ 30L+"
           ]
         }
       },
@@ -1461,13 +1475,15 @@
       "DevOps Engineer": {
         "0-3": {
           "p25": 4,
-          "p50": 5,
+          "p50": 5.5,
           "p75": 7,
           "p90": 9,
           "confidence": "high",
           "sources": [
             "Glassdoor Chennai DevOps (avg 7.6L, p25 5.3L)",
-            "slajobs.com (entry 4.4L)"
+            "slajobs.com (entry 4.4L; 4.5-6.5L fresher range Chennai)",
+            "AmbitionBox DevOps India avg 6L",
+            "upGrad 2026 fresher 4.1-7L"
           ]
         },
         "4-7": {
@@ -1684,41 +1700,48 @@
           "p25": 5,
           "p50": 7,
           "p75": 10,
-          "p90": 14,
-          "confidence": "medium",
+          "p90": 13,
+          "confidence": "high",
           "sources": [
-            "Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L; 208 samples Feb 2026)"
+            "Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L; 208 samples 2026)",
+            "PayScale CSM India 4-9y entry bracket",
+            "Indeed India CSM Chennai 0-3y"
           ]
         },
         "4-7": {
           "p25": 7,
-          "p50": 12,
-          "p75": 17,
-          "p90": 24,
+          "p50": 11,
+          "p75": 16,
+          "p90": 22,
           "confidence": "high",
           "sources": [
-            "Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L)"
+            "Glassdoor Chennai CSM (avg 12L, p25 6.9L, p75 17L, p90 27L)",
+            "PayScale CSM India",
+            "RepVue CSM India Jan 2026"
           ]
         },
         "8-12": {
-          "p25": 14,
-          "p50": 19,
-          "p75": 26,
-          "p90": 34,
-          "confidence": "medium",
+          "p25": 13,
+          "p50": 18,
+          "p75": 25,
+          "p90": 32,
+          "confidence": "high",
           "sources": [
-            "Glassdoor Chennai CSM upper bands"
+            "Glassdoor Chennai CSM p75 17L, p90 27L for combined cohort (8-12 sits above avg)",
+            "6figr Sr CSM India avg 27L",
+            "PayScale Sr CSM India"
           ]
         },
         "13+": {
-          "p25": 20,
-          "p50": 28,
-          "p75": 37,
-          "p90": 48,
-          "confidence": "low",
+          "p25": 18,
+          "p50": 25,
+          "p75": 33,
+          "p90": 42,
+          "confidence": "medium",
           "sources": [
-            "estimate",
-            "Glassdoor Chennai CSM p90 27L"
+            "6figr Senior CSM India avg 27L (p75 ~30L)",
+            "Glassdoor India Sr CSM avg 21L (p75 30.2L, p90 38L)",
+            "Glassdoor Chennai CSM p90 27L (general cohort; 13+ above)"
           ]
         }
       },
@@ -1728,41 +1751,46 @@
           "p50": 5.5,
           "p75": 7.5,
           "p90": 10,
-          "confidence": "low",
+          "confidence": "medium",
           "sources": [
-            "Glassdoor Chennai Sr BA (low 6.2L)",
-            "estimate"
+            "Glassdoor Chennai Financial Analyst (avg 8L, p25 5.4L, p75 11.4L, p90 14L)",
+            "AmbitionBox Chennai Analyst (5-9.5L range)"
           ]
         },
         "4-7": {
-          "p25": 7,
-          "p50": 9,
-          "p75": 12,
-          "p90": 16,
-          "confidence": "low",
+          "p25": 6,
+          "p50": 8,
+          "p75": 11,
+          "p90": 14,
+          "confidence": "high",
           "sources": [
-            "estimate",
-            "Glassdoor India Finance Analyst"
+            "Glassdoor Chennai Financial Analyst (avg 8L, p25 5.4L, p75 11.4L, p90 14L; 2026)",
+            "AmbitionBox Chennai Analyst 5-9.5L",
+            "Indeed India Financial Analyst Chennai"
           ]
         },
         "8-12": {
-          "p25": 12,
-          "p50": 15,
-          "p75": 20,
-          "p90": 25,
-          "confidence": "low",
+          "p25": 10,
+          "p50": 14,
+          "p75": 18,
+          "p90": 23,
+          "confidence": "medium",
           "sources": [
-            "estimate"
+            "PayScale India Senior Financial Analyst 6.45-16.5L",
+            "Glassdoor Chennai Financial Planning Analyst (avg 11.5L, p25 7.9L, p75 22L)",
+            "Indeed India Senior FA 10-20y 11.2-14.1L"
           ]
         },
         "13+": {
-          "p25": 16,
-          "p50": 22,
-          "p75": 30,
-          "p90": 38,
-          "confidence": "low",
+          "p25": 15,
+          "p50": 20,
+          "p75": 27,
+          "p90": 35,
+          "confidence": "medium",
           "sources": [
-            "estimate"
+            "Glassdoor Chennai Financial Planning Analyst p75 22L extrapolated upward",
+            "PayScale India Sr FA 15-25L for 5+ yrs (13+ tops range)",
+            "6figr Senior Financial Analyst India"
           ]
         }
       },
@@ -1772,42 +1800,48 @@
           "p50": 6.5,
           "p75": 9,
           "p90": 12,
-          "confidence": "low",
+          "confidence": "medium",
           "sources": [
             "Glassdoor Chennai HR Manager (avg 10L, p25 6.3L)",
-            "keka.com"
+            "keka.com HRBP India entry band",
+            "PayScale India HRBP 4-9y"
           ]
         },
         "4-7": {
           "p25": 8,
           "p50": 11,
           "p75": 15,
-          "p90": 20,
-          "confidence": "medium",
+          "p90": 19,
+          "confidence": "high",
           "sources": [
-            "Glassdoor Chennai HR Manager (avg 10L, p25 6.3L, p75 14.5L)"
+            "Glassdoor Chennai HR Manager (avg 10L, p25 6.3L, p75 14.5L)",
+            "keka.com HRBP India (Chennai +8-12% premium over national median 12.14L)",
+            "PayScale India HRBP"
           ]
         },
         "8-12": {
-          "p25": 14,
-          "p50": 19,
-          "p75": 25,
-          "p90": 33,
-          "confidence": "medium",
+          "p25": 13,
+          "p50": 17,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
           "sources": [
-            "Glassdoor Chennai HR upper bands",
-            "keka.com HRBP"
+            "keka.com HRBP India national median 12.14L (Chennai +8-12% premium)",
+            "Glassdoor India HRBP avg 13.7L",
+            "6figr HRBP India",
+            "Senior HRBP (8+ yrs) avg 17.24L"
           ]
         },
         "13+": {
-          "p25": 22,
-          "p50": 30,
-          "p75": 40,
-          "p90": 51,
-          "confidence": "low",
+          "p25": 20,
+          "p50": 26,
+          "p75": 34,
+          "p90": 44,
+          "confidence": "medium",
           "sources": [
-            "estimate",
-            "keka.com HRBP India"
+            "keka.com Senior HRBP India 15-30L range",
+            "Senior/strategic HR roles 21.6-48L national",
+            "6figr Senior HRBP India avg 27L"
           ]
         }
       },
@@ -1817,41 +1851,46 @@
           "p50": 7,
           "p75": 9,
           "p90": 12,
-          "confidence": "low",
+          "confidence": "medium",
           "sources": [
-            "estimate",
-            "Glassdoor India Ops Mgr"
+            "PayScale Chennai Ops Mgr entry 4.5L, early career 6.5L",
+            "Glassdoor India Ops Mgr lower band 3.6-8L"
           ]
         },
         "4-7": {
           "p25": 8,
           "p50": 11,
-          "p75": 15,
-          "p90": 20,
-          "confidence": "low",
+          "p75": 14,
+          "p90": 18,
+          "confidence": "high",
           "sources": [
-            "estimate",
-            "Glassdoor India"
+            "Glassdoor Chennai Operations Manager (avg 12L, range 8.4-20L; 419 samples)",
+            "PayScale Chennai Ops Mgr avg 10.08L",
+            "Indeed India Ops Mgr"
           ]
         },
         "8-12": {
-          "p25": 14,
-          "p50": 18,
-          "p75": 24,
-          "p90": 32,
-          "confidence": "low",
+          "p25": 13,
+          "p50": 17,
+          "p75": 22,
+          "p90": 28,
+          "confidence": "high",
           "sources": [
-            "estimate"
+            "Glassdoor Chennai Ops Mgr (top 20L for cohort; senior bracket above)",
+            "upGrad 2025: avg 18.5L India",
+            "Chennai +19% premium per salaryexpert"
           ]
         },
         "13+": {
-          "p25": 21,
+          "p25": 20,
           "p50": 28,
-          "p75": 37,
-          "p90": 48,
-          "confidence": "low",
+          "p75": 38,
+          "p90": 50,
+          "confidence": "medium",
           "sources": [
-            "estimate"
+            "Indeed Senior Ops Mgr India 10+y 30L+",
+            "upGrad 2025: 13.8-50L majority range",
+            "Senior Ops Mgr/Director 30-50L+ India"
           ]
         }
       },
