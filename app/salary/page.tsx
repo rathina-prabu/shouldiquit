@@ -36,6 +36,7 @@ export default function SalaryPage() {
   const total = (fixed || 0) + (variable || 0)
 
   const [showSkipDialog, setShowSkipDialog] = useState(false)
+  const [showZeroDialog, setShowZeroDialog] = useState(false)
 
   const submitWithPayload = async (salaryPayload: {
     fixed_lakhs: number | null
@@ -75,12 +76,28 @@ export default function SalaryPage() {
       )
       return
     }
+    // Fixed = 0 almost always means "I don't have a salary right now"
+    // (between jobs / intern / unemployed). Confirm before treating as a
+    // valid zero — otherwise the salary offset would score them as severely
+    // underpaid relative to market, which isn't the intent.
+    if (fixed === 0) {
+      setWarn(null)
+      setShowZeroDialog(true)
+      return
+    }
     setWarn(null)
     await submitWithPayload({ fixed_lakhs: fixed, variable_lakhs: variable })
   }
 
   const confirmSkip = async () => {
     setShowSkipDialog(false)
+    await submitWithPayload({ fixed_lakhs: null, variable_lakhs: null, skipped: true })
+  }
+
+  // 0-fixed flow: confirm intent. Yes → treat as skip. No → close dialog,
+  // user fixes the field.
+  const confirmZeroAsSkip = async () => {
+    setShowZeroDialog(false)
     await submitWithPayload({ fixed_lakhs: null, variable_lakhs: null, skipped: true })
   }
 
@@ -144,6 +161,14 @@ export default function SalaryPage() {
           submitting={submitting}
         />
       )}
+
+      {showZeroDialog && (
+        <ZeroSalaryDialog
+          onCancel={() => setShowZeroDialog(false)}
+          onConfirm={confirmZeroAsSkip}
+          submitting={submitting}
+        />
+      )}
     </RisoLayout>
   )
 }
@@ -193,6 +218,59 @@ function SkipDialog({
             className="flex-1 border-[1.5px] border-ink/60 text-ink/80 px-4 py-3 text-[13.5px] hover:bg-ink/5 disabled:opacity-50"
           >
             {submitting ? "…" : "Skip anyway"}
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ZeroSalaryDialog({
+  onCancel,
+  onConfirm,
+  submitting,
+}: {
+  onCancel: () => void
+  onConfirm: () => void
+  submitting: boolean
+}) {
+  return (
+    <div className="fixed inset-0 bg-ink/40 flex items-center justify-center p-5 z-50">
+      <div
+        role="dialog"
+        aria-modal="true"
+        className="bg-paper border-[1.5px] border-ink shadow-[6px_6px_0_#e8576b] max-w-[360px] w-full p-5"
+      >
+        <div className="text-[11px] tracking-[0.18em] uppercase text-accent mb-2 font-semibold">
+          — Hold on —
+        </div>
+        <h3 className="font-display text-[22px] leading-tight mb-3">
+          Annual fixed is ₹0. Did you mean to skip?
+        </h3>
+        <p className="text-[13.5px] leading-[1.55] text-ink/80 mb-2">
+          If you&apos;re between jobs, an intern, or just don&apos;t have a fixed
+          salary right now, that&apos;s fine — we&apos;ll skip the salary part
+          and score you on your answers alone.
+        </p>
+        <p className="text-[13.5px] leading-[1.55] text-ink/80 mb-5">
+          If you meant to enter a number, go back and fix it.
+        </p>
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={onCancel}
+            disabled={submitting}
+            className="flex-1 bg-ink text-paper px-4 py-3 font-medium text-[13.5px] shadow-[3px_3px_0_#e8576b] disabled:opacity-50"
+          >
+            Go back, I&apos;ll fix it
+          </button>
+          <button
+            type="button"
+            onClick={onConfirm}
+            disabled={submitting}
+            className="flex-1 border-[1.5px] border-ink/60 text-ink/80 px-4 py-3 text-[13.5px] hover:bg-ink/5 disabled:opacity-50"
+          >
+            {submitting ? "…" : "Yes, skip"}
           </button>
         </div>
       </div>
