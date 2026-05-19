@@ -1,10 +1,9 @@
 import type { Role } from "@/lib/types"
 import {
   aiRiskFor,
-  layoffImpactFor,
-  perceivedAiRiskFromChoice,
   readPerception,
   riskBand,
+  upskillPathFor,
 } from "@/lib/role-risk"
 import { yoeToBand } from "@/lib/benchmarks"
 
@@ -15,42 +14,34 @@ interface Props {
 }
 
 const PERCEPTION_LABEL: Record<number, string> = {
-  0: "Safe — needs human judgment",
-  1: "Parts of it, core stays human",
-  2: "Most of it, writing on the wall",
+  0: "Low — needs human judgment",
+  1: "Medium — parts of it, core stays human",
+  2: "High — most of it is going away",
   3: "Already happening, daily",
 }
 
 export function MarketSection({ role, yoe, q19ChoiceIndex }: Props) {
   const aiRisk = aiRiskFor(role, yoe)
-  const layoff = layoffImpactFor(role)
-  if (aiRisk == null || layoff == null) return null
+  if (aiRisk == null) return null
 
   const aiBand = riskBand(aiRisk)
-  const layoffBand = riskBand(layoff)
   const perception = readPerception(role, yoe, q19ChoiceIndex)
   const userLabel =
     q19ChoiceIndex != null && q19ChoiceIndex in PERCEPTION_LABEL
       ? PERCEPTION_LABEL[q19ChoiceIndex]
       : null
+  const upskill = aiRisk >= 60 ? upskillPathFor(role) : null
 
   return (
     <>
       <h2 className="text-[11px] tracking-[0.2em] uppercase text-accent font-medium mb-3.5 pt-5 mt-5 border-t border-ink/20">
-        The Market
+        The AI Threat
       </h2>
       <div className="flex flex-col">
         <RiskRow
-          label="AI replacement risk"
-          score={aiRisk}
+          label="AI exposure for your role"
           band={aiBand}
-          sub={`${role}, ${yoeToBand(yoe)} band`}
-        />
-        <RiskRow
-          label="Current layoff wave"
-          score={layoff}
-          band={layoffBand}
-          sub="2025-26, India IT"
+          sub={`${role}, ${yoeToBand(yoe)} band — directional estimate`}
         />
       </div>
 
@@ -61,18 +52,27 @@ export function MarketSection({ role, yoe, q19ChoiceIndex }: Props) {
           role={role}
         />
       )}
+
+      {upskill && (
+        <div className="mt-3 py-3 px-3.5 border-l-[3px] border-ink/40 bg-ink/[0.03]">
+          <div className="text-[11px] tracking-[0.2em] uppercase text-ink/60 font-semibold mb-1.5">
+            — Where to lean —
+          </div>
+          <div className="text-[13.5px] leading-[1.55] text-ink/85">
+            {upskill}
+          </div>
+        </div>
+      )}
     </>
   )
 }
 
 function RiskRow({
   label,
-  score,
   band,
   sub,
 }: {
   label: string
-  score: number
   band: { label: string; dots: number }
   sub: string
 }) {

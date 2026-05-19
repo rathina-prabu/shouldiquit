@@ -407,7 +407,7 @@ export interface DiagnosisBlockData extends DiagnosisResult {
 export function templatedDiagnoses(
   moduleScores: Record<ModuleName, number>,
   tier: VerdictTier,
-  weakThreshold = 60,
+  weakThreshold = 50,
 ): DiagnosisBlockData[] {
   const labels: Record<ModuleName, string> = {
     work: "The Work",

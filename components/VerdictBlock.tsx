@@ -16,7 +16,18 @@ const TIER_TAGLINES: Record<VerdictTier, string> = {
   LEAVE_NOW: "The math is done. Open LinkedIn.",
 }
 
-export function VerdictBlock({ tier, score }: { tier: VerdictTier; score: number }) {
+export function VerdictBlock({
+  tier,
+  score,
+  actionLabel,
+  actionBody,
+}: {
+  tier: VerdictTier
+  score: number
+  actionLabel?: string | null
+  actionBody?: string | null
+}) {
+  const tagline = TIER_TAGLINES[tier]
   return (
     <div className="bg-accent text-paper py-7 px-5 -mx-6 mb-3 text-center">
       <div className="text-[13px] tracking-[0.04em] opacity-80 mb-2 italic">
@@ -30,8 +41,22 @@ export function VerdictBlock({ tier, score }: { tier: VerdictTier; score: number
         <span className="text-[18px] opacity-70">/ 100</span>
       </div>
       <div className="mt-3 italic text-[15px] leading-snug opacity-95 px-3">
-        &ldquo;{TIER_TAGLINES[tier]}&rdquo;
+        &ldquo;{tagline}&rdquo;
       </div>
+
+      {actionLabel && actionBody && (
+        <div className="mt-5 pt-4 border-t border-paper/30">
+          <div className="text-[11px] tracking-[0.22em] uppercase opacity-80 mb-1.5">
+            — Recommended path —
+          </div>
+          <div className="font-display text-[22px] leading-tight uppercase tracking-tight mb-2">
+            {actionLabel}
+          </div>
+          <div className="text-[13.5px] leading-[1.5] opacity-95 px-2 text-left">
+            {actionBody}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

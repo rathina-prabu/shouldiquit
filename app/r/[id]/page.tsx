@@ -8,6 +8,8 @@ import { VerdictBlock } from "@/components/VerdictBlock"
 import { MoneySection } from "@/components/MoneySection"
 import { DiagnosisBlock, type DiagnosisBlockData } from "@/components/DiagnosisBlock"
 import { MarketSection } from "@/components/MarketSection"
+import { aiRiskFor, aiUsageFromChoice, isAiBlockedByOrg, recommendAction } from "@/lib/role-risk"
+import { deriveVerdict } from "@/lib/scoring"
 import { ShareButtons } from "@/components/ShareButtons"
 import { getOrCreateUserUuid } from "@/lib/user-uuid"
 import type { City, Role, VerdictTier, ModuleName } from "@/lib/types"
@@ -62,6 +64,7 @@ export default function ResultPage() {
   const [missing, setMissing] = useState(false)
   const [diagnosisBlocks, setDiagnosisBlocks] = useState<DiagnosisBlockData[] | null>(null)
   const [q19Choice, setQ19Choice] = useState<number | null>(null)
+  const [q20Choice, setQ20Choice] = useState<number | null>(null)
   const [isTaker, setIsTaker] = useState(false)
   const [shareUrl, setShareUrl] = useState("")
 
@@ -87,15 +90,18 @@ export default function ResultPage() {
         setSession(s)
         const myUuid = getOrCreateUserUuid()
         setIsTaker(Boolean(myUuid && myUuid === s.user_uuid))
-        // Fetch the Q19 (AI replaceability perception) answer alongside.
+        // Fetch the Q19 (AI replaceability perception) + Q20 (AI usage) answers.
         supabaseBrowser()
           .from("answers")
-          .select("choice_index")
+          .select("question_id, choice_index")
           .eq("session_id", s.id)
-          .eq("question_id", "q19")
-          .maybeSingle()
-          .then(({ data: a }) => {
-            if (!cancelled && a) setQ19Choice(a.choice_index as number)
+          .in("question_id", ["q19", "q20"])
+          .then(({ data: rows }) => {
+            if (cancelled || !rows) return
+            for (const r of rows) {
+              if (r.question_id === "q19") setQ19Choice(r.choice_index as number)
+              if (r.question_id === "q20") setQ20Choice(r.choice_index as number)
+            }
           })
         // diagnosis_actions now holds the structured blocks array (JSONB).
         if (
@@ -158,7 +164,11 @@ export default function ResultPage() {
     )
   }
 
-  const tier = session.verdict_tier
+  // Derive tier from the current master_score (not the stored verdict_tier).
+  // Tier boundaries shifted from 75/55/40/20 → 80/65/45/25; older sessions
+  // submitted under the old logic would otherwise see a verdict label that
+  // contradicts the action body (which always uses live thresholds).
+  const tier = deriveVerdict(session.master_score)
   const weakestLabel = MODULE_LABELS[session.weakest_module] ?? session.weakest_module
 
   if (!isTaker) {
@@ -214,10 +224,37 @@ export default function ResultPage() {
     )
   }
 
-  // Taker view
+  // Taker view — compute the action recommendation from (score, AI risk,
+  // AI usage). aiBlocked = user picked Q20 D ("AI not allowed in my org"),
+  // which routes to a special branch overriding the normal matrix. Module
+  // scores are threaded through so the STAY-bucket body can narrate which
+  // modules are broken.
+  const aiRisk = aiRiskFor(session.role as Role, session.yoe) ?? 0
+  const aiUsage = aiUsageFromChoice(q20Choice)
+  const aiBlocked = isAiBlockedByOrg(q20Choice)
+  const moduleScores: Record<string, number> = {
+    work: session.module_work,
+    manager: session.module_manager,
+    people: session.module_people,
+    growth: session.module_growth,
+    money: session.module_money,
+    wellbeing: session.module_wellbeing,
+  }
+  const advice = recommendAction(
+    session.master_score,
+    aiRisk,
+    aiUsage,
+    aiBlocked,
+    moduleScores,
+  )
   return (
     <RisoLayout topBarLeft="shouldiquit.work" topBarRight="Verdict">
-      <VerdictBlock tier={tier} score={session.master_score} />
+      <VerdictBlock
+        tier={tier}
+        score={session.master_score}
+        actionLabel={advice.label}
+        actionBody={advice.body}
+      />
       <ShareButtons
         shareUrl={shareUrl}
         tier={tier}

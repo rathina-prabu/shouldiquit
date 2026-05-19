@@ -163,7 +163,7 @@ export const QUESTIONS: Question[] = [
       { label: "Higher. You quietly know it.", highlight: "Higher", scores: { money: 5, agency: 2 } },
       { label: "About the same. The system feels fair enough.", highlight: "About the same", scores: { money: 4 } },
       { label: "Lower. Same work, same title. The gap stings.", highlight: "Lower", scores: { money: 0, intent_to_quit: 3, cynicism: 2 } },
-      { label: "No clue. Nobody here talks pay. You've stopped guessing.", highlight: "stopped guessing", scores: { money: -1, cynicism: 4, agency: -2 } },
+      { label: "No clue. Nobody here talks pay. You've stopped guessing.", highlight: "stopped guessing", scores: { money: 0, cynicism: 2, agency: -1 } },
     ],
   },
   // Module 6: THE STATE OF YOU / wellbeing (2 questions)
@@ -188,17 +188,30 @@ export const QUESTIONS: Question[] = [
     ],
   },
   // Q19: AI replaceability perception. Used to compare the user's self-read
-  // against the actual market AI-risk for their role/YoE (see data/role-risk.json).
-  // All four choices contribute 0 to growth so the question doesn't move the
-  // module math — it's a perception probe only.
+  // against the actual market AI-risk for their role/YoE. Scores 0 on growth —
+  // pure perception probe, no module impact.
   {
     id: "q19", module: "growth",
     prompt: "Will AI replace your role in the next 5 years?",
     choices: [
-      { label: "No. My role needs human judgment AI can't replicate.", highlight: "human judgment", scores: { growth: 0 } },
-      { label: "Parts of it. The core stays human.", highlight: "core stays human", scores: { growth: 0 } },
-      { label: "Most of it. The writing's on the wall.", highlight: "writing's on the wall", scores: { growth: 0 } },
+      { label: "Low — my role needs human judgment AI can't replicate.", highlight: "Low", scores: { growth: 0 } },
+      { label: "Medium — parts of it, but the core stays human.", highlight: "Medium", scores: { growth: 0 } },
+      { label: "High — most of it is going away.", highlight: "High", scores: { growth: 0 } },
       { label: "It's already happening. I see it daily.", highlight: "already happening", scores: { growth: 0 } },
+    ],
+  },
+  // Q20: AI usage at work. Measures how much AI is in the user's actual
+  // workflow. Option D ("not allowed in my org") is the strongest negative
+  // signal — it captures a structural problem (org is behind) on top of
+  // personal non-use, so it carries extra cynicism + intent_to_quit hits.
+  {
+    id: "q20", module: "growth",
+    prompt: "How do you use AI in your job today?",
+    choices: [
+      { label: "Most of my core work runs through AI now.", highlight: "Most of my core work", scores: { growth: 5, agency: 2 } },
+      { label: "Some of my core work — it augments my output.", highlight: "Some of my core work", scores: { growth: 3, agency: 1 } },
+      { label: "Just side work — emails, drafts, the small stuff.", highlight: "Just side work", scores: { growth: 0 } },
+      { label: "AI isn't allowed in my org.", highlight: "isn't allowed", scores: { growth: -7, cynicism: 4, intent_to_quit: 3, agency: -2 } },
     ],
   },
 ]

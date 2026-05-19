@@ -1,25 +1,21 @@
 import { QUESTIONS } from "./questions"
 import type { Answer, ModuleName, Scores, VerdictTier, WorkType } from "./types"
 
+// Weights tuned to a deliberate quit-driver priority order:
+//   1. AI (Q20 + org-block) — external, sits above any module (~-17 max)
+//   2. Money (+ salary offset window adds more on top)
+//   3. Manager
+//   4. Wellbeing (+ work-setup offset)
+//   5. Work
+//   6. Growth (lower weight because Q20's AI hit lives here separately)
+//   7. People (team / colleagues — rarely the primary quit driver)
 const MODULE_WEIGHTS: Record<ModuleName, number> = {
-  work: 0.14,
-  manager: 0.18,
-  people: 0.14,
-  growth: 0.18,
-  money: 0.18,
-  wellbeing: 0.18,
-}
-
-// When the taker skips salary, the money module has nothing but two quiz
-// answers behind it — too thin a signal to carry 18% of the verdict. Drop
-// money to 0 and spread its weight evenly across the remaining five modules.
-const MODULE_WEIGHTS_NO_SALARY: Record<ModuleName, number> = {
-  work: 0.176,
-  manager: 0.216,
-  people: 0.176,
-  growth: 0.216,
-  money: 0,
-  wellbeing: 0.216,
+  money: 0.21,
+  manager: 0.20,
+  wellbeing: 0.16,
+  work: 0.16,
+  growth: 0.14,
+  people: 0.13,
 }
 
 const MODULES: ModuleName[] = ["work", "manager", "people", "growth", "money", "wellbeing"]
@@ -80,10 +76,16 @@ export function computeScores(answers: Answer[]): Scores {
 }
 
 export function deriveVerdict(master: number): VerdictTier {
-  if (master >= 75) return "STAY_THRIVE"
-  if (master >= 55) return "STAY_FIX"
-  if (master >= 40) return "ITS_COMPLICATED"
-  if (master >= 20) return "START_LOOKING"
+  // Tightened tier boundaries (2026-05-19):
+  //   >=80  STAY_THRIVE
+  //   65-79 STAY_FIX
+  //   45-64 ITS_COMPLICATED
+  //   25-44 START_LOOKING
+  //   <25   LEAVE_NOW
+  if (master >= 80) return "STAY_THRIVE"
+  if (master >= 65) return "STAY_FIX"
+  if (master >= 45) return "ITS_COMPLICATED"
+  if (master >= 25) return "START_LOOKING"
   return "LEAVE_NOW"
 }
 
@@ -125,7 +127,12 @@ export function recomputeMasterWithOffsets(
   modules: Record<ModuleName, number>,
   moneyOffset: number,
   workTypeOffset: { wellbeing: number; work: number },
-  opts: { salaryProvided?: boolean } = {},
+  /**
+   * Direct master-score adjustment from Q20 AI signal (range -12 to +8).
+   * Positive when user heavily adopts AI; negative when org bans it.
+   * See aiSignalMasterAdjust() in lib/role-risk.ts.
+   */
+  aiAdjust = 0,
 ): {
   adjMoney: number
   adjWellbeing: number
@@ -140,23 +147,18 @@ export function recomputeMasterWithOffsets(
   const adjMoney = Math.max(0, Math.min(100, modules.money + quizRebate + moneyOffset))
   const adjWellbeing = Math.max(0, Math.min(100, modules.wellbeing + workTypeOffset.wellbeing))
   const adjWork = Math.max(0, Math.min(100, modules.work + workTypeOffset.work))
-
-  // Default opts.salaryProvided to true to preserve behavior for callers that
-  // don't pass the flag.
-  const weights =
-    opts.salaryProvided === false ? MODULE_WEIGHTS_NO_SALARY : MODULE_WEIGHTS
-
   const adjMaster = Math.max(
     0,
     Math.min(
       100,
       Math.round(
-        weights.work * adjWork +
-          weights.manager * modules.manager +
-          weights.people * modules.people +
-          weights.growth * modules.growth +
-          weights.money * adjMoney +
-          weights.wellbeing * adjWellbeing,
+        MODULE_WEIGHTS.work * adjWork +
+          MODULE_WEIGHTS.manager * modules.manager +
+          MODULE_WEIGHTS.people * modules.people +
+          MODULE_WEIGHTS.growth * modules.growth +
+          MODULE_WEIGHTS.money * adjMoney +
+          MODULE_WEIGHTS.wellbeing * adjWellbeing +
+          aiAdjust,
       ),
     ),
   )

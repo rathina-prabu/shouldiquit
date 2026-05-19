@@ -41,35 +41,35 @@ export function DiagnosisBlock({ blocks, loading }: Props) {
           .slice(0, 3)
       : (blocks[0]?.actions ?? []).slice(0, 3)
 
+  // Build a single concise summary line naming the weak areas.
+  const labels = blocks.map((b) => b.label)
+  const summary = buildSummary(labels)
+
   return (
     <>
       <h2 className="text-[11px] tracking-[0.2em] uppercase text-accent font-medium mb-3.5 pt-5 mt-5 border-t border-ink/20">
         Your diagnosis
       </h2>
-      {blocks.length > 1 && (
-        <p className="text-[12.5px] text-ink/60 italic mb-4 leading-snug">
-          {blocks.length} areas scored below par. Weakest first.
-        </p>
-      )}
-      <div className="flex flex-col gap-6">
-        {blocks.map((b) => (
-          <div key={b.module} className="pl-3.5 border-l-2 border-accent">
-            <div className="flex items-baseline justify-between mb-2">
-              <div className="text-[11px] tracking-[0.18em] uppercase text-accent font-semibold">
-                {b.label}
-              </div>
+      <p className="text-[15px] leading-[1.55] mb-4">{summary}</p>
+
+      {blocks.length > 0 && (
+        <div className="flex flex-col">
+          {blocks.map((b) => (
+            <div
+              key={b.module}
+              className="flex justify-between items-center py-2 border-b border-ink/[0.12]"
+            >
+              <span className="text-[13.5px] text-ink">{b.label}</span>
               {typeof b.score === "number" && (
-                <div className="text-[12px] text-ink/55 font-display">
+                <span className="font-display text-[14px] text-accent">
                   {b.score}/100
-                </div>
+                </span>
               )}
             </div>
-            <div className="text-[15px] leading-[1.6] space-y-3 whitespace-pre-line">
-              {b.diagnosis}
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+
       {allActions.length > 0 && (
         <>
           <h2 className="text-[11px] tracking-[0.2em] uppercase text-accent font-medium mb-3.5 pt-5 mt-5 border-t border-ink/20">
@@ -89,4 +89,24 @@ export function DiagnosisBlock({ blocks, loading }: Props) {
       )}
     </>
   )
+}
+
+/**
+ * Build a short summary sentence naming the user's weak areas. Honest about
+ * how many there are; never longer than 2 sentences.
+ */
+function buildSummary(labels: string[]): string {
+  if (labels.length === 0) {
+    return "Nothing scored below par. The numbers say you're in good shape."
+  }
+  if (labels.length === 1) {
+    return `${labels[0]} is the area pulling your score down. The rest is fine.`
+  }
+  if (labels.length === 2) {
+    return `${labels[0]} and ${labels[1]} are the weak spots. Address these first.`
+  }
+  // 3+: list with Oxford comma
+  const last = labels[labels.length - 1]
+  const rest = labels.slice(0, -1).join(", ")
+  return `${labels.length} areas are pulling your score down: ${rest}, and ${last}. Tackle the weakest first.`
 }

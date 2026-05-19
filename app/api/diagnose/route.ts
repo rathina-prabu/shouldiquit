@@ -46,16 +46,12 @@ export async function POST(req: NextRequest) {
     })
   }
 
-  // If the taker skipped salary, the money module is a thin 2-question signal
-  // that's also been zeroed out in the verdict weighting — don't surface a
-  // 'money is your weak area' diagnosis block for these users.
-  const salaryProvided = session.salary_fixed_lakhs != null
   const moduleScores: Record<ModuleName, number> = {
     work: session.module_work,
     manager: session.module_manager,
     people: session.module_people,
     growth: session.module_growth,
-    money: salaryProvided ? session.module_money : 101,
+    money: session.module_money,
     wellbeing: session.module_wellbeing,
   }
 

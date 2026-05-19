@@ -20,7 +20,6 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
   const salaryCell = lookupSalary(city, role, yoe)
   const realDaily = computeRealDailyRate(fixed_lakhs, variable_lakhs)
   const chaiwalaDaily = getChaiwalaDaily(city)
-  const delta = realDaily - chaiwalaDaily
   const band = yoeToBand(yoe)
 
   return (
@@ -65,23 +64,7 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
         />
       </div>
       <div className="mt-2 py-2.5 px-3 bg-accent/10 border-l-[3px] border-accent text-[13px] leading-relaxed">
-        {delta >= 0 ? (
-          <>
-            You earn{" "}
-            <strong className="font-medium text-accent">
-              ₹{delta.toLocaleString("en-IN")} more
-            </strong>{" "}
-            per day than a chaiwala. Barely.
-          </>
-        ) : (
-          <>
-            A {city} chaiwala earns{" "}
-            <strong className="font-medium text-accent">
-              ₹{Math.abs(delta).toLocaleString("en-IN")} MORE
-            </strong>{" "}
-            per day than you. Read that again.
-          </>
-        )}
+        <ChaiwalaRatio realDaily={realDaily} chaiwalaDaily={chaiwalaDaily} city={city} />
       </div>
     </>
   )
@@ -127,6 +110,49 @@ function SalaryIndicator({ salary, median }: { salary: number; median: number })
     >
       ▲
     </span>
+  )
+}
+
+/**
+ * Chaiwala comparison expressed as a ratio (e.g. "1.5×"). The tone shifts
+ * based on whether the user earns more or less than the chaiwala, and how
+ * dramatic the gap is.
+ */
+function ChaiwalaRatio({
+  realDaily,
+  chaiwalaDaily,
+  city,
+}: {
+  realDaily: number
+  chaiwalaDaily: number
+  city: string
+}) {
+  if (chaiwalaDaily <= 0) return null
+  const ratio = realDaily / chaiwalaDaily
+  if (ratio >= 1) {
+    const formatted = ratio.toFixed(1).replace(/\.0$/, "")
+    const flavour =
+      ratio < 1.5
+        ? "Barely."
+        : ratio < 3
+          ? "Better than the headline number suggests, isn't it?"
+          : "After ~16 years of school + work to get here."
+    return (
+      <>
+        You earn{" "}
+        <strong className="font-medium text-accent">{formatted}× more</strong>
+        {" "}per day than a chaiwala. {flavour}
+      </>
+    )
+  }
+  const inverse = chaiwalaDaily / realDaily
+  const formatted = inverse.toFixed(1).replace(/\.0$/, "")
+  return (
+    <>
+      A {city} chaiwala earns{" "}
+      <strong className="font-medium text-accent">{formatted}× MORE</strong>
+      {" "}per day than you. Read that again.
+    </>
   )
 }
 

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { supabaseServer } from "@/lib/supabase"
 import { computeScores, recomputeMasterWithOffsets, computeWorkTypeOffset, deriveVerdict, findWeakestModule } from "@/lib/scoring"
 import { computeSalaryOffset, offsetEligibleTotal } from "@/lib/benchmarks"
+import { aiSignalMasterAdjust } from "@/lib/role-risk"
 import { generateShortId } from "@/lib/short-id"
 import type { Answer, City, Role, SetupData, SalaryData } from "@/lib/types"
 
@@ -45,11 +46,17 @@ export async function POST(req: NextRequest) {
       )
     : 0
   const workTypeOffset = computeWorkTypeOffset(setup.work_type)
+  // AI signal: direct master-score adjustment from Q20.
+  // Heavy AI users (A) earn a +8 bonus; org-banned (D) takes a -12 hit.
+  // Symmetric in spirit with the salary offset — rewards adoption, penalises
+  // structural blocks.
+  const q20 = answers.find((a) => a.question_id === "q20")
+  const aiAdjust = aiSignalMasterAdjust(q20?.choice_index)
   const { adjMoney, adjWellbeing, adjWork, adjMaster } = recomputeMasterWithOffsets(
     scores.modules,
     moneyOffset,
     workTypeOffset,
-    { salaryProvided },
+    aiAdjust,
   )
   // Re-derive verdict + weakest module from offset-adjusted modules
   const adjModules = {
@@ -59,12 +66,7 @@ export async function POST(req: NextRequest) {
     work: adjWork,
   }
   const adjTier = deriveVerdict(adjMaster)
-  // When salary was skipped, money carries 0 weight in the master and has only
-  // 2 quiz answers behind it — exclude it from the "weakest module" pick.
-  const weakestModulesPool: typeof adjModules = salaryProvided
-    ? adjModules
-    : { ...adjModules, money: 101 }
-  const adjWeakest = findWeakestModule(weakestModulesPool)
+  const adjWeakest = findWeakestModule(adjModules)
 
   const id = generateShortId()
   const supabase = supabaseServer()
