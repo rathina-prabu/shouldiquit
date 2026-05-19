@@ -72,31 +72,31 @@ export function MoneySection({ city, role, yoe, fixed_lakhs, variable_lakhs }: P
 
 /**
  * Visual cue next to the user's salary, benchmarked against the product-co median:
- *  < 1.33× median   → red ▼  (close to / below market)
- *  1.33×–1.60×      → amber ●  (comfortably above, but not exceptional)
- *  ≥ 1.60× median   → green ▲  (well above market)
+ *   ratio < 1.0       → red ▼   (below market median)
+ *   1.0 ≤ ratio < 1.33 → amber ● (at or just above median — fair, not exceptional)
+ *   ratio ≥ 1.33      → green ▲  (33%+ above median — comfortable)
  */
 function SalaryIndicator({ salary, median }: { salary: number; median: number }) {
   if (!median || median <= 0) return null
   const ratio = salary / median
 
-  if (ratio < 1.33) {
+  if (ratio < 1.0) {
     return (
       <span
         className="text-[#e8576b] text-[15px] leading-none"
-        aria-label="Salary is below or close to product-company market median"
-        title="Below 33% over product median"
+        aria-label="Salary is below the product-company market median"
+        title="Below market median"
       >
         ▼
       </span>
     )
   }
-  if (ratio < 1.6) {
+  if (ratio < 1.33) {
     return (
       <span
         className="text-[#c9a227] text-[14px] leading-none"
-        aria-label="Salary is moderately above product-company market median"
-        title="33–60% over product median"
+        aria-label="Salary is at or just above market median"
+        title="0–33% above market median"
       >
         ●
       </span>
@@ -105,8 +105,8 @@ function SalaryIndicator({ salary, median }: { salary: number; median: number })
   return (
     <span
       className="text-[#5a8a5a] text-[15px] leading-none"
-      aria-label="Salary is well above product-company market median"
-      title="60%+ over product median"
+      aria-label="Salary is well above market median"
+      title="33%+ above market median"
     >
       ▲
     </span>

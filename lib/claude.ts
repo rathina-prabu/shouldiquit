@@ -399,15 +399,45 @@ export interface DiagnosisBlockData extends DiagnosisResult {
 }
 
 /**
- * Picks every module that scored below `weakThreshold` and returns a hand-
- * written diagnosis block for each, sorted weakest-first. If nothing falls
- * below the threshold, returns just the single weakest module — so users
- * with strong scores still get one paragraph.
+ * Primary quiz questions per module — used for the C/D pattern check.
+ * Cross-hits (e.g. Q14 contributing to wellbeing) don't count: a module is
+ * flagged for a *pattern of bad answers in its own questions*.
+ */
+const PRIMARY_QUESTIONS: Record<ModuleName, string[]> = {
+  work: ["q1", "q2", "q3"],
+  manager: ["q4", "q5", "q6", "q7"],
+  people: ["q8", "q9", "q10", "q11"],
+  growth: ["q12", "q13", "q14"],
+  money: ["q15", "q16"],
+  wellbeing: ["q17", "q18"],
+}
+
+/**
+ * Count how many of a module's primary questions the user answered C or D
+ * (choice_index 2 or 3 — the bottom-two options on every question).
+ */
+function countCDInModule(
+  module: ModuleName,
+  answers: Array<{ question_id: string; choice_index: number }>,
+): number {
+  const qs = new Set(PRIMARY_QUESTIONS[module])
+  return answers.filter((a) => qs.has(a.question_id) && a.choice_index >= 2).length
+}
+
+/**
+ * Hybrid "weak" detector. A module is weak if EITHER:
+ *  - its score is < 35 (severely low, captures any single strong negative)
+ *  - it has ≥ 2 C/D answers in its primary questions (pattern of problems)
+ *
+ * Sorted weakest-first by score. If nothing is weak, returns the single
+ * lowest-scoring module so users with strong profiles still get one block.
  */
 export function templatedDiagnoses(
   moduleScores: Record<ModuleName, number>,
   tier: VerdictTier,
-  weakThreshold = 50,
+  answers: Array<{ question_id: string; choice_index: number }> = [],
+  scoreThreshold = 35,
+  cdThreshold = 2,
 ): DiagnosisBlockData[] {
   const labels: Record<ModuleName, string> = {
     work: "The Work",
@@ -419,10 +449,16 @@ export function templatedDiagnoses(
   }
 
   const ranked = (Object.keys(moduleScores) as ModuleName[])
-    .map((m) => ({ module: m, score: moduleScores[m] }))
+    .map((m) => ({
+      module: m,
+      score: moduleScores[m],
+      cdCount: countCDInModule(m, answers),
+    }))
     .sort((a, b) => a.score - b.score)
 
-  const picks = ranked.filter((r) => r.score < weakThreshold)
+  const picks = ranked.filter(
+    (r) => r.score < scoreThreshold || r.cdCount >= cdThreshold,
+  )
   const finalPicks = picks.length > 0 ? picks : ranked.slice(0, 1)
 
   return finalPicks.map(({ module, score }) => {

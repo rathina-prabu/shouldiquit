@@ -55,9 +55,17 @@ export async function POST(req: NextRequest) {
     wellbeing: session.module_wellbeing,
   }
 
+  // Fetch answers — used by templatedDiagnoses to count C/D-answer patterns
+  // for the hybrid "weak module" detector (score < 35 OR ≥ 2 C/D).
+  const { data: answers } = await supabase
+    .from("answers")
+    .select("question_id, choice_index")
+    .eq("session_id", session_id)
+
   const blocks = templatedDiagnoses(
     moduleScores,
     session.verdict_tier as VerdictTier,
+    answers ?? [],
   )
 
   // Cache. Put structured blocks in diagnosis_actions (JSONB) and a flat
