@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "source": "Synthesis of TCS/Infosys/Wipro FY26 layoffs, BLS automation studies, McKinsey GenAI exposure index, AmbitionBox role exposure 2025-26, and qualitative industry signal (Livspace designer cuts, banking QA replacement cases).",
+    "ai_replaceability": "0 = AI cannot replace this in 5 years; 100 = role is being automated away now",
+    "layoff_impact": "0 = role unaffected by current wave; 100 = role is among hardest hit",
+    "last_updated": "2026-05-19"
+  },
+  "ai_replaceability": {
+    "Engineer (IC)":              { "0-3": 65, "4-7": 45, "8-12": 28, "13+": 18 },
+    "Engineering Manager":        { "0-3": 30, "4-7": 22, "8-12": 18, "13+": 12 },
+    "DevOps / SRE":               { "0-3": 55, "4-7": 38, "8-12": 25, "13+": 18 },
+    "QA":                         { "0-3": 85, "4-7": 72, "8-12": 52, "13+": 35 },
+    "Data Scientist":             { "0-3": 55, "4-7": 35, "8-12": 25, "13+": 20 },
+    "Product Manager":            { "0-3": 32, "4-7": 25, "8-12": 20, "13+": 15 },
+    "Project / Program Manager":  { "0-3": 65, "4-7": 48, "8-12": 32, "13+": 22 },
+    "Designer":                   { "0-3": 60, "4-7": 42, "8-12": 28, "13+": 18 },
+    "Sales":                      { "0-3": 35, "4-7": 25, "8-12": 20, "13+": 15 },
+    "Marketing / Growth":         { "0-3": 65, "4-7": 48, "8-12": 32, "13+": 22 },
+    "Customer Success":           { "0-3": 75, "4-7": 58, "8-12": 38, "13+": 25 },
+    "Business Ops":               { "0-3": 60, "4-7": 42, "8-12": 28, "13+": 18 }
+  },
+  "layoff_impact": {
+    "Engineer (IC)":              60,
+    "Engineering Manager":        75,
+    "DevOps / SRE":               40,
+    "QA":                         75,
+    "Data Scientist":             55,
+    "Product Manager":            65,
+    "Project / Program Manager":  75,
+    "Designer":                   70,
+    "Sales":                      50,
+    "Marketing / Growth":         70,
+    "Customer Success":           65,
+    "Business Ops":               55
+  }
+}

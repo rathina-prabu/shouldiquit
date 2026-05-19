@@ -2,15 +2,15 @@ import { describe, it, expect } from "vitest"
 import { QUESTIONS } from "@/lib/questions"
 
 describe("QUESTIONS", () => {
-  it("has 18 questions", () => {
-    expect(QUESTIONS).toHaveLength(18)
+  it("has 19 questions", () => {
+    expect(QUESTIONS).toHaveLength(19)
   })
   it("every question has exactly 4 choices", () => {
     QUESTIONS.forEach((q) => expect(q.choices).toHaveLength(4))
   })
   it("question IDs are unique", () => {
     const ids = new Set(QUESTIONS.map((q) => q.id))
-    expect(ids.size).toBe(18)
+    expect(ids.size).toBe(19)
   })
   it("module distribution matches locked spec (work 3, manager 4, people 4, growth 3, money 2, wellbeing 2)", () => {
     const counts: Record<string, number> = {}

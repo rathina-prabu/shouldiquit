@@ -7,6 +7,7 @@ import { RisoLayout } from "@/components/RisoLayout"
 import { VerdictBlock } from "@/components/VerdictBlock"
 import { MoneySection } from "@/components/MoneySection"
 import { DiagnosisBlock, type DiagnosisBlockData } from "@/components/DiagnosisBlock"
+import { MarketSection } from "@/components/MarketSection"
 import { ShareButtons } from "@/components/ShareButtons"
 import { getOrCreateUserUuid } from "@/lib/user-uuid"
 import type { City, Role, VerdictTier, ModuleName } from "@/lib/types"
@@ -60,6 +61,7 @@ export default function ResultPage() {
   const [session, setSession] = useState<Session | null>(null)
   const [missing, setMissing] = useState(false)
   const [diagnosisBlocks, setDiagnosisBlocks] = useState<DiagnosisBlockData[] | null>(null)
+  const [q19Choice, setQ19Choice] = useState<number | null>(null)
   const [isTaker, setIsTaker] = useState(false)
   const [shareUrl, setShareUrl] = useState("")
 
@@ -85,6 +87,16 @@ export default function ResultPage() {
         setSession(s)
         const myUuid = getOrCreateUserUuid()
         setIsTaker(Boolean(myUuid && myUuid === s.user_uuid))
+        // Fetch the Q19 (AI replaceability perception) answer alongside.
+        supabaseBrowser()
+          .from("answers")
+          .select("choice_index")
+          .eq("session_id", s.id)
+          .eq("question_id", "q19")
+          .maybeSingle()
+          .then(({ data: a }) => {
+            if (!cancelled && a) setQ19Choice(a.choice_index as number)
+          })
         // diagnosis_actions now holds the structured blocks array (JSONB).
         if (
           Array.isArray(s.diagnosis_actions) &&
@@ -221,6 +233,11 @@ export default function ResultPage() {
           variable_lakhs={session.salary_variable_lakhs ?? 0}
         />
       )}
+      <MarketSection
+        role={session.role as Role}
+        yoe={session.yoe}
+        q19ChoiceIndex={q19Choice}
+      />
       <DiagnosisBlock blocks={diagnosisBlocks} loading={!diagnosisBlocks} />
     </RisoLayout>
   )

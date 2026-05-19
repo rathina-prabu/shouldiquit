@@ -187,6 +187,20 @@ export const QUESTIONS: Question[] = [
       { label: "Mentally, you're still at the office. Always.", highlight: "still at the office", scores: { wellbeing: -2, intent_to_quit: 3, cynicism: 2 } },
     ],
   },
+  // Q19: AI replaceability perception. Used to compare the user's self-read
+  // against the actual market AI-risk for their role/YoE (see data/role-risk.json).
+  // All four choices contribute 0 to growth so the question doesn't move the
+  // module math — it's a perception probe only.
+  {
+    id: "q19", module: "growth",
+    prompt: "Will AI replace your role in the next 5 years?",
+    choices: [
+      { label: "No. My role needs human judgment AI can't replicate.", highlight: "human judgment", scores: { growth: 0 } },
+      { label: "Parts of it. The core stays human.", highlight: "core stays human", scores: { growth: 0 } },
+      { label: "Most of it. The writing's on the wall.", highlight: "writing's on the wall", scores: { growth: 0 } },
+      { label: "It's already happening. I see it daily.", highlight: "already happening", scores: { growth: 0 } },
+    ],
+  },
 ]
 
 export const MODULE_LABELS: Record<string, string> = {
