@@ -190,15 +190,22 @@ export function offsetEligibleTotal(fixedLakhs: number, variableLakhs: number): 
 }
 
 /**
- * Salary offset applied to the Money module score. Still asymmetric — being
- * underpaid hurts more than being top-of-market helps — but capped so the
- * money quiz answers can still influence the verdict even when the salary
- * number is bad.
- *   - below p25   → -40  (severely underpaid)
- *   - p25..p50    → -20  (underpaid)
- *   - p50..p75    →   0  (fair)
- *   - p75..p90    →  +4  (well paid)
- *   - above p90   →  +7  (top of market)
+ * Salary offset — pro-rated by how far the user's total sits from the
+ * role/city/YoE median. Smoother than the old band-based offset (no cliff
+ * edges between p25/p50/p75/p90). Still asymmetric: being underpaid bites
+ * ~8× harder per ratio-point than being top-of-market lifts.
+ *
+ *   ratio = total / p50
+ *   if ratio < 1:  offset = max(-40, (ratio - 1) × 80)   // underpaid
+ *   if ratio >= 1: offset = min(+7,  (ratio - 1) × 10)   // overpaid
+ *
+ * Calibration anchors:
+ *   ratio 0.50 (half median)  →  -40   (severely underpaid; cap)
+ *   ratio 0.75 (25% below)    →  -20   (matches old p25-p50 band)
+ *   ratio 1.00 (at median)    →    0
+ *   ratio 1.40 (40% above)    →   +4   (matches old p75 anchor)
+ *   ratio 1.70 (70% above)    →   +7   (cap)
+ *   ratio 2.00+ (double+)     →   +7
  */
 export function computeSalaryOffset(
   totalLakhs: number,
@@ -207,12 +214,12 @@ export function computeSalaryOffset(
   yoe: number,
 ): number {
   const cell = lookupSalary(city, role, yoe)
-  if (!cell) return 0
-  if (totalLakhs < cell.p25) return -40
-  if (totalLakhs < cell.p50) return -20
-  if (totalLakhs < cell.p75) return 0
-  if (totalLakhs < cell.p90) return 4
-  return 7
+  if (!cell || !cell.p50) return 0
+  const ratio = totalLakhs / cell.p50
+  if (ratio < 1) {
+    return Math.max(-40, Math.round((ratio - 1) * 80))
+  }
+  return Math.min(7, Math.round((ratio - 1) * 10))
 }
 
 export function salaryVsMarket(
